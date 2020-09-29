@@ -54,7 +54,7 @@ for i = 1:length(EbNodB)
 end
 
 % Plot results
-berNoCoding = berawgn(EbNodB,'psk',8,'nondiff');
+berNoCoding = berawgn(EbNodB,'PSK',8,'nondiff');
 semilogy(EbNodB, berNoCoding, 'o-', EbNodB, ber, 'x--');
 title('SNR per bit (Eb/N0) Vs BER curve for BCH and LDPC code concatenation.');
 xlabel('SNR per bit (Eb/N0) in dB');
@@ -63,10 +63,35 @@ grid on;
 
 %% 4.- Mapping:
 dvb = initDVBS();
-FECFRAME = randi([0 1], dvb.LDPCCodewordLength, 1);
-XFECFRAME = map(FECFRAME, dvb);
-R_FECFRAME = demap(XFECFRAME, dvb);
+EbNodB = -6:2:20; % Eb/N0 range in dB for simulation
+EbNo = 10.^(EbNodB / 10);
+ber = zeros(1, length(EbNodB));
+channel = comm.AWGNChannel('BitsPerSymbol', log2(dvb.ModulationOrder));
+errorRate = comm.ErrorRate;
+for i = 1:length(EbNodB)
+    disp("Iteration nº: " + i);
+    % Source
+    fec_frame = randi([0 1], dvb.LDPCCodewordLength, 1);
+    % Transmitter
+    tx_signal = map(fec_frame, dvb);
+    % Channel
+    channel.EbNo = EbNodB(i);
+    rx_signal = channel(tx_signal);
+    % Demodulate the noisy signal.
+    rx_fec_frame = demap(rx_signal, dvb);
+    %Bit Error rate Calculation
+    errorStats = errorRate(fec_frame, rx_fec_frame);
+    ber(i) = errorStats(1);
+    reset(errorRate);
+end
 
+% Plot results
+berNoCoding = berawgn(EbNodB,'psk',8,'nondiff');
+semilogy(EbNodB, berNoCoding, 'o-', EbNodB, ber, 'x--');
+title('SNR per bit (Eb/N0) Vs BER curve for BCH and LDPC code concatenation.');
+xlabel('SNR per bit (Eb/N0) in dB');
+ylabel('Bit Error Rate (BER) in dB');
+grid on;
 
 %% 5.- Physical Layer Framming
 
