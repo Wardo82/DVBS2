@@ -3,9 +3,10 @@ function SIGNAL = BBFilterAndQModulate(PL_FRAME, dvb)
 %   Filter the signal with a RC filter
     % RRC filter
     % TODO: Review theory
-    txfilter = comm.RaisedCosineTransmitFilter('FilterSpanInSymbols', 10,... % "Should be way higher than the Samples per Symbol"
-                                               'OutputSamplesPerSymbol', dvb.SamplesPerSymbol, ...
-                                               'RolloffFactor', dvb.RolloffFactor); 
+    txfilter = comm.RaisedCosineTransmitFilter('Shape', 'Square Root',...
+                            'FilterSpanInSymbols', 10,... % "Should be way higher than the Samples per Symbol"
+                            'OutputSamplesPerSymbol', dvb.SamplesPerSymbol, ...
+                            'RolloffFactor', dvb.RolloffFactor); 
     % b = coeffs(txfilter);
     % TODO: ask -> txfilter.Gain = 1/sum(b.Numerator);
     delay = txfilter.FilterSpanInSymbols; % Delay of the filter

@@ -13,8 +13,12 @@ function BBFRAME = FECdecoding(FECFRAME, dvb)
     %% Interl1eaver
     % For 8PSK, 16APSK, and 32APSK modulation formats, the output of the LDPC encoder shall be
     % bit interleaved using a block interleaver
-    deintrlvr = comm.BlockDeinterleaver((1:n_ldpc)');
-    deinterlvrOut = deintrlvr(FECFRAME);
+    if strcmp(dvb.ModulationType, 'QPSK') % If using QPSK, don't interleave
+        deinterlvrOut = FECFRAME;
+    else
+        deintrlvr = comm.BlockDeinterleaver(dvb.InterleaveOrder);
+        deinterlvrOut = deintrlvr(FECFRAME);
+    end
     
     %% LDPC outer code:
     % Parity check matrix using dvbs2ldpc MATLAB function, with code rate

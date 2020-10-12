@@ -27,7 +27,9 @@ end
 % stream shall be composed of BBFRAMEs and the output stream of FECFRAMEs.
 % Each BBFRAME (Kbch bits) shall be processed by the FEC coding subsystem, to generate a FECFRAME (nldpc bits).
 dvb = initDVBS();
-EbNodB = -6:2:10; % Eb/N0 range in dB for simulation
+dvb.bch_object = BCH(dvb);
+dvb.interleaver_object = Interleaver(dvb);
+EbNodB = 5:2:20; % Eb/N0 range in dB for simulation
 EbNo = 10.^(EbNodB / 10);
 ber = zeros(1, length(EbNodB));
 channel = comm.AWGNChannel('BitsPerSymbol',3);
@@ -96,3 +98,5 @@ grid on;
 %% 5.- Physical Layer Framming
 
 %% 6.- Base-Band Filtering and Quadrature Modulation
+dvb = initDVBS();
+

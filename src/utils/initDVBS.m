@@ -30,11 +30,37 @@ function DVB = initDVBS()
     dvb.BCHMessageLength = kBCH;
     dvb.BCHPrimPoly = primBCH;
     dvb.BCHGenPoly = genBCH;
-
+    
     % == Modulation parameters ==
     dvb.ModulationType = subsystemType{1};
     dvb = setModulationParameters(dvb);
+    
+    % == Interleaver: Section 5.3.3, p. 23 ==
+    % No interleaving (for BPSK and QPSK)
+    dvb.InterleaveOrder = (1:dvb.LDPCCodewordLength).';
 
+    switch dvb.ModulationType
+        case '8PSK'
+            Ncol = 3;
+            iTemp = reshape(dvb.InterleaveOrder, ...
+                dvb.LDPCCodewordLength/Ncol, Ncol).';
+            if dvb.LDPCCodeRate == 3/5
+                % Special Case - Figure 8
+                iTemp = flipud(iTemp);
+            end
+            dvb.InterleaveOrder = iTemp(:);
+        case '16APSK'
+            Ncol = 4;
+            iTemp = reshape(dvb.InterleaveOrder, ...
+                dvb.LDPCCodewordLength/Ncol, Ncol).';
+            dvb.InterleaveOrder = iTemp(:);
+        case '32APSK'
+            Ncol = 5;
+            iTemp = reshape(dvb.InterleaveOrder, ...
+                dvb.LDPCCodewordLength/Ncol, Ncol).';
+            dvb.InterleaveOrder = iTemp(:);
+    end
+    
     % == Filter parameters ==
     dvb.SamplesPerSymbol = 8;
     dvb.RolloffFactor = 0.25;
