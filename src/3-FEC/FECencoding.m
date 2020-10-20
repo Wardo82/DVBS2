@@ -15,7 +15,6 @@ function FECFRAME = FECencoding(BBFRAME, dvb)
 %                             'GeneratorPolynomial', dvb.BCHGenPoly, ...
 %                             'CheckGeneratorPolynomial', true);    
     % MATLAB comm library: bchEncOut = encbch(BBFRAME);  
-    
     bch_encoder = dvb.bch_object;
     bch_encoder_output = bch_encoder.encode(BBFRAME);       
     %% LDPC inner code:
