@@ -10,13 +10,23 @@ classdef BCHEncoder < matlab.System
     end
     % Hidden properties that won't be shown either in matlab nor in 
     % simulink.
-    properties (Hidden)
+    properties (Access = private)
         n = 48600; % Codeword length
-        k = 48408; % Length of input message
+        k % Length of input message
+        lfsr_generator % The generator polynomial in ascending order
     end
     properties
-        % The generator polynomial in ascending order
-        lfsr_generator = logical([1  1  1  0  0  1  1  1  1  0  1  0  1 ... 
+    end
+    methods
+        function obj = BCHEncoder(varargin)
+            setProperties(obj,nargin,varargin{:});
+        end
+    end
+    methods (Access = protected)
+        function setupImpl(obj, ~)
+            obj.n = 48600;
+            obj.k = 48408;
+            obj.lfsr_generator = logical([1  1  1  0  0  1  1  1  1  0  1  0  1 ... 
                                             0  1  0  0  1  0  0  0  0  0  0  0  1  1  0 ... 
                                             0  1  1  0  1  1  1  0  1  1  1  1  1  0  1 ... 
                                             0  0  0  0  1  1  1  1  0  0  0  1  0  1  1 ...
@@ -29,9 +39,6 @@ classdef BCHEncoder < matlab.System
                                             1  0  1  0  0  0  1  0  0  0  0  1  1  1  0 ...                                      
                                             0  0  0  0  1  0  1  1  1  0  0  0  0  0  1 ...                                       
                                             1  0  0  1  0  0  0  1  1  1  0  0  1  0  1]);
-    end
-    methods (Access = protected)
-        function setupImpl(~)
         end
         function codeword = stepImpl(obj, message)
             % 1.- Multiply the message polynomial m(x) by x^(n−k) .
