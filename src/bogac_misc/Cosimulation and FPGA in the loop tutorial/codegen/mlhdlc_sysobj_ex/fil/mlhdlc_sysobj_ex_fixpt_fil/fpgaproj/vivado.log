@@ -1,0 +1,893 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Sun Nov 29 19:41:43 2020
+# Process ID: 3782
+# Current directory: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj
+# Command line: vivado -mode batch -source createproject.tcl
+# Log file: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/vivado.log
+# Journal file: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/vivado.jou
+#-----------------------------------------------------------
+source createproject.tcl
+# create_project -force mlhdlc_sysobj_ex_fixpt_fil .
+# set_property target_language VHDL [current_project]
+# set_property part xc7z020clg400-1 [current_project]
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/hdlsrc/mlhdlc_sysobj_ex_fixpt.vhd"}
+# create_ip -name clk_wiz -vendor xilinx.com -library ip -module_name clk_wiz_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip'.
+create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2211.453 ; gain = 63.918 ; free physical = 15634 ; free virtual = 24100
+# set_property -dict [list  CONFIG.PRIM_IN_FREQ {100.000} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25}] [get_ips clk_wiz_0]
+# create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name jtag_mac_fifo
+# set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Input_Data_Width {8} CONFIG.Input_Depth {4096} CONFIG.Read_Data_Count {true}  CONFIG.Use_Embedded_Registers {false} CONFIG.read_data_count_width {12} CONFIG.Almost_Full_Flag {true}] [get_ips jtag_mac_fifo]
+# create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name simcycle_fifo
+# set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Input_Data_Width {16} CONFIG.Input_Depth {16} CONFIG.Use_Embedded_Registers {false} ] [get_ips simcycle_fifo]
+# generate_target all [get_ips] -force
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'simcycle_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'simcycle_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'simcycle_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'simcycle_fifo'...
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/jtag_mac.v"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/jtag_mac_fifo_wrapper.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/simcycle_fifo_wrapper.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mwfil_dpscram.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mwfil_udfifo.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mwfil_bus2dut.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mwfil_chifcore.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mwfil_controller.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mwfil_dut2bus.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_wrapper.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mwfil_chiftop.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_fil.vhd"}
+# add_files -norecurse {"/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_fil.xdc"}
+# set_property top mlhdlc_sysobj_ex_fixpt_fil [current_fileset]
+# launch_runs impl_1
+[Sun Nov 29 19:42:01 2020] Launched clk_wiz_0_synth_1, simcycle_fifo_synth_1, jtag_mac_fifo_synth_1, synth_1...
+Run output will be captured here:
+clk_wiz_0_synth_1: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/clk_wiz_0_synth_1/runme.log
+simcycle_fifo_synth_1: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/simcycle_fifo_synth_1/runme.log
+jtag_mac_fifo_synth_1: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/jtag_mac_fifo_synth_1/runme.log
+synth_1: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/synth_1/runme.log
+[Sun Nov 29 19:42:01 2020] Launched impl_1...
+Run output will be captured here: /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Sun Nov 29 19:42:01 2020] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log mlhdlc_sysobj_ex_fixpt_fil.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mlhdlc_sysobj_ex_fixpt_fil.tcl -notrace
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source mlhdlc_sysobj_ex_fixpt_fil.tcl -notrace
+Command: link_design -top mlhdlc_sysobj_ex_fixpt_fil -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'u_clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.dcp' for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo.dcp' for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo'
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2147.625 ; gain = 0.000 ; free physical = 14715 ; free virtual = 23277
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_wiz_0/inst'
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_wiz_0/inst'
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2569.574 ; gain = 366.016 ; free physical = 14232 ; free virtual = 22793
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_wiz_0/inst'
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0'
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0'
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0'
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0'
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0'
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0'
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_fil.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk' already exists, overwriting the previous clock with the same name. [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_fil.xdc:1]
+WARNING: [Vivado 12-2489] -period contains time 15.151515 which will be rounded to 15.152 to ensure it is an integer multiple of 1 picosecond [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_fil.xdc:4]
+WARNING: [Vivado 12-2489] -waveform contains time 7.575758 which will be rounded to 7.576 to ensure it is an integer multiple of 1 picosecond [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_fil.xdc:4]
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/filsrc/mlhdlc_sysobj_ex_fixpt_fil.xdc]
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo_clocks.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0'
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo_clocks.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0'
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_clocks.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0'
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_clocks.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0'
+Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_clocks.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0'
+Finished Parsing XDC File [/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_clocks.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2572.543 ; gain = 0.000 ; free physical = 14233 ; free virtual = 22793
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 5 instances
+
+12 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2572.543 ; gain = 425.012 ; free physical = 14233 ; free virtual = 22793
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2668.293 ; gain = 95.750 ; free physical = 14222 ; free virtual = 22782
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 25a05aa53
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2668.293 ; gain = 0.000 ; free physical = 14222 ; free virtual = 22783
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1f1ef5fed
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 21 cells
+INFO: [Opt 31-1021] In phase Retarget, 19 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1c02846e6
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 18 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 2585fc7f3
+
+Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 30 cells
+INFO: [Opt 31-1021] In phase Sweep, 42 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 2585fc7f3
+
+Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 2585fc7f3
+
+Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 2585fc7f3
+
+Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 22 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              21  |                                             19  |
+|  Constant propagation         |               0  |               0  |                                             18  |
+|  Sweep                        |               0  |              30  |                                             42  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             22  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+Ending Logic Optimization Task | Checksum: 183e13611
+
+Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2750.277 ; gain = 0.000 ; free physical = 14061 ; free virtual = 22622
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 2 BRAM(s) out of a total of 5 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-201] Structural ODC has moved 3 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 3 Total Ports: 10
+Ending PowerOpt Patch Enables Task | Checksum: 1ebeff41d
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14049 ; free virtual = 22610
+Ending Power Optimization Task | Checksum: 1ebeff41d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.89 . Memory (MB): peak = 3092.496 ; gain = 342.219 ; free physical = 14054 ; free virtual = 22615
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1ebeff41d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14054 ; free virtual = 22615
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14054 ; free virtual = 22615
+Ending Netlist Obfuscation Task | Checksum: 14f5a27cf
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14054 ; free virtual = 22615
+INFO: [Common 17-83] Releasing license: Implementation
+39 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3092.496 ; gain = 519.953 ; free physical = 14054 ; free virtual = 22615
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14051 ; free virtual = 22614
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/mlhdlc_sysobj_ex_fixpt_fil_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file mlhdlc_sysobj_ex_fixpt_fil_drc_opted.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_drc_opted.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_drc_opted.rpx
+Command: report_drc -file mlhdlc_sysobj_ex_fixpt_fil_drc_opted.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_drc_opted.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/mlhdlc_sysobj_ex_fixpt_fil_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14035 ; free virtual = 22597
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: eeb0ca52
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14035 ; free virtual = 22597
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14035 ; free virtual = 22597
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11acb0e7d
+
+Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.35 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14028 ; free virtual = 22589
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 20e0a48ae
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.74 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14032 ; free virtual = 22594
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 20e0a48ae
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.74 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14032 ; free virtual = 22594
+Phase 1 Placer Initialization | Checksum: 20e0a48ae
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.76 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14032 ; free virtual = 22594
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1abb7d513
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14024 ; free virtual = 22586
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 1abb7d513
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14024 ; free virtual = 22586
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 1abb7d513
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14013 ; free virtual = 22575
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1bd9eb1cd
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14012 ; free virtual = 22574
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1bd9eb1cd
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14012 ; free virtual = 22574
+Phase 2.1.1 Partition Driven Placement | Checksum: 1bd9eb1cd
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14012 ; free virtual = 22574
+Phase 2.1 Floorplanning | Checksum: 1d2dfdade
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14012 ; free virtual = 22574
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 49 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 24 nets or cells. Created 0 new cell, deleted 24 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14006 ; free virtual = 22568
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             24  |                    24  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             24  |                    24  |           0  |           3  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 733c9a96
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:05 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14006 ; free virtual = 22568
+Phase 2.2 Global Placement Core | Checksum: 131e6cdde
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:06 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14004 ; free virtual = 22566
+Phase 2 Global Placement | Checksum: 131e6cdde
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:06 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14006 ; free virtual = 22568
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 648fd626
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:06 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14006 ; free virtual = 22568
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: f9893af9
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:06 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14005 ; free virtual = 22567
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: e1642ab0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:06 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14005 ; free virtual = 22567
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 73cbcd4a
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:06 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14005 ; free virtual = 22567
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1633e319c
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14003 ; free virtual = 22565
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1116ec53a
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14003 ; free virtual = 22565
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: af072ad8
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14003 ; free virtual = 22565
+Phase 3 Detail Placement | Checksum: af072ad8
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14003 ; free virtual = 22565
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: d524318e
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=7.645 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: c5938f94
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14001 ; free virtual = 22563
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: fbbd4a29
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14001 ; free virtual = 22563
+Phase 4.1.1.1 BUFG Insertion | Checksum: d524318e
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14001 ; free virtual = 22563
+INFO: [Place 30-746] Post Placement Timing Summary WNS=7.645. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 15a3fe7f1
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14001 ; free virtual = 22563
+Phase 4.1 Post Commit Optimization | Checksum: 15a3fe7f1
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14001 ; free virtual = 22563
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 15a3fe7f1
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:07 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14002 ; free virtual = 22564
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 15a3fe7f1
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14002 ; free virtual = 22564
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14002 ; free virtual = 22564
+Phase 4.4 Final Placement Cleanup | Checksum: 1769f0e1b
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14002 ; free virtual = 22564
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1769f0e1b
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14002 ; free virtual = 22564
+Ending Placer Task | Checksum: b77312d6
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14002 ; free virtual = 22564
+INFO: [Common 17-83] Releasing license: Implementation
+73 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:10 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14017 ; free virtual = 22579
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14008 ; free virtual = 22574
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/mlhdlc_sysobj_ex_fixpt_fil_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file mlhdlc_sysobj_ex_fixpt_fil_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14004 ; free virtual = 22567
+INFO: [runtcl-4] Executing : report_utilization -file mlhdlc_sysobj_ex_fixpt_fil_utilization_placed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file mlhdlc_sysobj_ex_fixpt_fil_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 14014 ; free virtual = 22578
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+82 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13992 ; free virtual = 22560
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/mlhdlc_sysobj_ex_fixpt_fil_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 7039ff77 ConstDB: 0 ShapeSum: 4739135f RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 15fcabf01
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13886 ; free virtual = 22424
+Post Restoration Checksum: NetGraph: 75852dec NumContArr: ea459115 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 15fcabf01
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13887 ; free virtual = 22425
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 15fcabf01
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13852 ; free virtual = 22390
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 15fcabf01
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13852 ; free virtual = 22390
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1a5d0aa62
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13843 ; free virtual = 22381
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.665  | TNS=0.000  | WHS=-0.327 | THS=-62.175|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 115430454
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13842 ; free virtual = 22380
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.665  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 141e07573
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13842 ; free virtual = 22380
+Phase 2 Router Initialization | Checksum: 1a72d3048
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13842 ; free virtual = 22380
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00232992 %
+  Global Horizontal Routing Utilization  = 0.00211291 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 1822
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 1822
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 12cc0c3f1
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13843 ; free virtual = 22381
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 145
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.751  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 14b2dd5d8
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13841 ; free virtual = 22379
+Phase 4 Rip-up And Reroute | Checksum: 14b2dd5d8
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13841 ; free virtual = 22379
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: de8cf2a3
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13841 ; free virtual = 22379
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.866  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 125d970dd
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13841 ; free virtual = 22379
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 125d970dd
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13841 ; free virtual = 22379
+Phase 5 Delay and Skew Optimization | Checksum: 125d970dd
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13841 ; free virtual = 22379
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1a20c59bc
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13840 ; free virtual = 22378
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.866  | TNS=0.000  | WHS=0.046  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 12094bdc7
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13840 ; free virtual = 22378
+Phase 6 Post Hold Fix | Checksum: 12094bdc7
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13840 ; free virtual = 22378
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.212437 %
+  Global Horizontal Routing Utilization  = 0.2833 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: ffe08847
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13841 ; free virtual = 22379
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: ffe08847
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13840 ; free virtual = 22378
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1418ce76c
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13820 ; free virtual = 22359
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=7.866  | TNS=0.000  | WHS=0.046  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1418ce76c
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13821 ; free virtual = 22359
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13857 ; free virtual = 22395
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+98 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:20 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13857 ; free virtual = 22395
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3092.496 ; gain = 0.000 ; free physical = 13845 ; free virtual = 22388
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/mlhdlc_sysobj_ex_fixpt_fil_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file mlhdlc_sysobj_ex_fixpt_fil_drc_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_drc_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_drc_routed.rpx
+Command: report_drc -file mlhdlc_sysobj_ex_fixpt_fil_drc_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_drc_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/mlhdlc_sysobj_ex_fixpt_fil_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file mlhdlc_sysobj_ex_fixpt_fil_methodology_drc_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_methodology_drc_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_methodology_drc_routed.rpx
+Command: report_methodology -file mlhdlc_sysobj_ex_fixpt_fil_methodology_drc_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_methodology_drc_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/fpgaproj/mlhdlc_sysobj_ex_fixpt_fil.runs/impl_1/mlhdlc_sysobj_ex_fixpt_fil_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file mlhdlc_sysobj_ex_fixpt_fil_power_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_power_summary_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_power_routed.rpx
+Command: report_power -file mlhdlc_sysobj_ex_fixpt_fil_power_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_power_summary_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+110 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file mlhdlc_sysobj_ex_fixpt_fil_route_status.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file mlhdlc_sysobj_ex_fixpt_fil_timing_summary_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_timing_summary_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file mlhdlc_sysobj_ex_fixpt_fil_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file mlhdlc_sysobj_ex_fixpt_fil_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file mlhdlc_sysobj_ex_fixpt_fil_bus_skew_routed.rpt -pb mlhdlc_sysobj_ex_fixpt_fil_bus_skew_routed.pb -rpx mlhdlc_sysobj_ex_fixpt_fil_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 29 19:47:42 2020...
+[Sun Nov 29 19:47:47 2020] impl_1 finished
+wait_on_run: Time (s): cpu = 00:03:45 ; elapsed = 00:05:46 . Memory (MB): peak = 2243.562 ; gain = 0.000 ; free physical = 15334 ; free virtual = 23876
+# open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2243.562 ; gain = 0.000 ; free physical = 15177 ; free virtual = 23719
+INFO: [Netlist 29-17] Analyzing 106 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2604.062 ; gain = 5.938 ; free physical = 14700 ; free virtual = 23241
+Restored from archive | CPU: 0.280000 secs | Memory: 3.297913 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2604.062 ; gain = 5.938 ; free physical = 14700 ; free virtual = 23241
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2604.062 ; gain = 0.000 ; free physical = 14700 ; free virtual = 23241
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 5 instances
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2604.062 ; gain = 360.500 ; free physical = 14700 ; free virtual = 23241
+# write_bitstream -force mlhdlc_sysobj_ex_fixpt_fil
+Command: write_bitstream -force mlhdlc_sysobj_ex_fixpt_fil
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp input u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp output u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp output u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp output u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp output u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp multiplier stage u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p25m1_mul_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp multiplier stage u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p26m2_mul_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp multiplier stage u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p27m3_mul_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp multiplier stage u_mwfil_chiftop/u_dut/u_mlhdlc_sysobj_ex_fixpt/p28m4_mul_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC RTSTAT-10] No routable loads: 24 net(s) have no routable loads. The problem bus(es) and/or net(s) are u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/ENA_dly_D, u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/ENA_dly_D, u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2:0], u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2:0], and u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2:0].
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 18 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./mlhdlc_sysobj_ex_fixpt_fil.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+9 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3056.559 ; gain = 452.496 ; free physical = 14658 ; free virtual = 23205
+# open_run impl_1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3056.559 ; gain = 0.000 ; free physical = 14659 ; free virtual = 23204
+Restored from archive | CPU: 0.150000 secs | Memory: 2.200386 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3056.559 ; gain = 0.000 ; free physical = 14659 ; free virtual = 23204
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3056.559 ; gain = 0.000 ; free physical = 14659 ; free virtual = 23204
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+# set par_str [report_timing_summary -return_string]
+# set timing_err ""
+# set result [regexp {Timing constraints are not met} $par_str match]
+# if {$result > 0} {
+# 	set timing_err "Warning: Design does not meet all timing constraints."
+# }
+# close_project
+# set log ""
+# lappend log "\n\n------------------------------------"
+# lappend log "   FPGA-in-the-Loop build summary"
+# lappend log "------------------------------------\n"
+# set expected_file mlhdlc_sysobj_ex_fixpt_fil.bit
+# set copied_file "/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/mlhdlc_sysobj_ex_fixpt_fil.bit"
+# if [catch {file copy -force $expected_file ..}] {
+#    file delete ../$expected_file
+#    lappend log "Expected programming file not generated."
+#    lappend log "FPGA-in-the-Loop build failed.\n"
+# } else {
+#    if {[string length $timing_err] > 0} {
+#       lappend log "$timing_err\n"
+#       set warn_str " with warning"
+#    } else {
+#       set warn_str ""
+#    }
+#    lappend log "Programming file generated:"
+#    lappend log "$copied_file\n"
+#    lappend log "FPGA-in-the-Loop build completed$warn_str."
+#    lappend log "You may close this shell.\n"
+# }
+# foreach j $log {puts $j}
+
+
+------------------------------------
+   FPGA-in-the-Loop build summary
+------------------------------------
+
+Programming file generated:
+/home/wardo/Documents/Matlab Projects/Cosimulation and FPGA in the loop tutorial/codegen/mlhdlc_sysobj_ex/fil/mlhdlc_sysobj_ex_fixpt_fil/mlhdlc_sysobj_ex_fixpt_fil.bit
+
+FPGA-in-the-Loop build completed.
+You may close this shell.
+
+# if { [catch {open fpgaproj.log w} log_fid] } {
+# } else {
+#     foreach j $log {puts $log_fid $j}
+# }
+# close $log_fid
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 29 19:48:18 2020...

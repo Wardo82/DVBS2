@@ -22,7 +22,7 @@ mat_bch_encoder = comm.BCHEncoder('CodewordLength', bch.n, ...
 message = ones(bch.k, 1);
 
 %% Encode frame using BCH object  
-bchOut = bch.encode(message')';
+bchOut = bch.encode(message);
 
 %% Encode frame using MATLAB's comm object
 bchEncOut = mat_bch_encoder(message); 

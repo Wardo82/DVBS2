@@ -33,9 +33,6 @@ lfsr_message = [message; zeros(n-k, 1)];
 lfsr_generator = fliplr(generator'); % Flip the generator to ascending order
 for i = 1:length(lfsr_message)
     parity_bits = bch_lfsr_encode(lfsr_generator, lfsr_message(i), parity_bits);
-    if mod(i/192, 2) == 0
-        disp(i)
-    end
 end
 codeword = [message; fliplr(parity_bits')'];
 codeword_m = bch_encoder(message);

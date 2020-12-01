@@ -140,7 +140,7 @@ classdef BCH
             obj.primitive = de2bi(primpoly(m,'min'), 'left-msb');
             
             % Generate field over GF(m) for decoding
-            obj.generateField(m);
+            obj.field = obj.generateField(m);
         end
         
         function codeword = encode(obj, message)
@@ -148,17 +148,26 @@ classdef BCH
             %returns the resulting codeword
             % As per the ETSI estandar documentation:
             % 1.- Multiply the message polynomial m(x) by x^(n−k) .
-            syms D
-            x = sym2poly(D^(obj.n-obj.k)); 
-            msg = gf(message, 2);
-            m = gf(x, 2);
-            tmp = conv(msg, m);
-            % 2.- Divide x^(n−k)m(x) by g(x), the generator polynomial. Let 
-            % d(x) be the remainder.
-            gen = gf(obj.generator, 2);
-            [~, d] = deconv(tmp, gen);
-            % Set the codeword polynomial c(x) = x^(n−k)m(x) + d(x).
-            codeword = double(xor(tmp.x, d.x));
+            % Encode message with bch block
+            parity_bits = zeros(obj.n-obj.k, 1);
+            % 1.- Multiply the message polynomial m(x) by x^(n−k) .
+            lfsr_message = [message; zeros(obj.n-obj.k, 1)];
+            lfsr_generator = fliplr(obj.generator); % Flip the generator to ascending order
+            for i = 1:length(lfsr_message)
+                parity_bits = obj.bch_lfsr_encode(lfsr_generator, lfsr_message(i), parity_bits);
+            end
+            codeword = [message; fliplr(parity_bits')'];
+%             syms D
+%             x = sym2poly(D^(obj.n-obj.k)); 
+%             msg = gf(message, 2);
+%             m = gf(x, 2);
+%             tmp = conv(msg, m);
+%             % 2.- Divide x^(n−k)m(x) by g(x), the generator polynomial. Let 
+%             % d(x) be the remainder.
+%             gen = gf(obj.generator, 2);
+%             [~, d] = deconv(tmp, gen);
+%             % Set the codeword polynomial c(x) = x^(n−k)m(x) + d(x).
+%             codeword = double(xor(tmp.x, d.x));
         end
         
         function message = decode(obj, codeword)
@@ -167,8 +176,8 @@ classdef BCH
             p = 2; % Prime number as base of the GF 
             m = 16; % Extension degree
             num_elem = p^m-1; % Number of elements
-            pad = 2^16-length(codeword);
-            R = [zeros([1 pad]) codeword];
+            pa = 2^16-length(codeword);
+            R = [zeros(pa, 1); codeword];
             % 1. Compute the syndrome
             % The first step in decoding BCH codes is computing the syndrome polynomial
             % using the received codeword R and the powers of alpha
@@ -178,10 +187,10 @@ classdef BCH
             S = zeros(1, 2*obj.t);
             % TODO: This can be optimized by the fact that S2j = Sj^2
             for j = 1:2*obj.t
-                s = zeros(1, 16);
+                s = zeros(16, 1);
                 % Sum Ri*alpha^(ij) over all n
                 for i = 0:num_elem-1
-                    exp = mod((i)*j, num_elem); % We power each alpha to the jth power as coeffitiens for S(x)
+                    exp = mod(i*j, num_elem); % We power each alpha to the jth power as coeffitiens for S(x)
                     s = xor(s, R(i+1)*obj.field(exp+2, :)); % We sum over all elements to get Sj
                 end
                 [~, tmp] = ismember(s, obj.field,'rows'); % For simplycity we store it in decimal representation
@@ -226,13 +235,13 @@ classdef BCH
 
             C = xor(R, E);
             
-            message = C(pad+1:pad+obj.k);
+            message = C(pa+1:pa+obj.k);
             
             clear tmp exp s a v r i k x  y j root;
         end
         
         % === Create field matrix ===
-        function obj = generateField(obj, m)
+        function field = generateField(obj, m)
             % === Generate field over GF(m) for decoding ===
             p = 2; % Prime number as base of the GF 
             num_elem = p^m-1; % Number of elements
@@ -260,9 +269,24 @@ classdef BCH
                 galois_field(i, :) = tmp;
             end
             
-            obj.field = galois_field;
+            field = galois_field;
             
             clear aux tmp i;
+        end
+        function state_registers = bch_lfsr_encode(obj, generator, input, state_registers)    
+            g = length(generator) - 1; % Number of registers
+            % Compute the output of the LFSR, the last bit of the registers.
+            out = state_registers(g);
+            % Update the states in the LFSR
+            for s = g:-1:2
+                % Compute "and" flag
+                flag = and(out, generator(s));
+                % Each state will be the result of:
+                % state(s-1) xor generator_polinomial coefficient
+                state_registers(s) = xor(state_registers(s-1), flag);
+            end
+            % First register is: input xor generator(1)
+            state_registers(1) = xor(input, and(out, generator(1)));
         end
     end
 end
