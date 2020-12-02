@@ -157,7 +157,7 @@
     <param.hdl.TargetInterface>
       <param.hdl.TargetInterface />
     </param.hdl.TargetInterface>
-    <param.hdl.TargetLanguage>option.hdl.VHDL</param.hdl.TargetLanguage>
+    <param.hdl.TargetLanguage />
     <param.hdl.CheckConformance>false</param.hdl.CheckConformance>
     <param.hdl.LaunchConformanceReport>false</param.hdl.LaunchConformanceReport>
     <param.hdl.GenerateHDLCode>true</param.hdl.GenerateHDLCode>

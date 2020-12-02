@@ -39,9 +39,3 @@ codeword_m = bch_encoder(message);
 if ~(isequal(codeword, codeword_m))
     error("The codes do not match.");
 end
-
-message = randi([0 1], k, 1);
-codeword = bch_lfsr_encode(generator, message);
-
-message = randi([0 1], k, 1);
-codeword = bch_lfsr_encode(generator, message);
