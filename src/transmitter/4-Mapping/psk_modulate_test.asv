@@ -16,3 +16,7 @@ for index = 1:height(frame_reshape)
 end
 
 scatterplot(constellation)
+
+modulator = psk_modulator();
+constellation = I + 1i*Q;modulator.step(frame);
+scatterplot(constellation)

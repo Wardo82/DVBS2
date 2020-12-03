@@ -55,11 +55,8 @@ classdef bch_encoder < matlab.System
         end
 
         function out = getOutputDataTypeImpl(obj)
-            % Return data type for each output port
-            out = "logical";
-
-            % Example: inherit data type from first input port
-            % out = propagatedInputDataType(obj,1);
+            % Inherit data type from first input port
+            out = propagatedInputDataType(obj,1);
         end
 
         function out = isOutputComplexImpl(obj)

@@ -1,4 +1,4 @@
-function [I, Q] = modulate_8psk(input_bits, A)
+function [I, Q] = psk_modulate(input_bits, A)
 % 8psk_modulate Maps the bits in a stream of bits to an array of complex
 % symbols following an 16APSK modulation scheme.
 % @arg input_bit: Must be a vector with only 3 bits. The first
