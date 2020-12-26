@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1607785463">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="fil_test_fil.vdi"/>
+  <File Type="BG-DRC" Name="fil_test_fil.drc"/>
+  <File Type="BG-BGN" Name="fil_test_fil.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="fil_test_fil.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="fil_test_fil.ltx"/>
+  <File Type="RBD_FILE" Name="fil_test_fil.rbd"/>
+  <File Type="NPI_FILE" Name="fil_test_fil.npi"/>
+  <File Type="RNPI_FILE" Name="fil_test_fil.rnpi"/>
+  <File Type="CFI_FILE" Name="fil_test_fil.cfi"/>
+  <File Type="RCFI_FILE" Name="fil_test_fil.rcfi"/>
+  <File Type="PDI-FILE" Name="fil_test_fil.pdi"/>
+  <File Type="BITSTR-MMI" Name="fil_test_fil.mmi"/>
+  <File Type="BITSTR-BMM" Name="fil_test_fil_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="fil_test_fil.nky"/>
+  <File Type="BITSTR-RBT" Name="fil_test_fil.rbt"/>
+  <File Type="BITSTR-MSK" Name="fil_test_fil.msk"/>
+  <File Type="BG-BIN" Name="fil_test_fil.bin"/>
+  <File Type="BG-BIT" Name="fil_test_fil.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="fil_test_fil_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="fil_test_fil_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="fil_test_fil_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="fil_test_fil_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="fil_test_fil_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="fil_test_fil_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fil_test_fil_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="fil_test_fil_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="fil_test_fil_bus_skew_routed.rpx"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="fil_test_fil_postplace_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="fil_test_fil_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fil_test_fil_methodology_drc_routed.rpx"/>
+  <File Type="PLACE-UTIL" Name="fil_test_fil_utilization_placed.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="fil_test_fil_methodology_drc_opted.rpt"/>
+  <File Type="PLACE-CLK" Name="fil_test_fil_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="fil_test_fil_io_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="fil_test_fil_control_sets_placed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fil_test_fil_methodology_drc_routed.pb"/>
+  <File Type="PLACE-DCP" Name="fil_test_fil_placed.dcp"/>
+  <File Type="INIT-TIMING" Name="fil_test_fil_timing_summary_init.rpt"/>
+  <File Type="PWROPT-DRC" Name="fil_test_fil_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="fil_test_fil_timing_summary_pwropted.rpt"/>
+  <File Type="REPORTS-TCL" Name="fil_test_fil_reports.tcl"/>
+  <File Type="PLACE-TIMING" Name="fil_test_fil_timing_summary_placed.rpt"/>
+  <File Type="OPT-DRC" Name="fil_test_fil_drc_opted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="fil_test_fil_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PA-TCL" Name="fil_test_fil.tcl"/>
+  <File Type="OPT-TIMING" Name="fil_test_fil_timing_summary_opted.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="fil_test_fil_utilization_placed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="fil_test_fil_methodology_drc_routed.rpt"/>
+  <File Type="OPT-DCP" Name="fil_test_fil_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="fil_test_fil.hwdef"/>
+  <File Type="PHYSOPT-TIMING" Name="fil_test_fil_timing_summary_physopted.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="fil_test_fil_incremental_reuse_placed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="fil_test_fil_drc_routed.rpx"/>
+  <File Type="PWROPT-DCP" Name="fil_test_fil_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="fil_test_fil_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="fil_test_fil_drc_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="fil_test_fil_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="fil_test_fil_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="fil_test_fil_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="fil_test_fil_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="fil_test_fil_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="fil_test_fil_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="fil_test_fil_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="fil_test_fil_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="fil_test_fil_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="fil_test_fil_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="fil_test_fil_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="fil_test_fil_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="fil_test_fil_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="fil_test_fil_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="fil_test_fil_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="fil_test_fil_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="fil_test_fil_bus_skew_routed.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../filsrc/jtag_mac.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fil_test.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/fil_test_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/jtag_mac_fifo_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/mwfil_bus2dut.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/mwfil_chifcore.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/mwfil_chiftop.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/mwfil_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/mwfil_dpscram.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/mwfil_dut2bus.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/mwfil_udfifo.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/simcycle_fifo_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/fil_test_fil.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../filsrc/fil_test_fil.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="fil_test_fil"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="jtag_mac_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="simcycle_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

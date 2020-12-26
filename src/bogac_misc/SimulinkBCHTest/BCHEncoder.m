@@ -16,7 +16,7 @@ classdef BCHEncoder < matlab.System
     end
     properties
         % The generator polynomial in ascending order
-        lfsr_generator = logical([1  1  1  0  0  1  1  1  1  0  1  0  1 ... 
+        lfsr_generator = uint8([1  1  1  0  0  1  1  1  1  0  1  0  1 ... 
                                             0  1  0  0  1  0  0  0  0  0  0  0  1  1  0 ... 
                                             0  1  1  0  1  1  1  0  1  1  1  1  1  0  1 ... 
                                             0  0  0  0  1  1  1  1  0  0  0  1  0  1  1 ...
@@ -35,9 +35,9 @@ classdef BCHEncoder < matlab.System
         end
         function codeword = stepImpl(obj, message)
             % 1.- Multiply the message polynomial m(x) by x^(n−k) .
-            lfsr_message = [message; false(192, 1)];
+            lfsr_message = [message; zeros(192, 1)];
             % Parity bit column vector
-            parity_bits = false(192, 1);
+            parity_bits = zeros(192, 1);
             for i = 1:length(lfsr_message)
                 parity_bits = obj.bch_lfsr_encode(obj.lfsr_generator, lfsr_message(i), parity_bits);
             end
@@ -56,7 +56,7 @@ classdef BCHEncoder < matlab.System
 
         function out = getOutputDataTypeImpl(obj)
             % Return data type for each output port
-            out = "logical";
+            out = "uint8";
 
             % Example: inherit data type from first input port
             % out = propagatedInputDataType(obj,1);

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Sat Dec 12 16:08:00 2020
+# Process ID: 26028
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/bogac_misc/SimulinkBCHTest/fpgaproj/fil_test_fil.runs/synth_1
+# Command line: vivado -log fil_test_fil.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fil_test_fil.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/bogac_misc/SimulinkBCHTest/fpgaproj/fil_test_fil.runs/synth_1/fil_test_fil.vds
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/bogac_misc/SimulinkBCHTest/fpgaproj/fil_test_fil.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source fil_test_fil.tcl -notrace

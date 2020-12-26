@@ -33,15 +33,15 @@ classdef bch_encoder < matlab.System
     methods (Access = protected)
         function setupImpl(~)
         end
-        function codeword = stepImpl(obj, message)
+        function bch_codeword = stepImpl(obj, message)
             % 1.- Multiply the message polynomial m(x) by x^(n−k) .
-            lfsr_message = [message; false(192, 1)];
+            lfsr_message = [message; int32(zeros(192, 1))];
             % Parity bit column vector
-            parity_bits = false(192, 1);
+            parity_bits = int32(zeros(192, 1));
             for i = 1:length(lfsr_message)
                 parity_bits = obj.bch_lfsr_encode(obj.lfsr_generator, lfsr_message(i), parity_bits);
             end
-            codeword = [message; fliplr(parity_bits')'];
+            bch_codeword = [message; fliplr(parity_bits')'];
         end
         function releaseImpl(~)
         end

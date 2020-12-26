@@ -1,4 +1,4 @@
-function random_frame = pad_and_scramble(frame)
+function random_frame = pad_and_scramble(in_frame)
 % Pad and Scramble: Stream adaptation provides padding to complete a constant 
 % length (Kbch bits) BBFRAME and scrambling. Kbch depends on the FEC rate,
 % as reported in table 5. Padding may be applied in circumstances when the
@@ -7,8 +7,8 @@ function random_frame = pad_and_scramble(frame)
 % a BBFRAME.
     % Pad zeros to the end of the received message
     Kbch = 48408;
-    num_of_pad_bits = Kbch - length(frame);
-    frame = [frame zeros(num_of_pad_bits, 1)];
+    num_of_pad_bits = Kbch - length(in_frame);
+    frame = [in_frame zeros(num_of_pad_bits, 1)];
     
     % Scramble using PRBS
     state_registers = [1 0 0 1 0 1 0 1 0 0 0 0 0 0 0];

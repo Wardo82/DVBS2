@@ -203,7 +203,7 @@
     <param.hdl.TargetInterface>
       <param.hdl.TargetInterface />
     </param.hdl.TargetInterface>
-    <param.hdl.TargetLanguage>option.hdl.VHDL</param.hdl.TargetLanguage>
+    <param.hdl.TargetLanguage />
     <param.hdl.CheckConformance>false</param.hdl.CheckConformance>
     <param.hdl.LaunchConformanceReport>false</param.hdl.LaunchConformanceReport>
     <param.hdl.GenerateHDLCode>true</param.hdl.GenerateHDLCode>
@@ -272,7 +272,7 @@
     <param.hdl.InputType>option.hdl.StdLogicVector</param.hdl.InputType>
     <param.hdl.OutputType>option.hdl.SameAsInputType</param.hdl.OutputType>
     <param.hdl.ClockEnableOutputPort>ce_out</param.hdl.ClockEnableOutputPort>
-    <param.hdl.ScalarizePorts>option.hdl.off</param.hdl.ScalarizePorts>
+    <param.hdl.ScalarizePorts>false</param.hdl.ScalarizePorts>
     <param.hdl.MapPersistentVarsToRAM>true</param.hdl.MapPersistentVarsToRAM>
     <param.hdl.RAMThreshold>256</param.hdl.RAMThreshold>
     <param.hdl.MapPipelineDelaysToRAM>false</param.hdl.MapPipelineDelaysToRAM>
@@ -311,7 +311,7 @@
     <param.hdl.HDLCompileTerm />
     <param.hdl.HDLSimFilePostfix>_sim.do</param.hdl.HDLSimFilePostfix>
     <param.hdl.HDLSimInit>onbreak resume\nonerror resume\n</param.hdl.HDLSimInit>
-    <param.hdl.HDLSimCmd>vsim -voptargs=+acc %s.%s\n</param.hdl.HDLSimCmd>
+    <param.hdl.HDLSimCmd>vsim -novopt %s.%s\n</param.hdl.HDLSimCmd>
     <param.hdl.HDLSimViewWaveCmd>add wave sim:%s\n</param.hdl.HDLSimViewWaveCmd>
     <param.hdl.HDLSimTerm>run -all\n</param.hdl.HDLSimTerm>
     <param.hdl.HDLSynthTool>option.hdl.None</param.hdl.HDLSynthTool>
@@ -655,23 +655,16 @@
       <step key="category.workflow.fpgaturnkeyprogramtargetdevice" skipped="false" />
     </workflow>
     <matlab>
-      <root>/home/wardo/Documents/MATLAB</root>
+      <root>/home/wardo/Documents/Matlab2020</root>
       <toolboxes>
         <toolbox name="matlabcoder" />
-        <toolbox name="gpucoder" />
         <toolbox name="fixedpoint" />
         <toolbox name="matlabhdlcoder" />
-        <toolbox name="neuralnetwork" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
           <enabled>true</enabled>
         </matlabcoder>
-      </toolbox>
-      <toolbox>
-        <gpucoder>
-          <enabled>true</enabled>
-        </gpucoder>
       </toolbox>
       <toolbox>
         <fixedpoint>
@@ -683,11 +676,6 @@
           <enabled>true</enabled>
         </matlabhdlcoder>
       </toolbox>
-      <toolbox>
-        <neuralnetwork>
-          <enabled>true</enabled>
-        </neuralnetwork>
-      </toolbox>
     </matlab>
     <platform>
       <unix>true</unix>
@@ -698,7 +686,7 @@
       <vista>false</vista>
       <linux>true</linux>
       <solaris>false</solaris>
-      <osver>4.15.0-124-generic</osver>
+      <osver>4.15.0-128-generic</osver>
       <os32>false</os32>
       <os64>true</os64>
       <arch>glnxa64</arch>
