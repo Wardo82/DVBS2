@@ -28,20 +28,16 @@ function [c] = compute_error_locator_v2(syndrome, m, field, alpha_powers)
             % Compute the correction factor 
             correction_factor = uint32(zeros(polynom_length, 1));
             % This is d *  dm^-1
-            dd_sum = modulo(alpha_powers(d) + n_max - alpha_powers(dm), n_max);
+            power_minus = field(n_max-alpha_powers(dm)); % dm^-1
+            ddm = gf_mul_elements(d, power_minus, field, alpha_powers, n_max);
             for i = 0:polynom_length - 1
-                if p(i+1) ~= 0
-                    % Here we compute d*d^-1*p(x_i)
-                    ddp_sum = modulo(dd_sum + alpha_powers(p(i+1)), n_max);
-                    if ddp_sum == 0
-                        correction_factor(i + l + 1) = 1;
-                    else
-                        correction_factor(i + l + 1) = field(ddp_sum);
-                    end
-                end
+                % This is d * dm^-1 * p
+                ddmp = gf_mul_elements(ddm, p(i+1), field, alpha_powers, n_max);
+                % This is d * dm^-1 * x^l * p
+                correction_factor(i+l+1) = ddmp;
             end
             % Finally we add the correction factor to get the new locator
-            c = bitxor(c, correction_factor);
+            c = bitxor(c, correction_factor(1:polynom_length));
             
             if (2*L >= k) % No length change in update
                 l = l + 1;

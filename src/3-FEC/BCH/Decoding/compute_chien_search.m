@@ -1,7 +1,7 @@
 function [error_locations, errors] = compute_chien_search(n, locator_polynomial, field, alpha_powers, n_max)
        
     l = length(locator_polynomial);
-    error_locations = zeros(l, 1);
+    error_locations = zeros(l-1, 1);
     errors = 0;
     coefficient_buffer = locator_polynomial;
     alpha_degrees = uint32(1:l)';
@@ -19,7 +19,7 @@ function [error_locations, errors] = compute_chien_search(n, locator_polynomial,
         % Signal the error
         if tmp == 1       
             errors = errors + 1;
-            error_locations(errors) = n - (n_max - i);
+            error_locations(errors) = n_max - i;
         end
     end
 end

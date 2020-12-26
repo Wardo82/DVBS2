@@ -9,7 +9,7 @@ function verify_error_locator(locator, error_vector, t, field, alpha_powers, n_m
             if exponent == 0
                 elem = locator(v+1);
             else
-                elem = gf_mul_elements(locator(v+1), field(exponent), field, alpha_powers, n_max);
+                elem = gf_mul_elements(locator(v+1), field(exponent+1), field, alpha_powers, n_max);
             end
             sum = bitxor(sum, elem);
         end

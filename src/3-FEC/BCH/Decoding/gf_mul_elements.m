@@ -3,8 +3,6 @@ function [y] = gf_mul_elements(a, b, field, alpha_powers, n_max)
 %   Detailed explanation goes here
     if a == 0 || b == 0
         y = 0;
-    elseif a == 1 || b == 1
-        y = a * b;  
     else
         power_a = alpha_powers(a);
         power_b = alpha_powers(b);

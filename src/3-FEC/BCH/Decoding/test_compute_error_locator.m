@@ -49,10 +49,27 @@ enc_bits(2) = 1; enc_bits(4) = 1; enc_bits(9) = 1;
                 compute_chien_search(length(enc_bits), ...
                                      locator_polynomial, ...
                                      gf_table, alpha_powers, uint32(2^m - 1));
-                                 
+%% Table 7.1 from Algebraic Codes for data transmission
+t = 3;
+m = 4;
+load('userGftable.mat')
+gf_table = [GF_TABLE_STRUCT(m).table1];
+alpha_powers = GF_TABLE_STRUCT(m).table2;
+syndrome = [gf_table(14) gf_table(13) 1 gf_table(11) gf_table(5) 1]';
+locator_polynomial = compute_error_locator_v2(syndrome, m, gf_table, alpha_powers);
+
+if ~isequal(locator_polynomial, [1 gf_table(14) gf_table(11) gf_table(14)]')
+    error("Error in Table 7.1 from Algebraic Codes for data transmission.")
+end
+enc_bits = zeros(15, 1);
+enc_bits(2) = 1; enc_bits(4) = 1; enc_bits(9) = 1;
+[error_locations, errors] = ...
+                compute_chien_search(length(enc_bits), ...
+                                     locator_polynomial, ...
+                                     gf_table, alpha_powers, uint32(2^m - 1));
 %% Testing for m = 16. The syndrome should be 0 for a codeword without errors.
 clear variables
-t = 3; 
+t = 2; 
 m = 16;
 n_max = 2^m - 1;
 primitive_poly = 65581;
@@ -103,7 +120,7 @@ verify_syndromes(syndrome, fliplr(random_errors), t, gf_table, n_max);
 % Error locator polynomial (lambda) calculation
 locator_polynomial = compute_error_locator(syndrome, t, m, gf_table, alpha_powers);
 c = compute_error_locator_v2(syndrome, m, gf_table, alpha_powers);
-verify_error_locator(c, fliplr(random_errors), t, gf_table, alpha_powers, n_max);
+verify_error_locator(c, fliplr(random_errors), t, gf_table, alpha_tuples, n_max);
 
 [error_locations, errors] = ...
                 compute_chien_search(length(received_code), ...
