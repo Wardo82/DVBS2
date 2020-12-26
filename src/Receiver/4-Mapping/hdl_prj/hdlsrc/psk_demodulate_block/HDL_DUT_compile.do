@@ -5,7 +5,6 @@ vcom  nfp_relop_single.vhd
 vcom  nfp_relop_single_block.vhd
 vcom  value_within.vhd
 vcom  value_within3.vhd
-vcom  value_within5.vhd
 vcom  nfp_relop_single_block1.vhd
 vcom  value_within_pi.vhd
 vcom  hard_decision_demod.vhd

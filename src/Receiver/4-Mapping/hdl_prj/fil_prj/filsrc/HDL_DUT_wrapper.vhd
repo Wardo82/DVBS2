@@ -1,7 +1,7 @@
 
 -- ----------------------------------------------
 -- File Name: HDL_DUT_wrapper.vhd
--- Created:   26-Dec-2020 16:06:37
+-- Created:   26-Dec-2020 18:16:09
 -- Copyright  2020 MathWorks, Inc.
 -- ----------------------------------------------
 
@@ -25,13 +25,13 @@ ARCHITECTURE rtl of HDL_DUT_wrapper IS
 COMPONENT HDL_DUT IS 
 PORT (
       inphase                         : IN  std_logic_vector(31 DOWNTO 0);
-      reset_x                         : IN  std_logic;
-      clk                             : IN  std_logic;
-      clk_enable                      : IN  std_logic;
       quadrature                      : IN  std_logic_vector(31 DOWNTO 0);
-      out_0                           : OUT std_logic_vector(31 DOWNTO 0);
+      clk                             : IN  std_logic;
+      reset_x                         : IN  std_logic;
+      clk_enable                      : IN  std_logic;
       out_1                           : OUT std_logic_vector(31 DOWNTO 0);
-      out_2                           : OUT std_logic_vector(31 DOWNTO 0)
+      out_2                           : OUT std_logic_vector(31 DOWNTO 0);
+      out_0                           : OUT std_logic_vector(31 DOWNTO 0)
 );
 END COMPONENT;
 
@@ -52,14 +52,14 @@ BEGIN
 
 u_HDL_DUT: HDL_DUT 
 PORT MAP(
-        inphase              => inphase,
-        out_0                => out_0,
         out_1                => out_1,
-        out_2                => out_2,
-        reset_x              => dut_reset,
+        inphase              => inphase,
+        quadrature           => quadrature,
         clk                  => clk,
-        clk_enable           => enb,
-        quadrature           => quadrature
+        reset_x              => dut_reset,
+        out_2                => out_2,
+        out_0                => out_0,
+        clk_enable           => enb
 );
 
 dut_reset <= reset;

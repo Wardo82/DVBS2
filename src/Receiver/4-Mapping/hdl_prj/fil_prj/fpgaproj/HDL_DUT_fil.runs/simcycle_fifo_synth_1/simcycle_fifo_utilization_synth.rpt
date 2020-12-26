@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.1.1 (lin64) Build 2960000 Wed Aug  5 22:57:21 MDT 2020
-| Date         : Sat Dec 26 16:09:02 2020
-| Host         : Wardo running 64-bit Ubuntu 18.04.5 LTS
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Dec 26 18:17:57 2020
+| Host         : Jarvis running 64-bit major release  (build 9200)
 | Command      : report_utilization -file simcycle_fifo_utilization_synth.rpt -pb simcycle_fifo_utilization_synth.pb
 | Design       : simcycle_fifo
 | Device       : 7z020clg484-1

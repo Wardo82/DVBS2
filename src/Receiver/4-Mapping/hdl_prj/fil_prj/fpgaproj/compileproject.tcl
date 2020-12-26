@@ -17,7 +17,7 @@ lappend log "\n\n------------------------------------"
 lappend log "   FPGA-in-the-Loop build summary"
 lappend log "------------------------------------\n"
 set expected_file HDL_DUT_fil.bit
-set copied_file /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/HDL_DUT_fil.bit
+set copied_file D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/HDL_DUT_fil.bit
 if [catch {file copy -force $expected_file ..}] {
    file delete ../$expected_file
    lappend log "Expected programming file not generated."

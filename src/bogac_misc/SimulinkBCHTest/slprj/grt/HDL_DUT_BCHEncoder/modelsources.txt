@@ -1,2 +1,0 @@
-  HDL_DUT_BCHEncoder.c
-

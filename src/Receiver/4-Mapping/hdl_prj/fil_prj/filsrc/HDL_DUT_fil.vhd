@@ -1,7 +1,7 @@
 
 -- ----------------------------------------------
 -- File Name: HDL_DUT_fil.vhd
--- Created:   26-Dec-2020 16:06:37
+-- Created:   26-Dec-2020 18:16:09
 -- Copyright  2020 MathWorks, Inc.
 -- ----------------------------------------------
 
@@ -19,8 +19,8 @@ USE UNISIM.VComponents.all;
 
 ENTITY HDL_DUT_fil IS 
 PORT (
-      sysclk                          : IN  std_logic;
-      sysrst                          : IN  std_logic
+      sysrst                          : IN  std_logic;
+      sysclk                          : IN  std_logic
 );
 END HDL_DUT_fil;
 
@@ -28,44 +28,44 @@ ARCHITECTURE rtl of HDL_DUT_fil IS
 
 COMPONENT clk_wiz_0 IS 
 PORT (
-      clk_in1                         : IN  std_logic;
       reset                           : IN  std_logic;
-      locked                          : OUT std_logic;
-      clk_out1                        : OUT std_logic
+      clk_in1                         : IN  std_logic;
+      clk_out1                        : OUT std_logic;
+      locked                          : OUT std_logic
 );
 END COMPONENT;
 
 COMPONENT BSCANE2 IS 
 PORT (
       TDO                             : IN  std_logic;
-      TCK                             : OUT std_logic;
-      TDI                             : OUT std_logic;
-      TMS                             : OUT std_logic;
-      UPDATE                          : OUT std_logic;
-      CAPTURE                         : OUT std_logic;
       RESET                           : OUT std_logic;
+      TCK                             : OUT std_logic;
       DRCK                            : OUT std_logic;
-      RUNTEST                         : OUT std_logic;
+      TDI                             : OUT std_logic;
       SEL                             : OUT std_logic;
-      SHIFT                           : OUT std_logic
+      CAPTURE                         : OUT std_logic;
+      UPDATE                          : OUT std_logic;
+      RUNTEST                         : OUT std_logic;
+      SHIFT                           : OUT std_logic;
+      TMS                             : OUT std_logic
 );
 END COMPONENT;
 
 COMPONENT jtag_mac IS 
 PORT (
-      chif_clk                        : IN  std_logic;
-      sys_rst                         : IN  std_logic;
-      tck                             : IN  std_logic;
-      tdi                             : IN  std_logic;
-      chif_dout                       : IN  std_logic_vector(7 DOWNTO 0);
-      chif_din_ready                  : IN  std_logic;
       chif_dout_valid                 : IN  std_logic;
+      tck                             : IN  std_logic;
+      sys_rst                         : IN  std_logic;
+      tdi                             : IN  std_logic;
+      chif_din_ready                  : IN  std_logic;
+      chif_clk                        : IN  std_logic;
+      chif_dout                       : IN  std_logic_vector(7 DOWNTO 0);
       chif_simcycle                   : OUT std_logic_vector(15 DOWNTO 0);
-      chif_reset                      : OUT std_logic;
-      chif_din                        : OUT std_logic_vector(7 DOWNTO 0);
       chif_din_valid                  : OUT std_logic;
-      chif_dout_ready                 : OUT std_logic;
-      tdo                             : OUT std_logic
+      chif_reset                      : OUT std_logic;
+      tdo                             : OUT std_logic;
+      chif_din                        : OUT std_logic_vector(7 DOWNTO 0);
+      chif_dout_ready                 : OUT std_logic
 );
 END COMPONENT;
 
@@ -114,42 +114,42 @@ BEGIN
 
 u_clk_wiz_0: clk_wiz_0 
 PORT MAP(
-        clk_in1              => sysclk,
-        locked               => locked,
         reset                => dcm_reset,
-        clk_out1             => dutClk
+        clk_out1             => dutClk,
+        clk_in1              => sysclk,
+        locked               => locked
 );
 
 u_BSCANE2: BSCANE2 
 PORT MAP(
-        TCK                  => TCK,
-        TDI                  => TDI,
-        TMS                  => TMS,
-        UPDATE               => UPDATE,
-        TDO                  => TDO,
-        CAPTURE              => CAPTURE,
         RESET                => RESET,
+        TCK                  => TCK,
         DRCK                 => DRCK,
-        RUNTEST              => RUNTEST,
+        TDI                  => TDI,
         SEL                  => SEL,
-        SHIFT                => SHIFT
+        CAPTURE              => CAPTURE,
+        TDO                  => TDO,
+        UPDATE               => UPDATE,
+        RUNTEST              => RUNTEST,
+        SHIFT                => SHIFT,
+        TMS                  => TMS
 );
 
 u_jtag_mac: jtag_mac 
 PORT MAP(
+        chif_dout_valid      => dout_valid,
         chif_simcycle        => simcycle,
-        chif_clk             => dutClk,
-        sys_rst              => mac_reset,
+        chif_din_valid       => din_valid,
         chif_reset           => chif_reset,
         tck                  => TCK,
+        tdo                  => TDO,
+        sys_rst              => mac_reset,
         tdi                  => TDI,
-        chif_din             => din,
-        chif_dout            => dout,
-        chif_din_valid       => din_valid,
-        chif_dout_ready      => dout_ready,
         chif_din_ready       => din_ready,
-        chif_dout_valid      => dout_valid,
-        tdo                  => TDO
+        chif_din             => din,
+        chif_clk             => dutClk,
+        chif_dout_ready      => dout_ready,
+        chif_dout            => dout
 );
 
 u_mwfil_chiftop: mwfil_chiftop 

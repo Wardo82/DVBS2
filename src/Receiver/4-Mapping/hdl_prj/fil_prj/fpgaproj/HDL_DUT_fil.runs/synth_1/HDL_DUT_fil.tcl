@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/HDL_DUT_fil.tcl"
+  variable script "D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/HDL_DUT_fil.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,57 +77,56 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.cache/wt [current_project]
-set_property parent.project_path /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.xpr [current_project]
+set_property webtalk.parent_dir D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.cache/wt [current_project]
+set_property parent.project_path D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.cache/ip [current_project]
+set_property ip_output_repo d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v
+read_verilog -library xil_defaultlib D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v
 read_vhdl -library xil_defaultlib {
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/HDL_DUT_pac.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_relop_single_block.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_div_single.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_atan_single.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_sub_single.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_add_single.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_relop_single.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/value_within.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/value_within3.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_relop_single_block1.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/value_within_pi.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/value_within5.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/hard_decision_demod.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/HDL_DUT.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_bus2dut.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_controller.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dut2bus.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd
-  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/HDL_DUT_pac.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_relop_single_block.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_div_single.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_atan_single.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_sub_single.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_add_single.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_relop_single.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/value_within.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/value_within3.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/nfp_relop_single_block1.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/value_within_pi.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/hard_decision_demod.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block/HDL_DUT.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_bus2dut.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_controller.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dut2bus.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd
+  D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd
 }
-read_ip -quiet /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo.xci
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo.xdc]
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo_ooc.xdc]
+read_ip -quiet d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo.xci
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/simcycle_fifo/simcycle_fifo.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/simcycle_fifo/simcycle_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/simcycle_fifo/simcycle_fifo_ooc.xdc]
 
-read_ip -quiet /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xci
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xdc]
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_ooc.xdc]
+read_ip -quiet d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xci
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.gen/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -138,8 +137,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc
-set_property used_in_implementation false [get_files /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc]
+read_xdc D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc
+set_property used_in_implementation false [get_files D:/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
@@ -147,6 +146,9 @@ close [open __synthesis_is_running__ w]
 OPTRACE "synth_design" START { }
 synth_design -top HDL_DUT_fil -part xc7z020clg484-1
 OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
