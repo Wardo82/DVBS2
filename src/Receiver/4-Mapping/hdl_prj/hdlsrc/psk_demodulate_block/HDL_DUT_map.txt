@@ -1,0 +1,14 @@
+ --> HDL_DUT_pac
+psk_demodulate_block/HDL_DUT/hard_decision_demod/value_within/nfp_relop_single --> nfp_relop_single
+psk_demodulate_block/HDL_DUT/nfp_relop_single --> nfp_relop_single_block
+psk_demodulate_block/HDL_DUT/hard_decision_demod/value_within --> value_within
+psk_demodulate_block/HDL_DUT/hard_decision_demod/value_within3 --> value_within3
+psk_demodulate_block/HDL_DUT/hard_decision_demod/value_within5 --> value_within5
+psk_demodulate_block/HDL_DUT/hard_decision_demod/value_within_pi/nfp_relop_single --> nfp_relop_single_block1
+psk_demodulate_block/HDL_DUT/hard_decision_demod/value_within_pi --> value_within_pi
+psk_demodulate_block/HDL_DUT/hard_decision_demod --> hard_decision_demod
+psk_demodulate_block/HDL_DUT/nfp_add_single --> nfp_add_single
+psk_demodulate_block/HDL_DUT/nfp_atan_single --> nfp_atan_single
+psk_demodulate_block/HDL_DUT/nfp_div_single --> nfp_div_single
+psk_demodulate_block/HDL_DUT/nfp_sub_single --> nfp_sub_single
+psk_demodulate_block/HDL_DUT --> HDL_DUT
