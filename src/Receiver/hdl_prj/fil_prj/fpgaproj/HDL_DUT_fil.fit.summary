@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Dec 28 21:16:30 2020
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : HDL_DUT_fil
+Top-level Entity Name : HDL_DUT_fil
+Family : Cyclone V
+Device : 5CSEMA4U23C6
+Timing Models : Final
+Logic utilization (in ALMs) : 3,175 / 15,880 ( 20 % )
+Total registers : 6603
+Total pins : 1 / 314 ( < 1 % )
+Total virtual pins : 0
+Total block memory bits : 140,441 / 2,764,800 ( 5 % )
+Total RAM Blocks : 42 / 270 ( 16 % )
+Total DSP Blocks : 7 / 84 ( 8 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 5 ( 20 % )
+Total DLLs : 0 / 4 ( 0 % )
