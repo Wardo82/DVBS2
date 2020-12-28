@@ -1,0 +1,16 @@
+vlib work
+vmap -c
+vcom  HDL_DUT_pac.vhd
+vcom  nfp_relop_single.vhd
+vcom  nfp_relop_single_block.vhd
+vcom  value_within.vhd
+vcom  value_within3.vhd
+vcom  value_within5.vhd
+vcom  nfp_relop_single_block1.vhd
+vcom  value_within_pi.vhd
+vcom  hard_decision_demod.vhd
+vcom  nfp_add_single.vhd
+vcom  nfp_atan_single.vhd
+vcom  nfp_div_single.vhd
+vcom  nfp_sub_single.vhd
+vcom  HDL_DUT.vhd

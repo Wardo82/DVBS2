@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Model Advisor Report for 'psk_demodulate_block1/HDL_DUT'</title>  
+<style type="text/css">
+<!--
+@media screen {    
+    /* Table Formatting */
+    .AdvTable th { 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+    }
+}
+
+@media all {
+    *{ font-family: sans-serif; }
+
+	H3 {
+		font-size: 14pt;
+		font-weight: 200;
+	}
+	H4 {
+		font-size: 9pt;
+		font-weight: normal;
+	}
+	H5 {
+		font-size: 12pt;
+		font-style: italic;
+		font-weight: bold;
+		color: #333333;
+		margin-bottom: 2px;
+	}
+	a[href] {
+		color: #005FCE;
+	}
+	.subsection {
+		padding-left: 30px;
+	}
+    
+    .CheckHeading {
+		font-size:1.05em;
+		font-weight:bold;
+	}
+
+    /* Table Formatting */
+    table.AdvTable { 
+        border-collapse:collapse; border:1px solid #ececec; border-right:none; border-bottom:none; 
+    }
+
+    .AdvTable th { 
+        padding-left:5px; 
+        padding-right:5px; 
+        color:#fff; 
+        line-height:120%; 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+        border-right: 1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+
+    .AdvTable td { 
+        padding-left:5px; 
+        padding-right:5px; 
+        border-right:1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+    
+    .AdvTable th p { 
+        margin-bottom:0px; 
+    }
+
+    .AdvTable p { 
+        margin-bottom:10px; 
+    }
+    
+    .AdvTableNoBorder p { 
+        margin-bottom:10px; 
+    }
+
+    table+span.SDCollapseControl { 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    ul+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em;
+        font-weight:bold; 
+    }
+
+    ol+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    .SystemdefinedCollapse { 
+        margin-top:0px;
+        margin-bottom:5px; 
+    }
+
+    div.AllCollapse p, div.AllCollapse table, div.AllCollapse ol, div.AllCollapse ul { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px;
+    }
+
+    div.AllCollapse + div { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px; 
+    }
+
+    img.CollapseAllControlImage { 
+        float:left; 
+    }
+
+    .SubResultsSummary {
+        padding-left:30px;
+    }
+
+    .EmptyFolderMessage {
+        color:gray;
+        margin:10px 0 0 30px;
+        font-size:0.8em;
+    }
+	
+    .CsEml-Symbol-Status-Pass
+    { 
+        color: green;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Warn
+        { 
+        color: orange;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Fail
+    { 
+        color: red;
+        font-family: monospace;
+    }
+    
+    .CsEml-Line-Number
+    {
+        color: #A0A0A0;
+        font-style: italic;
+        font-family: monospace;
+    }
+
+    .CsEml-Code
+    {
+        color: blue;
+        font-family: monospace;
+    }
+
+    .CsEml-Code-Fragment
+    {
+        color: blue;
+        font-weight: bold;
+        font-family: monospace;
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .CsEml-Function-Type
+    {
+        color:       #A0A0A0;
+        font-style:  italic;
+        font-family: monospace;
+    }
+
+}
+-->
+</style>
+
+<script type="text/javascript"> <!-- /* Copyright 2013-2017 The MathWorks, Inc */
+/* define String.trim() method if not defined (used by filterByText() function) */
+if(!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g,'');
+  };
+}
+
+// rtwreport needs it 
+function init() {
+    var showFailed = document.getElementById("Failed Checkbox");
+    var showPassed = document.getElementById("Passed Checkbox");
+    var showWarning = document.getElementById("Warning Checkbox");
+    var showNotRun = document.getElementById("Not Run Checkbox");       
+    
+    urlQueryStringRegexp = RegExp('\\?(.*)').exec(window.location.search);
+
+    if (urlQueryStringRegexp == null) {
+        /* refresh check boxes and search input */
+        showFailed.checked = true;
+        showPassed.checked = true;
+        showWarning.checked = true;
+        showNotRun.checked = true;
+    }
+    else 
+    {
+        showFailed.checked = false;
+        showPassed.checked = false;
+        showWarning.checked = false;
+        showNotRun.checked = false;
+        
+        urlQueryString = urlQueryStringRegexp[1];
+        
+        var queryArgs = [];
+        
+        if (urlQueryString.indexOf("&") == -1)
+        {
+            // Only 1 argument
+            queryArgs[0] = urlQueryString;
+        }
+        else
+        {
+            queryArgs = urlQueryString.split("&");
+        }
+        
+        for (var idx = 0; idx < queryArgs.length; ++idx)
+        {
+            // get in
+            if (queryArgs[idx].localeCompare("showPassedChecks") == 0) 
+            {
+                showPassed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showWarningChecks") == 0) 
+            {
+                showWarning.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showFailedChecks") == 0)
+            {
+                showFailed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showNotRunChecks") == 0)
+            {
+                showNotRun.checked = true;
+            }
+        }
+            
+        // if nothing is selected, select everything
+        if (!showFailed.checked && !showPassed.checked && 
+            !showWarning.checked && !showNotRun.checked) 
+        {
+            showFailed.checked = true;
+            showPassed.checked = true;
+            showWarning.checked = true;
+            showNotRun.checked = true;
+        }
+    }
+    
+    updateVisibleChecks();
+}
+
+function markEmptyFolders(){
+	var nodeTypes = ["FailedCheck","PassedCheck",  "WarningCheck", "NotRunCheck"];
+	var folderArray = document.querySelectorAll("div.FolderContent");
+	
+	for (var n=0;n<folderArray.length;n++){
+		/* get direct check result children and check visibility */
+		var childNodes = folderArray[n].childNodes;
+		var noneVisible = true;
+		var noChecksInFolder = true;
+		
+		for (var ni=0;ni<childNodes.length;ni++){
+			if (childNodes[ni].nodeType == 1 && childNodes[ni].tagName.toLowerCase() == "div"){
+				if (childNodes[ni].className == nodeTypes[0] || childNodes[ni].className == nodeTypes[1] || childNodes[ni].className == nodeTypes[2] || childNodes[ni].className == nodeTypes[3]){
+					noChecksInFolder = false;
+					if (childNodes[ni].style.display != "none"){
+						noneVisible = false;
+                        break;
+					}
+				}
+			}
+		}
+		
+		/* Only display hidden message if any checks inside the folders and not just other folders */
+		if (!noChecksInFolder){
+			var hiddenMessage = folderArray[n].querySelector("div.EmptyFolderMessage");
+			
+			if (hiddenMessage && noneVisible == true){
+				hiddenMessage.style.display = "";
+			}else if (hiddenMessage && noneVisible == false){
+				hiddenMessage.style.display = "none";
+			}else{
+				/* hidden message not found */
+			}
+		}
+	}
+
+    return;
+}
+
+function updateVisibleChecks( /* show all flags */ checkbox ){
+	
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox"];
+	var nodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check"];
+	var textInput = document.getElementById("TxtFilterInput");
+	
+	
+	if (checkbox && textInput && textInput.color=="gray"){
+		var checkType = checkbox.id;
+		var ind = checkboxes.indexOf(checkType);
+		var nodes = document.getElementsByName(nodeTypes[ind]);
+		for (i = 0; i < nodes.length;i++){
+		    nodes[i].style.display = checkbox.checked ? "" : "none";
+		}
+	}
+	else{ /* Update all checks if called from init or if a previous text filter was applied */
+		for (i = 0; i < checkboxes.length; i++){
+			
+			  var show = document.getElementById(checkboxes[i]).checked ? "" : "none";
+			  var nodes = document.getElementsByName(nodeTypes[i]);
+			  for(j = 0; j < nodes.length; j++){
+				  nodes[j].style.display = show;
+			  }
+		   
+		}
+	}
+
+    /* clear text search */
+	if (textInput && checkbox){
+		textInput.value = "Keywords";
+        textInput.style.color = "gray";
+        textInput.blur;
+	}
+
+    markEmptyFolders();
+
+    return; 
+}
+
+function filterByText(ev){
+	// get all the nodes
+	var allNodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check"];
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox"];
+	var nodeTypes = [];
+	
+	// get nodes depending on filter selections
+	for (var n=0; n<checkboxes.length; n++){
+		var checkbox = document.getElementById(checkboxes[n]);
+		if (checkbox && checkbox.checked){
+			nodeTypes.push(allNodeTypes[n]);
+		}
+	}
+	
+    var searchNodes = [".CheckHeading"];
+    var allnodes = [];
+	var alltext = [];
+	if (!ev) return;
+	var target = ev.target ? ev.target : window.event.srcElement;
+	var searchString = target.value;
+	
+	if (!searchString){
+        updateVisibleChecks();  // clear all and display by other filters
+	}else{
+		for (i = 0; i < nodeTypes.length; i++){
+			var nodes = document.getElementsByName(nodeTypes[i]);
+			for (j = 0; j < nodes.length; j++){
+				// get text from check heading
+				var checkContent = nodes[j].querySelector(searchNodes).innerHTML;
+				// creaet a regular expression to ignore case
+				var ss = new RegExp(searchString.trim(), "i");
+				if (ss.exec(checkContent)){
+				   nodes[j].style.display = "";
+				}else{
+				   nodes[j].style.display = "none";
+				}
+			}
+		}
+        markEmptyFolders();
+	}	
+}
+
+
+function MATableShrink(o,tagNameStr){
+    var temp = document.getElementsByName(tagNameStr);
+    var classUsed = document.getElementsByName('EmbedImages'); 
+    var embeddedMode = !(classUsed.length == 0);
+    var img = o.querySelector("img");
+
+    if (temp[0].style.display == "") 
+    {
+        temp[0].style.display = "none";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }
+        else
+        {
+            img.src = "plus.png";
+        }
+    } 
+    else 
+    {
+        temp[0].style.display = "";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+        else
+        {
+            img.src = "minus.png";
+        }
+    }
+}
+
+// rtwreport needs it 
+function updateHyperlink() {
+    docObj = window.document;
+    loc = document.location;
+    var aHash = "";
+    var externalweb = "false";
+    if (loc.search || loc.hash) {
+        if (loc.search)
+            aHash = loc.search.substring(1);
+        else
+            aHash = loc.hash.substring(1);
+    }    
+    var args = new Array();
+    args = aHash.split('&');
+    for (var i = 0; i < args.length; ++i) {
+        var arg = args[i];
+          sep = arg.indexOf('=');
+        if (sep != -1) {
+            var cmd = arg.substring(0,sep);
+            var opt = arg.substring(sep+1);
+            switch (cmd.toLowerCase()) {
+            case "externalweb":
+                externalweb = opt;
+                break;
+            }
+        }
+    }        
+    if (externalweb === "true") {        
+        var objs = docObj.getElementsByTagName("a");
+        if (objs.length > 0 && objs[0].removeAttribute) {
+            for (var i = 0; i < objs.length; ++i) {           
+                if (objs[i].href.indexOf('matlab') > -1)           
+                    objs[i].removeAttribute("href");                
+            }
+        }
+    }
+    init();
+}
+    
+function findParentNode(e) {
+   var parent = e.parentElement;
+   if (!!parent) {
+    if (parent.id == "") {   
+       return findParentNode(parent);
+    } else {
+       return parent;
+    }
+   } else {
+    return null;
+   }
+}
+
+function expandParentNode(e) {
+   var parent = findParentNode(e);
+   while (!!parent) { 
+    var prefix = "FolderControl_";
+    var folderControl = document.getElementById(prefix.concat(parent.id));
+    if (parent.style.display == "none") {       
+       MATableShrink(folderControl,parent.id);
+    }
+    parent = findParentNode(parent);
+   }
+}
+
+function isHidden(e) {
+    return (e.offsetParent === null)
+}
+
+function navigateToElement(eleID) {
+   var e = document.getElementById(eleID);
+   if (isHidden(e)) {
+       expandParentNode(e);
+   }       
+   if (!!e && e.scrollIntoView) {
+       e.scrollIntoView();
+   }
+}
+
+function setTextContent(element, value) {
+    var content = element.textContent;
+    if (value === undefined) return;
+    
+    if (content !== undefined) element.textContent = value;
+    else element.innerText = value;
+}
+
+function hideControlPanel(control){
+	var panelComponents = ["ControlsCheckFiltering", "ControlsView", "ControlsTOC"];
+	var reportContent = document.querySelector(".ReportContent");
+	var controlPanel = document.getElementById("ControlPanel");
+	var isHidden = false;
+	
+    if (reportContent && control && controlPanel) {
+    	for (var n=0; n<panelComponents.length; n++){
+			var component = document.getElementById(panelComponents[n]);
+			
+			if (component && component.style.display == ""){
+				component.style.display = "none";
+            } else if (component && component.style.display == "none"){
+				component.style.display = "";
+			}
+		}
+		
+		if (controlPanel.style.width != "6px"){
+			reportContent.style.marginLeft = "25px";
+	    	controlPanel.style.width = "6px";
+	    	control.style.left = "0px";
+	       	var innerDiv = control.querySelector("#HidePanelControlInner");
+	       	setTextContent(innerDiv, "\u25BA");
+	    } else {
+	    	reportContent.style.marginLeft = "225px";
+        	controlPanel.style.width = "210px";
+        	control.style.left = "204px";
+        	var innerDiv = control.querySelector("#HidePanelControlInner");
+        	setTextContent(innerDiv, "\u25C0");
+        }
+    }
+}
+/* Copyright 2013 The MathWorks, Inc. */
+//COLLAPSIBLE FEATURE
+
+// global variables
+var GlobalCollapseState = "off";
+
+function collapseSDHelper(o, CollElementParent, disp, mode){
+    var CollElement = CollElementParent; /* ul/ol with lists, tbody with table */
+
+    if (CollElement.nodeName == "UL" || CollElement.nodeName == "OL"){
+        var CollName = "LI";
+    }else if (CollElement.nodeName == "TABLE"){
+        if (CollElement.querySelector('tbody')) {
+            /* tr modes are child nodes of tbody node */
+            CollElement = CollElement.querySelector('tbody');
+        }
+        var CollName = "TR";
+    }
+    
+    // get children (li for list and tr for table)
+    var children = CollElement.childNodes;
+
+    var nElements = 0;
+    for (var i=0;i<children.length;i++){
+        if (children[i].nodeName == CollName){
+            nElements = nElements + 1;
+            if (nElements > 5){
+                children[i].style.display = disp;
+            }
+        }
+    }
+    if (disp == "none"){
+        if (CollName == "LI"){
+            var text = " items)";
+        }else{
+            var text = " rows)";
+        }
+        
+        var textNode = document.createTextNode(("\u2228 More (" + (nElements-5) + text));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "on");
+
+        /* scroll to element if it is not visible */
+        if (mode == "single" && CollElement.offsetTop < document.documentElement.scrollTop){
+			CollElement.scrollIntoView();
+		}
+    }else{
+        var textNode = document.createTextNode(("\u2227 " + "Less"));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "off");
+    }
+}
+
+function collapseSD(o, ID){
+    var CollElement = document.getElementById(ID);
+    if (CollElement != null){
+        if (CollElement.getAttribute("dataCollapse") == "off"){
+            var disp="none";
+        }else{
+            var disp="";
+        }
+        collapseSDHelper(o, CollElement, disp, "single");
+    }
+}
+
+function collapseAllHelper(o, CollElement, CollInfo, disp){
+
+    if (CollElement != null){
+        var img = o.querySelector("img");
+        if (disp == "none"){
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }else{
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+
+        if (CollInfo != null){
+            if (disp == "none"){
+                CollInfo.style.display = "";
+            }else{
+                CollInfo.style.display = "none";
+            }
+        }
+    }
+}
+
+function collapseAll(o, ID, ID2){
+    var CollElement = document.getElementById(ID);
+    var CollInfo = document.getElementById(ID2);
+
+    if (CollElement.style.display == ""){
+        var disp = "none";
+    }else{
+        var disp = "";
+    }
+
+    collapseAllHelper(o, CollElement, CollInfo, disp);
+}
+
+function expandCollapseAll(o){
+	/* IE has no method for getting elements by class name. Use querySelectorAll instead 
+       Note: requires IE not to be in IE7 compatability mode */
+    var SDCollapse = document.querySelectorAll(".SystemdefinedCollapse");
+    var Button = null;
+
+    if (GlobalCollapseState == "off"){
+        var disp = "none";
+        GlobalCollapseState = "on";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Show check details";
+		}
+    }else{
+        var disp = "";
+        GlobalCollapseState = "off";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Hide check details";
+		}
+    }
+
+    for (var i=0;i<SDCollapse.length;i++){
+        Button = SDCollapse[i].nextSibling;
+        while(Button.nodeType !== 1){
+            Button = Button.nextSibling;
+        }
+        //Button = SDCollapse[i].parentNode.querySelector("span.SDCollapseControl");
+        collapseSDHelper(Button, SDCollapse[i], disp, "all");
+    }
+		
+    var AllCollapse = document.querySelectorAll(".AllCollapse");
+
+    for (i=0;i<AllCollapse.length;i++){
+        // get children of top level collapsible div
+        var children = AllCollapse[i].parentNode.children;
+        
+        // collapsible button is first child
+		Button = children[0];
+        
+        // get content to display in collapsed state
+        // this is optional and last child of collapsible div 
+        if (Button)
+        {
+            if (children.length>2)
+            {
+                collapseAllHelper(Button, AllCollapse[i], children[2], disp);
+            }
+            else
+            {
+                collapseAllHelper(Button, AllCollapse[i], null, disp);
+            }
+        }
+    }
+}
+
+
+function expandCollapseAllOnLoad(){
+    GlobalCollapseState = "on";
+    var Switch = document.getElementById("ExpandCollapseAll");
+    expandCollapseAll(Switch);
+}
+//END COLLAPSIBLE
+
+ --></script></head>  
+<body onload="updateHyperlink(); expandCollapseAllOnLoad();">  
+<span id="top">
+
+</span>
+<!-- mdladv_ignore_start --><div id="Container"><!-- mdladv_ignore_finish -->
+<!-- mdladv_ignore_start --><div class="ReportContent" id="psk_demodulate_block1/HDL_DUT"><!-- mdladv_ignore_finish --><table class="AdvTableNoBorder" width="100%" border="0">
+<tr>
+<td colspan="2" align="center">
+<b>
+Model Advisor Report - <font color="#800000">psk_demodulate_block1.slx</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+Simulink version: <font color="#800000">10.1</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Model version: <font color="#800000">1.11</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+System: <font color="#800000">psk_demodulate_block1/HDL_DUT</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Current run: <font color="#800000">26-Dec-2020 19:59:01</font>
+</b>
+
+</td>
+
+</tr>
+
+</table>
+<br /><font color="#800000"><b>Run Summary</b></font><br /><table class="AdvTableNoBorder" width="60%" border="0">
+<tr>
+<th align="left" valign="top">
+<b>
+Pass
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Fail
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Warning
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Not Run
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Total
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 1
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 0
+</td>
+<td align="left" valign="top">
+ 1
+</td>
+
+</tr>
+
+</table>
+<!-- Compile Status Flag --><!-- Service Status Flag -->
+<!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 0pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_157"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunFIL">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,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"  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunFIL">
+4.2. Build FPGA-in-the-Loop</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p />### Generating FPGA-in-the-Loop testbench model for 'psk_demodulate_block1.<p />[Warning: Overwriting the following folder:<p />hdl_prj/fil_prj] <p />[> In eda.internal.workflow.LegacyCodeFILManager/warnFolderOverwrite<p />  In eda.internal.workflow/LegacyCodeFILManager/validate<p />  In eda.internal.workflow/LegacyCodeFILManager/build<p />  In cosimtb/genfiltb/generateProgrammingFile<p />  In cosimtb/genfiltb/doIt<p />  In runFILBuild<p />  In Simulink.ModelAdvisor/executeCheckCallbackFct<p />  In Simulink.ModelAdvisor/run<p />  In Simulink.ModelAdvisor/runCheck<p />  In ModelAdvisor.Node/runTaskAdvisor<p />  In ModelAdvisor.Node/runToFail<p />  In ModelAdvisor.Node/runContinue<p />  In ModelAdvisor.Node.continuerun] <p /><p />### Generating code for FPGA-in-the-Loop ...<p />### Generating HDL file for: <a href="matlab:edit('hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd')">hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd</a><p />### Generating HDL file for: <a href="matlab:edit('hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd')">hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd</a><p />### Generating HDL file for: <a href="matlab:edit('hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd')">hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd</a><p />### Generating SIM file for: <a href="matlab:edit('hdl_prj/fil_prj/filsrc/sim/mwfil_xjtagtop.do')">hdl_prj/fil_prj/filsrc/sim/mwfil_xjtagtop.do</a><p /><p />### Generating Vivado project and running HDL compilation ...<p />###    Project:<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.xpr<p />###    Target Device:<p />###       Zynq xc7z020-1clg484<p />###    Property Settings:<p />###    User design files:<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT_pac.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within3.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block1.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within_pi.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_add_single.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_atan_single.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_div_single.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_sub_single.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd<p />###    Generating Xilinx DCM and FIFO IP<p />###    Generated files:<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_bus2dut.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_controller.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dut2bus.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd<p />###       /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc<p />### Running HDL Compilation<p /><p />****** Vivado v2020.1.1 (64-bit)<p />  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020<p />  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020<p />    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.<p /><p />source createproject.tcl<p /># create_project -force HDL_DUT_fil .<p /># set_property target_language VHDL [current_project]<p /># set_property part xc7z020clg484-1 [current_project]<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT_pac.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within3.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block1.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within_pi.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_add_single.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_atan_single.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_div_single.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_sub_single.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd}<p /># create_ip -name clk_wiz -vendor xilinx.com -library ip -module_name clk_wiz_0<p />INFO: [IP_Flow 19-234] Refreshing IP repositories<p />INFO: [IP_Flow 19-1704] No user IP repositories specified<p />INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip'.<p /># set_property -dict [list  CONFIG.PRIM_IN_FREQ {100.000} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.0000}] [get_ips clk_wiz_0]<p /># create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name jtag_mac_fifo<p /># set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Input_Data_Width {8} CONFIG.Input_Depth {4096} CONFIG.Read_Data_Count {true}  CONFIG.Use_Embedded_Registers {false} CONFIG.read_data_count_width {12} CONFIG.Almost_Full_Flag {true}] [get_ips jtag_mac_fifo]<p /># create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name simcycle_fifo<p /># set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Input_Data_Width {16} CONFIG.Input_Depth {16} CONFIG.Use_Embedded_Registers {false} ] [get_ips simcycle_fifo]<p /># generate_target all [get_ips] -force<p />INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...<p />INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...<p />INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...<p />INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...<p />INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...<p />INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'jtag_mac_fifo'...<p />INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'jtag_mac_fifo'...<p />INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'jtag_mac_fifo'...<p />INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'jtag_mac_fifo'...<p />INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'simcycle_fifo'...<p />INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'simcycle_fifo'...<p />INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'simcycle_fifo'...<p />INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'simcycle_fifo'...<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_bus2dut.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_controller.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dut2bus.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd}<p /># add_files -norecurse {/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc}<p /># set_property top HDL_DUT_fil [current_fileset]<p /># launch_runs synth_1<p />[Sat Dec 26 20:00:30 2020] Launched simcycle_fifo_synth_1, clk_wiz_0_synth_1, jtag_mac_fifo_synth_1...<p />Run output will be captured here:<p />simcycle_fifo_synth_1: /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/simcycle_fifo_synth_1/runme.log<p />clk_wiz_0_synth_1: /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/clk_wiz_0_synth_1/runme.log<p />jtag_mac_fifo_synth_1: /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/jtag_mac_fifo_synth_1/runme.log<p />[Sat Dec 26 20:00:30 2020] Launched synth_1...<p />Run output will be captured here: /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/runme.log<p /># wait_on_run synth_1<p />[Sat Dec 26 20:00:30 2020] Waiting for synth_1 to finish...<p /><p />*** Running vivado<p />    with args -log HDL_DUT_fil.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDL_DUT_fil.tcl<p /><p /><p />****** Vivado v2020.1.1 (64-bit)<p />  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020<p />  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020<p />    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.<p /><p />source HDL_DUT_fil.tcl -notrace<p />Command: synth_design -top HDL_DUT_fil -part xc7z020clg484-1<p />Starting synth_design<p />Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'<p />INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'<p />INFO: [Device 21-403] Loading part xc7z020clg484-1<p />INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.<p />INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes<p />INFO: [Synth 8-7075] Helper process launched with PID 8624<p />---------------------------------------------------------------------------------<p />Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.598 ; gain = 0.000 ; free physical = 11398 ; free virtual = 20638<p />---------------------------------------------------------------------------------<p />INFO: [Synth 8-638] synthesizing module 'HDL_DUT_fil' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd:27]<p />INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/.Xil/Vivado-8618-Wardo/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'u_clk_wiz_0' of component 'clk_wiz_0' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd:115]<p />INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/.Xil/Vivado-8618-Wardo/realtime/clk_wiz_0_stub.vhdl:15]<p />INFO: [Synth 8-3491] module 'BSCANE2' declared at '/home/wardo/Documents/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:884' bound to instance 'u_BSCANE2' of component 'BSCANE2' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd:123]<p />INFO: [Synth 8-6157] synthesizing module 'BSCANE2' [/home/wardo/Documents/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:884]<p />	Parameter DISABLE_JTAG bound to: FALSE - type: string <p />	Parameter JTAG_CHAIN bound to: 1 - type: integer <p />INFO: [Synth 8-6155] done synthesizing module 'BSCANE2' (1#1) [/home/wardo/Documents/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:884]<p />INFO: [Synth 8-3491] module 'jtag_mac' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:13' bound to instance 'u_jtag_mac' of component 'jtag_mac' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd:138]<p />INFO: [Synth 8-6157] synthesizing module 'jtag_mac' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:13]<p />	Parameter VERSION bound to: 191724 - type: integer <p />	Parameter idle bound to: 15'b000000000000000 <p />	Parameter user_rst bound to: 15'b000000000000001 <p />	Parameter get_cmd bound to: 15'b000000000000010 <p />	Parameter get_wr_len bound to: 15'b000000000000100 <p />	Parameter get_sim bound to: 15'b000000000001000 <p />	Parameter wr bound to: 15'b000000000010000 <p />	Parameter get_rd_len bound to: 15'b000000001000000 <p />	Parameter get_skip bound to: 15'b000000010000000 <p />	Parameter exe_skip bound to: 15'b000000100000000 <p />	Parameter rdbk_len bound to: 15'b000001000000000 <p />	Parameter rdbk_dat bound to: 15'b000010000000000 <p />	Parameter ver_get_skip bound to: 15'b000100000000000 <p />	Parameter ver_exe_skip bound to: 15'b001000000000000 <p />	Parameter ver_rdbk_len bound to: 15'b010000000000000 <p />	Parameter ver_rdbk_dat bound to: 15'b100000000000000 <p />INFO: [Synth 8-638] synthesizing module 'simcycle_fifo_wrapper' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:28]<p />WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:30]<p />WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:30]<p />INFO: [Synth 8-3491] module 'simcycle_fifo' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/.Xil/Vivado-8618-Wardo/realtime/simcycle_fifo_stub.vhdl:5' bound to instance 'u_simcycle_fifo' of component 'simcycle_fifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:46]<p />INFO: [Synth 8-638] synthesizing module 'simcycle_fifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/.Xil/Vivado-8618-Wardo/realtime/simcycle_fifo_stub.vhdl:22]<p />INFO: [Synth 8-256] done synthesizing module 'simcycle_fifo_wrapper' (2#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:28]<p />INFO: [Synth 8-638] synthesizing module 'jtag_mac_fifo_wrapper' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:30]<p />WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:32]<p />WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:32]<p />INFO: [Synth 8-3491] module 'jtag_mac_fifo' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/.Xil/Vivado-8618-Wardo/realtime/jtag_mac_fifo_stub.vhdl:5' bound to instance 'u_jtag_mac_fifo' of component 'jtag_mac_fifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:50]<p />INFO: [Synth 8-638] synthesizing module 'jtag_mac_fifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/.Xil/Vivado-8618-Wardo/realtime/jtag_mac_fifo_stub.vhdl:24]<p />INFO: [Synth 8-256] done synthesizing module 'jtag_mac_fifo_wrapper' (3#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:30]<p />WARNING: [Synth 8-7071] port 'almost_full' of module 'jtag_mac_fifo_wrapper' is unconnected for instance 'u_pre_chif_fifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:68]<p />WARNING: [Synth 8-7023] instance 'u_pre_chif_fifo' of module 'jtag_mac_fifo_wrapper' has 11 connections declared, but only 10 given [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:68]<p />WARNING: [Synth 8-567] referenced signal 'wr_len' should be on the sensitivity list [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:187]<p />WARNING: [Synth 8-567] referenced signal 'skip_len' should be on the sensitivity list [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:187]<p />WARNING: [Synth 8-567] referenced signal 'act_rd_len' should be on the sensitivity list [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:187]<p />INFO: [Synth 8-6155] done synthesizing module 'jtag_mac' (4#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/jtag_mac.v:13]<p />INFO: [Synth 8-3491] module 'mwfil_chiftop' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd:13' bound to instance 'u_mwfil_chiftop' of component 'mwfil_chiftop' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd:155]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_chiftop' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd:27]<p />	Parameter INWORD bound to: 8 - type: integer <p />	Parameter OUTWORD bound to: 12 - type: integer <p />	Parameter WORDSIZE bound to: 8 - type: integer <p />	Parameter HASENABLE bound to: 1 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_chifcore' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:15' bound to instance 'u_mwfil_chifcore' of component 'mwfil_chifcore' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd:79]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_chifcore' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:42]<p />	Parameter INWORD bound to: 8 - type: integer <p />	Parameter OUTWORD bound to: 12 - type: integer <p />	Parameter WORDSIZE bound to: 8 - type: integer <p />	Parameter HASENABLE bound to: 1 - type: integer <p />	Parameter WORDSIZE bound to: 8 - type: integer <p />	Parameter OUTWORD bound to: 8 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_bus2dut' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_bus2dut.vhd:13' bound to instance 'u_bus2dut' of component 'mwfil_bus2dut' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:153]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_bus2dut' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_bus2dut.vhd:34]<p />	Parameter WORDSIZE bound to: 8 - type: integer <p />	Parameter OUTWORD bound to: 8 - type: integer <p />INFO: [Synth 8-256] done synthesizing module 'mwfil_bus2dut' (5#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_bus2dut.vhd:34]<p />	Parameter fifo_depth bound to: 16 - type: integer <p />	Parameter fifo_uword bound to: 4 - type: integer <p />	Parameter fifo_width bound to: 64 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_udfifo' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:14' bound to instance 'u_b2dfifo' of component 'mwfil_udfifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:168]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_udfifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:33]<p />	Parameter fifo_depth bound to: 16 - type: integer <p />	Parameter fifo_uword bound to: 4 - type: integer <p />	Parameter fifo_width bound to: 64 - type: integer <p />	Parameter DATA bound to: 64 - type: integer <p />	Parameter ADDR bound to: 4 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_dpscram' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd:12' bound to instance 'u_dpscram' of component 'mwfil_dpscram' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:130]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_dpscram' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd:31]<p />	Parameter DATA bound to: 64 - type: integer <p />	Parameter ADDR bound to: 4 - type: integer <p />INFO: [Synth 8-256] done synthesizing module 'mwfil_dpscram' (6#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd:31]<p />INFO: [Synth 8-256] done synthesizing module 'mwfil_udfifo' (7#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:33]<p />	Parameter HASENABLE bound to: 1 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_controller' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_controller.vhd:15' bound to instance 'u_controller' of component 'mwfil_controller' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:195]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_controller' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_controller.vhd:38]<p />	Parameter HASENABLE bound to: 1 - type: integer <p />INFO: [Synth 8-256] done synthesizing module 'mwfil_controller' (8#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_controller.vhd:38]<p />	Parameter fifo_depth bound to: 16 - type: integer <p />	Parameter fifo_uword bound to: 4 - type: integer <p />	Parameter fifo_width bound to: 96 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_udfifo' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:14' bound to instance 'u_d2bfifo' of component 'mwfil_udfifo' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:219]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_udfifo__parameterized1' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:33]<p />	Parameter fifo_depth bound to: 16 - type: integer <p />	Parameter fifo_uword bound to: 4 - type: integer <p />	Parameter fifo_width bound to: 96 - type: integer <p />	Parameter DATA bound to: 96 - type: integer <p />	Parameter ADDR bound to: 4 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_dpscram' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd:12' bound to instance 'u_dpscram' of component 'mwfil_dpscram' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:130]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_dpscram__parameterized1' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd:31]<p />	Parameter DATA bound to: 96 - type: integer <p />	Parameter ADDR bound to: 4 - type: integer <p />INFO: [Synth 8-256] done synthesizing module 'mwfil_dpscram__parameterized1' (8#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dpscram.vhd:31]<p />INFO: [Synth 8-256] done synthesizing module 'mwfil_udfifo__parameterized1' (8#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_udfifo.vhd:33]<p />	Parameter WORDSIZE bound to: 8 - type: integer <p />	Parameter OUTWORD bound to: 12 - type: integer <p />INFO: [Synth 8-3491] module 'mwfil_dut2bus' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dut2bus.vhd:13' bound to instance 'u_dut2bus' of component 'mwfil_dut2bus' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:236]<p />INFO: [Synth 8-638] synthesizing module 'mwfil_dut2bus' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dut2bus.vhd:34]<p />	Parameter WORDSIZE bound to: 8 - type: integer <p />	Parameter OUTWORD bound to: 12 - type: integer <p />INFO: [Synth 8-256] done synthesizing module 'mwfil_dut2bus' (9#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_dut2bus.vhd:34]<p />INFO: [Synth 8-256] done synthesizing module 'mwfil_chifcore' (10#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chifcore.vhd:42]<p />INFO: [Synth 8-3491] module 'HDL_DUT_wrapper' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd:13' bound to instance 'u_dut' of component 'HDL_DUT_wrapper' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd:100]<p />INFO: [Synth 8-638] synthesizing module 'HDL_DUT_wrapper' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd:23]<p />WARNING: [Synth 8-5640] Port 'ce_out' is missing in component declaration [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd:25]<p />INFO: [Synth 8-3491] module 'HDL_DUT' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:44' bound to instance 'u_HDL_DUT' of component 'HDL_DUT' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd:53]<p />INFO: [Synth 8-638] synthesizing module 'HDL_DUT' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:58]<p />INFO: [Synth 8-3491] module 'nfp_relop_single_block' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:24' bound to instance 'u_nfp_relop_comp' of component 'nfp_relop_single_block' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:173]<p />INFO: [Synth 8-638] synthesizing module 'nfp_relop_single_block' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:35]<p />INFO: [Synth 8-256] done synthesizing module 'nfp_relop_single_block' (11#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:35]<p />INFO: [Synth 8-3491] module 'nfp_relop_single_block' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:24' bound to instance 'u_nfp_relop_comp_1' of component 'nfp_relop_single_block' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:182]<p />INFO: [Synth 8-3491] module 'nfp_div_single' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_div_single.vhd:26' bound to instance 'u_nfp_div_comp' of component 'nfp_div_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:191]<p />INFO: [Synth 8-638] synthesizing module 'nfp_div_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_div_single.vhd:37]<p />INFO: [Synth 8-256] done synthesizing module 'nfp_div_single' (12#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_div_single.vhd:37]<p />INFO: [Synth 8-3491] module 'nfp_atan_single' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_atan_single.vhd:25' bound to instance 'u_nfp_atan_comp' of component 'nfp_atan_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:200]<p />INFO: [Synth 8-638] synthesizing module 'nfp_atan_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_atan_single.vhd:35]<p />INFO: [Synth 8-256] done synthesizing module 'nfp_atan_single' (13#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_atan_single.vhd:35]<p />INFO: [Synth 8-3491] module 'nfp_sub_single' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_sub_single.vhd:25' bound to instance 'u_nfp_sub_comp' of component 'nfp_sub_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:208]<p />INFO: [Synth 8-638] synthesizing module 'nfp_sub_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_sub_single.vhd:36]<p />INFO: [Synth 8-256] done synthesizing module 'nfp_sub_single' (14#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_sub_single.vhd:36]<p />INFO: [Synth 8-3491] module 'nfp_add_single' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_add_single.vhd:25' bound to instance 'u_nfp_add_comp' of component 'nfp_add_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:217]<p />INFO: [Synth 8-638] synthesizing module 'nfp_add_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_add_single.vhd:36]<p />INFO: [Synth 8-256] done synthesizing module 'nfp_add_single' (15#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_add_single.vhd:36]<p />INFO: [Synth 8-3491] module 'hard_decision_demod' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:22' bound to instance 'u_hard_decision_demod' of component 'hard_decision_demod' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:226]<p />INFO: [Synth 8-638] synthesizing module 'hard_decision_demod' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:32]<p />INFO: [Synth 8-3491] module 'value_within' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd:22' bound to instance 'u_value_within' of component 'value_within' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:155]<p />INFO: [Synth 8-638] synthesizing module 'value_within' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd:34]<p />INFO: [Synth 8-3491] module 'nfp_relop_single' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single.vhd:24' bound to instance 'u_nfp_relop_comp' of component 'nfp_relop_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd:70]<p />INFO: [Synth 8-638] synthesizing module 'nfp_relop_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single.vhd:35]<p />INFO: [Synth 8-256] done synthesizing module 'nfp_relop_single' (16#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single.vhd:35]<p />INFO: [Synth 8-3491] module 'nfp_relop_single_block' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:24' bound to instance 'u_nfp_relop_comp_1' of component 'nfp_relop_single_block' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd:79]<p />INFO: [Synth 8-256] done synthesizing module 'value_within' (17#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd:34]<p />INFO: [Synth 8-3491] module 'value_within' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd:22' bound to instance 'u_value_within1' of component 'value_within' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:165]<p />INFO: [Synth 8-3491] module 'value_within' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within.vhd:22' bound to instance 'u_value_within2' of component 'value_within' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:175]<p />INFO: [Synth 8-3491] module 'value_within3' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within3.vhd:22' bound to instance 'u_value_within3' of component 'value_within3' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:185]<p />INFO: [Synth 8-638] synthesizing module 'value_within3' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within3.vhd:34]<p />INFO: [Synth 8-3491] module 'nfp_relop_single' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single.vhd:24' bound to instance 'u_nfp_relop_comp' of component 'nfp_relop_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within3.vhd:70]<p />INFO: [Synth 8-3491] module 'nfp_relop_single_block' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:24' bound to instance 'u_nfp_relop_comp_1' of component 'nfp_relop_single_block' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within3.vhd:79]<p />INFO: [Synth 8-256] done synthesizing module 'value_within3' (18#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within3.vhd:34]<p />INFO: [Synth 8-3491] module 'value_within_pi' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within_pi.vhd:22' bound to instance 'u_value_within_pi' of component 'value_within_pi' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:195]<p />INFO: [Synth 8-638] synthesizing module 'value_within_pi' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within_pi.vhd:34]<p />INFO: [Synth 8-3491] module 'nfp_relop_single_block1' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block1.vhd:24' bound to instance 'u_nfp_relop_comp' of component 'nfp_relop_single_block1' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within_pi.vhd:70]<p />INFO: [Synth 8-638] synthesizing module 'nfp_relop_single_block1' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block1.vhd:35]<p />INFO: [Synth 8-256] done synthesizing module 'nfp_relop_single_block1' (19#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block1.vhd:35]<p />INFO: [Synth 8-3491] module 'nfp_relop_single_block' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:24' bound to instance 'u_nfp_relop_comp_1' of component 'nfp_relop_single_block' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within_pi.vhd:79]<p />INFO: [Synth 8-256] done synthesizing module 'value_within_pi' (20#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within_pi.vhd:34]<p />INFO: [Synth 8-3491] module 'value_within5' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd:22' bound to instance 'u_value_within5' of component 'value_within5' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:205]<p />INFO: [Synth 8-638] synthesizing module 'value_within5' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd:34]<p />INFO: [Synth 8-3491] module 'nfp_relop_single' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single.vhd:24' bound to instance 'u_nfp_relop_comp' of component 'nfp_relop_single' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd:70]<p />INFO: [Synth 8-3491] module 'nfp_relop_single_block' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/nfp_relop_single_block.vhd:24' bound to instance 'u_nfp_relop_comp_1' of component 'nfp_relop_single_block' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd:79]<p />INFO: [Synth 8-256] done synthesizing module 'value_within5' (21#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd:34]<p />INFO: [Synth 8-3491] module 'value_within5' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd:22' bound to instance 'u_value_within6' of component 'value_within5' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:215]<p />INFO: [Synth 8-3491] module 'value_within5' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/value_within5.vhd:22' bound to instance 'u_value_within7' of component 'value_within5' [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:225]<p />INFO: [Synth 8-256] done synthesizing module 'hard_decision_demod' (22#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/hard_decision_demod.vhd:32]<p />INFO: [Synth 8-256] done synthesizing module 'HDL_DUT' (23#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/hdlsrc/psk_demodulate_block1/HDL_DUT.vhd:58]<p />INFO: [Synth 8-256] done synthesizing module 'HDL_DUT_wrapper' (24#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_wrapper.vhd:23]<p />INFO: [Synth 8-256] done synthesizing module 'mwfil_chiftop' (25#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/mwfil_chiftop.vhd:27]<p />INFO: [Synth 8-256] done synthesizing module 'HDL_DUT_fil' (26#1) [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.vhd:27]<p />---------------------------------------------------------------------------------<p />Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2254.504 ; gain = 107.906 ; free physical = 11431 ; free virtual = 20672<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Handling Custom Attributes<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2260.441 ; gain = 113.844 ; free physical = 11407 ; free virtual = 20656<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2260.441 ; gain = 113.844 ; free physical = 11407 ; free virtual = 20656<p />---------------------------------------------------------------------------------<p />Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2267.379 ; gain = 0.000 ; free physical = 11320 ; free virtual = 20584<p />INFO: [Project 1-570] Preparing netlist for logic optimization<p /><p />Processing XDC Constraints<p />Initializing timing engine<p />Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo/simcycle_fifo_in_context.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo'<p />Finished Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/simcycle_fifo/simcycle_fifo/simcycle_fifo_in_context.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo'<p />Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz_0'<p />WARNING: [Vivado 12-584] No ports matched ''. [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]<p />WARNING: [Vivado 12-584] No ports matched ''. [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:4]<p />Finished Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz_0'<p />Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo'<p />Finished Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo'<p />Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo'<p />Finished Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo'<p />Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc]<p />WARNING: [Constraints 18-619] A clock with name 'sysclk' already exists, overwriting the previous clock with the same name. [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc:1]<p />WARNING: [Vivado 12-2489] -period contains time 15.151515 which will be rounded to 15.152 to ensure it is an integer multiple of 1 picosecond [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc:6]<p />WARNING: [Vivado 12-2489] -waveform contains time 7.575758 which will be rounded to 7.576 to ensure it is an integer multiple of 1 picosecond [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc:6]<p />WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz_0'. [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc:7]<p />INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc:7]<p />WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz_0'. [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc:8]<p />INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc:8]<p />Finished Parsing XDC File [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc]<p />WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/HDL_DUT_fil_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.<p />INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/filsrc/HDL_DUT_fil.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDL_DUT_fil_propImpl.xdc].<p />Resolution: To avoid this warning, move constraints listed in [.Xil/HDL_DUT_fil_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.<p />Completed Processing XDC Constraints<p /><p />Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2436.129 ; gain = 0.000 ; free physical = 11177 ; free virtual = 20435<p />INFO: [Project 1-111] Unisim Transformation Summary:<p />No Unisim elements were transformed.<p /><p />Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2436.129 ; gain = 0.000 ; free physical = 11177 ; free virtual = 20435<p />---------------------------------------------------------------------------------<p />Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2436.129 ; gain = 289.531 ; free physical = 11315 ; free virtual = 20571<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Loading Part and Timing Information<p />---------------------------------------------------------------------------------<p />Loading part: xc7z020clg484-1<p />---------------------------------------------------------------------------------<p />Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2436.129 ; gain = 289.531 ; free physical = 11315 ; free virtual = 20571<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Applying 'set_property' XDC Constraints<p />---------------------------------------------------------------------------------<p />Applied set_property IO_BUFFER_TYPE = NONE for sysclk. (constraint file  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).<p />Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk. (constraint file  /home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 6).<p />Applied set_property DONT_TOUCH = true for u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo. (constraint file  auto generated constraint, line ).<p />Applied set_property DONT_TOUCH = true for u_clk_wiz_0. (constraint file  auto generated constraint, line ).<p />Applied set_property DONT_TOUCH = true for u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo. (constraint file  auto generated constraint, line ).<p />Applied set_property DONT_TOUCH = true for u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo. (constraint file  auto generated constraint, line ).<p />---------------------------------------------------------------------------------<p />Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2436.129 ; gain = 289.531 ; free physical = 11315 ; free virtual = 20571<p />---------------------------------------------------------------------------------<p />INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'jtag_mac'<p />---------------------------------------------------------------------------------------------------<p />                   State |                     New Encoding |                Previous Encoding <p />---------------------------------------------------------------------------------------------------<p />                    idle |                  000000000000001 |                  000000000000000<p />                 get_cmd |                  000000000000010 |                  000000000000010<p />              get_wr_len |                  000001000000000 |                  000000000000100<p />                 get_sim |                  000000000010000 |                  000000000001000<p />                      wr |                  000000000100000 |                  000000000010000<p />              get_rd_len |                  001000000000000 |                  000000001000000<p />                get_skip |                  000010000000000 |                  000000010000000<p />                exe_skip |                  000000001000000 |                  000000100000000<p />                rdbk_len |                  000000010000000 |                  000001000000000<p />                rdbk_dat |                  100000000000000 |                  000010000000000<p />                user_rst |                  010000000000000 |                  000000000000001<p />            ver_get_skip |                  000100000000000 |                  000100000000000<p />            ver_exe_skip |                  000000100000000 |                  001000000000000<p />            ver_rdbk_len |                  000000000000100 |                  010000000000000<p />            ver_rdbk_dat |                  000000000001000 |                  100000000000000<p />---------------------------------------------------------------------------------------------------<p />INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'jtag_mac'<p />---------------------------------------------------------------------------------<p />Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2436.129 ; gain = 289.531 ; free physical = 11303 ; free virtual = 20565<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start RTL Component Statistics <p />---------------------------------------------------------------------------------<p />Detailed RTL Component Info : <p />+---Adders : <p />	   2 Input   64 Bit       Adders := 2     <p />	   2 Input   53 Bit       Adders := 2     <p />	   2 Input   52 Bit       Adders := 3     <p />	   2 Input   28 Bit       Adders := 2     <p />	   2 Input   27 Bit       Adders := 4     <p />	   2 Input   26 Bit       Adders := 26    <p />	   2 Input   24 Bit       Adders := 5     <p />	   2 Input   17 Bit       Adders := 2     <p />	   2 Input   16 Bit       Adders := 4     <p />	   2 Input   10 Bit       Adders := 2     <p />	   3 Input   10 Bit       Adders := 1     <p />	   2 Input    9 Bit       Adders := 1     <p />	   3 Input    9 Bit       Adders := 2     <p />	   2 Input    8 Bit       Adders := 10    <p />	   3 Input    8 Bit       Adders := 2     <p />	   8 Input    7 Bit       Adders := 1     <p />	   2 Input    6 Bit       Adders := 2     <p />	   3 Input    6 Bit       Adders := 1     <p />	   2 Input    5 Bit       Adders := 3     <p />	   2 Input    4 Bit       Adders := 5     <p />	   3 Input    4 Bit       Adders := 2     <p />	   2 Input    3 Bit       Adders := 36    <p />+---XORs : <p />	   2 Input      1 Bit         XORs := 3     <p />+---Registers : <p />	               96 Bit    Registers := 3     <p />	               76 Bit    Registers := 2     <p />	               64 Bit    Registers := 12    <p />	               62 Bit    Registers := 3     <p />	               48 Bit    Registers := 20    <p />	               37 Bit    Registers := 9     <p />	               36 Bit    Registers := 1     <p />	               33 Bit    Registers := 1     <p />	               32 Bit    Registers := 12    <p />	               30 Bit    Registers := 4     <p />	               28 Bit    Registers := 16    <p />	               27 Bit    Registers := 40    <p />	               26 Bit    Registers := 49    <p />	               25 Bit    Registers := 1     <p />	               24 Bit    Registers := 50    <p />	               23 Bit    Registers := 139   <p />	               22 Bit    Registers := 1     <p />	               21 Bit    Registers := 1     <p />	               20 Bit    Registers := 1     <p />	               19 Bit    Registers := 1     <p />	               18 Bit    Registers := 1     <p />	               17 Bit    Registers := 1     <p />	               16 Bit    Registers := 6     <p />	               15 Bit    Registers := 4     <p />	               14 Bit    Registers := 2     <p />	               13 Bit    Registers := 7     <p />	               12 Bit    Registers := 1     <p />	               11 Bit    Registers := 1     <p />	               10 Bit    Registers := 7     <p />	                9 Bit    Registers := 33    <p />	                8 Bit    Registers := 206   <p />	                7 Bit    Registers := 1     <p />	                6 Bit    Registers := 11    <p />	                5 Bit    Registers := 38    <p />	                4 Bit    Registers := 8     <p />	                3 Bit    Registers := 22    <p />	                2 Bit    Registers := 13    <p />	                1 Bit    Registers := 379   <p />+---Multipliers : <p />	              27x38  Multipliers := 1     <p />+---RAMs : <p />	             1024 Bit	(16 X 64 bit)          RAMs := 1     <p />	               1K Bit	(16 X 96 bit)          RAMs := 1     <p />+---Muxes : <p />	   2 Input   96 Bit        Muxes := 8     <p />	   2 Input   64 Bit        Muxes := 8     <p />	   2 Input   62 Bit        Muxes := 1     <p />	   2 Input   37 Bit        Muxes := 1     <p />	   3 Input   32 Bit        Muxes := 1     <p />	   2 Input   32 Bit        Muxes := 2     <p />	   2 Input   30 Bit        Muxes := 3     <p />	   7 Input   30 Bit        Muxes := 1     <p />	   8 Input   30 Bit        Muxes := 1     <p />	   6 Input   30 Bit        Muxes := 1     <p />	   2 Input   28 Bit        Muxes := 2     <p />	   2 Input   27 Bit        Muxes := 2     <p />	   2 Input   26 Bit        Muxes := 24    <p />	   2 Input   25 Bit        Muxes := 1     <p />	   2 Input   24 Bit        Muxes := 3     <p />	   2 Input   23 Bit        Muxes := 19    <p />	   3 Input   23 Bit        Muxes := 1     <p />	   2 Input   21 Bit        Muxes := 1     <p />	   2 Input   17 Bit        Muxes := 2     <p />	   3 Input   16 Bit        Muxes := 3     <p />	   2 Input   15 Bit        Muxes := 2     <p />	  15 Input   15 Bit        Muxes := 6     <p />	  38 Input   15 Bit        Muxes := 1     <p />	   2 Input   14 Bit        Muxes := 12    <p />	   2 Input   13 Bit        Muxes := 3     <p />	   3 Input   13 Bit        Muxes := 1     <p />	   5 Input   12 Bit        Muxes := 6     <p />	   2 Input   11 Bit        Muxes := 13    <p />	   2 Input   10 Bit        Muxes := 13    <p />	   2 Input    9 Bit        Muxes := 2     <p />	   2 Input    8 Bit        Muxes := 35    <p />	   2 Input    7 Bit        Muxes := 1     <p />	   2 Input    6 Bit        Muxes := 20    <p />	   5 Input    6 Bit        Muxes := 3     <p />	   8 Input    6 Bit        Muxes := 1     <p />	   3 Input    5 Bit        Muxes := 1     <p />	   2 Input    5 Bit        Muxes := 26    <p />	   4 Input    5 Bit        Muxes := 3     <p />	   9 Input    5 Bit        Muxes := 2     <p />	   5 Input    5 Bit        Muxes := 2     <p />	   6 Input    5 Bit        Muxes := 6     <p />	   7 Input    5 Bit        Muxes := 6     <p />	   2 Input    4 Bit        Muxes := 7     <p />	   9 Input    4 Bit        Muxes := 1     <p />	   5 Input    4 Bit        Muxes := 1     <p />	   2 Input    3 Bit        Muxes := 2     <p />	   5 Input    3 Bit        Muxes := 1     <p />	   2 Input    2 Bit        Muxes := 2     <p />	   4 Input    2 Bit        Muxes := 1     <p />	   3 Input    1 Bit        Muxes := 1     <p />	   2 Input    1 Bit        Muxes := 222   <p />	   4 Input    1 Bit        Muxes := 1     <p />---------------------------------------------------------------------------------<p />Finished RTL Component Statistics <p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Part Resource Summary<p />---------------------------------------------------------------------------------<p />Part Resources:<p />DSPs: 220 (col length:60)<p />BRAMs: 280 (col length: RAMB18 60 RAMB36 30)<p />---------------------------------------------------------------------------------<p />Finished Part Resource Summary<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Cross Boundary and Area Optimization<p />---------------------------------------------------------------------------------<p />Why this net has no driver: _order_recur <const1><p />DSP Report: Generating DSP res_x_mul_temp, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp is absorbed into DSP res_x_mul_temp.<p />DSP Report: operator res_x_mul_temp is absorbed into DSP res_x_mul_temp.<p />DSP Report: Generating DSP res_x_mul_temp, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp is absorbed into DSP res_x_mul_temp.<p />DSP Report: operator res_x_mul_temp is absorbed into DSP res_x_mul_temp.<p />DSP Report: Generating DSP res_x_mul_temp, operation Mode is: (PCIN>>17)+A*B.<p />DSP Report: operator res_x_mul_temp is absorbed into DSP res_x_mul_temp.<p />DSP Report: operator res_x_mul_temp is absorbed into DSP res_x_mul_temp.<p />DSP Report: Generating DSP res_d_mul_temp, operation Mode is: A*B.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: Generating DSP res_d_mul_temp, operation Mode is: (PCIN>>17)+A*B.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: Generating DSP res_d_mul_temp, operation Mode is: A*B.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: Generating DSP res_d_mul_temp, operation Mode is: (PCIN>>17)+A*B.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: operator res_d_mul_temp is absorbed into DSP res_d_mul_temp.<p />DSP Report: Generating DSP res_fi_2_0_2_0_fm_res_mul_temp, operation Mode is: A*B.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />DSP Report: Generating DSP res_fi_2_0_2_0_fm_res_mul_temp, operation Mode is: (PCIN>>17)+A*B.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />DSP Report: Generating DSP res_fi_2_0_2_0_fm_res_mul_temp, operation Mode is: A*B.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />DSP Report: Generating DSP res_fi_2_0_2_0_fm_res_mul_temp, operation Mode is: (PCIN>>17)+A*B.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />DSP Report: operator res_fi_2_0_2_0_fm_res_mul_temp is absorbed into DSP res_fi_2_0_2_0_fm_res_mul_temp.<p />Why this net has no driver: _order_recur <const1><p />Why this net has no driver: _order_recur <const0><p />Why this net has no driver: _order_recur <const0><p />Why this net has no driver: _order_recur <const0><p />Why this net has no driver: _order_recur <const1><p />Why this net has no driver: _order_recur <const1><p />Why this net has no driver: _order_recur <const1><p />DSP Report: Generating DSP res_x_mul_temp_1, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_1 is absorbed into DSP res_x_mul_temp_1.<p />DSP Report: operator res_x_mul_temp_1 is absorbed into DSP res_x_mul_temp_1.<p />DSP Report: Generating DSP res_x_mul_temp_1, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_1 is absorbed into DSP res_x_mul_temp_1.<p />DSP Report: operator res_x_mul_temp_1 is absorbed into DSP res_x_mul_temp_1.<p />DSP Report: Generating DSP res_x_mul_temp_1, operation Mode is: (PCIN>>17)+A*B.<p />DSP Report: operator res_x_mul_temp_1 is absorbed into DSP res_x_mul_temp_1.<p />DSP Report: operator res_x_mul_temp_1 is absorbed into DSP res_x_mul_temp_1.<p />DSP Report: Generating DSP res_x_mul_temp_2, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_2 is absorbed into DSP res_x_mul_temp_2.<p />DSP Report: operator res_x_mul_temp_2 is absorbed into DSP res_x_mul_temp_2.<p />DSP Report: Generating DSP res_x_mul_temp_2, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_2 is absorbed into DSP res_x_mul_temp_2.<p />DSP Report: operator res_x_mul_temp_2 is absorbed into DSP res_x_mul_temp_2.<p />DSP Report: Generating DSP res_x_mul_temp_2, operation Mode is: (PCIN>>17)+A*B.<p />DSP Report: operator res_x_mul_temp_2 is absorbed into DSP res_x_mul_temp_2.<p />DSP Report: operator res_x_mul_temp_2 is absorbed into DSP res_x_mul_temp_2.<p />DSP Report: Generating DSP res_x_mul_temp_3, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_3 is absorbed into DSP res_x_mul_temp_3.<p />DSP Report: operator res_x_mul_temp_3 is absorbed into DSP res_x_mul_temp_3.<p />DSP Report: Generating DSP res_x_mul_temp_3, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_3 is absorbed into DSP res_x_mul_temp_3.<p />DSP Report: Generating DSP res_x_mul_temp_3, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_3 is absorbed into DSP res_x_mul_temp_3.<p />DSP Report: Generating DSP res_x_mul_temp_3, operation Mode is: A*B.<p />DSP Report: operator res_x_mul_temp_3 is absorbed into DSP res_x_mul_temp_3.<p />---------------------------------------------------------------------------------<p />Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:23 . Memory (MB): peak = 2436.129 ; gain = 289.531 ; free physical = 11370 ; free virtual = 20613<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start ROM, RAM, DSP and Shift Register Reporting<p />---------------------------------------------------------------------------------<p /><p />ROM: Preliminary Mapping	Report<p />+----------------+------------+---------------+----------------+<p />|Module Name     | RTL Object | Depth x Width | Implemented As | <p />+----------------+------------+---------------+----------------+<p />|nfp_atan_single | p_0_out    | 256x26        | LUT            | <p />|nfp_atan_single | p_0_out    | 32x27         | LUT            | <p />|nfp_atan_single | p_0_out    | 256x26        | LUT            | <p />|nfp_atan_single | p_0_out    | 256x27        | LUT            | <p />|nfp_atan_single | p_0_out    | 256x26        | LUT            | <p />|nfp_atan_single | p_0_out    | 32x27         | LUT            | <p />|nfp_atan_single | p_0_out    | 256x26        | LUT            | <p />|nfp_atan_single | p_0_out    | 256x27        | LUT            | <p />+----------------+------------+---------------+----------------+<p /><p /><p />Block RAM: Preliminary Mapping	Report (see note below)<p />+------------+--------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+<p />|Module Name | RTL Object                                                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | <p />+------------+--------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+<p />|HDL_DUT_fil | u_mwfil_chiftop/u_mwfil_chifcore/NormalBlock.u_b2dfifo/u_dpscram/mem_reg | 16 x 64(READ_FIRST)    | W |   | 16 x 64(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_mwfil_chifcore/u_d2bfifo/u_dpscram/mem_reg             | 16 x 96(READ_FIRST)    | W |   | 16 x 96(WRITE_FIRST)   |   | R | Port A and B     | 1      | 1      | <p />+------------+--------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+<p /><p />Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. <p /><p />DSP: Preliminary Mapping	Report (see note below)<p />+----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+<p />|Module Name     | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | <p />+----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+<p />|nfp_atan_single | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | (PCIN>>17)+A*B | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | (PCIN>>17)+A*B | 11     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | (PCIN>>17)+A*B | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | (PCIN>>17)+A*B | 11     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | (PCIN>>17)+A*B | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | (PCIN>>17)+A*B | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | (PCIN>>17)+A*B | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />|nfp_atan_single | A*B            | 21     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | <p />+----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+<p /><p />Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.<p />---------------------------------------------------------------------------------<p />Finished ROM, RAM, DSP and Shift Register Reporting<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Applying XDC Timing Constraints<p />---------------------------------------------------------------------------------<p />WARNING: [Synth 8-565] redefining clock 'sysclk'<p />---------------------------------------------------------------------------------<p />Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2436.129 ; gain = 289.531 ; free physical = 11250 ; free virtual = 20493<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Timing Optimization<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 2462.238 ; gain = 315.641 ; free physical = 11193 ; free virtual = 20435<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start ROM, RAM, DSP and Shift Register Reporting<p />---------------------------------------------------------------------------------<p /><p />Block RAM: Final Mapping	Report<p />+------------+--------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+<p />|Module Name | RTL Object                                                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | <p />+------------+--------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+<p />|HDL_DUT_fil | u_mwfil_chiftop/u_mwfil_chifcore/NormalBlock.u_b2dfifo/u_dpscram/mem_reg | 16 x 64(READ_FIRST)    | W |   | 16 x 64(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_mwfil_chifcore/u_d2bfifo/u_dpscram/mem_reg             | 16 x 96(READ_FIRST)    | W |   | 16 x 96(WRITE_FIRST)   |   | R | Port A and B     | 1      | 1      | <p />+------------+--------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+<p /><p />---------------------------------------------------------------------------------<p />Finished ROM, RAM, DSP and Shift Register Reporting<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Technology Mapping<p />---------------------------------------------------------------------------------<p />INFO: [Synth 8-7052] The timing for the instance u_mwfil_chiftop/u_mwfil_chifcore/NormalBlock.u_b2dfifo/u_dpscram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.<p />INFO: [Synth 8-7052] The timing for the instance u_mwfil_chiftop/u_mwfil_chifcore/u_d2bfifo/u_dpscram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.<p />INFO: [Synth 8-7052] The timing for the instance u_mwfil_chiftop/u_mwfil_chifcore/u_d2bfifo/u_dpscram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.<p />---------------------------------------------------------------------------------<p />Finished Technology Mapping : Time (s): cpu = 00:01:41 ; elapsed = 00:01:46 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11190 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start IO Insertion<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Flattening Before IO Insertion<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Flattening Before IO Insertion<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Final Netlist Cleanup<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Final Netlist Cleanup<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:01:50 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11189 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Renaming Generated Instances<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:01:50 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11189 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Rebuilding User Hierarchy<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11189 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Renaming Generated Ports<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Renaming Generated Ports : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11189 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Handling Custom Attributes<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11189 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Renaming Generated Nets<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11189 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start ROM, RAM, DSP and Shift Register Reporting<p />---------------------------------------------------------------------------------<p /><p />Static Shift Register Report:<p />+------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+<p />|Module Name | RTL Name                                                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | <p />+------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+<p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay1_out1_2_reg[7]       | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay8_reg_reg[24][7]      | 25     | 8     | YES          | NO                 | YES               | 0      | 8       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[24]      | 25     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[23]      | 24     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[22]      | 23     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[21]      | 22     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[20]      | 21     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[19]      | 20     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[18]      | 19     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[17]      | 18     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[16]      | 17     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[15]      | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[14]      | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[13]      | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[12]      | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[11]      | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[10]      | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[9]       | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[8]       | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[7]       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[6]       | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[5]       | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[4]       | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay6_out1_1_reg[3]       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay11_reg_reg[23][4]     | 24     | 3     | YES          | NO                 | YES               | 0      | 3       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay52_reg_reg[29]        | 30     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay53_reg_reg[29]        | 30     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay51_reg_reg[29]        | 30     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay56_reg_reg[28][22]    | 29     | 23    | YES          | NO                 | YES               | 0      | 23      | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay55_reg_reg[28][7]     | 29     | 8     | YES          | NO                 | YES               | 0      | 8       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_div_comp/Delay54_reg_reg[29]        | 30     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay2_reg_reg[13]        | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay27_reg_reg[12]       | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/reduced_reg_reg[12][8]    | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/reduced_reg_reg[12][7]    | 14     | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay7_reg_1_reg[8][8]    | 11     | 9     | YES          | NO                 | YES               | 9      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay28_reg_reg[3]        | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/reduced_reg_1_reg[3]      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/reduced_reg_2_reg[13][23] | 14     | 24    | YES          | NO                 | YES               | 24     | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay_out1_reg[61]        | 12     | 24    | YES          | NO                 | YES               | 24     | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/reduced_reg_3_reg[10][23] | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay25_reg_1_reg[6][36]  | 7      | 37    | YES          | NO                 | YES               | 37     | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay25_reg_reg[32]       | 33     | 1     | YES          | NO                 | YES               | 0      | 1       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay33_reg_reg[3][22]    | 8      | 23    | YES          | NO                 | YES               | 23     | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay27_reg_1_reg[32][22] | 33     | 23    | YES          | NO                 | YES               | 0      | 23      | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay29_reg_reg[3][7]     | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay32_reg_reg[3][7]     | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay26_reg_reg[32][7]    | 33     | 8     | YES          | NO                 | YES               | 0      | 8       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_atan_comp/Delay12_reg_reg[35]       | 37     | 1     | YES          | NO                 | YES               | 0      | 2       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_sub_comp/Delay18_reg_reg[7]         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_sub_comp/Delay2_reg_reg[3][7]       | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_sub_comp/Delay17_reg_reg[6][22]     | 8      | 23    | YES          | NO                 | YES               | 23     | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_sub_comp/Delay15_reg_reg[7][7]      | 8      | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_sub_comp/Delay13_reg_reg[7]         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_sub_comp/Delay14_reg_reg[7]         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_add_comp/Delay18_reg_reg[7]         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_add_comp/Delay2_reg_reg[3][7]       | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_add_comp/Delay17_reg_reg[6][22]     | 8      | 23    | YES          | NO                 | YES               | 23     | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_add_comp/Delay15_reg_reg[7][7]      | 8      | 8     | YES          | NO                 | YES               | 8      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_add_comp/Delay13_reg_reg[7]         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/u_nfp_add_comp/Delay14_reg_reg[7]         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/delayMatch_reg_reg[75]                    | 76     | 1     | YES          | NO                 | YES               | 0      | 3       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/delayMatch2_reg_reg[75]                   | 76     | 1     | YES          | NO                 | YES               | 0      | 3       | <p />|HDL_DUT_fil | u_mwfil_chiftop/u_dut/u_HDL_DUT/delayMatch1_reg_reg[10][31]               | 11     | 32    | YES          | NO                 | YES               | 32     | 0       | <p />+------------+---------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+<p /><p />---------------------------------------------------------------------------------<p />Finished ROM, RAM, DSP and Shift Register Reporting<p />---------------------------------------------------------------------------------<p />---------------------------------------------------------------------------------<p />Start Writing Synthesis Report<p />---------------------------------------------------------------------------------<p /><p />Report BlackBoxes: <p />+------+--------------+----------+<p />|      |BlackBox name |Instances |<p />+------+--------------+----------+<p />|1     |clk_wiz_0     |         1|<p />|2     |jtag_mac_fifo |         2|<p />|3     |simcycle_fifo |         1|<p />+------+--------------+----------+<p /><p />Report Cell Usage: <p />+------+----------------------+------+<p />|      |Cell                  |Count |<p />+------+----------------------+------+<p />|1     |clk_wiz_0_bbox        |     1|<p />|2     |jtag_mac_fifo_bbox    |     1|<p />|3     |jtag_mac_fifo_bbox_2_ |     1|<p />|4     |simcycle_fifo_bbox    |     1|<p />|5     |BSCANE2               |     1|<p />|6     |BUFG                  |     1|<p />|7     |CARRY4                |   598|<p />|8     |DSP48E1               |    21|<p />|10    |LUT1                  |   230|<p />|11    |LUT2                  |  2239|<p />|12    |LUT3                  |  1776|<p />|13    |LUT4                  |   873|<p />|14    |LUT5                  |  1129|<p />|15    |LUT6                  |  1364|<p />|16    |MUXF7                 |     5|<p />|17    |RAMB18E1              |     1|<p />|18    |RAMB36E1              |     2|<p />|19    |SRL16E                |   309|<p />|20    |SRLC32E               |    93|<p />|21    |FDCE                  |  6366|<p />|22    |FDPE                  |     1|<p />|23    |FDRE                  |  1009|<p />|24    |FDSE                  |     6|<p />|25    |IBUF                  |     1|<p />+------+----------------------+------+<p />---------------------------------------------------------------------------------<p />Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 2519.254 ; gain = 372.656 ; free physical = 11189 ; free virtual = 20433<p />---------------------------------------------------------------------------------<p />Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.<p />Synthesis Optimization Runtime : Time (s): cpu = 00:01:41 ; elapsed = 00:01:47 . Memory (MB): peak = 2519.254 ; gain = 196.969 ; free physical = 11263 ; free virtual = 20507<p />Synthesis Optimization Complete : Time (s): cpu = 00:01:47 ; elapsed = 00:01:52 . Memory (MB): peak = 2519.262 ; gain = 372.656 ; free physical = 11263 ; free virtual = 20507<p />INFO: [Project 1-571] Translating synthesized netlist<p />Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2519.262 ; gain = 0.000 ; free physical = 11334 ; free virtual = 20578<p />INFO: [Netlist 29-17] Analyzing 627 Unisim elements for replacement<p />INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds<p />INFO: [Project 1-570] Preparing netlist for logic optimization<p />INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).<p />Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2551.270 ; gain = 0.000 ; free physical = 11279 ; free virtual = 20523<p />INFO: [Project 1-111] Unisim Transformation Summary:<p />No Unisim elements were transformed.<p /><p />INFO: [Common 17-83] Releasing license: Synthesis<p />120 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.<p />synth_design completed successfully<p />synth_design: Time (s): cpu = 00:01:58 ; elapsed = 00:02:01 . Memory (MB): peak = 2551.270 ; gain = 404.766 ; free physical = 11464 ; free virtual = 20709<p />INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/DVBS2/DVBS2/src/Receiver/4-Mapping/hdl_prj/fil_prj/fpgaproj/HDL_DUT_fil.runs/synth_1/HDL_DUT_fil.dcp' has been generated.<p />INFO: [runtcl-4] Executing : report_utilization -file HDL_DUT_fil_utilization_synth.rpt -pb HDL_DUT_fil_utilization_synth.pb<p />INFO: [Common 17-206] Exiting Vivado at Sat Dec 26 20:06:14 2020...<p />[Sat Dec 26 20:06:17 2020] synth_1 finished<p />wait_on_run: Time (s): cpu = 00:05:05 ; elapsed = 00:05:47 . Memory (MB): peak = 2244.562 ; gain = 0.000 ; free physical = 12391 ; free virtual = 21633<p /># if {[get_property PROGRESS [get_runs synth_1]] != "100%"} {  <p />#   error "ERROR: Synthesis failed" <p /># }<p /># close_project<p />INFO: [Common 17-206] Exiting Vivado at Sat Dec 26 20:06:17 2020...<p /><p />### HDL compilation completed.<p /><p />### Running programming file generation outside MATLAB.<p />### Check external shell for programming file generation progress.<p />### Generating new FIL model: <a href="matlab:open_system('gm_psk_demodulate_block1_fil')">gm_psk_demodulate_block1_fil</a>.<p />### FPGA-in-the-Loop testbench generation complete.<p /><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish -->
+<span name = "EmbedImages" id="EmbedImages"></span><!-- mdladv_ignore_start -->
+</div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start -->
+</div><!-- mdladv_ignore_finish -->
+</body>  
+</html>  
