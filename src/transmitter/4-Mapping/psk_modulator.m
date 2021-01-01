@@ -14,7 +14,7 @@ classdef psk_modulator < matlab.System
 
     % Public, non-tunable properties
     properties(Nontunable)
-        order = 8;
+        bits_per_symbol = 3;
         amplitude = 1;
         frame_size = 64800;
     end
@@ -42,20 +42,9 @@ classdef psk_modulator < matlab.System
             % Perform one-time calculations, such as computing constants
         end
 
-        function [I, Q] = stepImpl(obj, fec_frame)
+        function [inphase, quadrature] = stepImpl(obj, fec_frame)
             % Implement algorithm. 
-            num_of_bits = log2(obj.order);
-            h = length(fec_frame)/num_of_bits;
-            input_size = [h num_of_bits];
-            tmp = fi([],1,16,0);
-            I = fi(zeros(length(fec_frame)/num_of_bits, 1,'like',tmp));
-            Q = fi(zeros(length(fec_frame)/num_of_bits, 1,'like',tmp));
-            frame_reshape = reshape(fec_frame, input_size);
-            for index = 1:h
-                [i, q] = psk_modulate(frame_reshape(index, :), obj.amplitude);
-                I(index) = fi(i,1,16,0);
-                Q(index) = fi(q,1,16,0);
-            end
+            [inphase, quadrature] = psk_modulate(fec_frame, obj.bits_per_symbol, obj.amplitude);
         end
 
         %% Backup/restore functions
@@ -75,32 +64,28 @@ classdef psk_modulator < matlab.System
             ds = struct([]);
         end
 
-        function [out,out2] = getOutputSizeImpl(obj)
+        function [i, q] = getOutputSizeImpl(obj)
             % Return size for each output port
-            out = [obj.frame_size/3 1];
-            out2 = [obj.frame_size/3 1];
+            i = [obj.frame_size/obj.bits_per_symbol 1];
+            q = i;
         end
 
-        function [out,out2] = getOutputDataTypeImpl(obj)
+        function [i, q] = getOutputDataTypeImpl(obj)
             % Return data type for each output port
-            out = 'Fixed';
-            out2= 'Fixed';
+            i  = 'double';
+            q  = i;
         end
 
-        function [out,out2] = isOutputComplexImpl(obj)
+        function [out, out2] = isOutputComplexImpl(obj)
             % Return true for each output port with complex data
-            out = false;
-            out2 = false;
-
-            % Example: inherit complexity from first input port
-            % out = propagatedInputComplexity(obj,1);
+            out  = false;
+            out2 = out;
         end
 
-        function [out,out2] = isOutputFixedSizeImpl(obj)
+        function [out, out2] = isOutputFixedSizeImpl(obj)
             % Return true for each output port with fixed size
-            out = true;
-            out2 = true;
-
+            out  = true;
+            out2 = out;
             % Example: inherit fixed-size status from first input port
             % out = propagatedInputFixedSize(obj,1);
         end

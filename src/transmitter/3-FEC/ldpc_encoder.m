@@ -11,7 +11,7 @@ classdef ldpc_encoder < matlab.System
     properties(Nontunable)
         n = 64800;
         K  = 48600;
-        first_parity_bit_addresses = int32([[0 6385 7901 14611 13389 11200 3252 5243 2504 2722 821 7374];
+        first_parity_bit_addresses = [[0 6385 7901 14611 13389 11200 3252 5243 2504 2722 821 7374];
                                 [1 11359 2698 357 13824 12772 7244 6752 15310 852 2001 11417];
                                 [2 7862 7977 6321 13612 12197 14449 15137 13860 1708 6399 13444];
                                 [3 1560 11804 6975 13292 3646 3812 8772 7306 5795 14327 7866];
@@ -25,8 +25,8 @@ classdef ldpc_encoder < matlab.System
                                [11 1903 10818 119 215 7558 11046 10615 11545 14784 7961 15619];
                                [12 3655 8736 4917 15874 5129 2134 15944 14768 7150 2692 1469];
                                [13 8316 3820 505 8923 6757 806 7957 4216 15589 13244 2622];
-                               [14 14463 4852 15733 3041 11193 12860 13673 8152 6551 15108 8758]]);
-         second_parity_bit_addresses = int32([[15 3149 11981];
+                               [14 14463 4852 15733 3041 11193 12860 13673 8152 6551 15108 8758]];
+         second_parity_bit_addresses = [[15 3149 11981];
                                        [16 13416 6906];
                                        [17 13098 13352];
                                        [18 2009 14460];
@@ -145,7 +145,7 @@ classdef ldpc_encoder < matlab.System
                                        [41 15125 6119];
                                        [42 8051 14465];
                                        [43 11139 5167];
-                                       [44 2883 14521]]);
+                                       [44 2883 14521]];
     end
 
     properties(DiscreteState)
@@ -175,9 +175,9 @@ classdef ldpc_encoder < matlab.System
 
         function ldpc_codeword = stepImpl(obj,bch_codeword)
             % Implement algorithm. 
-            ldpc_codeword = int32(zeros(obj.n, 1));
+            ldpc_codeword = (zeros(obj.n, 1));
             % 1.- Initialize p0 = p1 = p2 = ... = p_(nldpc−kldpc−1) = 0.
-            obj.parity = int32(zeros(obj.n-obj.K, 1));
+            obj.parity = (zeros(obj.n-obj.K, 1));
             % Iterate over all chunks of 360 information bits
             numIter = length(bch_codeword)/360;
             for j = 0:15-1 % j will be each row

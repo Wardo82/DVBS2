@@ -2,7 +2,6 @@ function SIGNAL = BBFilterAndQModulate(PL_FRAME, dvb)
 %BB_filter_and_Q_modulate Summary of this function goes here
 %   Filter the signal with a RC filter
     % RRC filter
-    % TODO: Review theory
     txfilter = comm.RaisedCosineTransmitFilter('Shape', 'Square Root',...
                             'FilterSpanInSymbols', 10,... % "Should be way higher than the Samples per Symbol"
                             'OutputSamplesPerSymbol', dvb.SamplesPerSymbol, ...

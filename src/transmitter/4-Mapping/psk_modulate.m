@@ -2,7 +2,7 @@
     l = length(fec_frame)/bits_per_symbol;
     I = zeros(l, 1);
     Q = zeros(l, 1);
-    frame_reshape = reshape(fec_frame, [bits_per_symbol l]);
+    frame_reshape = reshape(fec_frame, bits_per_symbol, l);
     for index = 1:l
         phase = 0; % Start at phase 0
         input_bits = frame_reshape(:, index);
