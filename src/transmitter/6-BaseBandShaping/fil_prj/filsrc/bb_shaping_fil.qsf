@@ -1,0 +1,2 @@
+set_location_assignment PIN_V11 -to sysclk
+set_instance_assignment -name IO_STANDARD "3.3V LVCMOS" -to sysclk
