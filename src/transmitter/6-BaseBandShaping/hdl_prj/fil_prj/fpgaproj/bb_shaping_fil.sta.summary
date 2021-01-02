@@ -1,0 +1,245 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.680
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.743
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 11.007
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 29.408
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 36.527
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.494
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.722
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.758
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'sysclk'
+Slack : 9.670
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.303
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.764
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.591
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.818
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 10.964
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.282
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 29.548
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 36.774
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.694
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.728
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'sysclk'
+Slack : 9.673
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.334
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.724
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.350
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.909
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 13.351
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.101
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.137
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 30.583
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 37.577
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.881
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'sysclk'
+Slack : 9.336
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.078
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.884
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.604
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 13.592
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 30.873
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 37.930
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.881
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'sysclk'
+Slack : 9.286
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.112
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u_ClockManager|u_dcm|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.887
+TNS   : 0.000
+
+------------------------------------------------------------
