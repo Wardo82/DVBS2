@@ -1,7 +1,7 @@
 
 -- ----------------------------------------------
 -- File Name: FILCommLayer.vhd
--- Created:   03-Jan-2021 01:38:48
+-- Created:   03-Jan-2021 15:43:33
 -- Copyright  2021 MathWorks, Inc.
 -- ----------------------------------------------
 
@@ -33,16 +33,16 @@ ARCHITECTURE rtl of FILCommLayer IS
 COMPONENT MWAJTAG IS 
 PORT (
       TxData                          : IN  std_logic_vector(7 DOWNTO 0);
+      TxDataLength                    : IN  std_logic_vector(12 DOWNTO 0);
       TxDataValid                     : IN  std_logic;
       TxEOP                           : IN  std_logic;
-      TxDataLength                    : IN  std_logic_vector(12 DOWNTO 0);
       CLK125                          : IN  std_logic;
-      TxReady                         : OUT std_logic;
       RxData                          : OUT std_logic_vector(7 DOWNTO 0);
+      TxReady                         : OUT std_logic;
+      RxCRCBad                        : OUT std_logic;
       RxDataValid                     : OUT std_logic;
       RxEOP                           : OUT std_logic;
-      RxCRCOK                         : OUT std_logic;
-      RxCRCBad                        : OUT std_logic
+      RxCRCOK                         : OUT std_logic
 );
 END COMPONENT;
 
@@ -100,16 +100,16 @@ BEGIN
 
 u_MWAJTAG: MWAJTAG 
 PORT MAP(
+        RxData               => mac_rxdata,
         TxData               => mac_txdata,
+        TxReady              => mac_txrdy,
+        TxDataLength         => mac_txdatalength,
+        RxCRCBad             => mac_rxcrcbad,
+        RxDataValid          => mac_rxvld,
         TxDataValid          => mac_txvld,
         TxEOP                => mac_txeop,
-        TxDataLength         => mac_txdatalength,
-        TxReady              => mac_txrdy,
-        RxData               => mac_rxdata,
-        RxDataValid          => mac_rxvld,
         RxEOP                => mac_rxeop,
         RxCRCOK              => mac_rxcrcok,
-        RxCRCBad             => mac_rxcrcbad,
         CLK125               => CLK125
 );
 

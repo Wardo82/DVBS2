@@ -4,13 +4,13 @@ sysclk => MWClkMgr:u_ClockManager.CLK_IN
 
 |interleaver_dut_fil|MWClkMgr:u_ClockManager
 CLK_IN => altpll:u_dcm.inclk[0]
-RESET_IN => altpll:u_dcm.areset
 RXCLK_IN => MACRXCLK.DATAIN
-DUTCLK <= altpll:u_dcm.clk[0]
-RESET_OUT <= altpll:u_dcm.locked
-MACTXCLK <= altpll:u_dcm.clk[1]
+RESET_IN => altpll:u_dcm.areset
 TXCLK <= altpll:u_dcm.clk[2]
+MACTXCLK <= altpll:u_dcm.clk[1]
 MACRXCLK <= RXCLK_IN.DB_MAX_OUTPUT_PORT_TYPE
+RESET_OUT <= altpll:u_dcm.locked
+DUTCLK <= altpll:u_dcm.clk[0]
 
 
 |interleaver_dut_fil|MWClkMgr:u_ClockManager|altpll:u_dcm

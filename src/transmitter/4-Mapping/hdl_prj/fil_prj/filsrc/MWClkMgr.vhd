@@ -1,7 +1,7 @@
 
 -- ----------------------------------------------
 -- File Name: MWClkMgr.vhd
--- Created:   02-Jan-2021 22:08:30
+-- Created:   03-Jan-2021 10:47:35
 -- Copyright  2021 MathWorks, Inc.
 -- ----------------------------------------------
 
@@ -17,13 +17,13 @@ USE IEEE.numeric_std.ALL;
 ENTITY MWClkMgr IS 
 PORT (
       CLK_IN                          : IN  std_logic;
-      RESET_IN                        : IN  std_logic;
       RXCLK_IN                        : IN  std_logic;
-      DUTCLK                          : OUT std_logic;
-      RESET_OUT                       : OUT std_logic;
-      MACTXCLK                        : OUT std_logic;
+      RESET_IN                        : IN  std_logic;
       TXCLK                           : OUT std_logic;
-      MACRXCLK                        : OUT std_logic
+      MACTXCLK                        : OUT std_logic;
+      MACRXCLK                        : OUT std_logic;
+      RESET_OUT                       : OUT std_logic;
+      DUTCLK                          : OUT std_logic
 );
 END MWClkMgr;
 
@@ -88,8 +88,8 @@ clk2_phase_shift: string
 PORT (
       inclk                           : IN  std_logic_vector(1 DOWNTO 0);
       areset                          : IN  std_logic;
-      clk                             : OUT std_logic_vector(4 DOWNTO 0);
-      locked                          : OUT std_logic
+      locked                          : OUT std_logic;
+      clk                             : OUT std_logic_vector(4 DOWNTO 0)
 );
 END COMPONENT;
 
@@ -164,9 +164,9 @@ clk2_phase_shift => "0"
 )
 PORT MAP(
         inclk                => clkin_vector,
-        areset               => RESET_IN,
+        locked               => LOCKED,
         clk                  => clk5,
-        locked               => LOCKED
+        areset               => RESET_IN
 );
 
 DUTCLK <= clk5(0);

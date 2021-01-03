@@ -1,7 +1,7 @@
 
 -- ----------------------------------------------
 -- File Name: bit_mapping_fil.vhd
--- Created:   02-Jan-2021 22:08:32
+-- Created:   03-Jan-2021 10:47:36
 -- Copyright  2021 MathWorks, Inc.
 -- ----------------------------------------------
 
@@ -27,13 +27,13 @@ ARCHITECTURE rtl of bit_mapping_fil IS
 COMPONENT MWClkMgr IS 
 PORT (
       CLK_IN                          : IN  std_logic;
-      RESET_IN                        : IN  std_logic;
       RXCLK_IN                        : IN  std_logic;
-      DUTCLK                          : OUT std_logic;
-      RESET_OUT                       : OUT std_logic;
-      MACTXCLK                        : OUT std_logic;
+      RESET_IN                        : IN  std_logic;
       TXCLK                           : OUT std_logic;
-      MACRXCLK                        : OUT std_logic
+      MACTXCLK                        : OUT std_logic;
+      MACRXCLK                        : OUT std_logic;
+      RESET_OUT                       : OUT std_logic;
+      DUTCLK                          : OUT std_logic
 );
 END COMPONENT;
 
@@ -83,14 +83,14 @@ BEGIN
 
 u_ClockManager: MWClkMgr 
 PORT MAP(
-        CLK_IN               => ClkIn,
-        DUTCLK               => dutClk,
-        RESET_IN             => dcm_reset,
-        RESET_OUT            => rst,
-        MACTXCLK             => ref_clk,
         TXCLK                => OPEN,
+        MACTXCLK             => ref_clk,
         MACRXCLK             => OPEN,
-        RXCLK_IN             => Bit0
+        CLK_IN               => ClkIn,
+        RXCLK_IN             => Bit0,
+        RESET_OUT            => rst,
+        DUTCLK               => dutClk,
+        RESET_IN             => dcm_reset
 );
 
 u_FILCore: FILCore 

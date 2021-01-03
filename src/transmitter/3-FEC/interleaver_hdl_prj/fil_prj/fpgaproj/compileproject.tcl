@@ -19,7 +19,7 @@ lappend log "\n\n------------------------------------"
 lappend log "   FPGA-in-the-Loop build summary"
 lappend log "------------------------------------\n"
 set expected_file interleaver_dut_fil.sof
-set copied_file /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver_hdl_prj/fil_prj/interleaver_dut_fil.sof
+set copied_file D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver_hdl_prj/fil_prj/interleaver_dut_fil.sof
 if [catch {file copy -force $expected_file ..}] {
    file delete ../$expected_file
    lappend log "Expected programming file not generated."

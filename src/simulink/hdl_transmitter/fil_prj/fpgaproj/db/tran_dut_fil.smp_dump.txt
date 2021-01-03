@@ -1,0 +1,81 @@
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder|pktState
+Name pktState.DATA_PKT_PAYLOAD pktState.DATA_PKT_HEADER pktState.DATA_MODE pktState.STATUS_PKT pktState.STATUS_MODE pktState.PKT_READY pktState.IDLE 
+pktState.IDLE 0 0 0 0 0 0 0 
+pktState.PKT_READY 0 0 0 0 0 1 1 
+pktState.STATUS_MODE 0 0 0 0 1 0 1 
+pktState.STATUS_PKT 0 0 0 1 0 0 1 
+pktState.DATA_MODE 0 0 1 0 0 0 1 
+pktState.DATA_PKT_HEADER 0 1 0 0 0 0 1 
+pktState.DATA_PKT_PAYLOAD 1 0 0 0 0 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc|tx_state
+Name tx_state.TX_EOP tx_state.TX_DATA tx_state.TX_IDLE 
+tx_state.TX_IDLE 0 0 0 
+tx_state.TX_DATA 0 1 1 
+tx_state.TX_EOP 1 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc|rx_state
+Name rx_state.RX_EOP rx_state.RX_DATA rx_state.RX_HEADER_5 rx_state.RX_HEADER_4 rx_state.RX_HEADER_3 rx_state.RX_HEADER_2 rx_state.RX_HEADER_1 rx_state.RX_IDLE 
+rx_state.RX_IDLE 0 0 0 0 0 0 0 0 
+rx_state.RX_HEADER_1 0 0 0 0 0 0 1 1 
+rx_state.RX_HEADER_2 0 0 0 0 0 1 0 1 
+rx_state.RX_HEADER_3 0 0 0 0 1 0 0 1 
+rx_state.RX_HEADER_4 0 0 0 1 0 0 0 1 
+rx_state.RX_HEADER_5 0 0 1 0 0 0 0 1 
+rx_state.RX_DATA 0 1 0 0 0 0 0 1 
+rx_state.RX_EOP 1 0 0 0 0 0 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc|MWAsyncFIFO:u_txFIFO|rd_state
+Name rd_state.RD_DATA rd_state.RD_WAIT4VLD rd_state.RD_IDLE 
+rd_state.RD_IDLE 0 0 0 
+rd_state.RD_WAIT4VLD 0 1 1 
+rd_state.RD_DATA 1 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc|MWAsyncFIFO:u_rxFIFO|rd_state
+Name rd_state.RD_DATA rd_state.RD_WAIT4VLD rd_state.RD_IDLE 
+rd_state.RD_IDLE 0 0 0 
+rd_state.RD_WAIT4VLD 0 1 1 
+rd_state.RD_DATA 1 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILCmdProc:u_FILCmdProc|status_state
+Name status_state.STATUS_BYTE_8 status_state.STATUS_BYTE_7 status_state.STATUS_BYTE_6 status_state.STATUS_BYTE_5 status_state.STATUS_BYTE_4 status_state.STATUS_BYTE_3 status_state.STATUS_BYTE_2 status_state.STATUS_BYTE_1 status_state.STATUS_WAIT_RDY status_state.STATUS_IDLE 
+status_state.STATUS_IDLE 0 0 0 0 0 0 0 0 0 0 
+status_state.STATUS_WAIT_RDY 0 0 0 0 0 0 0 0 1 1 
+status_state.STATUS_BYTE_1 0 0 0 0 0 0 0 1 0 1 
+status_state.STATUS_BYTE_2 0 0 0 0 0 0 1 0 0 1 
+status_state.STATUS_BYTE_3 0 0 0 0 0 1 0 0 0 1 
+status_state.STATUS_BYTE_4 0 0 0 0 1 0 0 0 0 1 
+status_state.STATUS_BYTE_5 0 0 0 1 0 0 0 0 0 1 
+status_state.STATUS_BYTE_6 0 0 1 0 0 0 0 0 0 1 
+status_state.STATUS_BYTE_7 0 1 0 0 0 0 0 0 0 1 
+status_state.STATUS_BYTE_8 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILPktMUX:u_FILPktMUX|state
+Name state.DATA_WAIT_EOP state.CMD_WAIT_EOP state.IDLE 
+state.IDLE 0 0 0 
+state.CMD_WAIT_EOP 0 1 1 
+state.DATA_WAIT_EOP 1 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILUDPCRC:u_FILUDPCRC|wrState
+Name wrState.WR_CHECKCRC wrState.WR_DATA wrState.WR_IDLE 
+wrState.WR_IDLE 0 0 0 
+wrState.WR_DATA 0 1 1 
+wrState.WR_CHECKCRC 1 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|state
+Name state.RX_WEOP state.TX_NRDY_STATE state.TX_STATE state.RX_STATE state.TX_HEADER_STATE state.RX_HEADER_STATE state.PILOT_STATE state.IDLE_STATE 
+state.IDLE_STATE 0 0 0 0 0 0 0 0 
+state.PILOT_STATE 0 0 0 0 0 0 1 1 
+state.RX_HEADER_STATE 0 0 0 0 0 1 0 1 
+state.TX_HEADER_STATE 0 0 0 0 1 0 0 1 
+state.RX_STATE 0 0 0 1 0 0 0 1 
+state.TX_STATE 0 0 1 0 0 0 0 1 
+state.TX_NRDY_STATE 0 1 0 0 0 0 0 1 
+state.RX_WEOP 1 0 0 0 0 0 0 1 
+
+State Machine - |tran_dut_fil|FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|txfifo_state
+Name txfifo_state.TXFIFO_HALT_STATE txfifo_state.TXFIFO_SEND_STATE txfifo_state.TXFIFO_IDLE_STATE 
+txfifo_state.TXFIFO_IDLE_STATE 0 0 0 
+txfifo_state.TXFIFO_SEND_STATE 0 1 1 
+txfifo_state.TXFIFO_HALT_STATE 1 0 1 

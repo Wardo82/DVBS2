@@ -1,7 +1,7 @@
 
 -- ----------------------------------------------
 -- File Name: interleaver_dut_wrapper.vhd
--- Created:   03-Jan-2021 01:38:48
+-- Created:   03-Jan-2021 15:43:34
 -- Copyright  2021 MathWorks, Inc.
 -- ----------------------------------------------
 
@@ -24,15 +24,15 @@ ARCHITECTURE rtl of interleaver_dut_wrapper IS
 
 COMPONENT interleaver_dut IS 
 PORT (
-      valid                           : IN  std_logic;
+      input_bit                       : IN  std_logic;
+      clk                             : IN  std_logic;
       reset_x                         : IN  std_logic;
       clk_enable                      : IN  std_logic;
-      clk                             : IN  std_logic;
-      input_bit                       : IN  std_logic;
-      data_out_0                      : OUT std_logic;
+      valid                           : IN  std_logic;
       data_out_1                      : OUT std_logic;
-      data_out_2                      : OUT std_logic;
-      valid_out                       : OUT std_logic
+      data_out_0                      : OUT std_logic;
+      valid_out                       : OUT std_logic;
+      data_out_2                      : OUT std_logic
 );
 END COMPONENT;
 
@@ -59,15 +59,15 @@ BEGIN
 
 u_interleaver_dut: interleaver_dut 
 PORT MAP(
-        valid                => valid,
-        reset_x              => dut_reset,
-        clk_enable           => enb,
-        data_out_0           => data_out_0,
         data_out_1           => data_out_1,
-        data_out_2           => data_out_2,
+        data_out_0           => data_out_0,
+        input_bit            => input_bit,
         valid_out            => valid_out,
         clk                  => clk,
-        input_bit            => input_bit
+        reset_x              => dut_reset,
+        clk_enable           => enb,
+        data_out_2           => data_out_2,
+        valid                => valid
 );
 
 dut_reset <= reset;

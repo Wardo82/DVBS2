@@ -1,5 +1,5 @@
-set SRCDIR /home/wardo/Documents/DVBS2/DVBS2/src/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver_hdl_prj/fil_prj/filsrc
-set SIMDIR /home/wardo/Documents/DVBS2/DVBS2/src/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver_hdl_prj/fil_prj/filsrc/sim
+set SRCDIR D:/Documents/DVBS2/DVBS2/src/transmitter/D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver_hdl_prj/fil_prj/filsrc
+set SIMDIR D:/Documents/DVBS2/DVBS2/src/transmitter/D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver_hdl_prj/fil_prj/filsrc/sim
 set COMPILE vcom
 
 set SIM vsim

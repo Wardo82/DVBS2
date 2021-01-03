@@ -1,7 +1,7 @@
 
 -- ----------------------------------------------
 -- File Name: bit_mapping_wrapper.vhd
--- Created:   02-Jan-2021 22:08:31
+-- Created:   03-Jan-2021 10:47:36
 -- Copyright  2021 MathWorks, Inc.
 -- ----------------------------------------------
 
@@ -24,13 +24,13 @@ ARCHITECTURE rtl of bit_mapping_wrapper IS
 
 COMPONENT bit_mapping IS 
 PORT (
-      reset_x                         : IN  std_logic;
-      clk_enable                      : IN  std_logic;
       input_sequence_0                : IN  std_logic;
-      input_sequence_1                : IN  std_logic;
-      input_sequence_2                : IN  std_logic;
       amplitude                       : IN  std_logic_vector(15 DOWNTO 0);
       clk                             : IN  std_logic;
+      input_sequence_2                : IN  std_logic;
+      reset_x                         : IN  std_logic;
+      clk_enable                      : IN  std_logic;
+      input_sequence_1                : IN  std_logic;
       quadrature                      : OUT std_logic_vector(32 DOWNTO 0);
       inphase                         : OUT std_logic_vector(32 DOWNTO 0)
 );
@@ -57,15 +57,15 @@ BEGIN
 
 u_bit_mapping: bit_mapping 
 PORT MAP(
-        quadrature           => quadrature,
-        reset_x              => dut_reset,
-        clk_enable           => enb,
         input_sequence_0     => input_sequence_0,
-        input_sequence_1     => input_sequence_1,
-        input_sequence_2     => input_sequence_2,
+        quadrature           => quadrature,
+        inphase              => inphase,
         amplitude            => amplitude,
         clk                  => clk,
-        inphase              => inphase
+        input_sequence_2     => input_sequence_2,
+        reset_x              => dut_reset,
+        clk_enable           => enb,
+        input_sequence_1     => input_sequence_1
 );
 
 dut_reset <= reset;

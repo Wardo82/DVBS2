@@ -1,5 +1,5 @@
 Flow report for bit_mapping_fil
-Sat Jan  2 22:09:15 2021
+Sun Jan 03 10:50:09 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sat Jan  2 22:09:15 2021       ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; bit_mapping_fil                             ;
-; Top-level Entity Name       ; bit_mapping_fil                             ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CSEMA4U23C6                                ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Sun Jan 03 10:49:56 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; bit_mapping_fil                             ;
+; Top-level Entity Name           ; bit_mapping_fil                             ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA4U23C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 1,055 / 15,880 ( 7 % )                      ;
+; Total registers                 ; 1568                                        ;
+; Total pins                      ; 1 / 314 ( < 1 % )                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 134,976 / 2,764,800 ( 5 % )                 ;
+; Total DSP Blocks                ; 2 / 84 ( 2 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1 / 5 ( 20 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/02/2021 22:08:41 ;
+; Start date & time ; 01/03/2021 10:48:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; bit_mapping_fil     ;
 +-------------------+---------------------+
@@ -74,34 +79,43 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                  ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +----------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID            ; 215866198912885.160962172103260        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID            ; 30902524296679.160966729910380         ; --            ; --          ; --         ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE ; -- (Not supported for targeted family) ; Balanced      ; --          ; --         ;
 +----------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:33     ; 1.0                     ; 859 MB              ; 00:00:45                           ;
-; Total                  ; 00:00:33     ; --                      ; --                  ; 00:00:45                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 4921 MB             ; 00:00:46                           ;
+; Fitter               ; 00:00:54     ; 1.2                     ; 6420 MB             ; 00:01:27                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4861 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:12     ; 1.4                     ; 5188 MB             ; 00:00:16                           ;
+; Total                ; 00:01:42     ; --                      ; --                  ; 00:02:34                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+------------------------+------------------+----------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+------------------------+------------------+----------------+------------+----------------+
-; Analysis & Elaboration ; Wardo            ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
-+------------------------+------------------+----------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Jarvis           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Jarvis           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Jarvis           ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Jarvis           ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off bit_mapping_fil -c bit_mapping_fil --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off bit_mapping_fil -c bit_mapping_fil
+quartus_fit --read_settings_files=off --write_settings_files=off bit_mapping_fil -c bit_mapping_fil
+quartus_asm --read_settings_files=off --write_settings_files=off bit_mapping_fil -c bit_mapping_fil
+quartus_sta bit_mapping_fil -c bit_mapping_fil
 
 
 

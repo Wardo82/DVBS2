@@ -1,12 +1,17 @@
-Analysis & Elaboration Status : Successful - Sun Jan  3 01:39:09 2021
+Analysis & Synthesis Status : Successful - Sun Jan 03 15:44:20 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : interleaver_dut_fil
 Top-level Entity Name : interleaver_dut_fil
 Family : Cyclone V
-Logic utilization (in ALMs) : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total block memory bits : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
-Total DLLs : N/A until Partition Merge
+Logic utilization (in ALMs) : N/A
+Total registers : 1315
+Total pins : 1
+Total virtual pins : 0
+Total block memory bits : 133,936
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

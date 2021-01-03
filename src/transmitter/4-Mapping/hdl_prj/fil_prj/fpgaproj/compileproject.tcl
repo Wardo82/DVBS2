@@ -19,7 +19,7 @@ lappend log "\n\n------------------------------------"
 lappend log "   FPGA-in-the-Loop build summary"
 lappend log "------------------------------------\n"
 set expected_file bit_mapping_fil.sof
-set copied_file /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/hdl_prj/fil_prj/bit_mapping_fil.sof
+set copied_file D:/Documents/DVBS2/DVBS2/src/transmitter/hdl_prj/fil_prj/bit_mapping_fil.sof
 if [catch {file copy -force $expected_file ..}] {
    file delete ../$expected_file
    lappend log "Expected programming file not generated."
