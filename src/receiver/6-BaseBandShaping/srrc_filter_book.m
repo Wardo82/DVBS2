@@ -1,4 +1,4 @@
-function h=srrc_filter(T,k,m,alpha)
+function h=srrc_filter_book(T,k,m,alpha)
 % T - symbol time
 % k - samples per symbol
 % m - delay is mT
