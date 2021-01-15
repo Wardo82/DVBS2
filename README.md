@@ -11,4 +11,4 @@ Each folder contains the implementation of the corresponding block. Some of it u
 
 The code follows the guidelines as described in the image below:
 
-![DVBS2 Diagram](Assets/DVBS2-Diagram.png)
+![DVBS2 Diagram](src/Assets/DVBS2-Diagram.png)

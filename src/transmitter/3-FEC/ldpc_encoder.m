@@ -11,7 +11,7 @@ classdef ldpc_encoder < matlab.System
     properties(Nontunable)
         n = 64800;
         K  = 48600;
-        first_parity_bit_addresses = [[0 6385 7901 14611 13389 11200 3252 5243 2504 2722 821 7374];
+        first_parity_bit_addresses = {[0 6385 7901 14611 13389 11200 3252 5243 2504 2722 821 7374];
                                 [1 11359 2698 357 13824 12772 7244 6752 15310 852 2001 11417];
                                 [2 7862 7977 6321 13612 12197 14449 15137 13860 1708 6399 13444];
                                 [3 1560 11804 6975 13292 3646 3812 8772 7306 5795 14327 7866];
@@ -25,38 +25,38 @@ classdef ldpc_encoder < matlab.System
                                [11 1903 10818 119 215 7558 11046 10615 11545 14784 7961 15619];
                                [12 3655 8736 4917 15874 5129 2134 15944 14768 7150 2692 1469];
                                [13 8316 3820 505 8923 6757 806 7957 4216 15589 13244 2622];
-                               [14 14463 4852 15733 3041 11193 12860 13673 8152 6551 15108 8758]];
-         second_parity_bit_addresses = [[15 3149 11981];
-                                       [16 13416 6906];
-                                       [17 13098 13352];
-                                       [18 2009 14460];
-                                       [19 7207 4314];
-                                       [20 3312 3945];
-                                       [21 4418 6248];
-                                       [22 2669 13975];
-                                       [23 7571 9023];
-                                       [24 14172 2967];
-                                       [25 7271 7138];
-                                       [26 6135 13670];
-                                       [27 7490 14559];
-                                       [28 8657 2466];
-                                       [29 8599 12834];
-                                       [30 3470 3152];
-                                       [31 13917 4365];
-                                       [32 6024 13730];
-                                       [33 10973 14182];
-                                       [34 2464 13167];
-                                       [35 5281 15049];
-                                       [36 1103 1849];
-                                       [37 2058 1069];
-                                       [38 9654 6095];
-                                       [39 14311 7667];
-                                       [40 15617 8146];
-                                       [41 4588 11218];
-                                       [42 13660 6243];
-                                       [43 8578 7874];
-                                       [44 11741 2686];
-                                       [0 1022 1264];
+                               [14 14463 4852 15733 3041 11193 12860 13673 8152 6551 15108 8758];
+                               [15 3149 11981];
+                               [16 13416 6906];
+                               [17 13098 13352];
+                               [18 2009 14460];
+                               [19 7207 4314];
+                               [20 3312 3945];
+                               [21 4418 6248];
+                               [22 2669 13975];
+                               [23 7571 9023];
+                               [24 14172 2967];
+                               [25 7271 7138];
+                               [26 6135 13670];
+                               [27 7490 14559];
+                               [28 8657 2466];
+                               [29 8599 12834];
+                               [30 3470 3152];
+                               [31 13917 4365];
+                               [32 6024 13730];
+                               [33 10973 14182];
+                               [34 2464 13167];
+                               [35 5281 15049];
+                               [36 1103 1849];
+                               [37 2058 1069];
+                               [38 9654 6095];
+                               [39 14311 7667];
+                               [40 15617 8146];
+                               [41 4588 11218];
+                               [42 13660 6243];
+                               [43 8578 7874];
+                               [44 11741 2686]};
+        second_parity_bit_addresses = [[0 1022 1264];
                                        [1 12604 9965];
                                        [2 8217 2707];
                                        [3 3156 11793];
@@ -100,8 +100,8 @@ classdef ldpc_encoder < matlab.System
                                        [41 7820 15360];
                                        [42 1179 7939];
                                        [43 2357 8678];
-                                       [44 7703 6216];
-                                       [0 3477 7067];
+                                       [44 7703 6216]];
+        third_parity_bit_addresses =   [[0 3477 7067];
                                        [1 3931 13845];
                                        [2 7675 12899];
                                        [3 1754 8187];
@@ -178,23 +178,32 @@ classdef ldpc_encoder < matlab.System
             ldpc_codeword = (zeros(obj.n, 1));
             % 1.- Initialize p0 = p1 = p2 = ... = p_(nldpc−kldpc−1) = 0.
             obj.parity = (zeros(obj.n-obj.K, 1));
+
             % Iterate over all chunks of 360 information bits
-            numIter = length(bch_codeword)/360;
-            for j = 0:15-1 % j will be each row
-                parityAddrs = obj.first_parity_bit_addresses(j+1, :)';
+            for j = 0:44 % j will be each row
+                parityAddrs = obj.first_parity_bit_addresses{j+1, :}';
                 % Iterate over all 360 information bits of a given chunk
                 for i = 0:359
-                    m = j*360+i;
-                    adrr = mod(parityAddrs+mod(m, 360)*obj.q, obj.n-obj.K);
+                    m = (j)*360+i;
+                    adrr = mod(parityAddrs+i*obj.q, obj.n-obj.K);
                     obj.parity(adrr+1) = xor(obj.parity(adrr+1), bch_codeword(m+1));
                 end
             end
-            for j = 15:numIter-1
-                parityAddrs = obj.second_parity_bit_addresses(j+1-15, :)';
+            for j = 0:44
+                parityAddrs = obj.second_parity_bit_addresses(j + 1, :)';
                 % Iterate over all 360 information bits of a given chunk
                 for i = 0:359
-                    m = j*360+i;
-                    adrr = mod(parityAddrs+mod(m, 360)*obj.q, obj.n-obj.K);
+                    m = (45+j)*360+i;
+                    adrr = modulo(uint32(parityAddrs)+modulo(m, 360)*obj.q, obj.n-obj.K);
+                    obj.parity(adrr+1) = xor(obj.parity(adrr+1), bch_codeword(m+1));
+                end
+            end
+            for j = 0:44
+                parityAddrs = obj.third_parity_bit_addresses(j + 1, :)';
+                % Iterate over all 360 information bits of a given chunk
+                for i = 0:359
+                    m = (90+j)*360+i;
+                    adrr = modulo(uint32(parityAddrs)+modulo(m, 360)*obj.q, obj.n-obj.K);
                     obj.parity(adrr+1) = xor(obj.parity(adrr+1), bch_codeword(m+1));
                 end
             end
