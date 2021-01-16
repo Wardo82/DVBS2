@@ -1,4 +1,4 @@
-input_message = zeros(48600, 1); % randi([0 1], 1, 48600); 
+input_message = zeros(48600, 1)'; % randi([0 1], 1, 48600); 
 odd_idx = 1:2:48600;
 input_message(odd_idx) = 1;
 
