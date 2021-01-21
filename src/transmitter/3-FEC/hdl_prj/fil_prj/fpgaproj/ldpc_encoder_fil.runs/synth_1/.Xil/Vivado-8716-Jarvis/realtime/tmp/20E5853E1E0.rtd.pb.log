@@ -1,0 +1,2 @@
+xilinx rtfpga
+WARNING: [Synth 8-7129] Port parity_in[16200] in module sequential_xor is either unconnected or has no load
