@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="clk_wiz_0_synth_1" LaunchDir="/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc_hdl_prj/fil_prj/fpgaproj/ldpc_encoder_fil.runs/clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="simcycle_fifo_synth_1" LaunchDir="/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc_hdl_prj/fil_prj/fpgaproj/ldpc_encoder_fil.runs/simcycle_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="jtag_mac_fifo_synth_1" LaunchDir="/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc_hdl_prj/fil_prj/fpgaproj/ldpc_encoder_fil.runs/jtag_mac_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc_hdl_prj/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="clk_wiz_0_synth_1"/>
+		<Parent Id="simcycle_fifo_synth_1"/>
+		<Parent Id="jtag_mac_fifo_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

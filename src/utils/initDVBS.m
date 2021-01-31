@@ -7,7 +7,7 @@ function DVB = initDVBS()
                 '16APSK 4/5', '16APSK 5/6', '16APSK 8/9', '16APSK 9/10', ...
                 '32APSK 3/4', '32APSK 4/5', '32APSK 5/6', '32APSK 8/9', ...
                 '32APSK 9/10'};
-    dvb.MODCOD = 12; % Index of the desired combination, i.e. i = 1 for QPSK 1/4
+    dvb.MODCOD = 15; % Index of the desired combination, i.e. i = 1 for QPSK 1/4
     subsystemType = split(subsystem{dvb.MODCOD}, ' '); % Constellation and LDPC code rate
     dvb.EsNodB = 10; % Energy per symbol to noise PSD ratio in dB
 

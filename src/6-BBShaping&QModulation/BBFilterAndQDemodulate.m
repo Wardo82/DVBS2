@@ -1,6 +1,6 @@
 function PLFRAME = BBFilterAndQDemodulate(CHANNELOUT, dvb)
 %BBFilterAndQDemodulate 
-    rx_filter = comm.RaisedCosineReceiveFilter('InputSamplesPerSymbol', dvb.SamplesPerSymbol, ... 
+    rx_filter = comm.RaisedCosineReceiveFilter('InputSamplesPerSymbol', dvb.SamplesPerSymbol, ...
                                                'RolloffFactor', dvb.RolloffFactor); 
     % b = coeffs(rx_filter);
     % TODO: ask -> rx_filter.Gain = 1/sum(b.Numerator);

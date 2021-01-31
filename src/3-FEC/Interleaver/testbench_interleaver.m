@@ -5,7 +5,7 @@ dvb = initDVBS();
 interleaver = Interleaver(dvb);
 
 % Create Interleaver from the comm library
-intrlvr = matlab_interlvr(dvb);
+[intrlvr, deinterlvr] = matlab_interlvr(dvb);
                     
 %% Payload
 % Payload
@@ -20,13 +20,13 @@ interlvr_output = interleaver.encode(message')';
 %% Encode frame using MATLAB's comm object
 mat_interlvr_output = intrlvr(message);
 
-if isequal(interlvr_output, mat_interlvr_output)
+if isequal(message, deinterlvr(interlvr_output))
     disp("Encoding succesfull: Matlab's and Interleaver class output are equal.");
 end
 
 %% Helper functions
 %--------------------------------------------------------------------------
-function interleaver = matlab_interlvr(dvb)
+function [interleaver, deinterleaver] = matlab_interlvr(dvb)
     % Interleaver: Section 5.3.3, p. 23
     % No interleaving (for BPSK and QPSK)
     dvb.InterleaveOrder = (1:dvb.LDPCCodewordLength).';
@@ -53,4 +53,5 @@ function interleaver = matlab_interlvr(dvb)
             dvb.InterleaveOrder = iTemp(:);
     end
     interleaver = comm.BlockInterleaver(dvb.InterleaveOrder);
+    deinterleaver = comm.BlockDeinterleaver(dvb.InterleaveOrder);
 end
