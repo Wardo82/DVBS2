@@ -1,25 +1,9 @@
 %% 
 % Main simulation script for the dvbs2 rate= 3/4 transmitter scheme with
 % 8PSK modulation.
-
-%% 5.6 Baseband shaping and quadrature modulation
-filter_span      = 10; % Is this the filter span in symbols?
-samples_per_symbol = 8;
-roll_off_factor   = 0.2;
-tx_filter = comm.RaisedCosineTransmitFilter('Shape', 'Square Root',...
-                                           'FilterSpanInSymbols', filter_span,... % "Should be way higher than the Samples per Symbol"
-                                           'OutputSamplesPerSymbol', samples_per_symbol, ...
-                                           'RolloffFactor', roll_off_factor);
-
-rx_filter = comm.RaisedCosineReceiveFilter('InputSamplesPerSymbol', samples_per_symbol, ...
-                                           'RolloffFactor', roll_off_factor); 
-% Normalize to obtain maximum filter tap value of 1
-b = coeffs(tx_filter);
-tx_filter.Gain = 1/max(b.Numerator);
-
-% Visualize the impulse response
-fvtool(tx_filter,'Analysis','impulse')
-
+%% 5.2 Scrambler
+bbscrambler = comm.Scrambler(2, [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1],... 
+                                [1 0 0 1 0 1 0 1 0 0 0 0 0 0 0]);
 %% 5.3 FEC encoding
 % This sub-system shall perform outer coding (BCH), Inner Coding (LDPC) and Bit interleaving. The input stream shall
 % be composed of BBFRAMEs and the output stream of FECFRAMEs.
@@ -49,8 +33,26 @@ tx_ldpc_encoder = comm.LDPCEncoder(LDPCParityCheckMatrix);
 rx_ldpc_decoder = comm.LDPCDecoder(LDPCParityCheckMatrix);
 % 5.3.3 Bit Interleaver (for 8PSK, 16APSK and 32APSK only)
 
-interleaver = comm.BlockInterleaver(dvb.InterleaveOrder);
-deinterleaver = comm.BlockDeinterleaver(dvb.InterleaveOrder);
+% interleaver = comm.BlockInterleaver(dvb.InterleaveOrder);
+% deinterleaver = comm.BlockDeinterleaver(dvb.InterleaveOrder);
+%% 5.6 Baseband shaping and quadrature modulation
+filter_span      = 10; % Is this the filter span in symbols?
+samples_per_symbol = 8;
+roll_off_factor   = 0.2;
+tx_filter = comm.RaisedCosineTransmitFilter('Shape', 'Square Root',...
+                                           'FilterSpanInSymbols', filter_span,...
+                                           'OutputSamplesPerSymbol', samples_per_symbol, ...
+                                           'RolloffFactor', roll_off_factor);
+
+rx_filter = comm.RaisedCosineReceiveFilter('InputSamplesPerSymbol', samples_per_symbol, ...
+                                           'RolloffFactor', roll_off_factor); 
+% Normalize to obtain maximum filter tap value of 1
+b = coeffs(tx_filter);
+tx_filter.Gain = 1/max(b.Numerator);
+% Visualize the impulse response
+%fvtool(tx_filter,'Analysis','impulse')
+
+
 %% System Simulation
 
 SNRs = 8;
@@ -64,8 +66,9 @@ for i = 1:length(SNRs)
         message = randi([0 1], bch_message_length, 1);
                 
         % Send it
-        bch_codeword = tx_bch_encoder(message);
-        ldpc_codeword = tx_ldpc_encoder(bch_codeword);
+        scrambled_message = bbscrambler(message);
+        bch_codeword      = tx_bch_encoder(scrambled_message);
+        ldpc_codeword     = tx_ldpc_encoder(bch_codeword);
         
         
     end

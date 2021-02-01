@@ -1,4 +1,4 @@
-function [syndrome] = compute_syndrome(received_code, t, m, field, feedback_conections)
+function [syndrome] = compute_syndrome(received_code, t, m, field, feedback_connections)
 % Computes the syndrome by using FSR.
     % Compute the remainders of r(X) divided by each minimial polynomial.
     n_max = 2^m-1;
@@ -7,7 +7,7 @@ function [syndrome] = compute_syndrome(received_code, t, m, field, feedback_cone
         for j = 1:2*t
             [~, state_registers(j)] = fsr_step(received_code(i), m, ...
                                           state_registers(j), ...
-                                          feedback_conections(j), n_max);
+                                          feedback_connections(j), n_max);
             state_registers(j) = state_registers(j) - ...
                                  n_max * uint32(state_registers(j) > n_max); % Equivalent to aux mod(2^m - 1);
         end
