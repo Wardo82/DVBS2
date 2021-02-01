@@ -1,0 +1,16 @@
+open_system('interleaver_model');
+open_system('gm_interleaver_model');
+cs.HiliteType = 'user2';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'gray';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_interleaver_model/interleaver_dut/interleaver/interleaver', 'user2');
+annotate_port('gm_interleaver_model/interleaver_dut/interleaver/interleaver', 1, 1, 'Block not characterized');
+cs.HiliteType = 'user2';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'gray';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_interleaver_model/interleaver_dut/interleaver/interleaver', 'user2');
+annotate_port('gm_interleaver_model/interleaver_dut/interleaver/interleaver', 1, 1, 'Block not characterized');
+hilite_system('interleaver_model/interleaver_dut/interleaver', 'user2');
+annotate_port('interleaver_model/interleaver_dut/interleaver', 1, 1, 'Block not characterized');

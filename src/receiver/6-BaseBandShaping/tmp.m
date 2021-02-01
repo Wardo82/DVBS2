@@ -1,5 +1,5 @@
 % File: c5 FIRdesign.m
-L = 30;
+L = 40;
 % 2L+1 total points
 lam = 0.3;
 % normalized cutoff frequency

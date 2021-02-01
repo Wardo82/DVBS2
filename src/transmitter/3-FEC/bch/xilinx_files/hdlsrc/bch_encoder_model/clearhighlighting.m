@@ -1,0 +1,18 @@
+SLStudio.Utils.RemoveHighlighting(get_param('bch_encoder_model', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_bch_encoder_model', 'handle'));
+annotate_port('gm_bch_encoder_model/bch_encoder/shift_and_xor', 1, 3, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/generator', 0, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/Logical Operator', 0, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/output_mask/output_mask', 1, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/output_mask/output_mask', 1, 1, '');
+annotate_port('bch_encoder_model/bch_encoder/output_mask', 1, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/p2s/p2s', 1, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/p2s/p2s', 1, 1, '');
+annotate_port('bch_encoder_model/bch_encoder/p2s', 1, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/registers/registers', 1, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/registers/registers', 1, 1, '');
+annotate_port('bch_encoder_model/bch_encoder/registers', 1, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/shift_and_xor/shift_and_xor', 1, 3, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/shift_and_xor/shift_and_xor', 1, 1, '');
+annotate_port('gm_bch_encoder_model/bch_encoder/shift_and_xor/shift_and_xor', 1, 1, '');
+annotate_port('bch_encoder_model/bch_encoder/shift_and_xor', 1, 1, '');

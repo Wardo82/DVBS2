@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jan 31 17:48:33 2021
+# Process ID: 8836
+# Current directory: D:/Documents/DVBS2/DVBS2/src/transmitter/6-BaseBandShaping/xilinx_files/fil_prj/fpgaproj/bb_shaping_fil.runs/jtag_mac_fifo_synth_1
+# Command line: vivado.exe -log jtag_mac_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source jtag_mac_fifo.tcl
+# Log file: D:/Documents/DVBS2/DVBS2/src/transmitter/6-BaseBandShaping/xilinx_files/fil_prj/fpgaproj/bb_shaping_fil.runs/jtag_mac_fifo_synth_1/jtag_mac_fifo.vds
+# Journal file: D:/Documents/DVBS2/DVBS2/src/transmitter/6-BaseBandShaping/xilinx_files/fil_prj/fpgaproj/bb_shaping_fil.runs/jtag_mac_fifo_synth_1\vivado.jou
+#-----------------------------------------------------------
+source jtag_mac_fifo.tcl -notrace

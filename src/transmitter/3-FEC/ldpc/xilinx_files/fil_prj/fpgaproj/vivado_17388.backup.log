@@ -1,0 +1,567 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jan 31 21:50:58 2021
+# Process ID: 17388
+# Current directory: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj
+# Command line: vivado.exe -mode batch -source createproject.tcl
+# Log file: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/vivado.log
+# Journal file: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj\vivado.jou
+#-----------------------------------------------------------
+source createproject.tcl
+# create_project -force ldpc_encoder_fil .
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj'
+# set_property target_language VHDL [current_project]
+# set_property part xc7z020clg484-1 [current_project]
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder_pac.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/MATLAB_Function.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/p2s.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd}
+# create_ip -name clk_wiz -vendor xilinx.com -library ip -module_name clk_wiz_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+# set_property -dict [list  CONFIG.PRIM_IN_FREQ {100.000} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.0000}] [get_ips clk_wiz_0]
+# create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name jtag_mac_fifo
+# set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Input_Data_Width {8} CONFIG.Input_Depth {4096} CONFIG.Read_Data_Count {true}  CONFIG.Use_Embedded_Registers {false} CONFIG.read_data_count_width {12} CONFIG.Almost_Full_Flag {true}] [get_ips jtag_mac_fifo]
+# create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name simcycle_fifo
+# set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Input_Data_Width {16} CONFIG.Input_Depth {16} CONFIG.Use_Embedded_Registers {false} ] [get_ips simcycle_fifo]
+# generate_target all [get_ips] -force
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'jtag_mac_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'simcycle_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'simcycle_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'simcycle_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'simcycle_fifo'...
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/simcycle_fifo_wrapper.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dpscram.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_bus2dut.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_controller.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dut2bus.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_wrapper.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chiftop.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.vhd}
+# add_files -norecurse {D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc}
+# set_property top ldpc_encoder_fil [current_fileset]
+# launch_runs synth_1
+[Sun Jan 31 21:51:29 2021] Launched clk_wiz_0_synth_1, jtag_mac_fifo_synth_1, simcycle_fifo_synth_1...
+Run output will be captured here:
+clk_wiz_0_synth_1: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/clk_wiz_0_synth_1/runme.log
+jtag_mac_fifo_synth_1: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/jtag_mac_fifo_synth_1/runme.log
+simcycle_fifo_synth_1: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/simcycle_fifo_synth_1/runme.log
+[Sun Jan 31 21:51:29 2021] Launched synth_1...
+Run output will be captured here: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Sun Jan 31 21:51:29 2021] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log ldpc_encoder_fil.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ldpc_encoder_fil.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source ldpc_encoder_fil.tcl -notrace
+Command: synth_design -top ldpc_encoder_fil -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6032
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1179.969 ; gain = 36.758
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ldpc_encoder_fil' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.vhd:27]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/.Xil/Vivado-7324-Jarvis/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'u_clk_wiz_0' of component 'clk_wiz_0' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/.Xil/Vivado-7324-Jarvis/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BSCANE2' declared at 'D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:884' bound to instance 'u_BSCANE2' of component 'BSCANE2' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.vhd:123]
+INFO: [Synth 8-6157] synthesizing module 'BSCANE2' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:884]
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BSCANE2' (1#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:884]
+INFO: [Synth 8-3491] module 'jtag_mac' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:13' bound to instance 'u_jtag_mac' of component 'jtag_mac' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.vhd:138]
+INFO: [Synth 8-6157] synthesizing module 'jtag_mac' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:13]
+	Parameter VERSION bound to: 191724 - type: integer 
+	Parameter idle bound to: 15'b000000000000000 
+	Parameter user_rst bound to: 15'b000000000000001 
+	Parameter get_cmd bound to: 15'b000000000000010 
+	Parameter get_wr_len bound to: 15'b000000000000100 
+	Parameter get_sim bound to: 15'b000000000001000 
+	Parameter wr bound to: 15'b000000000010000 
+	Parameter get_rd_len bound to: 15'b000000001000000 
+	Parameter get_skip bound to: 15'b000000010000000 
+	Parameter exe_skip bound to: 15'b000000100000000 
+	Parameter rdbk_len bound to: 15'b000001000000000 
+	Parameter rdbk_dat bound to: 15'b000010000000000 
+	Parameter ver_get_skip bound to: 15'b000100000000000 
+	Parameter ver_exe_skip bound to: 15'b001000000000000 
+	Parameter ver_rdbk_len bound to: 15'b010000000000000 
+	Parameter ver_rdbk_dat bound to: 15'b100000000000000 
+INFO: [Synth 8-638] synthesizing module 'simcycle_fifo_wrapper' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:28]
+WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:30]
+WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:30]
+INFO: [Synth 8-3491] module 'simcycle_fifo' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/.Xil/Vivado-7324-Jarvis/realtime/simcycle_fifo_stub.vhdl:5' bound to instance 'u_simcycle_fifo' of component 'simcycle_fifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'simcycle_fifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/.Xil/Vivado-7324-Jarvis/realtime/simcycle_fifo_stub.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'simcycle_fifo_wrapper' (2#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/simcycle_fifo_wrapper.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'jtag_mac_fifo_wrapper' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:30]
+WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:32]
+WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:32]
+INFO: [Synth 8-3491] module 'jtag_mac_fifo' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/.Xil/Vivado-7324-Jarvis/realtime/jtag_mac_fifo_stub.vhdl:5' bound to instance 'u_jtag_mac_fifo' of component 'jtag_mac_fifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'jtag_mac_fifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/.Xil/Vivado-7324-Jarvis/realtime/jtag_mac_fifo_stub.vhdl:24]
+INFO: [Synth 8-256] done synthesizing module 'jtag_mac_fifo_wrapper' (3#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac_fifo_wrapper.vhd:30]
+WARNING: [Synth 8-7071] port 'almost_full' of module 'jtag_mac_fifo_wrapper' is unconnected for instance 'u_pre_chif_fifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:68]
+WARNING: [Synth 8-7023] instance 'u_pre_chif_fifo' of module 'jtag_mac_fifo_wrapper' has 11 connections declared, but only 10 given [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:68]
+WARNING: [Synth 8-567] referenced signal 'wr_len' should be on the sensitivity list [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:187]
+WARNING: [Synth 8-567] referenced signal 'skip_len' should be on the sensitivity list [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:187]
+WARNING: [Synth 8-567] referenced signal 'act_rd_len' should be on the sensitivity list [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:187]
+INFO: [Synth 8-6155] done synthesizing module 'jtag_mac' (4#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/jtag_mac.v:13]
+INFO: [Synth 8-3491] module 'mwfil_chiftop' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chiftop.vhd:13' bound to instance 'u_mwfil_chiftop' of component 'mwfil_chiftop' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'mwfil_chiftop' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chiftop.vhd:27]
+	Parameter INWORD bound to: 3 - type: integer 
+	Parameter OUTWORD bound to: 2 - type: integer 
+	Parameter WORDSIZE bound to: 8 - type: integer 
+	Parameter HASENABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_chifcore' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:15' bound to instance 'u_mwfil_chifcore' of component 'mwfil_chifcore' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chiftop.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'mwfil_chifcore' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:42]
+	Parameter INWORD bound to: 3 - type: integer 
+	Parameter OUTWORD bound to: 2 - type: integer 
+	Parameter WORDSIZE bound to: 8 - type: integer 
+	Parameter HASENABLE bound to: 1 - type: integer 
+	Parameter WORDSIZE bound to: 8 - type: integer 
+	Parameter OUTWORD bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_bus2dut' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_bus2dut.vhd:13' bound to instance 'u_bus2dut' of component 'mwfil_bus2dut' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'mwfil_bus2dut' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_bus2dut.vhd:34]
+	Parameter WORDSIZE bound to: 8 - type: integer 
+	Parameter OUTWORD bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mwfil_bus2dut' (5#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_bus2dut.vhd:34]
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_uword bound to: 4 - type: integer 
+	Parameter fifo_width bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_udfifo' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:14' bound to instance 'u_b2dfifo' of component 'mwfil_udfifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'mwfil_udfifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:33]
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_uword bound to: 4 - type: integer 
+	Parameter fifo_width bound to: 24 - type: integer 
+	Parameter DATA bound to: 24 - type: integer 
+	Parameter ADDR bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_dpscram' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dpscram.vhd:12' bound to instance 'u_dpscram' of component 'mwfil_dpscram' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'mwfil_dpscram' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dpscram.vhd:31]
+	Parameter DATA bound to: 24 - type: integer 
+	Parameter ADDR bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mwfil_dpscram' (6#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dpscram.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'mwfil_udfifo' (7#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:33]
+	Parameter HASENABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_controller' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_controller.vhd:15' bound to instance 'u_controller' of component 'mwfil_controller' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'mwfil_controller' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_controller.vhd:38]
+	Parameter HASENABLE bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mwfil_controller' (8#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_controller.vhd:38]
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_uword bound to: 4 - type: integer 
+	Parameter fifo_width bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_udfifo' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:14' bound to instance 'u_d2bfifo' of component 'mwfil_udfifo' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'mwfil_udfifo__parameterized1' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:33]
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_uword bound to: 4 - type: integer 
+	Parameter fifo_width bound to: 16 - type: integer 
+	Parameter DATA bound to: 16 - type: integer 
+	Parameter ADDR bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_dpscram' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dpscram.vhd:12' bound to instance 'u_dpscram' of component 'mwfil_dpscram' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'mwfil_dpscram__parameterized1' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dpscram.vhd:31]
+	Parameter DATA bound to: 16 - type: integer 
+	Parameter ADDR bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mwfil_dpscram__parameterized1' (8#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dpscram.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'mwfil_udfifo__parameterized1' (8#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_udfifo.vhd:33]
+	Parameter WORDSIZE bound to: 8 - type: integer 
+	Parameter OUTWORD bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'mwfil_dut2bus' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dut2bus.vhd:13' bound to instance 'u_dut2bus' of component 'mwfil_dut2bus' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'mwfil_dut2bus' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dut2bus.vhd:34]
+	Parameter WORDSIZE bound to: 8 - type: integer 
+	Parameter OUTWORD bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mwfil_dut2bus' (9#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_dut2bus.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'mwfil_chifcore' (10#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chifcore.vhd:42]
+INFO: [Synth 8-3491] module 'ldpc_encoder_wrapper' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_wrapper.vhd:13' bound to instance 'u_dut' of component 'ldpc_encoder_wrapper' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chiftop.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'ldpc_encoder_wrapper' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_wrapper.vhd:23]
+WARNING: [Synth 8-5640] Port 'ce_out' is missing in component declaration [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_wrapper.vhd:25]
+INFO: [Synth 8-3491] module 'ldpc_encoder' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:43' bound to instance 'u_ldpc_encoder' of component 'ldpc_encoder' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_wrapper.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'ldpc_encoder' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:57]
+INFO: [Synth 8-3491] module 'address_calculator' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:23' bound to instance 'u_address_calculator' of component 'address_calculator' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'address_calculator' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'addresses' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:23' bound to instance 'u_addresses' of component 'addresses' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'addresses' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'addresses' (11#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'address_calculator' (12#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'MATLAB_Function' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/MATLAB_Function.vhd:23' bound to instance 'u_MATLAB_Function' of component 'MATLAB_Function' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'MATLAB_Function' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/MATLAB_Function.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'MATLAB_Function' (13#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/MATLAB_Function.vhd:32]
+INFO: [Synth 8-3491] module 'p2s' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/p2s.vhd:22' bound to instance 'u_p2s' of component 'p2s' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'p2s' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/p2s.vhd:34]
+INFO: [Synth 8-226] default block is never used [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/p2s.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'p2s' (14#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/p2s.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder' (15#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder_wrapper' (16#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_wrapper.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'mwfil_chiftop' (17#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/mwfil_chiftop.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder_fil' (18#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1480.910 ; gain = 337.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1480.910 ; gain = 337.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1480.910 ; gain = 337.699
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1480.910 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz_0'
+Finished Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz_0'
+Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo'
+Finished Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo'
+Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo'
+Finished Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/jtag_mac_fifo/jtag_mac_fifo/jtag_mac_fifo_in_context.xdc] for cell 'u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo'
+Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/simcycle_fifo/simcycle_fifo/simcycle_fifo_in_context.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo'
+Finished Parsing XDC File [d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.gen/sources_1/ip/simcycle_fifo/simcycle_fifo/simcycle_fifo_in_context.xdc] for cell 'u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo'
+Parsing XDC File [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk' already exists, overwriting the previous clock with the same name. [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc:1]
+WARNING: [Vivado 12-2489] -period contains time 15.151515 which will be rounded to 15.152 to ensure it is an integer multiple of 1 picosecond [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc:6]
+WARNING: [Vivado 12-2489] -waveform contains time 7.575758 which will be rounded to 7.576 to ensure it is an integer multiple of 1 picosecond [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc:6]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz_0'. [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc:7]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc:7]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz_0'. [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc:8]
+Finished Parsing XDC File [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/ldpc_encoder_fil_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/filsrc/ldpc_encoder_fil.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ldpc_encoder_fil_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ldpc_encoder_fil_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1851.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.156 . Memory (MB): peak = 1851.836 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:37 . Memory (MB): peak = 1851.836 ; gain = 708.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:37 . Memory (MB): peak = 1851.836 ; gain = 708.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                  000000000000001 |                  000000000000000
+                 get_cmd |                  000000000000010 |                  000000000000010
+              get_wr_len |                  000001000000000 |                  000000000000100
+                 get_sim |                  000000000010000 |                  000000000001000
+                      wr |                  000000000100000 |                  000000000010000
+              get_rd_len |                  001000000000000 |                  000000001000000
+                get_skip |                  000010000000000 |                  000000010000000
+                exe_skip |                  000000001000000 |                  000000100000000
+                rdbk_len |                  000000010000000 |                  000001000000000
+                rdbk_dat |                  100000000000000 |                  000010000000000
+                user_rst |                  010000000000000 |                  000000000000001
+            ver_get_skip |                  000100000000000 |                  000100000000000
+            ver_exe_skip |                  000000100000000 |                  001000000000000
+            ver_rdbk_len |                  000000000000100 |                  010000000000000
+            ver_rdbk_dat |                  000000000001000 |                  100000000000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'jtag_mac'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 3854.117 ; gain = 2710.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 5     
+	   3 Input   16 Bit       Adders := 12    
+	   2 Input   14 Bit       Adders := 13    
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   3 Input    4 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	            16201 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 3     
+	               16 Bit    Registers := 8     
+	               15 Bit    Registers := 3     
+	               13 Bit    Registers := 5     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 22    
++---RAMs : 
+	              384 Bit	(16 X 24 bit)          RAMs := 1     
+	              256 Bit	(16 X 16 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input 16201 Bit        Muxes := 4     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 8     
+	   3 Input   16 Bit        Muxes := 3     
+	   2 Input   15 Bit        Muxes := 2     
+	  15 Input   15 Bit        Muxes := 6     
+	  38 Input   15 Bit        Muxes := 1     
+	  16 Input   14 Bit        Muxes := 9     
+	   2 Input   14 Bit        Muxes := 12    
+	   2 Input   13 Bit        Muxes := 3     
+	   3 Input   13 Bit        Muxes := 1     
+	   5 Input   12 Bit        Muxes := 6     
+	   2 Input   11 Bit        Muxes := 13    
+	   2 Input   10 Bit        Muxes := 12    
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 4     
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 7     
+	 135 Input    4 Bit        Muxes := 9     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 23    
+	   3 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:15 ; elapsed = 00:05:55 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|addresses   | nc[0,0]    | 256x6         | LUT            | 
+|addresses   | nc[0,1]    | 256x14        | LUT            | 
+|addresses   | nc[0,2]    | 256x14        | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++-----------------------------------+-----------------------------------------+-----------+----------------------+-------------+
+|Module Name                        | RTL Object                              | Inference | Size (Depth x Width) | Primitives  | 
++-----------------------------------+-----------------------------------------+-----------+----------------------+-------------+
+|\u_mwfil_chiftop/u_mwfil_chifcore  | NormalBlock.u_b2dfifo/u_dpscram/mem_reg | Implied   | 16 x 24              | RAM32M x 4	 | 
+|\u_mwfil_chiftop/u_mwfil_chifcore  | u_d2bfifo/u_dpscram/mem_reg             | Implied   | 16 x 16              | RAM32M x 3	 | 
++-----------------------------------+-----------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sysclk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:37 ; elapsed = 00:06:18 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:10:06 ; elapsed = 00:10:48 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++-----------------------------------+-----------------------------------------+-----------+----------------------+-------------+
+|Module Name                        | RTL Object                              | Inference | Size (Depth x Width) | Primitives  | 
++-----------------------------------+-----------------------------------------+-----------+----------------------+-------------+
+|\u_mwfil_chiftop/u_mwfil_chifcore  | NormalBlock.u_b2dfifo/u_dpscram/mem_reg | Implied   | 16 x 24              | RAM32M x 4	 | 
+|\u_mwfil_chiftop/u_mwfil_chifcore  | u_d2bfifo/u_dpscram/mem_reg             | Implied   | 16 x 16              | RAM32M x 3	 | 
++-----------------------------------+-----------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sysclk'
+WARNING: [Synth 8-565] redefining clock 'sysclk'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[2]' (FDRE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[7]' (FDRE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[6]' (FDRE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[5]' (FDRE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[4]' (FDRE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[1]' (FDRE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[0]' (FDSE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg_rep[3]' (FDRE) to 'u_ldpc_encoderi_11/u_mwfil_chiftop/u_dut/u_ldpc_encoder/u_address_calculator/slot_counter_out1_reg[3]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:14:04 ; elapsed = 00:16:24 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:14:48 ; elapsed = 00:17:10 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:14:50 ; elapsed = 00:17:12 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:16:11 ; elapsed = 00:18:33 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:16:12 ; elapsed = 00:18:35 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:16:38 ; elapsed = 00:19:01 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:16:39 ; elapsed = 00:19:02 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |jtag_mac_fifo |         2|
+|3     |simcycle_fifo |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------------+-------+
+|      |Cell                  |Count  |
++------+----------------------+-------+
+|1     |clk_wiz_0_bbox        |      1|
+|2     |jtag_mac_fifo_bbox    |      1|
+|3     |jtag_mac_fifo_bbox_2_ |      1|
+|4     |simcycle_fifo_bbox    |      1|
+|5     |BSCANE2               |      1|
+|6     |BUFG                  |      1|
+|7     |CARRY4                |    179|
+|8     |LUT1                  |    195|
+|9     |LUT2                  |  48750|
+|10    |LUT3                  |  33420|
+|11    |LUT4                  |    130|
+|12    |LUT5                  |  34102|
+|13    |LUT6                  | 312530|
+|14    |MUXF7                 |  34686|
+|15    |MUXF8                 |  17210|
+|16    |RAM32M                |      5|
+|17    |FDRE                  |  32776|
+|18    |FDSE                  |     10|
+|19    |IBUF                  |      1|
++------+----------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:16:41 ; elapsed = 00:19:04 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:16:08 ; elapsed = 00:18:58 . Memory (MB): peak = 5171.652 ; gain = 3657.516
+Synthesis Optimization Complete : Time (s): cpu = 00:16:41 ; elapsed = 00:19:15 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 5171.652 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 52080 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ldpc_encoder_fil' is not ideal for floorplanning, since the cellview 'addresses' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 5171.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+91 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:18:39 ; elapsed = 00:21:16 . Memory (MB): peak = 5171.652 ; gain = 4028.441
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/xilinx_files/fil_prj/fpgaproj/ldpc_encoder_fil.runs/synth_1/ldpc_encoder_fil.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:56 ; elapsed = 00:00:42 . Memory (MB): peak = 5171.652 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file ldpc_encoder_fil_utilization_synth.rpt -pb ldpc_encoder_fil_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 31 22:16:15 2021...
+[Sun Jan 31 22:16:23 2021] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:24:54 . Memory (MB): peak = 1108.129 ; gain = 0.000
+# if {[get_property PROGRESS [get_runs synth_1]] != "100%"} {  
+#   error "ERROR: Synthesis failed" 
+# }
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 31 22:16:24 2021...

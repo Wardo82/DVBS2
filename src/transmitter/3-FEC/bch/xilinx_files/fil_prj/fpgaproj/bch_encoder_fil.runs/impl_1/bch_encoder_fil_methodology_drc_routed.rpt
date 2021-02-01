@@ -1,0 +1,130 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Feb  1 09:44:00 2021
+| Host         : Jarvis running 64-bit major release  (build 9200)
+| Command      : report_methodology -file bch_encoder_fil_methodology_drc_routed.rpt -pb bch_encoder_fil_methodology_drc_routed.pb -rpx bch_encoder_fil_methodology_drc_routed.rpx
+| Design       : bch_encoder_fil
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 14
++-----------+----------+--------------------------------------------------------+------------+
+| Rule      | Severity | Description                                            | Violations |
++-----------+----------+--------------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                           | 1          |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain        | 2          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                      | 1          |
+| TIMING-24 | Warning  | Overridden Max delay datapath only                     | 6          |
+| TIMING-28 | Warning  | Auto-derived clock referenced by a timing constraint   | 2          |
+| XDCC-1    | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
++-----------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell u_jtag_mac/u_simcycle_fifo_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[0]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[100]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[101]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[102]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[103]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[104]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[105]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[106]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[107]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[108]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[109]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[10]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[110]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[111]/CLR,
+u_mwfil_chiftop/u_dut/u_bch_encoder/Delay_out1_reg[112]/CLR
+ (the first 15 of 405 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X79Y28 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X59Y22 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-24#1 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 5 in the Timing Constraints window in Vivado IDE) between clocks clk_out1_clk_wiz_0 and TCK overrides a set_max_delay -datapath_only (position 11). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#2 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 5 in the Timing Constraints window in Vivado IDE) between clocks clk_out1_clk_wiz_0 and TCK overrides a set_max_delay -datapath_only (position 15). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#3 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 5 in the Timing Constraints window in Vivado IDE) between clocks clk_out1_clk_wiz_0 and TCK overrides a set_max_delay -datapath_only (position 9). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#4 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 6 in the Timing Constraints window in Vivado IDE) between clocks TCK and clk_out1_clk_wiz_0 overrides a set_max_delay -datapath_only (position 13). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#5 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 6 in the Timing Constraints window in Vivado IDE) between clocks TCK and clk_out1_clk_wiz_0 overrides a set_max_delay -datapath_only (position 17). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#6 Warning
+Overridden Max delay datapath only  
+An asynchronous set_clock_groups or a set_false path (see constraint position 6 in the Timing Constraints window in Vivado IDE) between clocks TCK and clk_out1_clk_wiz_0 overrides a set_max_delay -datapath_only (position 7). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-28#1 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock clk_out1_clk_wiz_0 is referenced by name inside timing constraint (see constraint position 5 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
+Related violations: <none>
+
+TIMING-28#2 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock clk_out1_clk_wiz_0 is referenced by name inside timing constraint (see constraint position 6 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name sysclk -waveform {0.000 5.000} [get_ports sysclk] (Source: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/xilinx_files/fil_prj/filsrc/bch_encoder_fil.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports sysclk] (Source: d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/xilinx_files/fil_prj/fpgaproj/bch_encoder_fil.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name sysclk -waveform {0.000 5.000} [get_ports sysclk] (Source: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/xilinx_files/fil_prj/filsrc/bch_encoder_fil.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports sysclk] (Source: d:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/xilinx_files/fil_prj/fpgaproj/bch_encoder_fil.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+Related violations: <none>
+
+

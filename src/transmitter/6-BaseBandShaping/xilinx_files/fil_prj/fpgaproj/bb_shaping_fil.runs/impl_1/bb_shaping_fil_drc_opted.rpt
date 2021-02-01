@@ -1,0 +1,665 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Jan 31 17:52:29 2021
+| Host         : Jarvis running 64-bit major release  (build 9200)
+| Command      : report_drc -file bb_shaping_fil_drc_opted.rpt -pb bb_shaping_fil_drc_opted.pb -rpx bb_shaping_fil_drc_opted.rpx
+| Design       : bb_shaping_fil
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 125
++--------+----------+-------------------------+------------+
+| Rule   | Severity | Description             | Violations |
++--------+----------+-------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining        | 44         |
+| DPOP-1 | Warning  | PREG Output pipelining  | 2          |
+| DPOP-2 | Warning  | MREG Output pipelining  | 2          |
+| DPOR-1 | Warning  | Asynchronous load check | 76         |
+| ZPS7-1 | Warning  | PS7 block required      | 1          |
++--------+----------+-------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_1 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_1 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_2 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_2 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_3 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_3 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_4 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_4 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_5 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_5 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_6 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_6 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_7 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_7 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_8 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_8 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/product_10 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/product_10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/product_10 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/product_10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_1 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#26 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_1 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#27 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_2 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#28 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_2 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#29 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_3 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#30 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_3 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#31 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_4 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#32 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_4 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#33 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_5 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#34 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_5 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#35 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_6 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#36 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_6 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#37 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_7 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#38 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_7 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#39 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_8 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#40 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_8 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#41 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#42 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#43 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/product_10 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/product_10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#44 Warning
+Input pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/product_10 input u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/product_10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 multiplier stage u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 multiplier stage u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOR-1#1 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[0]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#2 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[10]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#3 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[11]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#4 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[12]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#5 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[13]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#6 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[14]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#7 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[15]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#8 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[16]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#9 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[17]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#10 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[18]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#11 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[19]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#12 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[1]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#13 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[20]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#14 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[21]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#15 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[22]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#16 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[23]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#17 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[24]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#18 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[25]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#19 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[26]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#20 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[27]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#21 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[28]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#22 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[29]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#23 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[2]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#24 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[30]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#25 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[31]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#26 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[32]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#27 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[33]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#28 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[34]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#29 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[35]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#30 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[36]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#31 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[37]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#32 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[3]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#33 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[4]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#34 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[5]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#35 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[6]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#36 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[7]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#37 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[8]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#38 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation/regout_reg[9]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#39 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[0]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#40 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[10]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#41 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[11]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#42 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[12]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#43 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[13]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#44 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[14]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#45 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[15]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#46 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[16]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#47 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[17]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#48 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[18]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#49 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[19]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#50 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[1]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#51 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[20]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#52 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[21]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#53 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[22]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#54 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[23]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#55 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[24]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#56 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[25]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#57 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[26]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#58 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[27]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#59 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[28]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#60 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[29]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#61 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[2]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#62 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[30]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#63 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[31]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#64 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[32]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#65 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[33]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#66 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[34]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#67 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[35]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#68 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[36]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#69 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[37]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#70 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[3]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#71 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[4]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#72 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[5]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#73 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[6]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#74 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[7]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#75 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[8]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#76 Warning
+Asynchronous load check  
+DSP u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/add_temp_9 output is connected to registers with an asynchronous reset (u_mwfil_chiftop/u_dut/u_bb_shaping/u_FIR_Interpolation1/regout_reg[9]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

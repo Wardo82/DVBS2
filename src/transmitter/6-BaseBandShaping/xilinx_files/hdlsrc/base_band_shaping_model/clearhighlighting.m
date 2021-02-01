@@ -1,0 +1,13 @@
+SLStudio.Utils.RemoveHighlighting(get_param('base_band_shaping_model', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_base_band_shaping_model', 'handle'));
+annotate_port('gm_base_band_shaping_model/bb_shaping/FIR Interpolation', 0, 1, '');
+annotate_port('gm_base_band_shaping_model/bb_shaping/FIR Interpolation', 1, 1, '');
+annotate_port('base_band_shaping_model/bb_shaping/FIR Interpolation', 1, 1, '');
+annotate_port('gm_base_band_shaping_model/bb_shaping/FIR Interpolation', 1, 1, '');
+annotate_port('base_band_shaping_model/bb_shaping/FIR Interpolation', 1, 1, '');
+annotate_port('gm_base_band_shaping_model/bb_shaping/FIR Interpolation1', 1, 1, '');
+annotate_port('base_band_shaping_model/bb_shaping/FIR Interpolation1', 1, 1, '');
+annotate_port('gm_base_band_shaping_model/bb_shaping/FIR Interpolation1', 1, 1, '');
+annotate_port('base_band_shaping_model/bb_shaping/FIR Interpolation1', 1, 1, '');
+annotate_port('base_band_shaping_model/bb_shaping/FIR Interpolation', 1, 1, '');
+annotate_port('base_band_shaping_model/bb_shaping/FIR Interpolation1', 1, 1, '');

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Model Advisor Report for 'bit_mapping_model/bit_mapping'</title>  
+<style type="text/css">
+<!--
+@media screen {    
+    /* Table Formatting */
+    .AdvTable th { 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+    }
+}
+
+@media all {
+    *{ font-family: sans-serif; }
+
+	H3 {
+		font-size: 14pt;
+		font-weight: 200;
+	}
+	H4 {
+		font-size: 9pt;
+		font-weight: normal;
+	}
+	H5 {
+		font-size: 12pt;
+		font-style: italic;
+		font-weight: bold;
+		color: #333333;
+		margin-bottom: 2px;
+	}
+	a[href] {
+		color: #005FCE;
+	}
+	.subsection {
+		padding-left: 30px;
+	}
+    
+    .CheckHeading {
+		font-size:1.05em;
+		font-weight:bold;
+	}
+
+    /* Table Formatting */
+    table.AdvTable { 
+        border-collapse:collapse; border:1px solid #ececec; border-right:none; border-bottom:none; 
+    }
+
+    .AdvTable th { 
+        padding-left:5px; 
+        padding-right:5px; 
+        color:#fff; 
+        line-height:120%; 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+        border-right: 1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+
+    .AdvTable td { 
+        padding-left:5px; 
+        padding-right:5px; 
+        border-right:1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+    
+    .AdvTable th p { 
+        margin-bottom:0px; 
+    }
+
+    .AdvTable p { 
+        margin-bottom:10px; 
+    }
+    
+    .AdvTableNoBorder p { 
+        margin-bottom:10px; 
+    }
+
+    table+span.SDCollapseControl { 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    ul+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em;
+        font-weight:bold; 
+    }
+
+    ol+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    .SystemdefinedCollapse { 
+        margin-top:0px;
+        margin-bottom:5px; 
+    }
+
+    div.AllCollapse p, div.AllCollapse table, div.AllCollapse ol, div.AllCollapse ul { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px;
+    }
+
+    div.AllCollapse + div { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px; 
+    }
+
+    img.CollapseAllControlImage { 
+        float:left; 
+    }
+
+    .SubResultsSummary {
+        padding-left:30px;
+    }
+
+    .EmptyFolderMessage {
+        color:gray;
+        margin:10px 0 0 30px;
+        font-size:0.8em;
+    }
+	
+    .CsEml-Symbol-Status-Pass
+    { 
+        color: green;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Warn
+        { 
+        color: orange;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Fail
+    { 
+        color: red;
+        font-family: monospace;
+    }
+    
+    .CsEml-Line-Number
+    {
+        color: #A0A0A0;
+        font-style: italic;
+        font-family: monospace;
+    }
+
+    .CsEml-Code
+    {
+        color: blue;
+        font-family: monospace;
+    }
+
+    .CsEml-Code-Fragment
+    {
+        color: blue;
+        font-weight: bold;
+        font-family: monospace;
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .CsEml-Function-Type
+    {
+        color:       #A0A0A0;
+        font-style:  italic;
+        font-family: monospace;
+    }
+
+}
+-->
+</style>
+
+<script type="text/javascript"> <!-- /* Copyright 2013-2017 The MathWorks, Inc */
+/* define String.trim() method if not defined (used by filterByText() function) */
+if(!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g,'');
+  };
+}
+
+// rtwreport needs it 
+function init() {
+    var showFailed = document.getElementById("Failed Checkbox");
+    var showPassed = document.getElementById("Passed Checkbox");
+    var showWarning = document.getElementById("Warning Checkbox");
+    var showNotRun = document.getElementById("Not Run Checkbox");       
+    
+    urlQueryStringRegexp = RegExp('\\?(.*)').exec(window.location.search);
+
+    if (urlQueryStringRegexp == null) {
+        /* refresh check boxes and search input */
+        showFailed.checked = true;
+        showPassed.checked = true;
+        showWarning.checked = true;
+        showNotRun.checked = true;
+    }
+    else 
+    {
+        showFailed.checked = false;
+        showPassed.checked = false;
+        showWarning.checked = false;
+        showNotRun.checked = false;
+        
+        urlQueryString = urlQueryStringRegexp[1];
+        
+        var queryArgs = [];
+        
+        if (urlQueryString.indexOf("&") == -1)
+        {
+            // Only 1 argument
+            queryArgs[0] = urlQueryString;
+        }
+        else
+        {
+            queryArgs = urlQueryString.split("&");
+        }
+        
+        for (var idx = 0; idx < queryArgs.length; ++idx)
+        {
+            // get in
+            if (queryArgs[idx].localeCompare("showPassedChecks") == 0) 
+            {
+                showPassed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showWarningChecks") == 0) 
+            {
+                showWarning.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showFailedChecks") == 0)
+            {
+                showFailed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showNotRunChecks") == 0)
+            {
+                showNotRun.checked = true;
+            }
+        }
+            
+        // if nothing is selected, select everything
+        if (!showFailed.checked && !showPassed.checked && 
+            !showWarning.checked && !showNotRun.checked) 
+        {
+            showFailed.checked = true;
+            showPassed.checked = true;
+            showWarning.checked = true;
+            showNotRun.checked = true;
+        }
+    }
+    
+    updateVisibleChecks();
+}
+
+function markEmptyFolders(){
+	var nodeTypes = ["FailedCheck","PassedCheck",  "WarningCheck", "NotRunCheck"];
+	var folderArray = document.querySelectorAll("div.FolderContent");
+	
+	for (var n=0;n<folderArray.length;n++){
+		/* get direct check result children and check visibility */
+		var childNodes = folderArray[n].childNodes;
+		var noneVisible = true;
+		var noChecksInFolder = true;
+		
+		for (var ni=0;ni<childNodes.length;ni++){
+			if (childNodes[ni].nodeType == 1 && childNodes[ni].tagName.toLowerCase() == "div"){
+				if (childNodes[ni].className == nodeTypes[0] || childNodes[ni].className == nodeTypes[1] || childNodes[ni].className == nodeTypes[2] || childNodes[ni].className == nodeTypes[3]){
+					noChecksInFolder = false;
+					if (childNodes[ni].style.display != "none"){
+						noneVisible = false;
+                        break;
+					}
+				}
+			}
+		}
+		
+		/* Only display hidden message if any checks inside the folders and not just other folders */
+		if (!noChecksInFolder){
+			var hiddenMessage = folderArray[n].querySelector("div.EmptyFolderMessage");
+			
+			if (hiddenMessage && noneVisible == true){
+				hiddenMessage.style.display = "";
+			}else if (hiddenMessage && noneVisible == false){
+				hiddenMessage.style.display = "none";
+			}else{
+				/* hidden message not found */
+			}
+		}
+	}
+
+    return;
+}
+
+function updateVisibleChecks( /* show all flags */ checkbox ){
+	
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox"];
+	var nodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check"];
+	var textInput = document.getElementById("TxtFilterInput");
+	
+	
+	if (checkbox && textInput && textInput.color=="gray"){
+		var checkType = checkbox.id;
+		var ind = checkboxes.indexOf(checkType);
+		var nodes = document.getElementsByName(nodeTypes[ind]);
+		for (i = 0; i < nodes.length;i++){
+		    nodes[i].style.display = checkbox.checked ? "" : "none";
+		}
+	}
+	else{ /* Update all checks if called from init or if a previous text filter was applied */
+		for (i = 0; i < checkboxes.length; i++){
+			
+			  var show = document.getElementById(checkboxes[i]).checked ? "" : "none";
+			  var nodes = document.getElementsByName(nodeTypes[i]);
+			  for(j = 0; j < nodes.length; j++){
+				  nodes[j].style.display = show;
+			  }
+		   
+		}
+	}
+
+    /* clear text search */
+	if (textInput && checkbox){
+		textInput.value = "Keywords";
+        textInput.style.color = "gray";
+        textInput.blur;
+	}
+
+    markEmptyFolders();
+
+    return; 
+}
+
+function filterByText(ev){
+	// get all the nodes
+	var allNodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check"];
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox"];
+	var nodeTypes = [];
+	
+	// get nodes depending on filter selections
+	for (var n=0; n<checkboxes.length; n++){
+		var checkbox = document.getElementById(checkboxes[n]);
+		if (checkbox && checkbox.checked){
+			nodeTypes.push(allNodeTypes[n]);
+		}
+	}
+	
+    var searchNodes = [".CheckHeading"];
+    var allnodes = [];
+	var alltext = [];
+	if (!ev) return;
+	var target = ev.target ? ev.target : window.event.srcElement;
+	var searchString = target.value;
+	
+	if (!searchString){
+        updateVisibleChecks();  // clear all and display by other filters
+	}else{
+		for (i = 0; i < nodeTypes.length; i++){
+			var nodes = document.getElementsByName(nodeTypes[i]);
+			for (j = 0; j < nodes.length; j++){
+				// get text from check heading
+				var checkContent = nodes[j].querySelector(searchNodes).innerHTML;
+				// creaet a regular expression to ignore case
+				var ss = new RegExp(searchString.trim(), "i");
+				if (ss.exec(checkContent)){
+				   nodes[j].style.display = "";
+				}else{
+				   nodes[j].style.display = "none";
+				}
+			}
+		}
+        markEmptyFolders();
+	}	
+}
+
+
+function MATableShrink(o,tagNameStr){
+    var temp = document.getElementsByName(tagNameStr);
+    var classUsed = document.getElementsByName('EmbedImages'); 
+    var embeddedMode = !(classUsed.length == 0);
+    var img = o.querySelector("img");
+
+    if (temp[0].style.display == "") 
+    {
+        temp[0].style.display = "none";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }
+        else
+        {
+            img.src = "plus.png";
+        }
+    } 
+    else 
+    {
+        temp[0].style.display = "";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+        else
+        {
+            img.src = "minus.png";
+        }
+    }
+}
+
+// rtwreport needs it 
+function updateHyperlink() {
+    docObj = window.document;
+    loc = document.location;
+    var aHash = "";
+    var externalweb = "false";
+    if (loc.search || loc.hash) {
+        if (loc.search)
+            aHash = loc.search.substring(1);
+        else
+            aHash = loc.hash.substring(1);
+    }    
+    var args = new Array();
+    args = aHash.split('&');
+    for (var i = 0; i < args.length; ++i) {
+        var arg = args[i];
+          sep = arg.indexOf('=');
+        if (sep != -1) {
+            var cmd = arg.substring(0,sep);
+            var opt = arg.substring(sep+1);
+            switch (cmd.toLowerCase()) {
+            case "externalweb":
+                externalweb = opt;
+                break;
+            }
+        }
+    }        
+    if (externalweb === "true") {        
+        var objs = docObj.getElementsByTagName("a");
+        if (objs.length > 0 && objs[0].removeAttribute) {
+            for (var i = 0; i < objs.length; ++i) {           
+                if (objs[i].href.indexOf('matlab') > -1)           
+                    objs[i].removeAttribute("href");                
+            }
+        }
+    }
+    init();
+}
+    
+function findParentNode(e) {
+   var parent = e.parentElement;
+   if (!!parent) {
+    if (parent.id == "") {   
+       return findParentNode(parent);
+    } else {
+       return parent;
+    }
+   } else {
+    return null;
+   }
+}
+
+function expandParentNode(e) {
+   var parent = findParentNode(e);
+   while (!!parent) { 
+    var prefix = "FolderControl_";
+    var folderControl = document.getElementById(prefix.concat(parent.id));
+    if (parent.style.display == "none") {       
+       MATableShrink(folderControl,parent.id);
+    }
+    parent = findParentNode(parent);
+   }
+}
+
+function isHidden(e) {
+    return (e.offsetParent === null)
+}
+
+function navigateToElement(eleID) {
+   var e = document.getElementById(eleID);
+   if (isHidden(e)) {
+       expandParentNode(e);
+   }       
+   if (!!e && e.scrollIntoView) {
+       e.scrollIntoView();
+   }
+}
+
+function setTextContent(element, value) {
+    var content = element.textContent;
+    if (value === undefined) return;
+    
+    if (content !== undefined) element.textContent = value;
+    else element.innerText = value;
+}
+
+function hideControlPanel(control){
+	var panelComponents = ["ControlsCheckFiltering", "ControlsView", "ControlsTOC"];
+	var reportContent = document.querySelector(".ReportContent");
+	var controlPanel = document.getElementById("ControlPanel");
+	var isHidden = false;
+	
+    if (reportContent && control && controlPanel) {
+    	for (var n=0; n<panelComponents.length; n++){
+			var component = document.getElementById(panelComponents[n]);
+			
+			if (component && component.style.display == ""){
+				component.style.display = "none";
+            } else if (component && component.style.display == "none"){
+				component.style.display = "";
+			}
+		}
+		
+		if (controlPanel.style.width != "6px"){
+			reportContent.style.marginLeft = "25px";
+	    	controlPanel.style.width = "6px";
+	    	control.style.left = "0px";
+	       	var innerDiv = control.querySelector("#HidePanelControlInner");
+	       	setTextContent(innerDiv, "\u25BA");
+	    } else {
+	    	reportContent.style.marginLeft = "225px";
+        	controlPanel.style.width = "210px";
+        	control.style.left = "204px";
+        	var innerDiv = control.querySelector("#HidePanelControlInner");
+        	setTextContent(innerDiv, "\u25C0");
+        }
+    }
+}
+/* Copyright 2013 The MathWorks, Inc. */
+//COLLAPSIBLE FEATURE
+
+// global variables
+var GlobalCollapseState = "off";
+
+function collapseSDHelper(o, CollElementParent, disp, mode){
+    var CollElement = CollElementParent; /* ul/ol with lists, tbody with table */
+
+    if (CollElement.nodeName == "UL" || CollElement.nodeName == "OL"){
+        var CollName = "LI";
+    }else if (CollElement.nodeName == "TABLE"){
+        if (CollElement.querySelector('tbody')) {
+            /* tr modes are child nodes of tbody node */
+            CollElement = CollElement.querySelector('tbody');
+        }
+        var CollName = "TR";
+    }
+    
+    // get children (li for list and tr for table)
+    var children = CollElement.childNodes;
+
+    var nElements = 0;
+    for (var i=0;i<children.length;i++){
+        if (children[i].nodeName == CollName){
+            nElements = nElements + 1;
+            if (nElements > 5){
+                children[i].style.display = disp;
+            }
+        }
+    }
+    if (disp == "none"){
+        if (CollName == "LI"){
+            var text = " items)";
+        }else{
+            var text = " rows)";
+        }
+        
+        var textNode = document.createTextNode(("\u2228 More (" + (nElements-5) + text));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "on");
+
+        /* scroll to element if it is not visible */
+        if (mode == "single" && CollElement.offsetTop < document.documentElement.scrollTop){
+			CollElement.scrollIntoView();
+		}
+    }else{
+        var textNode = document.createTextNode(("\u2227 " + "Less"));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "off");
+    }
+}
+
+function collapseSD(o, ID){
+    var CollElement = document.getElementById(ID);
+    if (CollElement != null){
+        if (CollElement.getAttribute("dataCollapse") == "off"){
+            var disp="none";
+        }else{
+            var disp="";
+        }
+        collapseSDHelper(o, CollElement, disp, "single");
+    }
+}
+
+function collapseAllHelper(o, CollElement, CollInfo, disp){
+
+    if (CollElement != null){
+        var img = o.querySelector("img");
+        if (disp == "none"){
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }else{
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+
+        if (CollInfo != null){
+            if (disp == "none"){
+                CollInfo.style.display = "";
+            }else{
+                CollInfo.style.display = "none";
+            }
+        }
+    }
+}
+
+function collapseAll(o, ID, ID2){
+    var CollElement = document.getElementById(ID);
+    var CollInfo = document.getElementById(ID2);
+
+    if (CollElement.style.display == ""){
+        var disp = "none";
+    }else{
+        var disp = "";
+    }
+
+    collapseAllHelper(o, CollElement, CollInfo, disp);
+}
+
+function expandCollapseAll(o){
+	/* IE has no method for getting elements by class name. Use querySelectorAll instead 
+       Note: requires IE not to be in IE7 compatability mode */
+    var SDCollapse = document.querySelectorAll(".SystemdefinedCollapse");
+    var Button = null;
+
+    if (GlobalCollapseState == "off"){
+        var disp = "none";
+        GlobalCollapseState = "on";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Show check details";
+		}
+    }else{
+        var disp = "";
+        GlobalCollapseState = "off";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Hide check details";
+		}
+    }
+
+    for (var i=0;i<SDCollapse.length;i++){
+        Button = SDCollapse[i].nextSibling;
+        while(Button.nodeType !== 1){
+            Button = Button.nextSibling;
+        }
+        //Button = SDCollapse[i].parentNode.querySelector("span.SDCollapseControl");
+        collapseSDHelper(Button, SDCollapse[i], disp, "all");
+    }
+		
+    var AllCollapse = document.querySelectorAll(".AllCollapse");
+
+    for (i=0;i<AllCollapse.length;i++){
+        // get children of top level collapsible div
+        var children = AllCollapse[i].parentNode.children;
+        
+        // collapsible button is first child
+		Button = children[0];
+        
+        // get content to display in collapsed state
+        // this is optional and last child of collapsible div 
+        if (Button)
+        {
+            if (children.length>2)
+            {
+                collapseAllHelper(Button, AllCollapse[i], children[2], disp);
+            }
+            else
+            {
+                collapseAllHelper(Button, AllCollapse[i], null, disp);
+            }
+        }
+    }
+}
+
+
+function expandCollapseAllOnLoad(){
+    GlobalCollapseState = "on";
+    var Switch = document.getElementById("ExpandCollapseAll");
+    expandCollapseAll(Switch);
+}
+//END COLLAPSIBLE
+
+ --></script></head>  
+<body onload="updateHyperlink(); expandCollapseAllOnLoad();">  
+<span id="top">
+
+</span>
+<!-- mdladv_ignore_start --><div id="Container"><!-- mdladv_ignore_finish -->
+<!-- mdladv_ignore_start --><div class="ReportContent" id="bit_mapping_model/bit_mapping"><!-- mdladv_ignore_finish --><table class="AdvTableNoBorder" width="100%" border="0">
+<tr>
+<td colspan="2" align="center">
+<b>
+Model Advisor Report - <font color="#800000">bit_mapping_model.slx</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+Simulink version: <font color="#800000">10.2</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Model version: <font color="#800000">1.31</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+System: <font color="#800000">bit_mapping_model/bit_mapping</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Current run: <font color="#800000">31-Jan-2021 18:09:47</font>
+</b>
+
+</td>
+
+</tr>
+
+</table>
+<br /><font color="#800000"><b>Run Summary</b></font><br /><table class="AdvTableNoBorder" width="60%" border="0">
+<tr>
+<th align="left" valign="top">
+<b>
+Pass
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Fail
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Warning
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Not Run
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Total
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 1
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,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"  /> 0
+</td>
+<td align="left" valign="top">
+ 1
+</td>
+
+</tr>
+
+</table>
+<!-- Compile Status Flag --><!-- Service Status Flag -->
+<!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 0pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_53"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunFIL">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,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"  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunFIL">
+4.2. Build FPGA-in-the-Loop</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p />### Generating FPGA-in-the-Loop testbench model for 'bit_mapping_model.<p /><p />### Generating code for FPGA-in-the-Loop ...<p /><p />### Generating Quartus II project and running HDL compilation ...<p />###    Project:<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\fpgaproj\bit_mapping_fil.qpf<p />###    Target Device:<p />###       Cyclone V 5CSEMA4U23C6<p />###    Property Settings:<p />###       CYCLONEII_OPTIMIZATION_TECHNIQUE = SPEED<p />###    User design files:<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\hdlsrc\bit_mapping_model\bit_mapping_pac.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\hdlsrc\bit_mapping_model\Cosine_HDL_Optimized.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\hdlsrc\bit_mapping_model\angle_selector.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\hdlsrc\bit_mapping_model\bit_mapping.vhd<p />###    Generated files:<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\MWClkMgr.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\MWAJTAG.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\MWDPRAM.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\FILUDPCRC.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\FILPktMUX.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\FILCmdProc.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\MWAsyncFIFO.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\FILDataProc.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\MWPKTBuffer.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\MWUDPPKTBuilder.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\FILPktProc.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\FILCommLayer.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\mwfil_dpscram.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\mwfil_udfifo.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\mwfil_bus2dut.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\mwfil_chifcore.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\mwfil_controller.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\mwfil_dut2bus.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\bit_mapping_wrapper.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\mwfil_chiftop.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\FILCore.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\bit_mapping_fil.vhd<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\bit_mapping_fil.qsf<p />###       D:\Documents\DVBS2\DVBS2\src\transmitter\4-Mapping\altera_files\fil_prj\filsrc\bit_mapping_fil.sdc<p />### <p />### Running HDL compilation ...<p />Info: ******************************************************************* <p />Info: Running Quartus Prime Shell <p />    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition <p />    Info: Copyright (C) 2020  Intel Corporation. All rights reserved. <p />    Info: Your use of Intel Corporation's design tools, logic functions  <p />    Info: and other software and tools, and any partner logic  <p />    Info: functions, and any output files from any of the foregoing  <p />    Info: (including device programming or simulation files), and any  <p />    Info: associated documentation or information are expressly subject  <p />    Info: to the terms and conditions of the Intel Program License  <p />    Info: Subscription Agreement, the Intel Quartus Prime License Agreement, <p />    Info: the Intel FPGA IP License Agreement, or other applicable license <p />    Info: agreement, including, without limitation, that your use is for <p />    Info: the sole purpose of programming logic devices manufactured by <p />    Info: Intel and sold by Intel or its authorized distributors.  Please <p />    Info: refer to the applicable agreement for further details, at <p />    Info: https://fpgasoftware.intel.com/eula. <p />    Info: Processing started: Sun Jan 31 18:10:24 2021 <p />Info: Command: quartus_sh -t createproject.tcl <p />Info: ******************************************************************* <p />Info: Running Quartus Prime Analysis & Elaboration <p />    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition <p />    Info: Processing started: Sun Jan 31 18:10:30 2021 <p />Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bit_mapping_fil -c bit_mapping_fil --analysis_and_elaboration <p />Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance. <p />Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected <p />Info (12021): Found 1 design units, including 0 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/hdlsrc/bit_mapping_model/bit_mapping_pac.vhd <p />    Info (12022): Found design unit 1: bit_mapping_pac File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/bit_mapping_pac.vhd Line: 15 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/hdlsrc/bit_mapping_model/cosine_hdl_optimized.vhd <p />    Info (12022): Found design unit 1: Cosine_HDL_Optimized-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/Cosine_HDL_Optimized.vhd Line: 34 <p />    Info (12023): Found entity 1: Cosine_HDL_Optimized File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/Cosine_HDL_Optimized.vhd Line: 23 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/hdlsrc/bit_mapping_model/angle_selector.vhd <p />    Info (12022): Found design unit 1: angle_selector-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/angle_selector.vhd Line: 29 <p />    Info (12023): Found entity 1: angle_selector File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/angle_selector.vhd Line: 22 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/hdlsrc/bit_mapping_model/bit_mapping.vhd <p />    Info (12022): Found design unit 1: bit_mapping-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/bit_mapping.vhd Line: 58 <p />    Info (12023): Found entity 1: bit_mapping File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/bit_mapping.vhd Line: 43 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwclkmgr.vhd <p />    Info (12022): Found design unit 1: MWClkMgr-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWClkMgr.vhd Line: 30 <p />    Info (12023): Found entity 1: MWClkMgr File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWClkMgr.vhd Line: 17 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwajtag.vhd <p />    Info (12022): Found design unit 1: MWAJTAG-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 41 <p />    Info (12023): Found entity 1: MWAJTAG File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 22 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwdpram.vhd <p />    Info (12022): Found design unit 1: MWDPRAM-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWDPRAM.vhd Line: 37 <p />    Info (12023): Found entity 1: MWDPRAM File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWDPRAM.vhd Line: 19 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/filudpcrc.vhd <p />    Info (12022): Found design unit 1: FILUDPCRC-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILUDPCRC.vhd Line: 37 <p />    Info (12023): Found entity 1: FILUDPCRC File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILUDPCRC.vhd Line: 16 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/filpktmux.vhd <p />    Info (12022): Found design unit 1: FILPktMUX-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktMUX.vhd Line: 32 <p />    Info (12023): Found entity 1: FILPktMUX File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktMUX.vhd Line: 14 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/filcmdproc.vhd <p />    Info (12022): Found design unit 1: FILCmdProc-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCmdProc.vhd Line: 35 <p />    Info (12023): Found entity 1: FILCmdProc File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCmdProc.vhd Line: 12 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwasyncfifo.vhd <p />    Info (12022): Found design unit 1: MWAsyncFIFO-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAsyncFIFO.vhd Line: 31 <p />    Info (12023): Found entity 1: MWAsyncFIFO File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAsyncFIFO.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/fildataproc.vhd <p />    Info (12022): Found design unit 1: FILDataProc-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILDataProc.vhd Line: 42 <p />    Info (12023): Found entity 1: FILDataProc File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILDataProc.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwpktbuffer.vhd <p />    Info (12022): Found design unit 1: MWPKTBuffer-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWPKTBuffer.vhd Line: 40 <p />    Info (12023): Found entity 1: MWPKTBuffer File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWPKTBuffer.vhd Line: 15 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwudppktbuilder.vhd <p />    Info (12022): Found design unit 1: MWUDPPKTBuilder-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWUDPPKTBuilder.vhd Line: 45 <p />    Info (12023): Found entity 1: MWUDPPKTBuilder File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWUDPPKTBuilder.vhd Line: 15 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/filpktproc.vhd <p />    Info (12022): Found design unit 1: FILPktProc-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktProc.vhd Line: 50 <p />    Info (12023): Found entity 1: FILPktProc File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktProc.vhd Line: 11 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/filcommlayer.vhd <p />    Info (12022): Found design unit 1: FILCommLayer-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 31 <p />    Info (12023): Found entity 1: FILCommLayer File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwfil_dpscram.vhd <p />    Info (12022): Found design unit 1: mwfil_dpscram-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_dpscram.vhd Line: 31 <p />    Info (12023): Found entity 1: mwfil_dpscram File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_dpscram.vhd Line: 12 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwfil_udfifo.vhd <p />    Info (12022): Found design unit 1: mwfil_udfifo-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_udfifo.vhd Line: 33 <p />    Info (12023): Found entity 1: mwfil_udfifo File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_udfifo.vhd Line: 14 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwfil_bus2dut.vhd <p />    Info (12022): Found design unit 1: mwfil_bus2dut-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_bus2dut.vhd Line: 34 <p />    Info (12023): Found entity 1: mwfil_bus2dut File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_bus2dut.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd <p />    Info (12022): Found design unit 1: mwfil_chifcore-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd Line: 42 <p />    Info (12023): Found entity 1: mwfil_chifcore File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd Line: 15 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwfil_controller.vhd <p />    Info (12022): Found design unit 1: mwfil_controller-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_controller.vhd Line: 38 <p />    Info (12023): Found entity 1: mwfil_controller File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_controller.vhd Line: 15 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwfil_dut2bus.vhd <p />    Info (12022): Found design unit 1: mwfil_dut2bus-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_dut2bus.vhd Line: 34 <p />    Info (12023): Found entity 1: mwfil_dut2bus File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_dut2bus.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/bit_mapping_wrapper.vhd <p />    Info (12022): Found design unit 1: bit_mapping_wrapper-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/bit_mapping_wrapper.vhd Line: 23 <p />    Info (12023): Found entity 1: bit_mapping_wrapper File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/bit_mapping_wrapper.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/mwfil_chiftop.vhd <p />    Info (12022): Found design unit 1: mwfil_chiftop-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chiftop.vhd Line: 27 <p />    Info (12023): Found entity 1: mwfil_chiftop File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chiftop.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/filcore.vhd <p />    Info (12022): Found design unit 1: FILCore-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCore.vhd Line: 23 <p />    Info (12023): Found entity 1: FILCore File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCore.vhd Line: 13 <p />Info (12021): Found 2 design units, including 1 entities, in source file /documents/dvbs2/dvbs2/src/transmitter/4-mapping/altera_files/fil_prj/filsrc/bit_mapping_fil.vhd <p />    Info (12022): Found design unit 1: bit_mapping_fil-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/bit_mapping_fil.vhd Line: 25 <p />    Info (12023): Found entity 1: bit_mapping_fil File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/bit_mapping_fil.vhd Line: 19 <p />Info (12127): Elaborating entity "bit_mapping_fil" for the top level hierarchy <p />Info (12128): Elaborating entity "MWClkMgr" for hierarchy "MWClkMgr:u_ClockManager" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/bit_mapping_fil.vhd Line: 84 <p />Info (12128): Elaborating entity "altpll" for hierarchy "MWClkMgr:u_ClockManager|altpll:u_dcm" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWClkMgr.vhd Line: 109 <p />Info (12130): Elaborated megafunction instantiation "MWClkMgr:u_ClockManager|altpll:u_dcm" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWClkMgr.vhd Line: 109 <p />Info (12133): Instantiated megafunction "MWClkMgr:u_ClockManager|altpll:u_dcm" with the following parameter: File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWClkMgr.vhd Line: 109 <p />    Info (12134): Parameter "width_clock" = "5" <p />    Info (12134): Parameter "bandwidth_type" = "AUTO" <p />    Info (12134): Parameter "clk0_divide_by" = "2" <p />    Info (12134): Parameter "clk0_duty_cycle" = "50" <p />    Info (12134): Parameter "clk0_multiply_by" = "1" <p />    Info (12134): Parameter "clk0_phase_shift" = "0" <p />    Info (12134): Parameter "compensate_clock" = "CLK0" <p />    Info (12134): Parameter "inclk0_input_frequency" = "20000" <p />    Info (12134): Parameter "intended_devcie_family" = "NONE" <p />    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=clockmodule" <p />    Info (12134): Parameter "lpm_type" = "altpll" <p />    Info (12134): Parameter "operation_mode" = "NORMAL" <p />    Info (12134): Parameter "pll_type" = "AUTO" <p />    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_areset" = "PORT_USED" <p />    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_fbin" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_inclk0" = "PORT_USED" <p />    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_locked" = "PORT_USED" <p />    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_pllena" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clk0" = "PORT_USED" <p />    Info (12134): Parameter "port_clk1" = "PORT_USED" <p />    Info (12134): Parameter "port_clk2" = "PORT_USED" <p />    Info (12134): Parameter "port_clk3" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clk4" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clk5" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clenak0" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED" <p />    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED" <p />    Info (12134): Parameter "clk1_divide_by" = "2" <p />    Info (12134): Parameter "clk1_duty_cycle" = "50" <p />    Info (12134): Parameter "clk1_multiply_by" = "5" <p />    Info (12134): Parameter "clk1_phase_shift" = "0" <p />    Info (12134): Parameter "clk2_divide_by" = "2" <p />    Info (12134): Parameter "clk2_duty_cycle" = "50" <p />    Info (12134): Parameter "clk2_multiply_by" = "5" <p />    Info (12134): Parameter "clk2_phase_shift" = "0" <p />Info (12021): Found 1 design units, including 1 entities, in source file db/clockmodule_altpll.v <p />    Info (12023): Found entity 1: clockmodule_altpll File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/clockmodule_altpll.v Line: 30 <p />Info (12128): Elaborating entity "clockmodule_altpll" for hierarchy "MWClkMgr:u_ClockManager|altpll:u_dcm|clockmodule_altpll:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altpll.tdf Line: 898 <p />Info (12128): Elaborating entity "FILCore" for hierarchy "FILCore:u_FILCore" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/bit_mapping_fil.vhd Line: 96 <p />Info (12128): Elaborating entity "FILCommLayer" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCore.vhd Line: 85 <p />Warning (10541): VHDL Signal Declaration warning at FILCommLayer.vhd(89): used implicit default value for signal "mac_rxdstport" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 89 <p />Warning (10036): Verilog HDL or VHDL warning at FILCommLayer.vhd(90): object "mac_rxreset" assigned a value but never read File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 90 <p />Warning (10036): Verilog HDL or VHDL warning at FILCommLayer.vhd(91): object "mac_txreset" assigned a value but never read File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 91 <p />Warning (10036): Verilog HDL or VHDL warning at FILCommLayer.vhd(97): object "mac_txsrcport" assigned a value but never read File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 97 <p />Info (12128): Elaborating entity "MWAJTAG" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 101 <p />Warning (10036): Verilog HDL or VHDL warning at MWAJTAG.vhd(126): object "read_write" assigned a value but never read File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 126 <p />Warning (10296): VHDL warning at MWAJTAG.vhd(477): ignored assignment of value to null range File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 477 <p />Info (12128): Elaborating entity "dcfifo" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 178 <p />Info (12130): Elaborated megafunction instantiation "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 178 <p />Info (12133): Instantiated megafunction "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo" with the following parameter: File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 178 <p />    Info (12134): Parameter "intended_device_family" = "Cyclone III" <p />    Info (12134): Parameter "lpm_numwords" = "16" <p />    Info (12134): Parameter "lpm_showahead" = "OFF" <p />    Info (12134): Parameter "lpm_type" = "dcfifo" <p />    Info (12134): Parameter "lpm_width" = "9" <p />    Info (12134): Parameter "lpm_widthu" = "4" <p />    Info (12134): Parameter "overflow_checking" = "ON" <p />    Info (12134): Parameter "rdsync_delaypipe" = "5" <p />    Info (12134): Parameter "read_aclr_synch" = "OFF" <p />    Info (12134): Parameter "underflow_checking" = "ON" <p />    Info (12134): Parameter "use_eab" = "ON" <p />    Info (12134): Parameter "write_aclr_synch" = "OFF" <p />    Info (12134): Parameter "wrsync_delaypipe" = "5" <p />Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_eip1.tdf <p />    Info (12023): Found entity 1: dcfifo_eip1 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 41 <p />Info (12128): Elaborating entity "dcfifo_eip1" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/dcfifo.tdf Line: 191 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_bu6.tdf <p />    Info (12023): Found entity 1: a_graycounter_bu6 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/a_graycounter_bu6.tdf Line: 25 <p />Info (12128): Elaborating entity "a_graycounter_bu6" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|a_graycounter_bu6:rdptr_g1p" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 53 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_7cc.tdf <p />    Info (12023): Found entity 1: a_graycounter_7cc File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/a_graycounter_7cc.tdf Line: 25 <p />Info (12128): Elaborating entity "a_graycounter_7cc" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|a_graycounter_7cc:wrptr_g1p" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 54 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_23d1.tdf <p />    Info (12023): Found entity 1: altsyncram_23d1 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/altsyncram_23d1.tdf Line: 28 <p />Info (12128): Elaborating entity "altsyncram_23d1" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|altsyncram_23d1:fifo_ram" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 55 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_snl.tdf <p />    Info (12023): Found entity 1: alt_synch_pipe_snl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_snl.tdf Line: 27 <p />Info (12128): Elaborating entity "alt_synch_pipe_snl" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|alt_synch_pipe_snl:rs_dgwp" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 74 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_dd9.tdf <p />    Info (12023): Found entity 1: dffpipe_dd9 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dffpipe_dd9.tdf Line: 25 <p />Info (12128): Elaborating entity "dffpipe_dd9" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|alt_synch_pipe_snl:rs_dgwp|dffpipe_dd9:dffpipe10" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_snl.tdf Line: 35 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_tnl.tdf <p />    Info (12023): Found entity 1: alt_synch_pipe_tnl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_tnl.tdf Line: 27 <p />Info (12128): Elaborating entity "alt_synch_pipe_tnl" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|alt_synch_pipe_tnl:ws_dgrp" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 75 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_ed9.tdf <p />    Info (12023): Found entity 1: dffpipe_ed9 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dffpipe_ed9.tdf Line: 25 <p />Info (12128): Elaborating entity "dffpipe_ed9" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|alt_synch_pipe_tnl:ws_dgrp|dffpipe_ed9:dffpipe13" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_tnl.tdf Line: 35 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ru5.tdf <p />    Info (12023): Found entity 1: cmpr_ru5 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/cmpr_ru5.tdf Line: 23 <p />Info (12128): Elaborating entity "cmpr_ru5" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|cmpr_ru5:rdempty_eq_comp1_lsb" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 76 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_qu5.tdf <p />    Info (12023): Found entity 1: cmpr_qu5 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/cmpr_qu5.tdf Line: 23 <p />Info (12128): Elaborating entity "cmpr_qu5" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|cmpr_qu5:rdempty_eq_comp1_msb" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 77 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/mux_5r7.tdf <p />    Info (12023): Found entity 1: mux_5r7 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/mux_5r7.tdf Line: 23 <p />Info (12128): Elaborating entity "mux_5r7" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:u_rxfifo|dcfifo_eip1:auto_generated|mux_5r7:rdemp_eq_comp_lsb_mux" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_eip1.tdf Line: 84 <p />Info (12128): Elaborating entity "dcfifo" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 270 <p />Info (12130): Elaborated megafunction instantiation "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 270 <p />Info (12133): Instantiated megafunction "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component" with the following parameter: File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 270 <p />    Info (12134): Parameter "intended_device_family" = "Cyclone III" <p />    Info (12134): Parameter "lpm_numwords" = "2048" <p />    Info (12134): Parameter "lpm_showahead" = "OFF" <p />    Info (12134): Parameter "lpm_type" = "dcfifo" <p />    Info (12134): Parameter "lpm_width" = "21" <p />    Info (12134): Parameter "lpm_widthu" = "11" <p />    Info (12134): Parameter "overflow_checking" = "ON" <p />    Info (12134): Parameter "rdsync_delaypipe" = "5" <p />    Info (12134): Parameter "read_aclr_synch" = "OFF" <p />    Info (12134): Parameter "underflow_checking" = "ON" <p />    Info (12134): Parameter "use_eab" = "ON" <p />    Info (12134): Parameter "write_aclr_synch" = "OFF" <p />    Info (12134): Parameter "wrsync_delaypipe" = "5" <p />Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_mkq1.tdf <p />    Info (12023): Found entity 1: dcfifo_mkq1 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 43 <p />Info (12128): Elaborating entity "dcfifo_mkq1" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/dcfifo.tdf Line: 191 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_qab.tdf <p />    Info (12023): Found entity 1: a_gray2bin_qab File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/a_gray2bin_qab.tdf Line: 23 <p />Info (12128): Elaborating entity "a_gray2bin_qab" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|a_gray2bin_qab:wrptr_g_gray2bin" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 56 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_pv6.tdf <p />    Info (12023): Found entity 1: a_graycounter_pv6 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/a_graycounter_pv6.tdf Line: 25 <p />Info (12128): Elaborating entity "a_graycounter_pv6" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|a_graycounter_pv6:rdptr_g1p" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 58 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_ldc.tdf <p />    Info (12023): Found entity 1: a_graycounter_ldc File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/a_graycounter_ldc.tdf Line: 25 <p />Info (12128): Elaborating entity "a_graycounter_ldc" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|a_graycounter_ldc:wrptr_g1p" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 59 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i8d1.tdf <p />    Info (12023): Found entity 1: altsyncram_i8d1 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/altsyncram_i8d1.tdf Line: 28 <p />Info (12128): Elaborating entity "altsyncram_i8d1" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|altsyncram_i8d1:fifo_ram" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 60 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_apl.tdf <p />    Info (12023): Found entity 1: alt_synch_pipe_apl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_apl.tdf Line: 27 <p />Info (12128): Elaborating entity "alt_synch_pipe_apl" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|alt_synch_pipe_apl:rs_dgwp" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 79 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_re9.tdf <p />    Info (12023): Found entity 1: dffpipe_re9 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dffpipe_re9.tdf Line: 25 <p />Info (12128): Elaborating entity "dffpipe_re9" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|alt_synch_pipe_apl:rs_dgwp|dffpipe_re9:dffpipe12" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_apl.tdf Line: 35 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_qe9.tdf <p />    Info (12023): Found entity 1: dffpipe_qe9 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dffpipe_qe9.tdf Line: 25 <p />Info (12128): Elaborating entity "dffpipe_qe9" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|dffpipe_qe9:ws_brp" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 80 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_bpl.tdf <p />    Info (12023): Found entity 1: alt_synch_pipe_bpl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_bpl.tdf Line: 27 <p />Info (12128): Elaborating entity "alt_synch_pipe_bpl" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|alt_synch_pipe_bpl:ws_dgrp" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 82 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_se9.tdf <p />    Info (12023): Found entity 1: dffpipe_se9 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dffpipe_se9.tdf Line: 25 <p />Info (12128): Elaborating entity "dffpipe_se9" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|alt_synch_pipe_bpl:ws_dgrp|dffpipe_se9:dffpipe16" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/alt_synch_pipe_bpl.tdf Line: 35 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_uu5.tdf <p />    Info (12023): Found entity 1: cmpr_uu5 File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/cmpr_uu5.tdf Line: 23 <p />Info (12128): Elaborating entity "cmpr_uu5" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|dcfifo:dcfifo_component|dcfifo_mkq1:auto_generated|cmpr_uu5:rdempty_eq_comp1_lsb" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/dcfifo_mkq1.tdf Line: 86 <p />Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 472 <p />Info (12130): Elaborated megafunction instantiation "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 472 <p />Info (12133): Instantiated megafunction "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component" with the following parameter: File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAJTAG.vhd Line: 472 <p />    Info (12134): Parameter "sld_auto_instance_index" = "NO" <p />    Info (12134): Parameter "sld_instance_index" = "54" <p />    Info (12134): Parameter "sld_ir_width" = "16" <p />    Info (12134): Parameter "sld_sim_action" = "" <p />    Info (12134): Parameter "sld_sim_n_scan" = "0" <p />    Info (12134): Parameter "sld_sim_total_length" = "0" <p />    Info (12134): Parameter "lpm_type" = "sld_virtual_jtag" <p />Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst" File: d:/quartus/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152 <p />Info (12131): Elaborated megafunction instantiation "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst", which is child of megafunction instantiation "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component" File: d:/quartus/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152 <p />Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" File: d:/quartus/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152 <p />Info (12131): Elaborated megafunction instantiation "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component" File: d:/quartus/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152 <p />Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: d:/quartus/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415 <p />Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|MWAJTAG:u_MWAJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: d:/quartus/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232 <p />Info (12128): Elaborating entity "FILPktProc" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCommLayer.vhd Line: 116 <p />Info (12128): Elaborating entity "FILUDPCRC" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILUDPCRC:u_FILUDPCRC" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktProc.vhd Line: 194 <p />Info (12128): Elaborating entity "MWDPRAM" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILUDPCRC:u_FILUDPCRC|MWDPRAM:u_MWDPRAM" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILUDPCRC.vhd Line: 74 <p />Info (12128): Elaborating entity "FILPktMUX" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILPktMUX:u_FILPktMUX" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktProc.vhd Line: 210 <p />Info (12128): Elaborating entity "FILCmdProc" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILCmdProc:u_FILCmdProc" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktProc.vhd Line: 225 <p />Info (12128): Elaborating entity "FILDataProc" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktProc.vhd Line: 244 <p />Info (12128): Elaborating entity "MWAsyncFIFO" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc|MWAsyncFIFO:u_rxFIFO" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILDataProc.vhd Line: 101 <p />Info (12128): Elaborating entity "MWDPRAM" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc|MWAsyncFIFO:u_rxFIFO|MWDPRAM:dpram" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWAsyncFIFO.vhd Line: 98 <p />Info (12128): Elaborating entity "MWAsyncFIFO" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|FILDataProc:u_FILDataProc|MWAsyncFIFO:u_txFIFO" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILDataProc.vhd Line: 215 <p />Info (12128): Elaborating entity "MWUDPPKTBuilder" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILPktProc.vhd Line: 272 <p />Info (12128): Elaborating entity "MWPKTBuffer" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder|MWPKTBuffer:u_DATA_BUF" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWUDPPKTBuilder.vhd Line: 101 <p />Info (12128): Elaborating entity "MWDPRAM" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder|MWPKTBuffer:u_DATA_BUF|MWDPRAM:u_MWDPRAM" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWPKTBuffer.vhd Line: 76 <p />Info (12128): Elaborating entity "MWDPRAM" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder|MWPKTBuffer:u_DATA_BUF|MWDPRAM:u_PKTINFO" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWPKTBuffer.vhd Line: 156 <p />Info (12128): Elaborating entity "MWPKTBuffer" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder|MWPKTBuffer:u_STATUS_BUF" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWUDPPKTBuilder.vhd Line: 124 <p />Info (12128): Elaborating entity "MWDPRAM" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder|MWPKTBuffer:u_STATUS_BUF|MWDPRAM:u_MWDPRAM" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWPKTBuffer.vhd Line: 76 <p />Info (12128): Elaborating entity "MWDPRAM" for hierarchy "FILCore:u_FILCore|FILCommLayer:u_FILCommLayer|FILPktProc:u_FILPktProc|MWUDPPKTBuilder:u_MWUDPPKTBuilder|MWPKTBuffer:u_STATUS_BUF|MWDPRAM:u_PKTINFO" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/MWPKTBuffer.vhd Line: 156 <p />Info (12128): Elaborating entity "mwfil_chiftop" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/FILCore.vhd Line: 102 <p />Info (12128): Elaborating entity "mwfil_chifcore" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chiftop.vhd Line: 83 <p />Info (12128): Elaborating entity "mwfil_bus2dut" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore|mwfil_bus2dut:\NormalBlock:u_bus2dut" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd Line: 153 <p />Info (12128): Elaborating entity "mwfil_udfifo" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore|mwfil_udfifo:\NormalBlock:u_b2dfifo" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd Line: 168 <p />Info (12128): Elaborating entity "mwfil_dpscram" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore|mwfil_udfifo:\NormalBlock:u_b2dfifo|mwfil_dpscram:u_dpscram" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_udfifo.vhd Line: 130 <p />Info (12128): Elaborating entity "mwfil_controller" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore|mwfil_controller:u_controller" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd Line: 195 <p />Info (12128): Elaborating entity "mwfil_udfifo" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore|mwfil_udfifo:u_d2bfifo" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd Line: 219 <p />Info (12128): Elaborating entity "mwfil_dpscram" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore|mwfil_udfifo:u_d2bfifo|mwfil_dpscram:u_dpscram" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_udfifo.vhd Line: 130 <p />Info (12128): Elaborating entity "mwfil_dut2bus" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|mwfil_chifcore:u_mwfil_chifcore|mwfil_dut2bus:u_dut2bus" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chifcore.vhd Line: 236 <p />Info (12128): Elaborating entity "bit_mapping_wrapper" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|bit_mapping_wrapper:u_dut" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/mwfil_chiftop.vhd Line: 104 <p />Info (12128): Elaborating entity "bit_mapping" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|bit_mapping_wrapper:u_dut|bit_mapping:u_bit_mapping" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/filsrc/bit_mapping_wrapper.vhd Line: 58 <p />Info (12129): Elaborating entity "angle_selector" using architecture "A:rtl" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|bit_mapping_wrapper:u_dut|bit_mapping:u_bit_mapping|angle_selector:u_angle_selector" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/bit_mapping.vhd Line: 109 <p />Info (12129): Elaborating entity "Cosine_HDL_Optimized" using architecture "A:rtl" for hierarchy "FILCore:u_FILCore|mwfil_chiftop:u_mwfil_chiftop|bit_mapping_wrapper:u_dut|bit_mapping:u_bit_mapping|Cosine_HDL_Optimized:u_Cosine_HDL_Optimized" File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/hdlsrc/bit_mapping_model/bit_mapping.vhd Line: 114 <p />Info (11170): Starting IP generation for the debug fabric: alt_sld_fab. <p />Info (11172): 2021.01.31.18:10:50 Progress: Loading slda1d554db/alt_sld_fab_wrapper_hw.tcl <p />Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG <p />Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH <p />Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab" <p />Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit" <p />Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter" <p />Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric" <p />Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident" <p />Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files <p />Info (11171): Finished IP generation for the debug fabric: alt_sld_fab. <p />Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda1d554db/alt_sld_fab.v <p />    Info (12023): Found entity 1: alt_sld_fab File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/ip/slda1d554db/alt_sld_fab.v Line: 9 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab.v <p />    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab.v Line: 9 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_ident.sv <p />    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_presplit.sv <p />    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3 <p />Info (12021): Found 2 design units, including 1 entities, in source file db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd <p />    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102 <p />    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11 <p />Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_splitter.sv <p />    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: D:/Documents/DVBS2/DVBS2/src/transmitter/4-Mapping/altera_files/fil_prj/fpgaproj/db/ip/slda1d554db/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3 <p />Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder <p />Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings <p />    Info: Peak virtual memory: 4889 megabytes <p />    Info: Processing ended: Sun Jan 31 18:10:56 2021 <p />    Info: Elapsed time: 00:00:26 <p />    Info: Total CPU time (on all processors): 00:00:40 <p />Info (23030): Evaluation of Tcl script createproject.tcl was successful <p />Info: Quartus Prime Shell was successful. 0 errors, 8 warnings <p />    Info: Peak virtual memory: 4651 megabytes <p />    Info: Processing ended: Sun Jan 31 18:10:56 2021 <p />    Info: Elapsed time: 00:00:32 <p />    Info: Total CPU time (on all processors): 00:00:00 <p /><p />### HDL compilation completed.<p /><p />### Running programming file generation outside MATLAB.<p />### Check external shell for programming file generation progress.<p />[Warning: The model name 'gm_bit_mapping_model_fil' is shadowing another name in the MATLAB workspace or path. Type "which -all gm_bit_mapping_model_fil" at the command line to<p />find the other uses of this name. You should change the name of the model to avoid problems.] <p />[> In slpir.PIR2SL/createTargetModel<p />In slpir.PIR2SL/createAndInitTargetModel<p />In cosimtb/genfiltb/createLinkMdl<p />In cosimtb/gencosim/generateLinkModel<p />In cosimtb/genfiltb/doIt<p />In runFILBuild<p />In Simulink.ModelAdvisor/executeCheckCallbackFct<p />In Simulink.ModelAdvisor/run<p />In Simulink.ModelAdvisor/runCheck<p />In ModelAdvisor.Node/runTaskAdvisor<p />In ModelAdvisor.Node/runToFail<p />In ModelAdvisor.Node.runtofailure] <p />### Generating new FIL model: <a href="matlab:open_system('gm_bit_mapping_model_fil')">gm_bit_mapping_model_fil</a>.<p />### FPGA-in-the-Loop testbench generation complete.<p /><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish -->
+<span name = "EmbedImages" id="EmbedImages"></span><!-- mdladv_ignore_start -->
+</div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start -->
+</div><!-- mdladv_ignore_finish -->
+</body>  
+</html>  

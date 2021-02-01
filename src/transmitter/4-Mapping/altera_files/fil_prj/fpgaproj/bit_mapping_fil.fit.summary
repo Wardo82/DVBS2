@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Jan 31 18:13:01 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : bit_mapping_fil
+Top-level Entity Name : bit_mapping_fil
+Family : Cyclone V
+Device : 5CSEMA4U23C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,034 / 15,880 ( 7 % )
+Total registers : 1564
+Total pins : 1 / 314 ( < 1 % )
+Total virtual pins : 0
+Total block memory bits : 134,976 / 2,764,800 ( 5 % )
+Total RAM Blocks : 21 / 270 ( 8 % )
+Total DSP Blocks : 2 / 84 ( 2 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 5 ( 20 % )
+Total DLLs : 0 / 4 ( 0 % )
