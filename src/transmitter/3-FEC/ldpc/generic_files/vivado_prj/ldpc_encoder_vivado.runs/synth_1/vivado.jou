@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Feb  5 04:58:00 2021
+# Process ID: 4880
+# Current directory: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1
+# Command line: vivado.exe -log ldpc_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ldpc_encoder.tcl
+# Log file: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/ldpc_encoder.vds
+# Journal file: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ldpc_encoder.tcl -notrace
