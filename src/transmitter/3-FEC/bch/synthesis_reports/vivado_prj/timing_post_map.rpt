@@ -1,0 +1,2146 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1.1 (lin64) Build 2960000 Wed Aug  5 22:57:21 MDT 2020
+| Date         : Fri Feb  5 01:12:22 2021
+| Host         : Wardo running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 3 -nworst 3 -name timing_post_map -file timing_post_map.rpt
+| Design       : bch_encoder
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (492)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (1276)
+5. checking no_input_delay (4)
+6. checking no_output_delay (2)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (492)
+--------------------------
+ There are 492 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+Delay_out1_reg[0]/C
+Delay_out1_reg[100]/C
+Delay_out1_reg[101]/C
+Delay_out1_reg[102]/C
+Delay_out1_reg[103]/C
+Delay_out1_reg[104]/C
+Delay_out1_reg[105]/C
+Delay_out1_reg[106]/C
+Delay_out1_reg[107]/C
+Delay_out1_reg[108]/C
+Delay_out1_reg[109]/C
+Delay_out1_reg[10]/C
+Delay_out1_reg[110]/C
+Delay_out1_reg[111]/C
+Delay_out1_reg[112]/C
+Delay_out1_reg[113]/C
+Delay_out1_reg[114]/C
+Delay_out1_reg[115]/C
+Delay_out1_reg[116]/C
+Delay_out1_reg[117]/C
+Delay_out1_reg[118]/C
+Delay_out1_reg[119]/C
+Delay_out1_reg[11]/C
+Delay_out1_reg[120]/C
+Delay_out1_reg[121]/C
+Delay_out1_reg[122]/C
+Delay_out1_reg[123]/C
+Delay_out1_reg[124]/C
+Delay_out1_reg[125]/C
+Delay_out1_reg[126]/C
+Delay_out1_reg[127]/C
+Delay_out1_reg[128]/C
+Delay_out1_reg[129]/C
+Delay_out1_reg[12]/C
+Delay_out1_reg[130]/C
+Delay_out1_reg[131]/C
+Delay_out1_reg[132]/C
+Delay_out1_reg[133]/C
+Delay_out1_reg[134]/C
+Delay_out1_reg[135]/C
+Delay_out1_reg[136]/C
+Delay_out1_reg[137]/C
+Delay_out1_reg[138]/C
+Delay_out1_reg[139]/C
+Delay_out1_reg[13]/C
+Delay_out1_reg[140]/C
+Delay_out1_reg[141]/C
+Delay_out1_reg[142]/C
+Delay_out1_reg[143]/C
+Delay_out1_reg[144]/C
+Delay_out1_reg[145]/C
+Delay_out1_reg[146]/C
+Delay_out1_reg[147]/C
+Delay_out1_reg[148]/C
+Delay_out1_reg[149]/C
+Delay_out1_reg[14]/C
+Delay_out1_reg[150]/C
+Delay_out1_reg[151]/C
+Delay_out1_reg[152]/C
+Delay_out1_reg[153]/C
+Delay_out1_reg[154]/C
+Delay_out1_reg[155]/C
+Delay_out1_reg[156]/C
+Delay_out1_reg[157]/C
+Delay_out1_reg[158]/C
+Delay_out1_reg[159]/C
+Delay_out1_reg[15]/C
+Delay_out1_reg[160]/C
+Delay_out1_reg[161]/C
+Delay_out1_reg[162]/C
+Delay_out1_reg[163]/C
+Delay_out1_reg[164]/C
+Delay_out1_reg[165]/C
+Delay_out1_reg[166]/C
+Delay_out1_reg[167]/C
+Delay_out1_reg[168]/C
+Delay_out1_reg[169]/C
+Delay_out1_reg[16]/C
+Delay_out1_reg[170]/C
+Delay_out1_reg[171]/C
+Delay_out1_reg[172]/C
+Delay_out1_reg[173]/C
+Delay_out1_reg[174]/C
+Delay_out1_reg[175]/C
+Delay_out1_reg[176]/C
+Delay_out1_reg[177]/C
+Delay_out1_reg[178]/C
+Delay_out1_reg[179]/C
+Delay_out1_reg[17]/C
+Delay_out1_reg[180]/C
+Delay_out1_reg[181]/C
+Delay_out1_reg[182]/C
+Delay_out1_reg[183]/C
+Delay_out1_reg[184]/C
+Delay_out1_reg[185]/C
+Delay_out1_reg[186]/C
+Delay_out1_reg[187]/C
+Delay_out1_reg[188]/C
+Delay_out1_reg[189]/C
+Delay_out1_reg[18]/C
+Delay_out1_reg[190]/C
+Delay_out1_reg[19]/C
+Delay_out1_reg[1]/C
+Delay_out1_reg[20]/C
+Delay_out1_reg[21]/C
+Delay_out1_reg[22]/C
+Delay_out1_reg[23]/C
+Delay_out1_reg[24]/C
+Delay_out1_reg[25]/C
+Delay_out1_reg[26]/C
+Delay_out1_reg[27]/C
+Delay_out1_reg[28]/C
+Delay_out1_reg[29]/C
+Delay_out1_reg[2]/C
+Delay_out1_reg[30]/C
+Delay_out1_reg[31]/C
+Delay_out1_reg[32]/C
+Delay_out1_reg[33]/C
+Delay_out1_reg[34]/C
+Delay_out1_reg[35]/C
+Delay_out1_reg[36]/C
+Delay_out1_reg[37]/C
+Delay_out1_reg[38]/C
+Delay_out1_reg[39]/C
+Delay_out1_reg[3]/C
+Delay_out1_reg[40]/C
+Delay_out1_reg[41]/C
+Delay_out1_reg[42]/C
+Delay_out1_reg[43]/C
+Delay_out1_reg[44]/C
+Delay_out1_reg[45]/C
+Delay_out1_reg[46]/C
+Delay_out1_reg[47]/C
+Delay_out1_reg[48]/C
+Delay_out1_reg[49]/C
+Delay_out1_reg[4]/C
+Delay_out1_reg[50]/C
+Delay_out1_reg[51]/C
+Delay_out1_reg[52]/C
+Delay_out1_reg[53]/C
+Delay_out1_reg[54]/C
+Delay_out1_reg[55]/C
+Delay_out1_reg[56]/C
+Delay_out1_reg[57]/C
+Delay_out1_reg[58]/C
+Delay_out1_reg[59]/C
+Delay_out1_reg[5]/C
+Delay_out1_reg[60]/C
+Delay_out1_reg[61]/C
+Delay_out1_reg[62]/C
+Delay_out1_reg[63]/C
+Delay_out1_reg[64]/C
+Delay_out1_reg[65]/C
+Delay_out1_reg[66]/C
+Delay_out1_reg[67]/C
+Delay_out1_reg[68]/C
+Delay_out1_reg[69]/C
+Delay_out1_reg[6]/C
+Delay_out1_reg[70]/C
+Delay_out1_reg[71]/C
+Delay_out1_reg[72]/C
+Delay_out1_reg[73]/C
+Delay_out1_reg[74]/C
+Delay_out1_reg[75]/C
+Delay_out1_reg[76]/C
+Delay_out1_reg[77]/C
+Delay_out1_reg[78]/C
+Delay_out1_reg[79]/C
+Delay_out1_reg[7]/C
+Delay_out1_reg[80]/C
+Delay_out1_reg[81]/C
+Delay_out1_reg[82]/C
+Delay_out1_reg[83]/C
+Delay_out1_reg[84]/C
+Delay_out1_reg[85]/C
+Delay_out1_reg[86]/C
+Delay_out1_reg[87]/C
+Delay_out1_reg[88]/C
+Delay_out1_reg[89]/C
+Delay_out1_reg[8]/C
+Delay_out1_reg[90]/C
+Delay_out1_reg[91]/C
+Delay_out1_reg[92]/C
+Delay_out1_reg[93]/C
+Delay_out1_reg[94]/C
+Delay_out1_reg[95]/C
+Delay_out1_reg[96]/C
+Delay_out1_reg[97]/C
+Delay_out1_reg[98]/C
+Delay_out1_reg[99]/C
+Delay_out1_reg[9]/C
+u_p2s/buffer_not_empty_reg/C
+u_p2s/buffer_not_empty_reg_rep/C
+u_p2s/buffer_not_empty_reg_rep__0/C
+u_p2s/buffer_rsvd_reg[0]/C
+u_p2s/buffer_rsvd_reg[100]/C
+u_p2s/buffer_rsvd_reg[101]/C
+u_p2s/buffer_rsvd_reg[102]/C
+u_p2s/buffer_rsvd_reg[103]/C
+u_p2s/buffer_rsvd_reg[104]/C
+u_p2s/buffer_rsvd_reg[105]/C
+u_p2s/buffer_rsvd_reg[106]/C
+u_p2s/buffer_rsvd_reg[107]/C
+u_p2s/buffer_rsvd_reg[108]/C
+u_p2s/buffer_rsvd_reg[109]/C
+u_p2s/buffer_rsvd_reg[10]/C
+u_p2s/buffer_rsvd_reg[110]/C
+u_p2s/buffer_rsvd_reg[111]/C
+u_p2s/buffer_rsvd_reg[112]/C
+u_p2s/buffer_rsvd_reg[113]/C
+u_p2s/buffer_rsvd_reg[114]/C
+u_p2s/buffer_rsvd_reg[115]/C
+u_p2s/buffer_rsvd_reg[116]/C
+u_p2s/buffer_rsvd_reg[117]/C
+u_p2s/buffer_rsvd_reg[118]/C
+u_p2s/buffer_rsvd_reg[119]/C
+u_p2s/buffer_rsvd_reg[11]/C
+u_p2s/buffer_rsvd_reg[120]/C
+u_p2s/buffer_rsvd_reg[121]/C
+u_p2s/buffer_rsvd_reg[122]/C
+u_p2s/buffer_rsvd_reg[123]/C
+u_p2s/buffer_rsvd_reg[124]/C
+u_p2s/buffer_rsvd_reg[125]/C
+u_p2s/buffer_rsvd_reg[126]/C
+u_p2s/buffer_rsvd_reg[127]/C
+u_p2s/buffer_rsvd_reg[128]/C
+u_p2s/buffer_rsvd_reg[129]/C
+u_p2s/buffer_rsvd_reg[12]/C
+u_p2s/buffer_rsvd_reg[130]/C
+u_p2s/buffer_rsvd_reg[131]/C
+u_p2s/buffer_rsvd_reg[132]/C
+u_p2s/buffer_rsvd_reg[133]/C
+u_p2s/buffer_rsvd_reg[134]/C
+u_p2s/buffer_rsvd_reg[135]/C
+u_p2s/buffer_rsvd_reg[136]/C
+u_p2s/buffer_rsvd_reg[137]/C
+u_p2s/buffer_rsvd_reg[138]/C
+u_p2s/buffer_rsvd_reg[139]/C
+u_p2s/buffer_rsvd_reg[13]/C
+u_p2s/buffer_rsvd_reg[140]/C
+u_p2s/buffer_rsvd_reg[141]/C
+u_p2s/buffer_rsvd_reg[142]/C
+u_p2s/buffer_rsvd_reg[143]/C
+u_p2s/buffer_rsvd_reg[144]/C
+u_p2s/buffer_rsvd_reg[145]/C
+u_p2s/buffer_rsvd_reg[146]/C
+u_p2s/buffer_rsvd_reg[147]/C
+u_p2s/buffer_rsvd_reg[148]/C
+u_p2s/buffer_rsvd_reg[149]/C
+u_p2s/buffer_rsvd_reg[14]/C
+u_p2s/buffer_rsvd_reg[150]/C
+u_p2s/buffer_rsvd_reg[151]/C
+u_p2s/buffer_rsvd_reg[152]/C
+u_p2s/buffer_rsvd_reg[153]/C
+u_p2s/buffer_rsvd_reg[154]/C
+u_p2s/buffer_rsvd_reg[155]/C
+u_p2s/buffer_rsvd_reg[156]/C
+u_p2s/buffer_rsvd_reg[157]/C
+u_p2s/buffer_rsvd_reg[158]/C
+u_p2s/buffer_rsvd_reg[159]/C
+u_p2s/buffer_rsvd_reg[15]/C
+u_p2s/buffer_rsvd_reg[160]/C
+u_p2s/buffer_rsvd_reg[161]/C
+u_p2s/buffer_rsvd_reg[162]/C
+u_p2s/buffer_rsvd_reg[163]/C
+u_p2s/buffer_rsvd_reg[164]/C
+u_p2s/buffer_rsvd_reg[165]/C
+u_p2s/buffer_rsvd_reg[166]/C
+u_p2s/buffer_rsvd_reg[167]/C
+u_p2s/buffer_rsvd_reg[168]/C
+u_p2s/buffer_rsvd_reg[169]/C
+u_p2s/buffer_rsvd_reg[16]/C
+u_p2s/buffer_rsvd_reg[170]/C
+u_p2s/buffer_rsvd_reg[171]/C
+u_p2s/buffer_rsvd_reg[172]/C
+u_p2s/buffer_rsvd_reg[173]/C
+u_p2s/buffer_rsvd_reg[174]/C
+u_p2s/buffer_rsvd_reg[175]/C
+u_p2s/buffer_rsvd_reg[176]/C
+u_p2s/buffer_rsvd_reg[177]/C
+u_p2s/buffer_rsvd_reg[178]/C
+u_p2s/buffer_rsvd_reg[179]/C
+u_p2s/buffer_rsvd_reg[17]/C
+u_p2s/buffer_rsvd_reg[180]/C
+u_p2s/buffer_rsvd_reg[181]/C
+u_p2s/buffer_rsvd_reg[182]/C
+u_p2s/buffer_rsvd_reg[183]/C
+u_p2s/buffer_rsvd_reg[184]/C
+u_p2s/buffer_rsvd_reg[185]/C
+u_p2s/buffer_rsvd_reg[186]/C
+u_p2s/buffer_rsvd_reg[187]/C
+u_p2s/buffer_rsvd_reg[188]/C
+u_p2s/buffer_rsvd_reg[189]/C
+u_p2s/buffer_rsvd_reg[18]/C
+u_p2s/buffer_rsvd_reg[190]/C
+u_p2s/buffer_rsvd_reg[191]/C
+u_p2s/buffer_rsvd_reg[19]/C
+u_p2s/buffer_rsvd_reg[1]/C
+u_p2s/buffer_rsvd_reg[20]/C
+u_p2s/buffer_rsvd_reg[21]/C
+u_p2s/buffer_rsvd_reg[22]/C
+u_p2s/buffer_rsvd_reg[23]/C
+u_p2s/buffer_rsvd_reg[24]/C
+u_p2s/buffer_rsvd_reg[25]/C
+u_p2s/buffer_rsvd_reg[26]/C
+u_p2s/buffer_rsvd_reg[27]/C
+u_p2s/buffer_rsvd_reg[28]/C
+u_p2s/buffer_rsvd_reg[29]/C
+u_p2s/buffer_rsvd_reg[2]/C
+u_p2s/buffer_rsvd_reg[30]/C
+u_p2s/buffer_rsvd_reg[31]/C
+u_p2s/buffer_rsvd_reg[32]/C
+u_p2s/buffer_rsvd_reg[33]/C
+u_p2s/buffer_rsvd_reg[34]/C
+u_p2s/buffer_rsvd_reg[35]/C
+u_p2s/buffer_rsvd_reg[36]/C
+u_p2s/buffer_rsvd_reg[37]/C
+u_p2s/buffer_rsvd_reg[38]/C
+u_p2s/buffer_rsvd_reg[39]/C
+u_p2s/buffer_rsvd_reg[3]/C
+u_p2s/buffer_rsvd_reg[40]/C
+u_p2s/buffer_rsvd_reg[41]/C
+u_p2s/buffer_rsvd_reg[42]/C
+u_p2s/buffer_rsvd_reg[43]/C
+u_p2s/buffer_rsvd_reg[44]/C
+u_p2s/buffer_rsvd_reg[45]/C
+u_p2s/buffer_rsvd_reg[46]/C
+u_p2s/buffer_rsvd_reg[47]/C
+u_p2s/buffer_rsvd_reg[48]/C
+u_p2s/buffer_rsvd_reg[49]/C
+u_p2s/buffer_rsvd_reg[4]/C
+u_p2s/buffer_rsvd_reg[50]/C
+u_p2s/buffer_rsvd_reg[51]/C
+u_p2s/buffer_rsvd_reg[52]/C
+u_p2s/buffer_rsvd_reg[53]/C
+u_p2s/buffer_rsvd_reg[54]/C
+u_p2s/buffer_rsvd_reg[55]/C
+u_p2s/buffer_rsvd_reg[56]/C
+u_p2s/buffer_rsvd_reg[57]/C
+u_p2s/buffer_rsvd_reg[58]/C
+u_p2s/buffer_rsvd_reg[59]/C
+u_p2s/buffer_rsvd_reg[5]/C
+u_p2s/buffer_rsvd_reg[60]/C
+u_p2s/buffer_rsvd_reg[61]/C
+u_p2s/buffer_rsvd_reg[62]/C
+u_p2s/buffer_rsvd_reg[63]/C
+u_p2s/buffer_rsvd_reg[64]/C
+u_p2s/buffer_rsvd_reg[65]/C
+u_p2s/buffer_rsvd_reg[66]/C
+u_p2s/buffer_rsvd_reg[67]/C
+u_p2s/buffer_rsvd_reg[68]/C
+u_p2s/buffer_rsvd_reg[69]/C
+u_p2s/buffer_rsvd_reg[6]/C
+u_p2s/buffer_rsvd_reg[70]/C
+u_p2s/buffer_rsvd_reg[71]/C
+u_p2s/buffer_rsvd_reg[72]/C
+u_p2s/buffer_rsvd_reg[73]/C
+u_p2s/buffer_rsvd_reg[74]/C
+u_p2s/buffer_rsvd_reg[75]/C
+u_p2s/buffer_rsvd_reg[76]/C
+u_p2s/buffer_rsvd_reg[77]/C
+u_p2s/buffer_rsvd_reg[78]/C
+u_p2s/buffer_rsvd_reg[79]/C
+u_p2s/buffer_rsvd_reg[7]/C
+u_p2s/buffer_rsvd_reg[80]/C
+u_p2s/buffer_rsvd_reg[81]/C
+u_p2s/buffer_rsvd_reg[82]/C
+u_p2s/buffer_rsvd_reg[83]/C
+u_p2s/buffer_rsvd_reg[84]/C
+u_p2s/buffer_rsvd_reg[85]/C
+u_p2s/buffer_rsvd_reg[86]/C
+u_p2s/buffer_rsvd_reg[87]/C
+u_p2s/buffer_rsvd_reg[88]/C
+u_p2s/buffer_rsvd_reg[89]/C
+u_p2s/buffer_rsvd_reg[8]/C
+u_p2s/buffer_rsvd_reg[90]/C
+u_p2s/buffer_rsvd_reg[91]/C
+u_p2s/buffer_rsvd_reg[92]/C
+u_p2s/buffer_rsvd_reg[93]/C
+u_p2s/buffer_rsvd_reg[94]/C
+u_p2s/buffer_rsvd_reg[95]/C
+u_p2s/buffer_rsvd_reg[96]/C
+u_p2s/buffer_rsvd_reg[97]/C
+u_p2s/buffer_rsvd_reg[98]/C
+u_p2s/buffer_rsvd_reg[99]/C
+u_p2s/buffer_rsvd_reg[9]/C
+u_p2s/counter_reg[0]/C
+u_p2s/counter_reg[10]/C
+u_p2s/counter_reg[11]/C
+u_p2s/counter_reg[12]/C
+u_p2s/counter_reg[13]/C
+u_p2s/counter_reg[14]/C
+u_p2s/counter_reg[15]/C
+u_p2s/counter_reg[1]/C
+u_p2s/counter_reg[2]/C
+u_p2s/counter_reg[3]/C
+u_p2s/counter_reg[4]/C
+u_p2s/counter_reg[5]/C
+u_p2s/counter_reg[6]/C
+u_p2s/counter_reg[7]/C
+u_p2s/counter_reg[8]/C
+u_p2s/counter_reg[9]/C
+u_p2s/moore_state_machine_reg/C
+u_p2s/moore_state_machine_reg_rep/C
+u_registers/lfsr_not_empty_reg/C
+u_registers/lfsr_not_empty_reg_rep/C
+u_registers/lfsr_not_empty_reg_rep__0/C
+u_registers/lfsr_reg[0]/C
+u_registers/lfsr_reg[101]/C
+u_registers/lfsr_reg[102]/C
+u_registers/lfsr_reg[105]/C
+u_registers/lfsr_reg[106]/C
+u_registers/lfsr_reg[108]/C
+u_registers/lfsr_reg[111]/C
+u_registers/lfsr_reg[112]/C
+u_registers/lfsr_reg[113]/C
+u_registers/lfsr_reg[114]/C
+u_registers/lfsr_reg[117]/C
+u_registers/lfsr_reg[118]/C
+u_registers/lfsr_reg[11]/C
+u_registers/lfsr_reg[123]/C
+u_registers/lfsr_reg[125]/C
+u_registers/lfsr_reg[129]/C
+u_registers/lfsr_reg[130]/C
+u_registers/lfsr_reg[131]/C
+u_registers/lfsr_reg[135]/C
+u_registers/lfsr_reg[139]/C
+u_registers/lfsr_reg[13]/C
+u_registers/lfsr_reg[141]/C
+u_registers/lfsr_reg[145]/C
+u_registers/lfsr_reg[146]/C
+u_registers/lfsr_reg[147]/C
+u_registers/lfsr_reg[149]/C
+u_registers/lfsr_reg[153]/C
+u_registers/lfsr_reg[158]/C
+u_registers/lfsr_reg[159]/C
+u_registers/lfsr_reg[160]/C
+u_registers/lfsr_reg[166]/C
+u_registers/lfsr_reg[168]/C
+u_registers/lfsr_reg[169]/C
+u_registers/lfsr_reg[16]/C
+u_registers/lfsr_reg[170]/C
+u_registers/lfsr_reg[176]/C
+u_registers/lfsr_reg[177]/C
+u_registers/lfsr_reg[180]/C
+u_registers/lfsr_reg[184]/C
+u_registers/lfsr_reg[185]/C
+u_registers/lfsr_reg[186]/C
+u_registers/lfsr_reg[189]/C
+u_registers/lfsr_reg[190]/C
+u_registers/lfsr_reg[191]/C
+u_registers/lfsr_reg[1]/C
+u_registers/lfsr_reg[24]/C
+u_registers/lfsr_reg[25]/C
+u_registers/lfsr_reg[28]/C
+u_registers/lfsr_reg[29]/C
+u_registers/lfsr_reg[31]/C
+u_registers/lfsr_reg[32]/C
+u_registers/lfsr_reg[33]/C
+u_registers/lfsr_reg[35]/C
+u_registers/lfsr_reg[36]/C
+u_registers/lfsr_reg[37]/C
+u_registers/lfsr_reg[38]/C
+u_registers/lfsr_reg[39]/C
+u_registers/lfsr_reg[41]/C
+u_registers/lfsr_reg[46]/C
+u_registers/lfsr_reg[47]/C
+u_registers/lfsr_reg[48]/C
+u_registers/lfsr_reg[49]/C
+u_registers/lfsr_reg[4]/C
+u_registers/lfsr_reg[53]/C
+u_registers/lfsr_reg[55]/C
+u_registers/lfsr_reg[56]/C
+u_registers/lfsr_reg[5]/C
+u_registers/lfsr_reg[63]/C
+u_registers/lfsr_reg[66]/C
+u_registers/lfsr_reg[6]/C
+u_registers/lfsr_reg[70]/C
+u_registers/lfsr_reg[74]/C
+u_registers/lfsr_reg[79]/C
+u_registers/lfsr_reg[7]/C
+u_registers/lfsr_reg[81]/C
+u_registers/lfsr_reg[83]/C
+u_registers/lfsr_reg[84]/C
+u_registers/lfsr_reg[89]/C
+u_registers/lfsr_reg[90]/C
+u_registers/lfsr_reg[91]/C
+u_registers/lfsr_reg[93]/C
+u_registers/lfsr_reg[94]/C
+u_registers/lfsr_reg[98]/C
+u_registers/lfsr_reg[99]/C
+u_registers/lfsr_reg[9]/C
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (1276)
+---------------------------------------------------
+ There are 1276 pins that are not constrained for maximum delay. (HIGH)
+
+Delay_out1_reg[0]/CE
+Delay_out1_reg[0]/CLR
+Delay_out1_reg[0]/D
+Delay_out1_reg[100]/CE
+Delay_out1_reg[100]/CLR
+Delay_out1_reg[100]/D
+Delay_out1_reg[101]/CE
+Delay_out1_reg[101]/CLR
+Delay_out1_reg[101]/D
+Delay_out1_reg[102]/CE
+Delay_out1_reg[102]/CLR
+Delay_out1_reg[102]/D
+Delay_out1_reg[103]/CE
+Delay_out1_reg[103]/CLR
+Delay_out1_reg[103]/D
+Delay_out1_reg[104]/CE
+Delay_out1_reg[104]/CLR
+Delay_out1_reg[104]/D
+Delay_out1_reg[105]/CE
+Delay_out1_reg[105]/CLR
+Delay_out1_reg[105]/D
+Delay_out1_reg[106]/CE
+Delay_out1_reg[106]/CLR
+Delay_out1_reg[106]/D
+Delay_out1_reg[107]/CE
+Delay_out1_reg[107]/CLR
+Delay_out1_reg[107]/D
+Delay_out1_reg[108]/CE
+Delay_out1_reg[108]/CLR
+Delay_out1_reg[108]/D
+Delay_out1_reg[109]/CE
+Delay_out1_reg[109]/CLR
+Delay_out1_reg[109]/D
+Delay_out1_reg[10]/CE
+Delay_out1_reg[10]/CLR
+Delay_out1_reg[10]/D
+Delay_out1_reg[110]/CE
+Delay_out1_reg[110]/CLR
+Delay_out1_reg[110]/D
+Delay_out1_reg[111]/CE
+Delay_out1_reg[111]/CLR
+Delay_out1_reg[111]/D
+Delay_out1_reg[112]/CE
+Delay_out1_reg[112]/CLR
+Delay_out1_reg[112]/D
+Delay_out1_reg[113]/CE
+Delay_out1_reg[113]/CLR
+Delay_out1_reg[113]/D
+Delay_out1_reg[114]/CE
+Delay_out1_reg[114]/CLR
+Delay_out1_reg[114]/D
+Delay_out1_reg[115]/CE
+Delay_out1_reg[115]/CLR
+Delay_out1_reg[115]/D
+Delay_out1_reg[116]/CE
+Delay_out1_reg[116]/CLR
+Delay_out1_reg[116]/D
+Delay_out1_reg[117]/CE
+Delay_out1_reg[117]/CLR
+Delay_out1_reg[117]/D
+Delay_out1_reg[118]/CE
+Delay_out1_reg[118]/CLR
+Delay_out1_reg[118]/D
+Delay_out1_reg[119]/CE
+Delay_out1_reg[119]/CLR
+Delay_out1_reg[119]/D
+Delay_out1_reg[11]/CE
+Delay_out1_reg[11]/CLR
+Delay_out1_reg[11]/D
+Delay_out1_reg[120]/CE
+Delay_out1_reg[120]/CLR
+Delay_out1_reg[120]/D
+Delay_out1_reg[121]/CE
+Delay_out1_reg[121]/CLR
+Delay_out1_reg[121]/D
+Delay_out1_reg[122]/CE
+Delay_out1_reg[122]/CLR
+Delay_out1_reg[122]/D
+Delay_out1_reg[123]/CE
+Delay_out1_reg[123]/CLR
+Delay_out1_reg[123]/D
+Delay_out1_reg[124]/CE
+Delay_out1_reg[124]/CLR
+Delay_out1_reg[124]/D
+Delay_out1_reg[125]/CE
+Delay_out1_reg[125]/CLR
+Delay_out1_reg[125]/D
+Delay_out1_reg[126]/CE
+Delay_out1_reg[126]/CLR
+Delay_out1_reg[126]/D
+Delay_out1_reg[127]/CE
+Delay_out1_reg[127]/CLR
+Delay_out1_reg[127]/D
+Delay_out1_reg[128]/CE
+Delay_out1_reg[128]/CLR
+Delay_out1_reg[128]/D
+Delay_out1_reg[129]/CE
+Delay_out1_reg[129]/CLR
+Delay_out1_reg[129]/D
+Delay_out1_reg[12]/CE
+Delay_out1_reg[12]/CLR
+Delay_out1_reg[12]/D
+Delay_out1_reg[130]/CE
+Delay_out1_reg[130]/CLR
+Delay_out1_reg[130]/D
+Delay_out1_reg[131]/CE
+Delay_out1_reg[131]/CLR
+Delay_out1_reg[131]/D
+Delay_out1_reg[132]/CE
+Delay_out1_reg[132]/CLR
+Delay_out1_reg[132]/D
+Delay_out1_reg[133]/CE
+Delay_out1_reg[133]/CLR
+Delay_out1_reg[133]/D
+Delay_out1_reg[134]/CE
+Delay_out1_reg[134]/CLR
+Delay_out1_reg[134]/D
+Delay_out1_reg[135]/CE
+Delay_out1_reg[135]/CLR
+Delay_out1_reg[135]/D
+Delay_out1_reg[136]/CE
+Delay_out1_reg[136]/CLR
+Delay_out1_reg[136]/D
+Delay_out1_reg[137]/CE
+Delay_out1_reg[137]/CLR
+Delay_out1_reg[137]/D
+Delay_out1_reg[138]/CE
+Delay_out1_reg[138]/CLR
+Delay_out1_reg[138]/D
+Delay_out1_reg[139]/CE
+Delay_out1_reg[139]/CLR
+Delay_out1_reg[139]/D
+Delay_out1_reg[13]/CE
+Delay_out1_reg[13]/CLR
+Delay_out1_reg[13]/D
+Delay_out1_reg[140]/CE
+Delay_out1_reg[140]/CLR
+Delay_out1_reg[140]/D
+Delay_out1_reg[141]/CE
+Delay_out1_reg[141]/CLR
+Delay_out1_reg[141]/D
+Delay_out1_reg[142]/CE
+Delay_out1_reg[142]/CLR
+Delay_out1_reg[142]/D
+Delay_out1_reg[143]/CE
+Delay_out1_reg[143]/CLR
+Delay_out1_reg[143]/D
+Delay_out1_reg[144]/CE
+Delay_out1_reg[144]/CLR
+Delay_out1_reg[144]/D
+Delay_out1_reg[145]/CE
+Delay_out1_reg[145]/CLR
+Delay_out1_reg[145]/D
+Delay_out1_reg[146]/CE
+Delay_out1_reg[146]/CLR
+Delay_out1_reg[146]/D
+Delay_out1_reg[147]/CE
+Delay_out1_reg[147]/CLR
+Delay_out1_reg[147]/D
+Delay_out1_reg[148]/CE
+Delay_out1_reg[148]/CLR
+Delay_out1_reg[148]/D
+Delay_out1_reg[149]/CE
+Delay_out1_reg[149]/CLR
+Delay_out1_reg[149]/D
+Delay_out1_reg[14]/CE
+Delay_out1_reg[14]/CLR
+Delay_out1_reg[14]/D
+Delay_out1_reg[150]/CE
+Delay_out1_reg[150]/CLR
+Delay_out1_reg[150]/D
+Delay_out1_reg[151]/CE
+Delay_out1_reg[151]/CLR
+Delay_out1_reg[151]/D
+Delay_out1_reg[152]/CE
+Delay_out1_reg[152]/CLR
+Delay_out1_reg[152]/D
+Delay_out1_reg[153]/CE
+Delay_out1_reg[153]/CLR
+Delay_out1_reg[153]/D
+Delay_out1_reg[154]/CE
+Delay_out1_reg[154]/CLR
+Delay_out1_reg[154]/D
+Delay_out1_reg[155]/CE
+Delay_out1_reg[155]/CLR
+Delay_out1_reg[155]/D
+Delay_out1_reg[156]/CE
+Delay_out1_reg[156]/CLR
+Delay_out1_reg[156]/D
+Delay_out1_reg[157]/CE
+Delay_out1_reg[157]/CLR
+Delay_out1_reg[157]/D
+Delay_out1_reg[158]/CE
+Delay_out1_reg[158]/CLR
+Delay_out1_reg[158]/D
+Delay_out1_reg[159]/CE
+Delay_out1_reg[159]/CLR
+Delay_out1_reg[159]/D
+Delay_out1_reg[15]/CE
+Delay_out1_reg[15]/CLR
+Delay_out1_reg[15]/D
+Delay_out1_reg[160]/CE
+Delay_out1_reg[160]/CLR
+Delay_out1_reg[160]/D
+Delay_out1_reg[161]/CE
+Delay_out1_reg[161]/CLR
+Delay_out1_reg[161]/D
+Delay_out1_reg[162]/CE
+Delay_out1_reg[162]/CLR
+Delay_out1_reg[162]/D
+Delay_out1_reg[163]/CE
+Delay_out1_reg[163]/CLR
+Delay_out1_reg[163]/D
+Delay_out1_reg[164]/CE
+Delay_out1_reg[164]/CLR
+Delay_out1_reg[164]/D
+Delay_out1_reg[165]/CE
+Delay_out1_reg[165]/CLR
+Delay_out1_reg[165]/D
+Delay_out1_reg[166]/CE
+Delay_out1_reg[166]/CLR
+Delay_out1_reg[166]/D
+Delay_out1_reg[167]/CE
+Delay_out1_reg[167]/CLR
+Delay_out1_reg[167]/D
+Delay_out1_reg[168]/CE
+Delay_out1_reg[168]/CLR
+Delay_out1_reg[168]/D
+Delay_out1_reg[169]/CE
+Delay_out1_reg[169]/CLR
+Delay_out1_reg[169]/D
+Delay_out1_reg[16]/CE
+Delay_out1_reg[16]/CLR
+Delay_out1_reg[16]/D
+Delay_out1_reg[170]/CE
+Delay_out1_reg[170]/CLR
+Delay_out1_reg[170]/D
+Delay_out1_reg[171]/CE
+Delay_out1_reg[171]/CLR
+Delay_out1_reg[171]/D
+Delay_out1_reg[172]/CE
+Delay_out1_reg[172]/CLR
+Delay_out1_reg[172]/D
+Delay_out1_reg[173]/CE
+Delay_out1_reg[173]/CLR
+Delay_out1_reg[173]/D
+Delay_out1_reg[174]/CE
+Delay_out1_reg[174]/CLR
+Delay_out1_reg[174]/D
+Delay_out1_reg[175]/CE
+Delay_out1_reg[175]/CLR
+Delay_out1_reg[175]/D
+Delay_out1_reg[176]/CE
+Delay_out1_reg[176]/CLR
+Delay_out1_reg[176]/D
+Delay_out1_reg[177]/CE
+Delay_out1_reg[177]/CLR
+Delay_out1_reg[177]/D
+Delay_out1_reg[178]/CE
+Delay_out1_reg[178]/CLR
+Delay_out1_reg[178]/D
+Delay_out1_reg[179]/CE
+Delay_out1_reg[179]/CLR
+Delay_out1_reg[179]/D
+Delay_out1_reg[17]/CE
+Delay_out1_reg[17]/CLR
+Delay_out1_reg[17]/D
+Delay_out1_reg[180]/CE
+Delay_out1_reg[180]/CLR
+Delay_out1_reg[180]/D
+Delay_out1_reg[181]/CE
+Delay_out1_reg[181]/CLR
+Delay_out1_reg[181]/D
+Delay_out1_reg[182]/CE
+Delay_out1_reg[182]/CLR
+Delay_out1_reg[182]/D
+Delay_out1_reg[183]/CE
+Delay_out1_reg[183]/CLR
+Delay_out1_reg[183]/D
+Delay_out1_reg[184]/CE
+Delay_out1_reg[184]/CLR
+Delay_out1_reg[184]/D
+Delay_out1_reg[185]/CE
+Delay_out1_reg[185]/CLR
+Delay_out1_reg[185]/D
+Delay_out1_reg[186]/CE
+Delay_out1_reg[186]/CLR
+Delay_out1_reg[186]/D
+Delay_out1_reg[187]/CE
+Delay_out1_reg[187]/CLR
+Delay_out1_reg[187]/D
+Delay_out1_reg[188]/CE
+Delay_out1_reg[188]/CLR
+Delay_out1_reg[188]/D
+Delay_out1_reg[189]/CE
+Delay_out1_reg[189]/CLR
+Delay_out1_reg[189]/D
+Delay_out1_reg[18]/CE
+Delay_out1_reg[18]/CLR
+Delay_out1_reg[18]/D
+Delay_out1_reg[190]/CE
+Delay_out1_reg[190]/CLR
+Delay_out1_reg[190]/D
+Delay_out1_reg[19]/CE
+Delay_out1_reg[19]/CLR
+Delay_out1_reg[19]/D
+Delay_out1_reg[1]/CE
+Delay_out1_reg[1]/CLR
+Delay_out1_reg[1]/D
+Delay_out1_reg[20]/CE
+Delay_out1_reg[20]/CLR
+Delay_out1_reg[20]/D
+Delay_out1_reg[21]/CE
+Delay_out1_reg[21]/CLR
+Delay_out1_reg[21]/D
+Delay_out1_reg[22]/CE
+Delay_out1_reg[22]/CLR
+Delay_out1_reg[22]/D
+Delay_out1_reg[23]/CE
+Delay_out1_reg[23]/CLR
+Delay_out1_reg[23]/D
+Delay_out1_reg[24]/CE
+Delay_out1_reg[24]/CLR
+Delay_out1_reg[24]/D
+Delay_out1_reg[25]/CE
+Delay_out1_reg[25]/CLR
+Delay_out1_reg[25]/D
+Delay_out1_reg[26]/CE
+Delay_out1_reg[26]/CLR
+Delay_out1_reg[26]/D
+Delay_out1_reg[27]/CE
+Delay_out1_reg[27]/CLR
+Delay_out1_reg[27]/D
+Delay_out1_reg[28]/CE
+Delay_out1_reg[28]/CLR
+Delay_out1_reg[28]/D
+Delay_out1_reg[29]/CE
+Delay_out1_reg[29]/CLR
+Delay_out1_reg[29]/D
+Delay_out1_reg[2]/CE
+Delay_out1_reg[2]/CLR
+Delay_out1_reg[2]/D
+Delay_out1_reg[30]/CE
+Delay_out1_reg[30]/CLR
+Delay_out1_reg[30]/D
+Delay_out1_reg[31]/CE
+Delay_out1_reg[31]/CLR
+Delay_out1_reg[31]/D
+Delay_out1_reg[32]/CE
+Delay_out1_reg[32]/CLR
+Delay_out1_reg[32]/D
+Delay_out1_reg[33]/CE
+Delay_out1_reg[33]/CLR
+Delay_out1_reg[33]/D
+Delay_out1_reg[34]/CE
+Delay_out1_reg[34]/CLR
+Delay_out1_reg[34]/D
+Delay_out1_reg[35]/CE
+Delay_out1_reg[35]/CLR
+Delay_out1_reg[35]/D
+Delay_out1_reg[36]/CE
+Delay_out1_reg[36]/CLR
+Delay_out1_reg[36]/D
+Delay_out1_reg[37]/CE
+Delay_out1_reg[37]/CLR
+Delay_out1_reg[37]/D
+Delay_out1_reg[38]/CE
+Delay_out1_reg[38]/CLR
+Delay_out1_reg[38]/D
+Delay_out1_reg[39]/CE
+Delay_out1_reg[39]/CLR
+Delay_out1_reg[39]/D
+Delay_out1_reg[3]/CE
+Delay_out1_reg[3]/CLR
+Delay_out1_reg[3]/D
+Delay_out1_reg[40]/CE
+Delay_out1_reg[40]/CLR
+Delay_out1_reg[40]/D
+Delay_out1_reg[41]/CE
+Delay_out1_reg[41]/CLR
+Delay_out1_reg[41]/D
+Delay_out1_reg[42]/CE
+Delay_out1_reg[42]/CLR
+Delay_out1_reg[42]/D
+Delay_out1_reg[43]/CE
+Delay_out1_reg[43]/CLR
+Delay_out1_reg[43]/D
+Delay_out1_reg[44]/CE
+Delay_out1_reg[44]/CLR
+Delay_out1_reg[44]/D
+Delay_out1_reg[45]/CE
+Delay_out1_reg[45]/CLR
+Delay_out1_reg[45]/D
+Delay_out1_reg[46]/CE
+Delay_out1_reg[46]/CLR
+Delay_out1_reg[46]/D
+Delay_out1_reg[47]/CE
+Delay_out1_reg[47]/CLR
+Delay_out1_reg[47]/D
+Delay_out1_reg[48]/CE
+Delay_out1_reg[48]/CLR
+Delay_out1_reg[48]/D
+Delay_out1_reg[49]/CE
+Delay_out1_reg[49]/CLR
+Delay_out1_reg[49]/D
+Delay_out1_reg[4]/CE
+Delay_out1_reg[4]/CLR
+Delay_out1_reg[4]/D
+Delay_out1_reg[50]/CE
+Delay_out1_reg[50]/CLR
+Delay_out1_reg[50]/D
+Delay_out1_reg[51]/CE
+Delay_out1_reg[51]/CLR
+Delay_out1_reg[51]/D
+Delay_out1_reg[52]/CE
+Delay_out1_reg[52]/CLR
+Delay_out1_reg[52]/D
+Delay_out1_reg[53]/CE
+Delay_out1_reg[53]/CLR
+Delay_out1_reg[53]/D
+Delay_out1_reg[54]/CE
+Delay_out1_reg[54]/CLR
+Delay_out1_reg[54]/D
+Delay_out1_reg[55]/CE
+Delay_out1_reg[55]/CLR
+Delay_out1_reg[55]/D
+Delay_out1_reg[56]/CE
+Delay_out1_reg[56]/CLR
+Delay_out1_reg[56]/D
+Delay_out1_reg[57]/CE
+Delay_out1_reg[57]/CLR
+Delay_out1_reg[57]/D
+Delay_out1_reg[58]/CE
+Delay_out1_reg[58]/CLR
+Delay_out1_reg[58]/D
+Delay_out1_reg[59]/CE
+Delay_out1_reg[59]/CLR
+Delay_out1_reg[59]/D
+Delay_out1_reg[5]/CE
+Delay_out1_reg[5]/CLR
+Delay_out1_reg[5]/D
+Delay_out1_reg[60]/CE
+Delay_out1_reg[60]/CLR
+Delay_out1_reg[60]/D
+Delay_out1_reg[61]/CE
+Delay_out1_reg[61]/CLR
+Delay_out1_reg[61]/D
+Delay_out1_reg[62]/CE
+Delay_out1_reg[62]/CLR
+Delay_out1_reg[62]/D
+Delay_out1_reg[63]/CE
+Delay_out1_reg[63]/CLR
+Delay_out1_reg[63]/D
+Delay_out1_reg[64]/CE
+Delay_out1_reg[64]/CLR
+Delay_out1_reg[64]/D
+Delay_out1_reg[65]/CE
+Delay_out1_reg[65]/CLR
+Delay_out1_reg[65]/D
+Delay_out1_reg[66]/CE
+Delay_out1_reg[66]/CLR
+Delay_out1_reg[66]/D
+Delay_out1_reg[67]/CE
+Delay_out1_reg[67]/CLR
+Delay_out1_reg[67]/D
+Delay_out1_reg[68]/CE
+Delay_out1_reg[68]/CLR
+Delay_out1_reg[68]/D
+Delay_out1_reg[69]/CE
+Delay_out1_reg[69]/CLR
+Delay_out1_reg[69]/D
+Delay_out1_reg[6]/CE
+Delay_out1_reg[6]/CLR
+Delay_out1_reg[6]/D
+Delay_out1_reg[70]/CE
+Delay_out1_reg[70]/CLR
+Delay_out1_reg[70]/D
+Delay_out1_reg[71]/CE
+Delay_out1_reg[71]/CLR
+Delay_out1_reg[71]/D
+Delay_out1_reg[72]/CE
+Delay_out1_reg[72]/CLR
+Delay_out1_reg[72]/D
+Delay_out1_reg[73]/CE
+Delay_out1_reg[73]/CLR
+Delay_out1_reg[73]/D
+Delay_out1_reg[74]/CE
+Delay_out1_reg[74]/CLR
+Delay_out1_reg[74]/D
+Delay_out1_reg[75]/CE
+Delay_out1_reg[75]/CLR
+Delay_out1_reg[75]/D
+Delay_out1_reg[76]/CE
+Delay_out1_reg[76]/CLR
+Delay_out1_reg[76]/D
+Delay_out1_reg[77]/CE
+Delay_out1_reg[77]/CLR
+Delay_out1_reg[77]/D
+Delay_out1_reg[78]/CE
+Delay_out1_reg[78]/CLR
+Delay_out1_reg[78]/D
+Delay_out1_reg[79]/CE
+Delay_out1_reg[79]/CLR
+Delay_out1_reg[79]/D
+Delay_out1_reg[7]/CE
+Delay_out1_reg[7]/CLR
+Delay_out1_reg[7]/D
+Delay_out1_reg[80]/CE
+Delay_out1_reg[80]/CLR
+Delay_out1_reg[80]/D
+Delay_out1_reg[81]/CE
+Delay_out1_reg[81]/CLR
+Delay_out1_reg[81]/D
+Delay_out1_reg[82]/CE
+Delay_out1_reg[82]/CLR
+Delay_out1_reg[82]/D
+Delay_out1_reg[83]/CE
+Delay_out1_reg[83]/CLR
+Delay_out1_reg[83]/D
+Delay_out1_reg[84]/CE
+Delay_out1_reg[84]/CLR
+Delay_out1_reg[84]/D
+Delay_out1_reg[85]/CE
+Delay_out1_reg[85]/CLR
+Delay_out1_reg[85]/D
+Delay_out1_reg[86]/CE
+Delay_out1_reg[86]/CLR
+Delay_out1_reg[86]/D
+Delay_out1_reg[87]/CE
+Delay_out1_reg[87]/CLR
+Delay_out1_reg[87]/D
+Delay_out1_reg[88]/CE
+Delay_out1_reg[88]/CLR
+Delay_out1_reg[88]/D
+Delay_out1_reg[89]/CE
+Delay_out1_reg[89]/CLR
+Delay_out1_reg[89]/D
+Delay_out1_reg[8]/CE
+Delay_out1_reg[8]/CLR
+Delay_out1_reg[8]/D
+Delay_out1_reg[90]/CE
+Delay_out1_reg[90]/CLR
+Delay_out1_reg[90]/D
+Delay_out1_reg[91]/CE
+Delay_out1_reg[91]/CLR
+Delay_out1_reg[91]/D
+Delay_out1_reg[92]/CE
+Delay_out1_reg[92]/CLR
+Delay_out1_reg[92]/D
+Delay_out1_reg[93]/CE
+Delay_out1_reg[93]/CLR
+Delay_out1_reg[93]/D
+Delay_out1_reg[94]/CE
+Delay_out1_reg[94]/CLR
+Delay_out1_reg[94]/D
+Delay_out1_reg[95]/CE
+Delay_out1_reg[95]/CLR
+Delay_out1_reg[95]/D
+Delay_out1_reg[96]/CE
+Delay_out1_reg[96]/CLR
+Delay_out1_reg[96]/D
+Delay_out1_reg[97]/CE
+Delay_out1_reg[97]/CLR
+Delay_out1_reg[97]/D
+Delay_out1_reg[98]/CE
+Delay_out1_reg[98]/CLR
+Delay_out1_reg[98]/D
+Delay_out1_reg[99]/CE
+Delay_out1_reg[99]/CLR
+Delay_out1_reg[99]/D
+Delay_out1_reg[9]/CE
+Delay_out1_reg[9]/CLR
+Delay_out1_reg[9]/D
+u_p2s/buffer_not_empty_reg/CLR
+u_p2s/buffer_not_empty_reg/D
+u_p2s/buffer_not_empty_reg_rep/CLR
+u_p2s/buffer_not_empty_reg_rep/D
+u_p2s/buffer_not_empty_reg_rep__0/CLR
+u_p2s/buffer_not_empty_reg_rep__0/D
+u_p2s/buffer_rsvd_reg[0]/CE
+u_p2s/buffer_rsvd_reg[0]/D
+u_p2s/buffer_rsvd_reg[100]/CE
+u_p2s/buffer_rsvd_reg[100]/D
+u_p2s/buffer_rsvd_reg[101]/CE
+u_p2s/buffer_rsvd_reg[101]/D
+u_p2s/buffer_rsvd_reg[102]/CE
+u_p2s/buffer_rsvd_reg[102]/D
+u_p2s/buffer_rsvd_reg[103]/CE
+u_p2s/buffer_rsvd_reg[103]/D
+u_p2s/buffer_rsvd_reg[104]/CE
+u_p2s/buffer_rsvd_reg[104]/D
+u_p2s/buffer_rsvd_reg[105]/CE
+u_p2s/buffer_rsvd_reg[105]/D
+u_p2s/buffer_rsvd_reg[106]/CE
+u_p2s/buffer_rsvd_reg[106]/D
+u_p2s/buffer_rsvd_reg[107]/CE
+u_p2s/buffer_rsvd_reg[107]/D
+u_p2s/buffer_rsvd_reg[108]/CE
+u_p2s/buffer_rsvd_reg[108]/D
+u_p2s/buffer_rsvd_reg[109]/CE
+u_p2s/buffer_rsvd_reg[109]/D
+u_p2s/buffer_rsvd_reg[10]/CE
+u_p2s/buffer_rsvd_reg[10]/D
+u_p2s/buffer_rsvd_reg[110]/CE
+u_p2s/buffer_rsvd_reg[110]/D
+u_p2s/buffer_rsvd_reg[111]/CE
+u_p2s/buffer_rsvd_reg[111]/D
+u_p2s/buffer_rsvd_reg[112]/CE
+u_p2s/buffer_rsvd_reg[112]/D
+u_p2s/buffer_rsvd_reg[113]/CE
+u_p2s/buffer_rsvd_reg[113]/D
+u_p2s/buffer_rsvd_reg[114]/CE
+u_p2s/buffer_rsvd_reg[114]/D
+u_p2s/buffer_rsvd_reg[115]/CE
+u_p2s/buffer_rsvd_reg[115]/D
+u_p2s/buffer_rsvd_reg[116]/CE
+u_p2s/buffer_rsvd_reg[116]/D
+u_p2s/buffer_rsvd_reg[117]/CE
+u_p2s/buffer_rsvd_reg[117]/D
+u_p2s/buffer_rsvd_reg[118]/CE
+u_p2s/buffer_rsvd_reg[118]/D
+u_p2s/buffer_rsvd_reg[119]/CE
+u_p2s/buffer_rsvd_reg[119]/D
+u_p2s/buffer_rsvd_reg[11]/CE
+u_p2s/buffer_rsvd_reg[11]/D
+u_p2s/buffer_rsvd_reg[120]/CE
+u_p2s/buffer_rsvd_reg[120]/D
+u_p2s/buffer_rsvd_reg[121]/CE
+u_p2s/buffer_rsvd_reg[121]/D
+u_p2s/buffer_rsvd_reg[122]/CE
+u_p2s/buffer_rsvd_reg[122]/D
+u_p2s/buffer_rsvd_reg[123]/CE
+u_p2s/buffer_rsvd_reg[123]/D
+u_p2s/buffer_rsvd_reg[124]/CE
+u_p2s/buffer_rsvd_reg[124]/D
+u_p2s/buffer_rsvd_reg[125]/CE
+u_p2s/buffer_rsvd_reg[125]/D
+u_p2s/buffer_rsvd_reg[126]/CE
+u_p2s/buffer_rsvd_reg[126]/D
+u_p2s/buffer_rsvd_reg[127]/CE
+u_p2s/buffer_rsvd_reg[127]/D
+u_p2s/buffer_rsvd_reg[128]/CE
+u_p2s/buffer_rsvd_reg[128]/D
+u_p2s/buffer_rsvd_reg[129]/CE
+u_p2s/buffer_rsvd_reg[129]/D
+u_p2s/buffer_rsvd_reg[12]/CE
+u_p2s/buffer_rsvd_reg[12]/D
+u_p2s/buffer_rsvd_reg[130]/CE
+u_p2s/buffer_rsvd_reg[130]/D
+u_p2s/buffer_rsvd_reg[131]/CE
+u_p2s/buffer_rsvd_reg[131]/D
+u_p2s/buffer_rsvd_reg[132]/CE
+u_p2s/buffer_rsvd_reg[132]/D
+u_p2s/buffer_rsvd_reg[133]/CE
+u_p2s/buffer_rsvd_reg[133]/D
+u_p2s/buffer_rsvd_reg[134]/CE
+u_p2s/buffer_rsvd_reg[134]/D
+u_p2s/buffer_rsvd_reg[135]/CE
+u_p2s/buffer_rsvd_reg[135]/D
+u_p2s/buffer_rsvd_reg[136]/CE
+u_p2s/buffer_rsvd_reg[136]/D
+u_p2s/buffer_rsvd_reg[137]/CE
+u_p2s/buffer_rsvd_reg[137]/D
+u_p2s/buffer_rsvd_reg[138]/CE
+u_p2s/buffer_rsvd_reg[138]/D
+u_p2s/buffer_rsvd_reg[139]/CE
+u_p2s/buffer_rsvd_reg[139]/D
+u_p2s/buffer_rsvd_reg[13]/CE
+u_p2s/buffer_rsvd_reg[13]/D
+u_p2s/buffer_rsvd_reg[140]/CE
+u_p2s/buffer_rsvd_reg[140]/D
+u_p2s/buffer_rsvd_reg[141]/CE
+u_p2s/buffer_rsvd_reg[141]/D
+u_p2s/buffer_rsvd_reg[142]/CE
+u_p2s/buffer_rsvd_reg[142]/D
+u_p2s/buffer_rsvd_reg[143]/CE
+u_p2s/buffer_rsvd_reg[143]/D
+u_p2s/buffer_rsvd_reg[144]/CE
+u_p2s/buffer_rsvd_reg[144]/D
+u_p2s/buffer_rsvd_reg[145]/CE
+u_p2s/buffer_rsvd_reg[145]/D
+u_p2s/buffer_rsvd_reg[146]/CE
+u_p2s/buffer_rsvd_reg[146]/D
+u_p2s/buffer_rsvd_reg[147]/CE
+u_p2s/buffer_rsvd_reg[147]/D
+u_p2s/buffer_rsvd_reg[148]/CE
+u_p2s/buffer_rsvd_reg[148]/D
+u_p2s/buffer_rsvd_reg[149]/CE
+u_p2s/buffer_rsvd_reg[149]/D
+u_p2s/buffer_rsvd_reg[14]/CE
+u_p2s/buffer_rsvd_reg[14]/D
+u_p2s/buffer_rsvd_reg[150]/CE
+u_p2s/buffer_rsvd_reg[150]/D
+u_p2s/buffer_rsvd_reg[151]/CE
+u_p2s/buffer_rsvd_reg[151]/D
+u_p2s/buffer_rsvd_reg[152]/CE
+u_p2s/buffer_rsvd_reg[152]/D
+u_p2s/buffer_rsvd_reg[153]/CE
+u_p2s/buffer_rsvd_reg[153]/D
+u_p2s/buffer_rsvd_reg[154]/CE
+u_p2s/buffer_rsvd_reg[154]/D
+u_p2s/buffer_rsvd_reg[155]/CE
+u_p2s/buffer_rsvd_reg[155]/D
+u_p2s/buffer_rsvd_reg[156]/CE
+u_p2s/buffer_rsvd_reg[156]/D
+u_p2s/buffer_rsvd_reg[157]/CE
+u_p2s/buffer_rsvd_reg[157]/D
+u_p2s/buffer_rsvd_reg[158]/CE
+u_p2s/buffer_rsvd_reg[158]/D
+u_p2s/buffer_rsvd_reg[159]/CE
+u_p2s/buffer_rsvd_reg[159]/D
+u_p2s/buffer_rsvd_reg[15]/CE
+u_p2s/buffer_rsvd_reg[15]/D
+u_p2s/buffer_rsvd_reg[160]/CE
+u_p2s/buffer_rsvd_reg[160]/D
+u_p2s/buffer_rsvd_reg[161]/CE
+u_p2s/buffer_rsvd_reg[161]/D
+u_p2s/buffer_rsvd_reg[162]/CE
+u_p2s/buffer_rsvd_reg[162]/D
+u_p2s/buffer_rsvd_reg[163]/CE
+u_p2s/buffer_rsvd_reg[163]/D
+u_p2s/buffer_rsvd_reg[164]/CE
+u_p2s/buffer_rsvd_reg[164]/D
+u_p2s/buffer_rsvd_reg[165]/CE
+u_p2s/buffer_rsvd_reg[165]/D
+u_p2s/buffer_rsvd_reg[166]/CE
+u_p2s/buffer_rsvd_reg[166]/D
+u_p2s/buffer_rsvd_reg[167]/CE
+u_p2s/buffer_rsvd_reg[167]/D
+u_p2s/buffer_rsvd_reg[168]/CE
+u_p2s/buffer_rsvd_reg[168]/D
+u_p2s/buffer_rsvd_reg[169]/CE
+u_p2s/buffer_rsvd_reg[169]/D
+u_p2s/buffer_rsvd_reg[16]/CE
+u_p2s/buffer_rsvd_reg[16]/D
+u_p2s/buffer_rsvd_reg[170]/CE
+u_p2s/buffer_rsvd_reg[170]/D
+u_p2s/buffer_rsvd_reg[171]/CE
+u_p2s/buffer_rsvd_reg[171]/D
+u_p2s/buffer_rsvd_reg[172]/CE
+u_p2s/buffer_rsvd_reg[172]/D
+u_p2s/buffer_rsvd_reg[173]/CE
+u_p2s/buffer_rsvd_reg[173]/D
+u_p2s/buffer_rsvd_reg[174]/CE
+u_p2s/buffer_rsvd_reg[174]/D
+u_p2s/buffer_rsvd_reg[175]/CE
+u_p2s/buffer_rsvd_reg[175]/D
+u_p2s/buffer_rsvd_reg[176]/CE
+u_p2s/buffer_rsvd_reg[176]/D
+u_p2s/buffer_rsvd_reg[177]/CE
+u_p2s/buffer_rsvd_reg[177]/D
+u_p2s/buffer_rsvd_reg[178]/CE
+u_p2s/buffer_rsvd_reg[178]/D
+u_p2s/buffer_rsvd_reg[179]/CE
+u_p2s/buffer_rsvd_reg[179]/D
+u_p2s/buffer_rsvd_reg[17]/CE
+u_p2s/buffer_rsvd_reg[17]/D
+u_p2s/buffer_rsvd_reg[180]/CE
+u_p2s/buffer_rsvd_reg[180]/D
+u_p2s/buffer_rsvd_reg[181]/CE
+u_p2s/buffer_rsvd_reg[181]/D
+u_p2s/buffer_rsvd_reg[182]/CE
+u_p2s/buffer_rsvd_reg[182]/D
+u_p2s/buffer_rsvd_reg[183]/CE
+u_p2s/buffer_rsvd_reg[183]/D
+u_p2s/buffer_rsvd_reg[184]/CE
+u_p2s/buffer_rsvd_reg[184]/D
+u_p2s/buffer_rsvd_reg[185]/CE
+u_p2s/buffer_rsvd_reg[185]/D
+u_p2s/buffer_rsvd_reg[186]/CE
+u_p2s/buffer_rsvd_reg[186]/D
+u_p2s/buffer_rsvd_reg[187]/CE
+u_p2s/buffer_rsvd_reg[187]/D
+u_p2s/buffer_rsvd_reg[188]/CE
+u_p2s/buffer_rsvd_reg[188]/D
+u_p2s/buffer_rsvd_reg[189]/CE
+u_p2s/buffer_rsvd_reg[189]/D
+u_p2s/buffer_rsvd_reg[18]/CE
+u_p2s/buffer_rsvd_reg[18]/D
+u_p2s/buffer_rsvd_reg[190]/CE
+u_p2s/buffer_rsvd_reg[190]/D
+u_p2s/buffer_rsvd_reg[191]/CE
+u_p2s/buffer_rsvd_reg[191]/D
+u_p2s/buffer_rsvd_reg[19]/CE
+u_p2s/buffer_rsvd_reg[19]/D
+u_p2s/buffer_rsvd_reg[1]/CE
+u_p2s/buffer_rsvd_reg[1]/D
+u_p2s/buffer_rsvd_reg[20]/CE
+u_p2s/buffer_rsvd_reg[20]/D
+u_p2s/buffer_rsvd_reg[21]/CE
+u_p2s/buffer_rsvd_reg[21]/D
+u_p2s/buffer_rsvd_reg[22]/CE
+u_p2s/buffer_rsvd_reg[22]/D
+u_p2s/buffer_rsvd_reg[23]/CE
+u_p2s/buffer_rsvd_reg[23]/D
+u_p2s/buffer_rsvd_reg[24]/CE
+u_p2s/buffer_rsvd_reg[24]/D
+u_p2s/buffer_rsvd_reg[25]/CE
+u_p2s/buffer_rsvd_reg[25]/D
+u_p2s/buffer_rsvd_reg[26]/CE
+u_p2s/buffer_rsvd_reg[26]/D
+u_p2s/buffer_rsvd_reg[27]/CE
+u_p2s/buffer_rsvd_reg[27]/D
+u_p2s/buffer_rsvd_reg[28]/CE
+u_p2s/buffer_rsvd_reg[28]/D
+u_p2s/buffer_rsvd_reg[29]/CE
+u_p2s/buffer_rsvd_reg[29]/D
+u_p2s/buffer_rsvd_reg[2]/CE
+u_p2s/buffer_rsvd_reg[2]/D
+u_p2s/buffer_rsvd_reg[30]/CE
+u_p2s/buffer_rsvd_reg[30]/D
+u_p2s/buffer_rsvd_reg[31]/CE
+u_p2s/buffer_rsvd_reg[31]/D
+u_p2s/buffer_rsvd_reg[32]/CE
+u_p2s/buffer_rsvd_reg[32]/D
+u_p2s/buffer_rsvd_reg[33]/CE
+u_p2s/buffer_rsvd_reg[33]/D
+u_p2s/buffer_rsvd_reg[34]/CE
+u_p2s/buffer_rsvd_reg[34]/D
+u_p2s/buffer_rsvd_reg[35]/CE
+u_p2s/buffer_rsvd_reg[35]/D
+u_p2s/buffer_rsvd_reg[36]/CE
+u_p2s/buffer_rsvd_reg[36]/D
+u_p2s/buffer_rsvd_reg[37]/CE
+u_p2s/buffer_rsvd_reg[37]/D
+u_p2s/buffer_rsvd_reg[38]/CE
+u_p2s/buffer_rsvd_reg[38]/D
+u_p2s/buffer_rsvd_reg[39]/CE
+u_p2s/buffer_rsvd_reg[39]/D
+u_p2s/buffer_rsvd_reg[3]/CE
+u_p2s/buffer_rsvd_reg[3]/D
+u_p2s/buffer_rsvd_reg[40]/CE
+u_p2s/buffer_rsvd_reg[40]/D
+u_p2s/buffer_rsvd_reg[41]/CE
+u_p2s/buffer_rsvd_reg[41]/D
+u_p2s/buffer_rsvd_reg[42]/CE
+u_p2s/buffer_rsvd_reg[42]/D
+u_p2s/buffer_rsvd_reg[43]/CE
+u_p2s/buffer_rsvd_reg[43]/D
+u_p2s/buffer_rsvd_reg[44]/CE
+u_p2s/buffer_rsvd_reg[44]/D
+u_p2s/buffer_rsvd_reg[45]/CE
+u_p2s/buffer_rsvd_reg[45]/D
+u_p2s/buffer_rsvd_reg[46]/CE
+u_p2s/buffer_rsvd_reg[46]/D
+u_p2s/buffer_rsvd_reg[47]/CE
+u_p2s/buffer_rsvd_reg[47]/D
+u_p2s/buffer_rsvd_reg[48]/CE
+u_p2s/buffer_rsvd_reg[48]/D
+u_p2s/buffer_rsvd_reg[49]/CE
+u_p2s/buffer_rsvd_reg[49]/D
+u_p2s/buffer_rsvd_reg[4]/CE
+u_p2s/buffer_rsvd_reg[4]/D
+u_p2s/buffer_rsvd_reg[50]/CE
+u_p2s/buffer_rsvd_reg[50]/D
+u_p2s/buffer_rsvd_reg[51]/CE
+u_p2s/buffer_rsvd_reg[51]/D
+u_p2s/buffer_rsvd_reg[52]/CE
+u_p2s/buffer_rsvd_reg[52]/D
+u_p2s/buffer_rsvd_reg[53]/CE
+u_p2s/buffer_rsvd_reg[53]/D
+u_p2s/buffer_rsvd_reg[54]/CE
+u_p2s/buffer_rsvd_reg[54]/D
+u_p2s/buffer_rsvd_reg[55]/CE
+u_p2s/buffer_rsvd_reg[55]/D
+u_p2s/buffer_rsvd_reg[56]/CE
+u_p2s/buffer_rsvd_reg[56]/D
+u_p2s/buffer_rsvd_reg[57]/CE
+u_p2s/buffer_rsvd_reg[57]/D
+u_p2s/buffer_rsvd_reg[58]/CE
+u_p2s/buffer_rsvd_reg[58]/D
+u_p2s/buffer_rsvd_reg[59]/CE
+u_p2s/buffer_rsvd_reg[59]/D
+u_p2s/buffer_rsvd_reg[5]/CE
+u_p2s/buffer_rsvd_reg[5]/D
+u_p2s/buffer_rsvd_reg[60]/CE
+u_p2s/buffer_rsvd_reg[60]/D
+u_p2s/buffer_rsvd_reg[61]/CE
+u_p2s/buffer_rsvd_reg[61]/D
+u_p2s/buffer_rsvd_reg[62]/CE
+u_p2s/buffer_rsvd_reg[62]/D
+u_p2s/buffer_rsvd_reg[63]/CE
+u_p2s/buffer_rsvd_reg[63]/D
+u_p2s/buffer_rsvd_reg[64]/CE
+u_p2s/buffer_rsvd_reg[64]/D
+u_p2s/buffer_rsvd_reg[65]/CE
+u_p2s/buffer_rsvd_reg[65]/D
+u_p2s/buffer_rsvd_reg[66]/CE
+u_p2s/buffer_rsvd_reg[66]/D
+u_p2s/buffer_rsvd_reg[67]/CE
+u_p2s/buffer_rsvd_reg[67]/D
+u_p2s/buffer_rsvd_reg[68]/CE
+u_p2s/buffer_rsvd_reg[68]/D
+u_p2s/buffer_rsvd_reg[69]/CE
+u_p2s/buffer_rsvd_reg[69]/D
+u_p2s/buffer_rsvd_reg[6]/CE
+u_p2s/buffer_rsvd_reg[6]/D
+u_p2s/buffer_rsvd_reg[70]/CE
+u_p2s/buffer_rsvd_reg[70]/D
+u_p2s/buffer_rsvd_reg[71]/CE
+u_p2s/buffer_rsvd_reg[71]/D
+u_p2s/buffer_rsvd_reg[72]/CE
+u_p2s/buffer_rsvd_reg[72]/D
+u_p2s/buffer_rsvd_reg[73]/CE
+u_p2s/buffer_rsvd_reg[73]/D
+u_p2s/buffer_rsvd_reg[74]/CE
+u_p2s/buffer_rsvd_reg[74]/D
+u_p2s/buffer_rsvd_reg[75]/CE
+u_p2s/buffer_rsvd_reg[75]/D
+u_p2s/buffer_rsvd_reg[76]/CE
+u_p2s/buffer_rsvd_reg[76]/D
+u_p2s/buffer_rsvd_reg[77]/CE
+u_p2s/buffer_rsvd_reg[77]/D
+u_p2s/buffer_rsvd_reg[78]/CE
+u_p2s/buffer_rsvd_reg[78]/D
+u_p2s/buffer_rsvd_reg[79]/CE
+u_p2s/buffer_rsvd_reg[79]/D
+u_p2s/buffer_rsvd_reg[7]/CE
+u_p2s/buffer_rsvd_reg[7]/D
+u_p2s/buffer_rsvd_reg[80]/CE
+u_p2s/buffer_rsvd_reg[80]/D
+u_p2s/buffer_rsvd_reg[81]/CE
+u_p2s/buffer_rsvd_reg[81]/D
+u_p2s/buffer_rsvd_reg[82]/CE
+u_p2s/buffer_rsvd_reg[82]/D
+u_p2s/buffer_rsvd_reg[83]/CE
+u_p2s/buffer_rsvd_reg[83]/D
+u_p2s/buffer_rsvd_reg[84]/CE
+u_p2s/buffer_rsvd_reg[84]/D
+u_p2s/buffer_rsvd_reg[85]/CE
+u_p2s/buffer_rsvd_reg[85]/D
+u_p2s/buffer_rsvd_reg[86]/CE
+u_p2s/buffer_rsvd_reg[86]/D
+u_p2s/buffer_rsvd_reg[87]/CE
+u_p2s/buffer_rsvd_reg[87]/D
+u_p2s/buffer_rsvd_reg[88]/CE
+u_p2s/buffer_rsvd_reg[88]/D
+u_p2s/buffer_rsvd_reg[89]/CE
+u_p2s/buffer_rsvd_reg[89]/D
+u_p2s/buffer_rsvd_reg[8]/CE
+u_p2s/buffer_rsvd_reg[8]/D
+u_p2s/buffer_rsvd_reg[90]/CE
+u_p2s/buffer_rsvd_reg[90]/D
+u_p2s/buffer_rsvd_reg[91]/CE
+u_p2s/buffer_rsvd_reg[91]/D
+u_p2s/buffer_rsvd_reg[92]/CE
+u_p2s/buffer_rsvd_reg[92]/D
+u_p2s/buffer_rsvd_reg[93]/CE
+u_p2s/buffer_rsvd_reg[93]/D
+u_p2s/buffer_rsvd_reg[94]/CE
+u_p2s/buffer_rsvd_reg[94]/D
+u_p2s/buffer_rsvd_reg[95]/CE
+u_p2s/buffer_rsvd_reg[95]/D
+u_p2s/buffer_rsvd_reg[96]/CE
+u_p2s/buffer_rsvd_reg[96]/D
+u_p2s/buffer_rsvd_reg[97]/CE
+u_p2s/buffer_rsvd_reg[97]/D
+u_p2s/buffer_rsvd_reg[98]/CE
+u_p2s/buffer_rsvd_reg[98]/D
+u_p2s/buffer_rsvd_reg[99]/CE
+u_p2s/buffer_rsvd_reg[99]/D
+u_p2s/buffer_rsvd_reg[9]/CE
+u_p2s/buffer_rsvd_reg[9]/D
+u_p2s/counter_reg[0]/CE
+u_p2s/counter_reg[0]/D
+u_p2s/counter_reg[0]/PRE
+u_p2s/counter_reg[10]/CE
+u_p2s/counter_reg[10]/CLR
+u_p2s/counter_reg[10]/D
+u_p2s/counter_reg[11]/CE
+u_p2s/counter_reg[11]/CLR
+u_p2s/counter_reg[11]/D
+u_p2s/counter_reg[12]/CE
+u_p2s/counter_reg[12]/CLR
+u_p2s/counter_reg[12]/D
+u_p2s/counter_reg[13]/CE
+u_p2s/counter_reg[13]/CLR
+u_p2s/counter_reg[13]/D
+u_p2s/counter_reg[14]/CE
+u_p2s/counter_reg[14]/CLR
+u_p2s/counter_reg[14]/D
+u_p2s/counter_reg[15]/CE
+u_p2s/counter_reg[15]/CLR
+u_p2s/counter_reg[15]/D
+u_p2s/counter_reg[1]/CE
+u_p2s/counter_reg[1]/CLR
+u_p2s/counter_reg[1]/D
+u_p2s/counter_reg[2]/CE
+u_p2s/counter_reg[2]/CLR
+u_p2s/counter_reg[2]/D
+u_p2s/counter_reg[3]/CE
+u_p2s/counter_reg[3]/CLR
+u_p2s/counter_reg[3]/D
+u_p2s/counter_reg[4]/CE
+u_p2s/counter_reg[4]/CLR
+u_p2s/counter_reg[4]/D
+u_p2s/counter_reg[5]/CE
+u_p2s/counter_reg[5]/CLR
+u_p2s/counter_reg[5]/D
+u_p2s/counter_reg[6]/CE
+u_p2s/counter_reg[6]/CLR
+u_p2s/counter_reg[6]/D
+u_p2s/counter_reg[7]/CE
+u_p2s/counter_reg[7]/CLR
+u_p2s/counter_reg[7]/D
+u_p2s/counter_reg[8]/CE
+u_p2s/counter_reg[8]/CLR
+u_p2s/counter_reg[8]/D
+u_p2s/counter_reg[9]/CE
+u_p2s/counter_reg[9]/CLR
+u_p2s/counter_reg[9]/D
+u_p2s/moore_state_machine_reg/CLR
+u_p2s/moore_state_machine_reg/D
+u_p2s/moore_state_machine_reg_rep/CLR
+u_p2s/moore_state_machine_reg_rep/D
+u_registers/lfsr_not_empty_reg/CLR
+u_registers/lfsr_not_empty_reg/D
+u_registers/lfsr_not_empty_reg_rep/CLR
+u_registers/lfsr_not_empty_reg_rep/D
+u_registers/lfsr_not_empty_reg_rep__0/CLR
+u_registers/lfsr_not_empty_reg_rep__0/D
+u_registers/lfsr_reg[0]/CE
+u_registers/lfsr_reg[0]/CLR
+u_registers/lfsr_reg[0]/D
+u_registers/lfsr_reg[101]/CE
+u_registers/lfsr_reg[101]/CLR
+u_registers/lfsr_reg[101]/D
+u_registers/lfsr_reg[102]/CE
+u_registers/lfsr_reg[102]/CLR
+u_registers/lfsr_reg[102]/D
+u_registers/lfsr_reg[105]/CE
+u_registers/lfsr_reg[105]/CLR
+u_registers/lfsr_reg[105]/D
+u_registers/lfsr_reg[106]/CE
+u_registers/lfsr_reg[106]/CLR
+u_registers/lfsr_reg[106]/D
+u_registers/lfsr_reg[108]/CE
+u_registers/lfsr_reg[108]/CLR
+u_registers/lfsr_reg[108]/D
+u_registers/lfsr_reg[111]/CE
+u_registers/lfsr_reg[111]/CLR
+u_registers/lfsr_reg[111]/D
+u_registers/lfsr_reg[112]/CE
+u_registers/lfsr_reg[112]/CLR
+u_registers/lfsr_reg[112]/D
+u_registers/lfsr_reg[113]/CE
+u_registers/lfsr_reg[113]/CLR
+u_registers/lfsr_reg[113]/D
+u_registers/lfsr_reg[114]/CE
+u_registers/lfsr_reg[114]/CLR
+u_registers/lfsr_reg[114]/D
+u_registers/lfsr_reg[117]/CE
+u_registers/lfsr_reg[117]/CLR
+u_registers/lfsr_reg[117]/D
+u_registers/lfsr_reg[118]/CE
+u_registers/lfsr_reg[118]/CLR
+u_registers/lfsr_reg[118]/D
+u_registers/lfsr_reg[11]/CE
+u_registers/lfsr_reg[11]/CLR
+u_registers/lfsr_reg[11]/D
+u_registers/lfsr_reg[123]/CE
+u_registers/lfsr_reg[123]/CLR
+u_registers/lfsr_reg[123]/D
+u_registers/lfsr_reg[125]/CE
+u_registers/lfsr_reg[125]/CLR
+u_registers/lfsr_reg[125]/D
+u_registers/lfsr_reg[129]/CE
+u_registers/lfsr_reg[129]/CLR
+u_registers/lfsr_reg[129]/D
+u_registers/lfsr_reg[130]/CE
+u_registers/lfsr_reg[130]/CLR
+u_registers/lfsr_reg[130]/D
+u_registers/lfsr_reg[131]/CE
+u_registers/lfsr_reg[131]/CLR
+u_registers/lfsr_reg[131]/D
+u_registers/lfsr_reg[135]/CE
+u_registers/lfsr_reg[135]/CLR
+u_registers/lfsr_reg[135]/D
+u_registers/lfsr_reg[139]/CE
+u_registers/lfsr_reg[139]/CLR
+u_registers/lfsr_reg[139]/D
+u_registers/lfsr_reg[13]/CE
+u_registers/lfsr_reg[13]/CLR
+u_registers/lfsr_reg[13]/D
+u_registers/lfsr_reg[141]/CE
+u_registers/lfsr_reg[141]/CLR
+u_registers/lfsr_reg[141]/D
+u_registers/lfsr_reg[145]/CE
+u_registers/lfsr_reg[145]/CLR
+u_registers/lfsr_reg[145]/D
+u_registers/lfsr_reg[146]/CE
+u_registers/lfsr_reg[146]/CLR
+u_registers/lfsr_reg[146]/D
+u_registers/lfsr_reg[147]/CE
+u_registers/lfsr_reg[147]/CLR
+u_registers/lfsr_reg[147]/D
+u_registers/lfsr_reg[149]/CE
+u_registers/lfsr_reg[149]/CLR
+u_registers/lfsr_reg[149]/D
+u_registers/lfsr_reg[153]/CE
+u_registers/lfsr_reg[153]/CLR
+u_registers/lfsr_reg[153]/D
+u_registers/lfsr_reg[158]/CE
+u_registers/lfsr_reg[158]/CLR
+u_registers/lfsr_reg[158]/D
+u_registers/lfsr_reg[159]/CE
+u_registers/lfsr_reg[159]/CLR
+u_registers/lfsr_reg[159]/D
+u_registers/lfsr_reg[160]/CE
+u_registers/lfsr_reg[160]/CLR
+u_registers/lfsr_reg[160]/D
+u_registers/lfsr_reg[166]/CE
+u_registers/lfsr_reg[166]/CLR
+u_registers/lfsr_reg[166]/D
+u_registers/lfsr_reg[168]/CE
+u_registers/lfsr_reg[168]/CLR
+u_registers/lfsr_reg[168]/D
+u_registers/lfsr_reg[169]/CE
+u_registers/lfsr_reg[169]/CLR
+u_registers/lfsr_reg[169]/D
+u_registers/lfsr_reg[16]/CE
+u_registers/lfsr_reg[16]/CLR
+u_registers/lfsr_reg[16]/D
+u_registers/lfsr_reg[170]/CE
+u_registers/lfsr_reg[170]/CLR
+u_registers/lfsr_reg[170]/D
+u_registers/lfsr_reg[176]/CE
+u_registers/lfsr_reg[176]/CLR
+u_registers/lfsr_reg[176]/D
+u_registers/lfsr_reg[177]/CE
+u_registers/lfsr_reg[177]/CLR
+u_registers/lfsr_reg[177]/D
+u_registers/lfsr_reg[180]/CE
+u_registers/lfsr_reg[180]/CLR
+u_registers/lfsr_reg[180]/D
+u_registers/lfsr_reg[184]/CE
+u_registers/lfsr_reg[184]/CLR
+u_registers/lfsr_reg[184]/D
+u_registers/lfsr_reg[185]/CE
+u_registers/lfsr_reg[185]/CLR
+u_registers/lfsr_reg[185]/D
+u_registers/lfsr_reg[186]/CE
+u_registers/lfsr_reg[186]/CLR
+u_registers/lfsr_reg[186]/D
+u_registers/lfsr_reg[189]/CE
+u_registers/lfsr_reg[189]/CLR
+u_registers/lfsr_reg[189]/D
+u_registers/lfsr_reg[190]/CE
+u_registers/lfsr_reg[190]/CLR
+u_registers/lfsr_reg[190]/D
+u_registers/lfsr_reg[191]/CE
+u_registers/lfsr_reg[191]/CLR
+u_registers/lfsr_reg[191]/D
+u_registers/lfsr_reg[1]/CE
+u_registers/lfsr_reg[1]/CLR
+u_registers/lfsr_reg[1]/D
+u_registers/lfsr_reg[24]/CE
+u_registers/lfsr_reg[24]/CLR
+u_registers/lfsr_reg[24]/D
+u_registers/lfsr_reg[25]/CE
+u_registers/lfsr_reg[25]/CLR
+u_registers/lfsr_reg[25]/D
+u_registers/lfsr_reg[28]/CE
+u_registers/lfsr_reg[28]/CLR
+u_registers/lfsr_reg[28]/D
+u_registers/lfsr_reg[29]/CE
+u_registers/lfsr_reg[29]/CLR
+u_registers/lfsr_reg[29]/D
+u_registers/lfsr_reg[31]/CE
+u_registers/lfsr_reg[31]/CLR
+u_registers/lfsr_reg[31]/D
+u_registers/lfsr_reg[32]/CE
+u_registers/lfsr_reg[32]/CLR
+u_registers/lfsr_reg[32]/D
+u_registers/lfsr_reg[33]/CE
+u_registers/lfsr_reg[33]/CLR
+u_registers/lfsr_reg[33]/D
+u_registers/lfsr_reg[35]/CE
+u_registers/lfsr_reg[35]/CLR
+u_registers/lfsr_reg[35]/D
+u_registers/lfsr_reg[36]/CE
+u_registers/lfsr_reg[36]/CLR
+u_registers/lfsr_reg[36]/D
+u_registers/lfsr_reg[37]/CE
+u_registers/lfsr_reg[37]/CLR
+u_registers/lfsr_reg[37]/D
+u_registers/lfsr_reg[38]/CE
+u_registers/lfsr_reg[38]/CLR
+u_registers/lfsr_reg[38]/D
+u_registers/lfsr_reg[39]/CE
+u_registers/lfsr_reg[39]/CLR
+u_registers/lfsr_reg[39]/D
+u_registers/lfsr_reg[41]/CE
+u_registers/lfsr_reg[41]/CLR
+u_registers/lfsr_reg[41]/D
+u_registers/lfsr_reg[46]/CE
+u_registers/lfsr_reg[46]/CLR
+u_registers/lfsr_reg[46]/D
+u_registers/lfsr_reg[47]/CE
+u_registers/lfsr_reg[47]/CLR
+u_registers/lfsr_reg[47]/D
+u_registers/lfsr_reg[48]/CE
+u_registers/lfsr_reg[48]/CLR
+u_registers/lfsr_reg[48]/D
+u_registers/lfsr_reg[49]/CE
+u_registers/lfsr_reg[49]/CLR
+u_registers/lfsr_reg[49]/D
+u_registers/lfsr_reg[4]/CE
+u_registers/lfsr_reg[4]/CLR
+u_registers/lfsr_reg[4]/D
+u_registers/lfsr_reg[53]/CE
+u_registers/lfsr_reg[53]/CLR
+u_registers/lfsr_reg[53]/D
+u_registers/lfsr_reg[55]/CE
+u_registers/lfsr_reg[55]/CLR
+u_registers/lfsr_reg[55]/D
+u_registers/lfsr_reg[56]/CE
+u_registers/lfsr_reg[56]/CLR
+u_registers/lfsr_reg[56]/D
+u_registers/lfsr_reg[5]/CE
+u_registers/lfsr_reg[5]/CLR
+u_registers/lfsr_reg[5]/D
+u_registers/lfsr_reg[63]/CE
+u_registers/lfsr_reg[63]/CLR
+u_registers/lfsr_reg[63]/D
+u_registers/lfsr_reg[66]/CE
+u_registers/lfsr_reg[66]/CLR
+u_registers/lfsr_reg[66]/D
+u_registers/lfsr_reg[6]/CE
+u_registers/lfsr_reg[6]/CLR
+u_registers/lfsr_reg[6]/D
+u_registers/lfsr_reg[70]/CE
+u_registers/lfsr_reg[70]/CLR
+u_registers/lfsr_reg[70]/D
+u_registers/lfsr_reg[74]/CE
+u_registers/lfsr_reg[74]/CLR
+u_registers/lfsr_reg[74]/D
+u_registers/lfsr_reg[79]/CE
+u_registers/lfsr_reg[79]/CLR
+u_registers/lfsr_reg[79]/D
+u_registers/lfsr_reg[7]/CE
+u_registers/lfsr_reg[7]/CLR
+u_registers/lfsr_reg[7]/D
+u_registers/lfsr_reg[81]/CE
+u_registers/lfsr_reg[81]/CLR
+u_registers/lfsr_reg[81]/D
+u_registers/lfsr_reg[83]/CE
+u_registers/lfsr_reg[83]/CLR
+u_registers/lfsr_reg[83]/D
+u_registers/lfsr_reg[84]/CE
+u_registers/lfsr_reg[84]/CLR
+u_registers/lfsr_reg[84]/D
+u_registers/lfsr_reg[89]/CE
+u_registers/lfsr_reg[89]/CLR
+u_registers/lfsr_reg[89]/D
+u_registers/lfsr_reg[90]/CE
+u_registers/lfsr_reg[90]/CLR
+u_registers/lfsr_reg[90]/D
+u_registers/lfsr_reg[91]/CE
+u_registers/lfsr_reg[91]/CLR
+u_registers/lfsr_reg[91]/D
+u_registers/lfsr_reg[93]/CE
+u_registers/lfsr_reg[93]/CLR
+u_registers/lfsr_reg[93]/D
+u_registers/lfsr_reg[94]/CE
+u_registers/lfsr_reg[94]/CLR
+u_registers/lfsr_reg[94]/D
+u_registers/lfsr_reg[98]/CE
+u_registers/lfsr_reg[98]/CLR
+u_registers/lfsr_reg[98]/D
+u_registers/lfsr_reg[99]/CE
+u_registers/lfsr_reg[99]/CLR
+u_registers/lfsr_reg[99]/D
+u_registers/lfsr_reg[9]/CE
+u_registers/lfsr_reg[9]/CLR
+u_registers/lfsr_reg[9]/D
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+clk_enable
+end_of_frame
+in_rsvd
+reset_x
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (2)
+-------------------------------
+ There are 2 ports with no output delay specified. (HIGH)
+
+out_rsvd
+valid
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                 1279          inf        0.000                      0                 1279           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay          1279 Endpoints
+Min Delay          1279 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_registers/lfsr_reg[190]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            out_rsvd
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.858ns  (logic 2.074ns (30.242%)  route 4.784ns (69.758%))
+  Logic Levels:           9  (FDCE=1 LUT3=1 LUT4=1 LUT6=3 MUXF7=2 MUXF8=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  u_registers/lfsr_reg[190]/C
+                         FDCE (Prop_fdce_C_Q)         0.518     0.518 r  u_registers/lfsr_reg[190]/Q
+                         net (fo=6, unplaced)         0.773     1.291    u_registers/lfsr_reg[190]_0[0]
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.586 r  u_registers/Delay_out1[130]_i_2/O
+                         net (fo=95, unplaced)        0.517     2.103    u_registers/Delay_out1_reg[0][0]
+                         LUT4 (Prop_lut4_I0_O)        0.150     2.253 r  u_registers/out_rsvd_INST_0_i_243/O
+                         net (fo=1, unplaced)         0.902     3.155    u_registers/out_rsvd_INST_0_i_243_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.279 r  u_registers/out_rsvd_INST_0_i_126/O
+                         net (fo=1, unplaced)         0.000     3.279    u_p2s/out_rsvd_INST_0_i_22_0
+                         MUXF7 (Prop_muxf7_I0_O)      0.209     3.488 r  u_p2s/out_rsvd_INST_0_i_52/O
+                         net (fo=1, unplaced)         0.000     3.488    u_p2s/out_rsvd_INST_0_i_52_n_0
+                         MUXF8 (Prop_muxf8_I1_O)      0.088     3.576 r  u_p2s/out_rsvd_INST_0_i_22/O
+                         net (fo=1, unplaced)         0.717     4.293    u_p2s/out_rsvd_INST_0_i_22_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.319     4.612 r  u_p2s/out_rsvd_INST_0_i_8/O
+                         net (fo=1, unplaced)         0.902     5.514    u_p2s/out_rsvd_INST_0_i_8_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     5.638 r  u_p2s/out_rsvd_INST_0_i_2/O
+                         net (fo=1, unplaced)         0.000     5.638    u_p2s/out_rsvd_INST_0_i_2_n_0
+                         MUXF7 (Prop_muxf7_I1_O)      0.247     5.885 r  u_p2s/out_rsvd_INST_0/O
+                         net (fo=0)                   0.973     6.858    out_rsvd
+                                                                      r  out_rsvd (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_registers/lfsr_reg[190]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            out_rsvd
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.858ns  (logic 2.074ns (30.242%)  route 4.784ns (69.758%))
+  Logic Levels:           9  (FDCE=1 LUT3=1 LUT4=1 LUT6=3 MUXF7=2 MUXF8=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  u_registers/lfsr_reg[190]/C
+                         FDCE (Prop_fdce_C_Q)         0.518     0.518 f  u_registers/lfsr_reg[190]/Q
+                         net (fo=6, unplaced)         0.773     1.291    u_registers/lfsr_reg[190]_0[0]
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.586 f  u_registers/Delay_out1[130]_i_2/O
+                         net (fo=95, unplaced)        0.517     2.103    u_registers/Delay_out1_reg[0][0]
+                         LUT4 (Prop_lut4_I0_O)        0.150     2.253 r  u_registers/out_rsvd_INST_0_i_243/O
+                         net (fo=1, unplaced)         0.902     3.155    u_registers/out_rsvd_INST_0_i_243_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.279 r  u_registers/out_rsvd_INST_0_i_126/O
+                         net (fo=1, unplaced)         0.000     3.279    u_p2s/out_rsvd_INST_0_i_22_0
+                         MUXF7 (Prop_muxf7_I0_O)      0.209     3.488 r  u_p2s/out_rsvd_INST_0_i_52/O
+                         net (fo=1, unplaced)         0.000     3.488    u_p2s/out_rsvd_INST_0_i_52_n_0
+                         MUXF8 (Prop_muxf8_I1_O)      0.088     3.576 r  u_p2s/out_rsvd_INST_0_i_22/O
+                         net (fo=1, unplaced)         0.717     4.293    u_p2s/out_rsvd_INST_0_i_22_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.319     4.612 r  u_p2s/out_rsvd_INST_0_i_8/O
+                         net (fo=1, unplaced)         0.902     5.514    u_p2s/out_rsvd_INST_0_i_8_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     5.638 r  u_p2s/out_rsvd_INST_0_i_2/O
+                         net (fo=1, unplaced)         0.000     5.638    u_p2s/out_rsvd_INST_0_i_2_n_0
+                         MUXF7 (Prop_muxf7_I1_O)      0.247     5.885 r  u_p2s/out_rsvd_INST_0/O
+                         net (fo=0)                   0.973     6.858    out_rsvd
+                                                                      r  out_rsvd (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_registers/lfsr_reg[190]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            out_rsvd
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.858ns  (logic 2.074ns (30.242%)  route 4.784ns (69.758%))
+  Logic Levels:           9  (FDCE=1 LUT3=1 LUT4=1 LUT6=3 MUXF7=2 MUXF8=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  u_registers/lfsr_reg[190]/C
+                         FDCE (Prop_fdce_C_Q)         0.518     0.518 r  u_registers/lfsr_reg[190]/Q
+                         net (fo=6, unplaced)         0.773     1.291    u_registers/lfsr_reg[190]_0[0]
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.586 r  u_registers/Delay_out1[130]_i_2/O
+                         net (fo=95, unplaced)        0.517     2.103    u_registers/Delay_out1_reg[0][0]
+                         LUT4 (Prop_lut4_I0_O)        0.150     2.253 f  u_registers/out_rsvd_INST_0_i_243/O
+                         net (fo=1, unplaced)         0.902     3.155    u_registers/out_rsvd_INST_0_i_243_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.279 f  u_registers/out_rsvd_INST_0_i_126/O
+                         net (fo=1, unplaced)         0.000     3.279    u_p2s/out_rsvd_INST_0_i_22_0
+                         MUXF7 (Prop_muxf7_I0_O)      0.209     3.488 f  u_p2s/out_rsvd_INST_0_i_52/O
+                         net (fo=1, unplaced)         0.000     3.488    u_p2s/out_rsvd_INST_0_i_52_n_0
+                         MUXF8 (Prop_muxf8_I1_O)      0.088     3.576 f  u_p2s/out_rsvd_INST_0_i_22/O
+                         net (fo=1, unplaced)         0.717     4.293    u_p2s/out_rsvd_INST_0_i_22_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.319     4.612 f  u_p2s/out_rsvd_INST_0_i_8/O
+                         net (fo=1, unplaced)         0.902     5.514    u_p2s/out_rsvd_INST_0_i_8_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     5.638 f  u_p2s/out_rsvd_INST_0_i_2/O
+                         net (fo=1, unplaced)         0.000     5.638    u_p2s/out_rsvd_INST_0_i_2_n_0
+                         MUXF7 (Prop_muxf7_I1_O)      0.247     5.885 f  u_p2s/out_rsvd_INST_0/O
+                         net (fo=0)                   0.973     6.858    out_rsvd
+                                                                      f  out_rsvd (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 clk_enable
+                            (input port)
+  Destination:            ce_out
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.410ns  (logic 0.000ns (0.000%)  route 0.410ns (100.000%))
+  Logic Levels:           0  
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  clk_enable (IN)
+                         net (fo=285, unset)          0.410     0.410    clk_enable
+                                                                      r  ce_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 clk_enable
+                            (input port)
+  Destination:            ce_out
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.410ns  (logic 0.000ns (0.000%)  route 0.410ns (100.000%))
+  Logic Levels:           0  
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  clk_enable (IN)
+                         net (fo=285, unset)          0.410     0.410    clk_enable
+                                                                      f  ce_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 clk_enable
+                            (input port)
+  Destination:            Delay_out1_reg[0]/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.410ns  (logic 0.000ns (0.000%)  route 0.410ns (100.000%))
+  Logic Levels:           0  
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  clk_enable (IN)
+                         net (fo=285, unset)          0.410     0.410    clk_enable
+                         FDCE                                         r  Delay_out1_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ce_out",
+					"strict" : false
+				},
+				{
+					"name" : "out_rsvd",
+					"strict" : false
+				},
+				{
+					"name" : "clk_enable",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[12]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[13]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[14]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[15]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[8]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[9]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[10]",
+					"strict" : false
+				},
+				{
+					"name" : "input_bit[11]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_x",
+					"strict" : false
+				},
+				{
+					"name" : "end_rsvd",
+					"strict" : false
+				},
+				{
+					"name" : "valid",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

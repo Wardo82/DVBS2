@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 02:11:45 2021
+# Process ID: 17517
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/synthesis_resources/vivado_prj
+# Command line: vivado -mode batch -notrace -source stream_adapt_Xilinx_Vivado_run.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/synthesis_resources/vivado_prj/vivado.log
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/synthesis_resources/vivado_prj/vivado.jou
+#-----------------------------------------------------------
+source stream_adapt_Xilinx_Vivado_run.tcl -notrace
+### Create new Xilinx Vivado 2020.1.1 project <a href="matlab:downstream.handle('Model','stream_adaptation_model').openTargetTool;">/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/synthesis_resources/vivado_prj/stream_adapt_vivado.xpr</a>
+### Set Xilinx Vivado 2020.1.1 project properties
+### Update Xilinx Vivado 2020.1.1 project with HDL source files
+WARNING: [Vivado 12-818] No files matched '*.tcl'
+### Close Xilinx Vivado 2020.1.1 project.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 02:11:55 2021...

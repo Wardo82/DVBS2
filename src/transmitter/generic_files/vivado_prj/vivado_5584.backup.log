@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 09:20:50 2021
+# Process ID: 5584
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj
+# Command line: vivado -mode batch -notrace -source tran_dut_Xilinx_Vivado_run.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/vivado.log
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/vivado.jou
+#-----------------------------------------------------------
+source tran_dut_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2020.1.1 project /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/tran_dut_vivado.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/tran_dut_vivado.srcs/sources_1'.
+### Running Synthesis in Xilinx Vivado 2020.1.1 ...
+[Fri Feb  5 09:21:00 2021] Launched synth_1...
+Run output will be captured here: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/tran_dut_vivado.runs/synth_1/runme.log
+[Fri Feb  5 09:21:00 2021] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log tran_dut.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tran_dut.tcl
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source tran_dut.tcl -notrace
+Command: synth_design -top tran_dut -part xc7v2000tfhg1761-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7v2000t'
+WARNING: [Common 17-348] Failed to get the license for feature 'Synthesis' and/or device 'xc7v2000t'. Explanation: The license feature Synthesis could not be found.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+0 Infos, 1 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-345] A valid license was not found for feature 'Synthesis' and/or device 'xc7v2000t'. Please run the Vivado License Manager for assistance in determining
+which features and devices are licensed for your system.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Please note that Vivado 2017.3 and later requires upgrading your license server tools to the Flex 11.14.1 tools. Please confirm with your license admin that the correct version of the license server tools are installed.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 09:21:11 2021...
+[Fri Feb  5 09:21:14 2021] synth_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'synth_1'
+wait_on_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2150.566 ; gain = 0.000 ; free physical = 13051 ; free virtual = 22271
+### Synthesis Complete.
+### Close Xilinx Vivado 2020.1.1 project.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 09:21:14 2021...

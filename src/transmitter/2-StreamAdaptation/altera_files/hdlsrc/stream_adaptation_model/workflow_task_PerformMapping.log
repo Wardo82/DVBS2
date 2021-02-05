@@ -1,0 +1,217 @@
+Task "Perform Mapping" successful.
+Generated logfile: 
+[0;32mInfo: *******************************************************************
+[0m[0;32mInfo: Running Quartus Prime Timing Analyzer
+[0m[0;32m    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+[0m[0;32m    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+[0m[0;32m    Info: Your use of Intel Corporation's design tools, logic functions 
+[0m[0;32m    Info: and other software and tools, and any partner logic 
+[0m[0;32m    Info: functions, and any output files from any of the foregoing 
+[0m[0;32m    Info: (including device programming or simulation files), and any 
+[0m[0;32m    Info: associated documentation or information are expressly subject 
+[0m[0;32m    Info: to the terms and conditions of the Intel Program License 
+[0m[0;32m    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+[0m[0;32m    Info: the Intel FPGA IP License Agreement, or other applicable license
+[0m[0;32m    Info: agreement, including, without limitation, that your use is for
+[0m[0;32m    Info: the sole purpose of programming logic devices manufactured by
+[0m[0;32m    Info: Intel and sold by Intel or its authorized distributors.  Please
+[0m[0;32m    Info: refer to the applicable agreement for further details, at
+[0m[0;32m    Info: https://fpgasoftware.intel.com/eula.
+[0m[0;32m    Info: Processing started: Fri Feb  5 00:36:43 2021
+[0m[0;32mInfo: Command: quartus_sta -t stream_adapt_Altera_QUARTUS_II_run.tcl
+[0m### Open existing Altera QUARTUS II 20.1.1 project /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/altera_files/quartus_prj/stream_adapt_quartus.qpf
+### Running PostMapTiming in Altera QUARTUS II 20.1.1 ...
+[0;32mInfo: *******************************************************************
+[0m[0;32mInfo: Running Quartus Prime Timing Analyzer
+[0m[0;32m    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+[0m[0;32m    Info: Processing started: Fri Feb  5 00:36:43 2021
+[0m[0;32mInfo: Command: quartus_sta stream_adapt_quartus -c stream_adapt_quartus --post_map
+[0m[0;32mInfo: qsta_default_script.tcl version: #1
+[0m[0;32mInfo: Using post quartus_map netlist
+[0m[0;32mInfo (119006): Selected device 5CSEMA4U23C6 for design "stream_adapt_quartus"
+[0m[0;36mWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+[0m[0;32mInfo (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+[0m[0;32mInfo (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+[0m[0;32mInfo (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+[0m[0;36mCritical Warning (332012): Synopsys Design Constraints File file not found: 'stream_adapt_quartus.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+[0m[0;32mInfo (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+[0m[0;32mInfo (332105): Deriving Clocks
+[0m[0;32m    Info (332105): create_clock -period 1.000 -name clk clk
+[0m[0;32mInfo (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+[0m[0;32mInfo (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+[0m[0;32mInfo: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+[0m[0;32mInfo: Analyzing Slow 1100mV 85C Model
+[0m[0;32mInfo: Can't run Report Timing Closure Recommendations. Extra Fitter information is not available. To generate the report, compile the design with the current version of the Quartus Prime software.
+[0m[0;36mCritical Warning (332148): Timing requirements not met
+[0m[0;32m    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+[0m[0;32mInfo (332146): Worst-case setup slack is -3.901
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -3.901             -47.219 clk 
+[0m[0;32mInfo (332146): Worst-case hold slack is 0.408
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):     0.408               0.000 clk 
+[0m[0;32mInfo (332140): No Recovery paths to report
+[0m[0;32mInfo (332140): No Removal paths to report
+[0m[0;32mInfo (332146): Worst-case minimum pulse width slack is -0.394
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -0.394             -21.186 clk 
+[0m[0;36mWarning (18869): Performing metastability analysis with a pre-fit timing netlist. MTBF values for unplaced blocks are not available, and any reported MTBF values should be treated as an estimate.
+[0m[0;32mInfo: Analyzing Slow 1100mV 0C Model
+[0m[0;32mInfo (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+[0m[0;36mCritical Warning (332148): Timing requirements not met
+[0m[0;32m    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+[0m[0;32mInfo (332146): Worst-case setup slack is -4.006
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -4.006             -49.342 clk 
+[0m[0;32mInfo (332146): Worst-case hold slack is 0.430
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):     0.430               0.000 clk 
+[0m[0;32mInfo (332140): No Recovery paths to report
+[0m[0;32mInfo (332140): No Removal paths to report
+[0m[0;32mInfo (332146): Worst-case minimum pulse width slack is -0.394
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -0.394             -19.305 clk 
+[0m[0;36mWarning (18869): Performing metastability analysis with a pre-fit timing netlist. MTBF values for unplaced blocks are not available, and any reported MTBF values should be treated as an estimate.
+[0m[0;32mInfo: Analyzing Fast 1100mV 85C Model
+[0m[0;32mInfo (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+[0m[0;36mCritical Warning (332148): Timing requirements not met
+[0m[0;32m    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+[0m[0;32mInfo (332146): Worst-case setup slack is -2.797
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -2.797             -26.233 clk 
+[0m[0;32mInfo (332146): Worst-case hold slack is 0.369
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):     0.369               0.000 clk 
+[0m[0;32mInfo (332140): No Recovery paths to report
+[0m[0;32mInfo (332140): No Removal paths to report
+[0m[0;32mInfo (332146): Worst-case minimum pulse width slack is -0.204
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -0.204              -6.732 clk 
+[0m[0;36mWarning (18869): Performing metastability analysis with a pre-fit timing netlist. MTBF values for unplaced blocks are not available, and any reported MTBF values should be treated as an estimate.
+[0m[0;32mInfo: Analyzing Fast 1100mV 0C Model
+[0m[0;32mInfo (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+[0m[0;36mCritical Warning (332148): Timing requirements not met
+[0m[0;32m    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+[0m[0;32mInfo (332146): Worst-case setup slack is -2.798
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -2.798             -26.077 clk 
+[0m[0;32mInfo (332146): Worst-case hold slack is 0.366
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):     0.366               0.000 clk 
+[0m[0;32mInfo (332140): No Recovery paths to report
+[0m[0;32mInfo (332140): No Removal paths to report
+[0m[0;32mInfo (332146): Worst-case minimum pulse width slack is -0.208
+[0m[0;32m    Info (332119):     Slack       End Point TNS Clock 
+[0m[0;32m    Info (332119): ========= =================== =====================
+[0m[0;32m    Info (332119):    -0.208              -6.864 clk 
+[0m[0;36mWarning (18869): Performing metastability analysis with a pre-fit timing netlist. MTBF values for unplaced blocks are not available, and any reported MTBF values should be treated as an estimate.
+[0m[0;32mInfo (332102): Design is not fully constrained for setup requirements
+[0m[0;32mInfo (332102): Design is not fully constrained for hold requirements
+[0m[0;32mInfo: Quartus Prime Timing Analyzer was successful. 0 errors, 10 warnings
+[0m[0;32m    Info: Peak virtual memory: 676 megabytes
+[0m[0;32m    Info: Processing ended: Fri Feb  5 00:36:49 2021
+[0m[0;32m    Info: Elapsed time: 00:00:06
+[0m[0;32m    Info: Total CPU time (on all processors): 00:00:03
+[0m[0;32mInfo (119006): Selected device 5CSEMA4U23C6 for design "stream_adapt_quartus"
+[0m[0;36mWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+[0m[0;32mInfo (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+[0m[0;32mInfo (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+[0m[0;32mInfo (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+[0m[0;36mCritical Warning (332012): Synopsys Design Constraints File file not found: 'stream_adapt_quartus.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+[0m[0;32mInfo (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+[0m[0;32mInfo (332105): Deriving Clocks
+[0m[0;32m    Info (332105): create_clock -period 1.000 -name clk clk
+[0m[0;32mInfo (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+[0m[0;32mInfo (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+[0m[0;32mInfo (332155): Fmax Summary
+[0m[0;32m    Info (332156):                Restricted
+[0m[0;32m    Info (332156):         Fmax         Fmax      Clock Note
+[0m[0;32m    Info (332156): ============ ============ ========== =====================
+[0m[0;32m    Info (332156):   425.35 MHz   425.35 MHz        clk   
+[0m[0;32mInfo (332115): Report Timing: Found 1 setup paths (1 violated).  Worst case slack is -1.351
+[0m[0;32m    Info (332115): -setup
+[0m[0;32m    Info (332115): -npaths 1
+[0m[0;32m    Info (332115): -stdout
+[0m[0;32mInfo (332115): Path #1: Setup slack is -1.351 (VIOLATED)
+[0m[0;32m    Info (332115): ===================================================================
+[0m[0;32m    Info (332115): From Node    : frame_counter_out1[0]
+[0m[0;32m    Info (332115): To Node      : frame_counter_out1[15]
+[0m[0;32m    Info (332115): Launch Clock : clk
+[0m[0;32m    Info (332115): Latch Clock  : clk
+[0m[0;32m    Info (332115): Data Arrival Path:
+[0m[0;32m    Info (332115): Total (ns)  Incr (ns)     Type  Element
+[0m[0;32m    Info (332115): ==========  ========= ==  ====  ===================================
+[0m[0;32m    Info (332115):      0.000      0.000           launch edge time
+[0m[0;32m    Info (332115):      1.086      1.086  R        clock network delay
+[0m[0;32m    Info (332115):      1.086      0.000     uTco  frame_counter_out1[0]
+[0m[0;32m    Info (332115):      1.086      0.000 FF  CELL  frame_counter_out1[0]|q
+[0m[0;32m    Info (332115):      1.086      0.000 FF    IC  Add0~61|datad
+[0m[0;32m    Info (332115):      1.715      0.629 FF  CELL  Add0~61|cout
+[0m[0;32m    Info (332115):      1.715      0.000 FF    IC  Add0~57|cin
+[0m[0;32m    Info (332115):      1.778      0.063 FF  CELL  Add0~57|cout
+[0m[0;32m    Info (332115):      1.778      0.000 FF    IC  Add0~53|cin
+[0m[0;32m    Info (332115):      1.841      0.063 FF  CELL  Add0~53|cout
+[0m[0;32m    Info (332115):      1.841      0.000 FF    IC  Add0~25|cin
+[0m[0;32m    Info (332115):      1.904      0.063 FF  CELL  Add0~25|cout
+[0m[0;32m    Info (332115):      1.904      0.000 FF    IC  Add0~29|cin
+[0m[0;32m    Info (332115):      1.967      0.063 FF  CELL  Add0~29|cout
+[0m[0;32m    Info (332115):      1.967      0.000 FF    IC  Add0~21|cin
+[0m[0;32m    Info (332115):      2.030      0.063 FF  CELL  Add0~21|cout
+[0m[0;32m    Info (332115):      2.030      0.000 FF    IC  Add0~17|cin
+[0m[0;32m    Info (332115):      2.093      0.063 FF  CELL  Add0~17|cout
+[0m[0;32m    Info (332115):      2.093      0.000 FF    IC  Add0~13|cin
+[0m[0;32m    Info (332115):      2.156      0.063 FF  CELL  Add0~13|cout
+[0m[0;32m    Info (332115):      2.156      0.000 FF    IC  Add0~49|cin
+[0m[0;32m    Info (332115):      2.219      0.063 FF  CELL  Add0~49|cout
+[0m[0;32m    Info (332115):      2.219      0.000 FF    IC  Add0~9|cin
+[0m[0;32m    Info (332115):      2.282      0.063 FF  CELL  Add0~9|cout
+[0m[0;32m    Info (332115):      2.282      0.000 FF    IC  Add0~45|cin
+[0m[0;32m    Info (332115):      2.345      0.063 FF  CELL  Add0~45|cout
+[0m[0;32m    Info (332115):      2.345      0.000 FF    IC  Add0~41|cin
+[0m[0;32m    Info (332115):      2.408      0.063 FF  CELL  Add0~41|cout
+[0m[0;32m    Info (332115):      2.408      0.000 FF    IC  Add0~37|cin
+[0m[0;32m    Info (332115):      2.471      0.063 FF  CELL  Add0~37|cout
+[0m[0;32m    Info (332115):      2.471      0.000 FF    IC  Add0~33|cin
+[0m[0;32m    Info (332115):      2.534      0.063 FF  CELL  Add0~33|cout
+[0m[0;32m    Info (332115):      2.534      0.000 FF    IC  Add0~5|cin
+[0m[0;32m    Info (332115):      2.597      0.063 FF  CELL  Add0~5|cout
+[0m[0;32m    Info (332115):      2.597      0.000 FF    IC  Add0~1|cin
+[0m[0;32m    Info (332115):      2.909      0.312 FR  CELL  Add0~1|sumout
+[0m[0;32m    Info (332115):      2.909      0.000 RR    IC  frame_counter_out1[15]|d
+[0m[0;32m    Info (332115):      3.145      0.236 RR  CELL  frame_counter_out1[15]
+[0m[0;32m    Info (332115): Data Required Path:
+[0m[0;32m    Info (332115): Total (ns)  Incr (ns)     Type  Element
+[0m[0;32m    Info (332115): ==========  ========= ==  ====  ===================================
+[0m[0;32m    Info (332115):      1.000      1.000           latch edge time
+[0m[0;32m    Info (332115):      1.954      0.954  R        clock network delay
+[0m[0;32m    Info (332115):      1.794     -0.160           clock uncertainty
+[0m[0;32m    Info (332115):      1.794      0.000     uTsu  frame_counter_out1[15]
+[0m[0;32m    Info (332115): Data Arrival Time  :     3.145
+[0m[0;32m    Info (332115): Data Required Time :     1.794
+[0m[0;32m    Info (332115): Slack              :    -1.351 (VIOLATED)
+[0m[0;32m    Info (332115): ===================================================================
+[0m[0;32mInfo (332115): Report Timing: Found 3 setup paths (3 violated).  Worst case slack is -1.351
+[0m[0;32m    Info (332115): -setup
+[0m[0;32m    Info (332115): -npaths 3
+[0m[0;32m    Info (332115): -file {stream_adapt_preroute.tqr}
+[0m### PostMapTiming Complete.
+### Close Altera QUARTUS II 20.1.1 project.
+[0;32mInfo (23030): Evaluation of Tcl script stream_adapt_Altera_QUARTUS_II_run.tcl was successful
+[0m[0;32mInfo: Quartus Prime Timing Analyzer was successful. 0 errors, 12 warnings
+[0m[0;32m    Info: Peak virtual memory: 672 megabytes
+[0m[0;32m    Info: Processing ended: Fri Feb  5 00:36:51 2021
+[0m[0;32m    Info: Elapsed time: 00:00:08
+[0m[0;32m    Info: Total CPU time (on all processors): 00:00:05
+[0m
+Elapsed time is 9.0151 seconds.

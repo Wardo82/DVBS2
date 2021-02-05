@@ -1,0 +1,22 @@
+ --> tran_dut_pac
+bb_shaping1/FIR_Interpolation --> FIR_Interpolation
+bb_shaping1/FIR_Interpolation1 --> FIR_Interpolation1
+transmitter/tran_dut/bb_shaping1 --> bb_shaping1
+transmitter/tran_dut/bch_encoder/p2s --> p2s
+transmitter/tran_dut/bch_encoder/output_mask --> output_mask
+transmitter/tran_dut/bch_encoder/registers --> registers
+transmitter/tran_dut/bch_encoder/shift_and_xor --> shift_and_xor
+transmitter/tran_dut/bch_encoder --> bch_encoder
+transmitter/tran_dut/interleaver_dut/SinglePortRAM_singlebit --> SinglePortRAM_singlebit
+transmitter/tran_dut/interleaver_dut --> interleaver_dut
+transmitter/tran_dut/ldpc_encoder/address_calculator/addresses --> addresses
+transmitter/tran_dut/ldpc_encoder/address_calculator --> address_calculator
+transmitter/tran_dut/ldpc_encoder/p2s --> p2s_block
+transmitter/tran_dut/ldpc_encoder/MATLAB Function --> MATLAB_Function
+transmitter/tran_dut/ldpc_encoder --> ldpc_encoder
+transmitter/tran_dut/stream_adapt --> stream_adapt
+transmitter/tran_dut/bit_mapping/Cosine HDL Optimized --> Cosine_HDL_Optimized
+transmitter/tran_dut/bit_mapping/angle_selector --> angle_selector
+transmitter/tran_dut/bit_mapping --> bit_mapping
+tran_dut_tc --> tran_dut_tc
+transmitter/tran_dut --> tran_dut

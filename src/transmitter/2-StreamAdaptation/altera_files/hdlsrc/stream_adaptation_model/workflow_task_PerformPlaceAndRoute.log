@@ -1,0 +1,143 @@
+Task "Perform Place and Route" successful.
+Generated logfile: 
+[0;32mInfo: *******************************************************************
+[0m[0;32mInfo: Running Quartus Prime Timing Analyzer
+[0m[0;32m    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+[0m[0;32m    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+[0m[0;32m    Info: Your use of Intel Corporation's design tools, logic functions 
+[0m[0;32m    Info: and other software and tools, and any partner logic 
+[0m[0;32m    Info: functions, and any output files from any of the foregoing 
+[0m[0;32m    Info: (including device programming or simulation files), and any 
+[0m[0;32m    Info: associated documentation or information are expressly subject 
+[0m[0;32m    Info: to the terms and conditions of the Intel Program License 
+[0m[0;32m    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+[0m[0;32m    Info: the Intel FPGA IP License Agreement, or other applicable license
+[0m[0;32m    Info: agreement, including, without limitation, that your use is for
+[0m[0;32m    Info: the sole purpose of programming logic devices manufactured by
+[0m[0;32m    Info: Intel and sold by Intel or its authorized distributors.  Please
+[0m[0;32m    Info: refer to the applicable agreement for further details, at
+[0m[0;32m    Info: https://fpgasoftware.intel.com/eula.
+[0m[0;32m    Info: Processing started: Fri Feb  5 00:36:53 2021
+[0m[0;32mInfo: Command: quartus_sta -t stream_adapt_Altera_QUARTUS_II_run.tcl
+[0m### Open existing Altera QUARTUS II 20.1.1 project /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/altera_files/quartus_prj/stream_adapt_quartus.qpf
+### Running PAR in Altera QUARTUS II 20.1.1 ...
+[0;32mInfo: *******************************************************************
+[0m[0;32mInfo: Running Quartus Prime Fitter
+[0m[0;32m    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+[0m[0;32m    Info: Processing started: Fri Feb  5 00:36:53 2021
+[0m[0;32mInfo: Command: quartus_fit --read_settings_files=on --write_settings_files=off stream_adapt_quartus -c stream_adapt_quartus
+[0m[0;32mInfo: qfit2_default_script.tcl version: #1
+[0m[0;32mInfo: Project  = stream_adapt_quartus
+[0m[0;32mInfo: Revision = stream_adapt_quartus
+[0m[0;36mWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+[0m[0;32mInfo (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+[0m[0;32mInfo (119006): Selected device 5CSEMA4U23C6 for design "stream_adapt_quartus"
+[0m[0;32mInfo (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+[0m[0;32mInfo (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+[0m[0;32mInfo (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+[0m[0;36mWarning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+[0m[0;36mWarning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+[0m[0;36mCritical Warning (169085): No exact pin location assignment(s) for 24 pins of 24 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+[0m[0;32mInfo (184020): Starting Fitter periphery placement operations
+[0m[0;32mInfo (11191): Automatically promoted 1 clock (1 global)
+[0m[0;32m    Info (11162): clk~inputCLKENA0 with 33 fanout uses global clock CLKCTRL_G12
+[0m[0;32mInfo (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+[0m[0;32mInfo (176233): Starting register packing
+[0m[0;32m[0m[0;32m[0m[0;32m[0m[0;32m[0m[0;32m[0m[0;32m[0m[0;32mInfo (176235): Finished register packing
+[0m[0;32m    Extra Info (176219): No registers were packed into other blocks
+[0m[0;32mInfo (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+[0m[0;36mCritical Warning (332012): Synopsys Design Constraints File file not found: 'stream_adapt_quartus.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+[0m[0;32mInfo (332144): No user constrained base clocks found in the design
+[0m[0;32mInfo (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+[0m[0;32mInfo (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+[0m[0;32mInfo (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+[0m[0;32mInfo (170189): Fitter placement preparation operations beginning
+[0m[0;32mInfo (14951): The Fitter is using Advanced Physical Optimization.
+[0m[0;32mInfo (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+[0m[0;32mInfo (170191): Fitter placement operations beginning
+[0m[0;32mInfo (170137): Fitter placement was successful
+[0m[0;32mInfo (170192): Fitter placement operations ending: elapsed time is 00:00:01
+[0m[0;32mInfo (170193): Fitter routing operations beginning
+[0m[0;32mInfo (170195): Router estimated average interconnect usage is 0% of the available device resources
+[0m[0;32m    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X10_Y11
+[0m[0;32mInfo (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+[0m[0;32m    Info (170201): Optimizations that may affect the design's routability were skipped
+[0m[0;32mInfo (170194): Fitter routing operations ending: elapsed time is 00:00:01
+[0m[0;32mInfo (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
+[0m[0;32mInfo (334003): Started post-fitting delay annotation
+[0m[0;32mInfo (334004): Delay annotation completed successfully
+[0m[0;32mInfo (334003): Started post-fitting delay annotation
+[0m[0;32mInfo (334004): Delay annotation completed successfully
+[0m[0;32mInfo (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+[0m[0;32mInfo (144001): Generated suppressed messages file /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/altera_files/quartus_prj/stream_adapt_quartus.fit.smsg
+[0m[0;32mInfo: Quartus Prime Fitter was successful. 0 errors, 5 warnings
+[0m[0;32m    Info: Peak virtual memory: 1604 megabytes
+[0m[0;32m    Info: Processing ended: Fri Feb  5 00:37:21 2021
+[0m[0;32m    Info: Elapsed time: 00:00:28
+[0m[0;32m    Info: Total CPU time (on all processors): 00:00:33
+[0m### PAR Complete.
+### Running PostPARTiming in Altera QUARTUS II 20.1.1 ...
+[0;36mWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+[0m[0;32mInfo (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+[0m[0;32mInfo (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+[0m[0;32mInfo (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+[0m[0;36mCritical Warning (332012): Synopsys Design Constraints File file not found: 'stream_adapt_quartus.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+[0m[0;32mInfo (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+[0m[0;32mInfo (332105): Deriving Clocks
+[0m[0;32m    Info (332105): create_clock -period 1.000 -name clk clk
+[0m[0;32mInfo (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+[0m[0;32mInfo (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+[0m[0;32mInfo (332155): Fmax Summary
+[0m[0;32m    Info (332156):                Restricted
+[0m[0;32m    Info (332156):         Fmax         Fmax      Clock Note
+[0m[0;32m    Info (332156): ============ ============ ========== =====================
+[0m[0;32m    Info (332156):   396.35 MHz   396.35 MHz        clk   
+[0m[0;32mInfo (332115): Report Timing: Found 1 setup paths (1 violated).  Worst case slack is -1.523
+[0m[0;32m    Info (332115): -setup
+[0m[0;32m    Info (332115): -npaths 1
+[0m[0;32m    Info (332115): -stdout
+[0m[0;32mInfo (332115): Path #1: Setup slack is -1.523 (VIOLATED)
+[0m[0;32m    Info (332115): ===================================================================
+[0m[0;32m    Info (332115): From Node    : frame_counter_out1[9]
+[0m[0;32m    Info (332115): To Node      : frame_counter_out1[14]
+[0m[0;32m    Info (332115): Launch Clock : clk
+[0m[0;32m    Info (332115): Latch Clock  : clk
+[0m[0;32m    Info (332115): Data Arrival Path:
+[0m[0;32m    Info (332115): Total (ns)  Incr (ns)     Type  Element
+[0m[0;32m    Info (332115): ==========  ========= ==  ====  ===================================
+[0m[0;32m    Info (332115):      0.000      0.000           launch edge time
+[0m[0;32m    Info (332115):      3.144      3.144  R        clock network delay
+[0m[0;32m    Info (332115):      3.144      0.000     uTco  frame_counter_out1[9]
+[0m[0;32m    Info (332115):      3.144      0.000 RR  CELL  frame_counter_out1[9]|q
+[0m[0;32m    Info (332115):      3.408      0.264 RR    IC  LessThan0~1|dataa
+[0m[0;32m    Info (332115):      3.924      0.516 RR  CELL  LessThan0~1|combout
+[0m[0;32m    Info (332115):      4.162      0.238 RR    IC  frame_counter_out1[3]~0|datae
+[0m[0;32m    Info (332115):      4.379      0.217 RR  CELL  frame_counter_out1[3]~0|combout
+[0m[0;32m    Info (332115):      4.753      0.374 RR    IC  frame_counter_out1[14]|sclr
+[0m[0;32m    Info (332115):      5.406      0.653 RF  CELL  frame_counter_out1[14]
+[0m[0;32m    Info (332115): Data Required Path:
+[0m[0;32m    Info (332115): Total (ns)  Incr (ns)     Type  Element
+[0m[0;32m    Info (332115): ==========  ========= ==  ====  ===================================
+[0m[0;32m    Info (332115):      1.000      1.000           latch edge time
+[0m[0;32m    Info (332115):      3.830      2.830  R        clock network delay
+[0m[0;32m    Info (332115):      4.053      0.223           clock pessimism removed
+[0m[0;32m    Info (332115):      3.883     -0.170           clock uncertainty
+[0m[0;32m    Info (332115):      3.883      0.000     uTsu  frame_counter_out1[14]
+[0m[0;32m    Info (332115): Data Arrival Time  :     5.406
+[0m[0;32m    Info (332115): Data Required Time :     3.883
+[0m[0;32m    Info (332115): Slack              :    -1.523 (VIOLATED)
+[0m[0;32m    Info (332115): ===================================================================
+[0m[0;32mInfo (332115): Report Timing: Found 3 setup paths (3 violated).  Worst case slack is -1.523
+[0m[0;32m    Info (332115): -setup
+[0m[0;32m    Info (332115): -npaths 3
+[0m[0;32m    Info (332115): -file {stream_adapt_postroute.tqr}
+[0m### PostPARTiming Complete.
+### Close Altera QUARTUS II 20.1.1 project.
+[0;32mInfo (23030): Evaluation of Tcl script stream_adapt_Altera_QUARTUS_II_run.tcl was successful
+[0m[0;32mInfo: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
+[0m[0;32m    Info: Peak virtual memory: 583 megabytes
+[0m[0;32m    Info: Processing ended: Fri Feb  5 00:37:23 2021
+[0m[0;32m    Info: Elapsed time: 00:00:30
+[0m[0;32m    Info: Total CPU time (on all processors): 00:00:35
+[0m
+Elapsed time is 31.006 seconds.

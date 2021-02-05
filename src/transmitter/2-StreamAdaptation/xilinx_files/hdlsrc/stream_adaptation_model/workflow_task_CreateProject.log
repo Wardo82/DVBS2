@@ -1,0 +1,18 @@
+Task "Create Project" successful.
+Generated logfile: 
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source stream_adapt_Xilinx_Vivado_run.tcl -notrace
+### Create new Xilinx Vivado 2020.1.1 project <a href="matlab:downstream.handle('Model','stream_adaptation_model').openTargetTool;">/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/xilinx_files/vivado_prj/stream_adapt_vivado.xpr</a>
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2033.473 ; gain = 2.016 ; free physical = 15913 ; free virtual = 23825
+### Set Xilinx Vivado 2020.1.1 project properties
+### Update Xilinx Vivado 2020.1.1 project with HDL source files
+WARNING: [Vivado 12-818] No files matched '*.tcl'
+### Close Xilinx Vivado 2020.1.1 project.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 00:54:54 2021...
+
+Elapsed time is 51.7666 seconds.

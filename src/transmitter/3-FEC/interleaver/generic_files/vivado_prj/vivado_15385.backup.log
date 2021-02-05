@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 03:08:05 2021
+# Process ID: 15385
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj
+# Command line: vivado -mode batch -notrace -source interleaver_dut_Xilinx_Vivado_run.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/vivado.log
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/vivado.jou
+#-----------------------------------------------------------
+source interleaver_dut_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2020.1.1 project /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.srcs/sources_1'.
+### Running Synthesis in Xilinx Vivado 2020.1.1 ...
+[Fri Feb  5 03:08:15 2021] Launched synth_1...
+Run output will be captured here: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.runs/synth_1/runme.log
+[Fri Feb  5 03:08:15 2021] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log interleaver_dut.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source interleaver_dut.tcl
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source interleaver_dut.tcl -notrace
+Command: synth_design -top interleaver_dut -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15499
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2149.566 ; gain = 0.000 ; free physical = 14084 ; free virtual = 22384
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'interleaver_dut' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver_dut.vhd:59]
+INFO: [Synth 8-3491] module 'interleaver' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver.vhd:23' bound to instance 'u_interleaver' of component 'interleaver' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver_dut.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'interleaver' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver.vhd:35]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+[Fri Feb  5 05:35:01 2021] Interrupt received
+wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 02:26:46 . Memory (MB): peak = 2158.477 ; gain = 7.910 ; free physical = 14889 ; free virtual = 22172
+INFO: [Common 17-344] 'wait_on_run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 05:35:01 2021...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 01:11:23 2021
+# Process ID: 28476
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/vivado_prj/bch_encoder_vivado.runs/synth_1
+# Command line: vivado -log bch_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bch_encoder.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/vivado_prj/bch_encoder_vivado.runs/synth_1/bch_encoder.vds
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/vivado_prj/bch_encoder_vivado.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source bch_encoder.tcl -notrace

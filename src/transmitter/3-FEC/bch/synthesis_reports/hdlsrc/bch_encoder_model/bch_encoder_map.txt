@@ -1,0 +1,5 @@
+bch_encoder_model/bch_encoder/output_mask --> output_mask
+bch_encoder_model/bch_encoder/p2s --> p2s
+bch_encoder_model/bch_encoder/registers --> registers
+bch_encoder_model/bch_encoder/shift_and_xor --> shift_and_xor
+bch_encoder_model/bch_encoder --> bch_encoder

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 02:50:37 2021
+# Process ID: 5882
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/6-BaseBandShaping/synthesis_reports/vivado_prj/bb_shaping_vivado.runs/synth_1
+# Command line: vivado -log bb_shaping.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bb_shaping.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/6-BaseBandShaping/synthesis_reports/vivado_prj/bb_shaping_vivado.runs/synth_1/bb_shaping.vds
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/6-BaseBandShaping/synthesis_reports/vivado_prj/bb_shaping_vivado.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source bb_shaping.tcl -notrace

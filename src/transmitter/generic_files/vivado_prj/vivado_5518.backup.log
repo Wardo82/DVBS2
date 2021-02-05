@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 09:20:30 2021
+# Process ID: 5518
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj
+# Command line: vivado -mode batch -notrace -source tran_dut_Xilinx_Vivado_run.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/vivado.log
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/vivado.jou
+#-----------------------------------------------------------
+source tran_dut_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2020.1.1 project <a href="matlab:downstream.handle('Model','transmitter').openTargetTool;">/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/tran_dut_vivado.xpr</a>
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/tran_dut_vivado.srcs/sources_1'.
+### Set Xilinx Vivado 2020.1.1 project properties
+### Update Xilinx Vivado 2020.1.1 project with HDL source files
+WARNING: [Vivado 12-818] No files matched '*.tcl'
+### Close Xilinx Vivado 2020.1.1 project.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 09:20:40 2021...

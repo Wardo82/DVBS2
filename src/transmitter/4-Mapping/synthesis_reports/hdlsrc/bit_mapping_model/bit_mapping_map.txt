@@ -1,0 +1,4 @@
+ --> bit_mapping_pac
+bit_mapping_model/bit_mapping/Cosine HDL Optimized --> Cosine_HDL_Optimized
+bit_mapping_model/bit_mapping/angle_selector --> angle_selector
+bit_mapping_model/bit_mapping --> bit_mapping

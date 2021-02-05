@@ -1,0 +1,208 @@
+
+*** Running vivado
+    with args -log bch_encoder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bch_encoder.tcl
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source bch_encoder.tcl -notrace
+Command: synth_design -top bch_encoder -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28481
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.594 ; gain = 0.000 ; free physical = 14740 ; free virtual = 22895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'bch_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/bch_encoder.vhd:55]
+INFO: [Synth 8-3491] module 'output_mask' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/output_mask.vhd:22' bound to instance 'u_output_mask' of component 'output_mask' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/bch_encoder.vhd:694]
+INFO: [Synth 8-638] synthesizing module 'output_mask' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/output_mask.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'output_mask' (1#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/output_mask.vhd:29]
+INFO: [Synth 8-3491] module 'registers' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/registers.vhd:22' bound to instance 'u_registers' of component 'registers' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/bch_encoder.vhd:699]
+INFO: [Synth 8-638] synthesizing module 'registers' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/registers.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'registers' (2#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/registers.vhd:33]
+INFO: [Synth 8-3491] module 'shift_and_xor' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/shift_and_xor.vhd:22' bound to instance 'u_shift_and_xor' of component 'shift_and_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/bch_encoder.vhd:708]
+INFO: [Synth 8-638] synthesizing module 'shift_and_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/shift_and_xor.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'shift_and_xor' (3#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/shift_and_xor.vhd:31]
+INFO: [Synth 8-3491] module 'p2s' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/p2s.vhd:22' bound to instance 'u_p2s' of component 'p2s' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/bch_encoder.vhd:715]
+INFO: [Synth 8-638] synthesizing module 'p2s' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/p2s.vhd:34]
+INFO: [Synth 8-226] default block is never used [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/p2s.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'p2s' (4#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/p2s.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'bch_encoder' (5#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/hdlsrc/bch_encoder_model/bch_encoder.vhd:55]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2146.594 ; gain = 0.000 ; free physical = 14832 ; free virtual = 22988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2146.594 ; gain = 0.000 ; free physical = 14831 ; free virtual = 22987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14831 ; free virtual = 22987
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14768 ; free virtual = 22924
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	              192 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input  192 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14565 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT2   |    87|
+|3     |LUT3   |   205|
+|4     |LUT4   |   102|
+|5     |LUT5   |   259|
+|6     |LUT6   |   220|
+|7     |MUXF7  |    37|
+|8     |MUXF8  |    18|
+|9     |FDCE   |   299|
+|10    |FDPE   |     1|
+|11    |FDRE   |   192|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+----------+------+
+|      |Instance      |Module    |Cells |
++------+--------------+----------+------+
+|1     |top           |          |  1428|
+|2     |  u_p2s       |p2s       |   712|
+|3     |  u_registers |registers |   525|
++------+--------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14564 ; free virtual = 22724
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2154.504 ; gain = 7.910 ; free physical = 14566 ; free virtual = 22726
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2154.512 ; gain = 7.910 ; free physical = 14566 ; free virtual = 22726
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2154.512 ; gain = 0.000 ; free physical = 14636 ; free virtual = 22795
+INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2259.344 ; gain = 0.000 ; free physical = 14562 ; free virtual = 22722
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 2259.344 ; gain = 112.844 ; free physical = 14702 ; free virtual = 22862
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/bch/synthesis_reports/vivado_prj/bch_encoder_vivado.runs/synth_1/bch_encoder.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2681.344 ; gain = 422.000 ; free physical = 14334 ; free virtual = 22494
+INFO: [runtcl-4] Executing : report_utilization -file bch_encoder_utilization_synth.rpt -pb bch_encoder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 01:12:04 2021...

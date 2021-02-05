@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1612509841">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="interleaver_dut.vdi"/>
+  <File Type="BG-DRC" Name="interleaver_dut.drc"/>
+  <File Type="BG-BGN" Name="interleaver_dut.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="interleaver_dut.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="interleaver_dut.ltx"/>
+  <File Type="RBD_FILE" Name="interleaver_dut.rbd"/>
+  <File Type="NPI_FILE" Name="interleaver_dut.npi"/>
+  <File Type="RNPI_FILE" Name="interleaver_dut.rnpi"/>
+  <File Type="CFI_FILE" Name="interleaver_dut.cfi"/>
+  <File Type="RCFI_FILE" Name="interleaver_dut.rcfi"/>
+  <File Type="PDI-FILE" Name="interleaver_dut.pdi"/>
+  <File Type="BITSTR-MMI" Name="interleaver_dut.mmi"/>
+  <File Type="BITSTR-BMM" Name="interleaver_dut_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="interleaver_dut.nky"/>
+  <File Type="BITSTR-RBT" Name="interleaver_dut.rbt"/>
+  <File Type="BITSTR-MSK" Name="interleaver_dut.msk"/>
+  <File Type="BG-BIN" Name="interleaver_dut.bin"/>
+  <File Type="BG-BIT" Name="interleaver_dut.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="interleaver_dut_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="interleaver_dut_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="interleaver_dut_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="interleaver_dut_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="interleaver_dut_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="interleaver_dut_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="interleaver_dut_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="interleaver_dut_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="interleaver_dut_bus_skew_routed.rpx"/>
+  <File Type="INIT-TIMING" Name="interleaver_dut_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="interleaver_dut_opt.dcp"/>
+  <File Type="OPT-DRC" Name="interleaver_dut_drc_opted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="interleaver_dut_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="interleaver_dut_methodology_drc_opted.rpt"/>
+  <File Type="PLACE-UTIL" Name="interleaver_dut_utilization_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="interleaver_dut.hwdef"/>
+  <File Type="PHYSOPT-TIMING" Name="interleaver_dut_timing_summary_physopted.rpt"/>
+  <File Type="PA-TCL" Name="interleaver_dut.tcl"/>
+  <File Type="OPT-TIMING" Name="interleaver_dut_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="interleaver_dut_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="interleaver_dut_drc_pwropted.rpt"/>
+  <File Type="REPORTS-TCL" Name="interleaver_dut_reports.tcl"/>
+  <File Type="PWROPT-TIMING" Name="interleaver_dut_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="interleaver_dut_placed.dcp"/>
+  <File Type="PLACE-IO" Name="interleaver_dut_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="interleaver_dut_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="interleaver_dut_utilization_placed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="interleaver_dut_methodology_drc_routed.rpt"/>
+  <File Type="PLACE-CTRL" Name="interleaver_dut_control_sets_placed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="interleaver_dut_methodology_drc_routed.pb"/>
+  <File Type="PLACE-SIMILARITY" Name="interleaver_dut_incremental_reuse_placed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="interleaver_dut_drc_routed.rpx"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="interleaver_dut_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="interleaver_dut_methodology_drc_routed.rpx"/>
+  <File Type="PLACE-TIMING" Name="interleaver_dut_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="interleaver_dut_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="interleaver_dut_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="interleaver_dut_drc_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="interleaver_dut_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="interleaver_dut_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="interleaver_dut_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="interleaver_dut_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="interleaver_dut_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="interleaver_dut_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="interleaver_dut_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="interleaver_dut_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="interleaver_dut_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="interleaver_dut_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="interleaver_dut_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="interleaver_dut_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="interleaver_dut_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="interleaver_dut_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="interleaver_dut_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="interleaver_dut_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="interleaver_dut_bus_skew_routed.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../hdlsrc/Copy_of_interleaver_model/SinglePortRAM_singlebit.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../hdlsrc/Copy_of_interleaver_model/interleaver_dut.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="interleaver_dut"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

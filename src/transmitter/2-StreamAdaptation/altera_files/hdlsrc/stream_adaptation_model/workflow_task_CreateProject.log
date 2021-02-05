@@ -1,0 +1,34 @@
+Task "Create Project" successful.
+Generated logfile: 
+[0;32mInfo: *******************************************************************
+[0m[0;32mInfo: Running Quartus Prime Timing Analyzer
+[0m[0;32m    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+[0m[0;32m    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+[0m[0;32m    Info: Your use of Intel Corporation's design tools, logic functions 
+[0m[0;32m    Info: and other software and tools, and any partner logic 
+[0m[0;32m    Info: functions, and any output files from any of the foregoing 
+[0m[0;32m    Info: (including device programming or simulation files), and any 
+[0m[0;32m    Info: associated documentation or information are expressly subject 
+[0m[0;32m    Info: to the terms and conditions of the Intel Program License 
+[0m[0;32m    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+[0m[0;32m    Info: the Intel FPGA IP License Agreement, or other applicable license
+[0m[0;32m    Info: agreement, including, without limitation, that your use is for
+[0m[0;32m    Info: the sole purpose of programming logic devices manufactured by
+[0m[0;32m    Info: Intel and sold by Intel or its authorized distributors.  Please
+[0m[0;32m    Info: refer to the applicable agreement for further details, at
+[0m[0;32m    Info: https://fpgasoftware.intel.com/eula.
+[0m[0;32m    Info: Processing started: Fri Feb  5 00:36:08 2021
+[0m[0;32mInfo: Command: quartus_sta -t stream_adapt_Altera_QUARTUS_II_run.tcl
+[0m### Create new Altera QUARTUS II 20.1.1 project <a href="matlab:downstream.handle('Model','stream_adaptation_model').openTargetTool;">/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/2-StreamAdaptation/altera_files/quartus_prj/stream_adapt_quartus.qpf</a>
+### Set Altera QUARTUS II 20.1.1 project properties
+### Update Altera QUARTUS II 20.1.1 project with HDL source files
+[0;32mInfo (125061): Changed top-level design entity name to "stream_adapt"
+[0m### Close Altera QUARTUS II 20.1.1 project.
+[0;32mInfo (23030): Evaluation of Tcl script stream_adapt_Altera_QUARTUS_II_run.tcl was successful
+[0m[0;32mInfo: Quartus Prime Timing Analyzer was successful. 0 errors, 0 warnings
+[0m[0;32m    Info: Peak virtual memory: 345 megabytes
+[0m[0;32m    Info: Processing ended: Fri Feb  5 00:36:10 2021
+[0m[0;32m    Info: Elapsed time: 00:00:02
+[0m[0;32m    Info: Total CPU time (on all processors): 00:00:00
+[0m
+Elapsed time is 6.1804 seconds.

@@ -1,0 +1,1 @@
+stream_adaptation_model/stream_adapt --> stream_adapt

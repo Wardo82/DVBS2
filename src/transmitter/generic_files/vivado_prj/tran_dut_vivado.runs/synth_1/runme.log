@@ -1,0 +1,472 @@
+
+*** Running vivado
+    with args -log tran_dut.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tran_dut.tcl
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source tran_dut.tcl -notrace
+Command: synth_design -top tran_dut -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6164
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2146.594 ; gain = 0.000 ; free physical = 12327 ; free virtual = 21546
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'tran_dut' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:58]
+INFO: [Synth 8-3491] module 'tran_dut_tc' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut_tc.vhd:29' bound to instance 'u_tran_dut_tc' of component 'tran_dut_tc' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'tran_dut_tc' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut_tc.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'tran_dut_tc' (1#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut_tc.vhd:41]
+INFO: [Synth 8-3491] module 'stream_adapt' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/stream_adapt.vhd:22' bound to instance 'u_stream_adapt' of component 'stream_adapt' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:229]
+INFO: [Synth 8-638] synthesizing module 'stream_adapt' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/stream_adapt.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'stream_adapt' (2#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/stream_adapt.vhd:35]
+INFO: [Synth 8-3491] module 'bch_encoder' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bch_encoder.vhd:22' bound to instance 'u_bch_encoder' of component 'bch_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'bch_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bch_encoder.vhd:34]
+INFO: [Synth 8-3491] module 'output_mask' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/output_mask.vhd:22' bound to instance 'u_output_mask' of component 'output_mask' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bch_encoder.vhd:672]
+INFO: [Synth 8-638] synthesizing module 'output_mask' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/output_mask.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'output_mask' (3#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/output_mask.vhd:29]
+INFO: [Synth 8-3491] module 'registers' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/registers.vhd:22' bound to instance 'u_registers' of component 'registers' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bch_encoder.vhd:677]
+INFO: [Synth 8-638] synthesizing module 'registers' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/registers.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'registers' (4#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/registers.vhd:33]
+INFO: [Synth 8-3491] module 'shift_and_xor' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/shift_and_xor.vhd:22' bound to instance 'u_shift_and_xor' of component 'shift_and_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bch_encoder.vhd:686]
+INFO: [Synth 8-638] synthesizing module 'shift_and_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/shift_and_xor.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'shift_and_xor' (5#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/shift_and_xor.vhd:31]
+INFO: [Synth 8-3491] module 'p2s' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s.vhd:22' bound to instance 'u_p2s' of component 'p2s' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bch_encoder.vhd:693]
+INFO: [Synth 8-638] synthesizing module 'p2s' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s.vhd:34]
+INFO: [Synth 8-226] default block is never used [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'p2s' (6#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'bch_encoder' (7#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bch_encoder.vhd:34]
+INFO: [Synth 8-3491] module 'ldpc_encoder' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/ldpc_encoder.vhd:23' bound to instance 'u_ldpc_encoder' of component 'ldpc_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'ldpc_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/ldpc_encoder.vhd:36]
+INFO: [Synth 8-3491] module 'address_calculator' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/address_calculator.vhd:23' bound to instance 'u_address_calculator' of component 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/ldpc_encoder.vhd:828]
+INFO: [Synth 8-638] synthesizing module 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'addresses' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/addresses.vhd:23' bound to instance 'u_addresses' of component 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/address_calculator.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'addresses' (8#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'address_calculator' (9#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'MATLAB_Function' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/MATLAB_Function.vhd:23' bound to instance 'u_MATLAB_Function' of component 'MATLAB_Function' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/ldpc_encoder.vhd:836]
+INFO: [Synth 8-638] synthesizing module 'MATLAB_Function' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/MATLAB_Function.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'MATLAB_Function' (10#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/MATLAB_Function.vhd:32]
+INFO: [Synth 8-3491] module 'p2s_block' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s_block.vhd:22' bound to instance 'u_p2s' of component 'p2s_block' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/ldpc_encoder.vhd:843]
+INFO: [Synth 8-638] synthesizing module 'p2s_block' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s_block.vhd:34]
+INFO: [Synth 8-226] default block is never used [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s_block.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'p2s_block' (11#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/p2s_block.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder' (12#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/ldpc_encoder.vhd:36]
+INFO: [Synth 8-3491] module 'interleaver_dut' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/interleaver_dut.vhd:22' bound to instance 'u_interleaver_dut' of component 'interleaver_dut' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'interleaver_dut' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/interleaver_dut.vhd:35]
+	Parameter AddrWidth bound to: 15 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'SinglePortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/SinglePortRAM_singlebit.vhd:22' bound to instance 'u_Single_Port_RAM' of component 'SinglePortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/interleaver_dut.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'SinglePortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/SinglePortRAM_singlebit.vhd:36]
+	Parameter AddrWidth bound to: 15 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SinglePortRAM_singlebit' (13#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/SinglePortRAM_singlebit.vhd:36]
+	Parameter AddrWidth bound to: 15 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'SinglePortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/SinglePortRAM_singlebit.vhd:22' bound to instance 'u_Single_Port_RAM1' of component 'SinglePortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/interleaver_dut.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'interleaver_dut' (14#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/interleaver_dut.vhd:35]
+INFO: [Synth 8-3491] module 'bit_mapping' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bit_mapping.vhd:22' bound to instance 'u_bit_mapping' of component 'bit_mapping' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'bit_mapping' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bit_mapping.vhd:34]
+INFO: [Synth 8-3491] module 'angle_selector' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/angle_selector.vhd:22' bound to instance 'u_angle_selector' of component 'angle_selector' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bit_mapping.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'angle_selector' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/angle_selector.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'angle_selector' (15#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/angle_selector.vhd:29]
+INFO: [Synth 8-3491] module 'Cosine_HDL_Optimized' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/Cosine_HDL_Optimized.vhd:23' bound to instance 'u_Cosine_HDL_Optimized' of component 'Cosine_HDL_Optimized' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bit_mapping.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'Cosine_HDL_Optimized' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/Cosine_HDL_Optimized.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Cosine_HDL_Optimized' (16#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/Cosine_HDL_Optimized.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'bit_mapping' (17#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bit_mapping.vhd:34]
+INFO: [Synth 8-3491] module 'bb_shaping1' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bb_shaping1.vhd:22' bound to instance 'u_bb_shaping1' of component 'bb_shaping1' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:282]
+INFO: [Synth 8-638] synthesizing module 'bb_shaping1' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bb_shaping1.vhd:34]
+INFO: [Synth 8-3491] module 'FIR_Interpolation' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/FIR_Interpolation.vhd:26' bound to instance 'u_FIR_Interpolation' of component 'FIR_Interpolation' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bb_shaping1.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'FIR_Interpolation' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/FIR_Interpolation.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Interpolation' (18#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/FIR_Interpolation.vhd:40]
+INFO: [Synth 8-3491] module 'FIR_Interpolation1' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/FIR_Interpolation1.vhd:26' bound to instance 'u_FIR_Interpolation1' of component 'FIR_Interpolation1' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bb_shaping1.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'FIR_Interpolation1' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/FIR_Interpolation1.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Interpolation1' (19#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/FIR_Interpolation1.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'bb_shaping1' (20#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/bb_shaping1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'tran_dut' (21#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/hdlsrc/transmitter/tran_dut.vhd:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2146.594 ; gain = 0.000 ; free physical = 12284 ; free virtual = 21506
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2146.594 ; gain = 0.000 ; free physical = 12296 ; free virtual = 21518
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:55 ; elapsed = 00:01:55 . Memory (MB): peak = 4838.809 ; gain = 2692.215 ; free physical = 7384 ; free virtual = 16609
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   18 Bit       Adders := 3     
+	   2 Input   17 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 4     
+	   3 Input   16 Bit       Adders := 12    
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 13    
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	            16201 Bit    Registers := 2     
+	              192 Bit    Registers := 3     
+	               45 Bit    Registers := 2     
+	               25 Bit    Registers := 22    
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 32    
++---RAMs : 
+	              32K Bit	(32768 X 1 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input 16201 Bit        Muxes := 3     
+	   2 Input  192 Bit        Muxes := 6     
+	   2 Input   45 Bit        Muxes := 4     
+	   2 Input   25 Bit        Muxes := 8     
+	   2 Input   18 Bit        Muxes := 5     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 7     
+	   2 Input   15 Bit        Muxes := 4     
+	   7 Input   15 Bit        Muxes := 2     
+	   4 Input   15 Bit        Muxes := 2     
+	  16 Input   14 Bit        Muxes := 9     
+	   8 Input   14 Bit        Muxes := 4     
+	   2 Input   14 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 6     
+	   8 Input   13 Bit        Muxes := 2     
+	   8 Input   12 Bit        Muxes := 2     
+	   6 Input   12 Bit        Muxes := 2     
+	   7 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 2     
+	   4 Input   11 Bit        Muxes := 2     
+	   8 Input   11 Bit        Muxes := 2     
+	   5 Input   10 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 4     
+	   9 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 8     
+	   2 Input    5 Bit        Muxes := 2     
+	 135 Input    4 Bit        Muxes := 9     
+	   2 Input    3 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 28    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP Product_mul_temp, operation Mode is: A*B.
+DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
+DSP Report: Generating DSP Product1_mul_temp, operation Mode is: A*B.
+DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
+DSP Report: Generating DSP u_FIR_Interpolation/product_10, operation Mode is: A*B.
+DSP Report: operator u_FIR_Interpolation/product_10 is absorbed into DSP u_FIR_Interpolation/product_10.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp is absorbed into DSP u_FIR_Interpolation/add_temp.
+DSP Report: operator u_FIR_Interpolation/product_9 is absorbed into DSP u_FIR_Interpolation/add_temp.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_1, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_1 is absorbed into DSP u_FIR_Interpolation/add_temp_1.
+DSP Report: operator u_FIR_Interpolation/product_8 is absorbed into DSP u_FIR_Interpolation/add_temp_1.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_2, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_2 is absorbed into DSP u_FIR_Interpolation/add_temp_2.
+DSP Report: operator u_FIR_Interpolation/product_7 is absorbed into DSP u_FIR_Interpolation/add_temp_2.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_3, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_3 is absorbed into DSP u_FIR_Interpolation/add_temp_3.
+DSP Report: operator u_FIR_Interpolation/product_6 is absorbed into DSP u_FIR_Interpolation/add_temp_3.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_4, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_4 is absorbed into DSP u_FIR_Interpolation/add_temp_4.
+DSP Report: operator u_FIR_Interpolation/product_5 is absorbed into DSP u_FIR_Interpolation/add_temp_4.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_5, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_5 is absorbed into DSP u_FIR_Interpolation/add_temp_5.
+DSP Report: operator u_FIR_Interpolation/product_4 is absorbed into DSP u_FIR_Interpolation/add_temp_5.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_6, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_6 is absorbed into DSP u_FIR_Interpolation/add_temp_6.
+DSP Report: operator u_FIR_Interpolation/product_3 is absorbed into DSP u_FIR_Interpolation/add_temp_6.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_7, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_7 is absorbed into DSP u_FIR_Interpolation/add_temp_7.
+DSP Report: operator u_FIR_Interpolation/product_2 is absorbed into DSP u_FIR_Interpolation/add_temp_7.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_8, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_8 is absorbed into DSP u_FIR_Interpolation/add_temp_8.
+DSP Report: operator u_FIR_Interpolation/product_1 is absorbed into DSP u_FIR_Interpolation/add_temp_8.
+DSP Report: Generating DSP u_FIR_Interpolation/add_temp_9, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation/add_temp_9 is absorbed into DSP u_FIR_Interpolation/add_temp_9.
+DSP Report: operator u_FIR_Interpolation/product is absorbed into DSP u_FIR_Interpolation/add_temp_9.
+DSP Report: Generating DSP u_FIR_Interpolation1/product_10, operation Mode is: A*B.
+DSP Report: operator u_FIR_Interpolation1/product_10 is absorbed into DSP u_FIR_Interpolation1/product_10.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp is absorbed into DSP u_FIR_Interpolation1/add_temp.
+DSP Report: operator u_FIR_Interpolation1/product_9 is absorbed into DSP u_FIR_Interpolation1/add_temp.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_1, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_1 is absorbed into DSP u_FIR_Interpolation1/add_temp_1.
+DSP Report: operator u_FIR_Interpolation1/product_8 is absorbed into DSP u_FIR_Interpolation1/add_temp_1.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_2, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_2 is absorbed into DSP u_FIR_Interpolation1/add_temp_2.
+DSP Report: operator u_FIR_Interpolation1/product_7 is absorbed into DSP u_FIR_Interpolation1/add_temp_2.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_3, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_3 is absorbed into DSP u_FIR_Interpolation1/add_temp_3.
+DSP Report: operator u_FIR_Interpolation1/product_6 is absorbed into DSP u_FIR_Interpolation1/add_temp_3.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_4, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_4 is absorbed into DSP u_FIR_Interpolation1/add_temp_4.
+DSP Report: operator u_FIR_Interpolation1/product_5 is absorbed into DSP u_FIR_Interpolation1/add_temp_4.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_5, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_5 is absorbed into DSP u_FIR_Interpolation1/add_temp_5.
+DSP Report: operator u_FIR_Interpolation1/product_4 is absorbed into DSP u_FIR_Interpolation1/add_temp_5.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_6, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_6 is absorbed into DSP u_FIR_Interpolation1/add_temp_6.
+DSP Report: operator u_FIR_Interpolation1/product_3 is absorbed into DSP u_FIR_Interpolation1/add_temp_6.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_7, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_7 is absorbed into DSP u_FIR_Interpolation1/add_temp_7.
+DSP Report: operator u_FIR_Interpolation1/product_2 is absorbed into DSP u_FIR_Interpolation1/add_temp_7.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_8, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_8 is absorbed into DSP u_FIR_Interpolation1/add_temp_8.
+DSP Report: operator u_FIR_Interpolation1/product_1 is absorbed into DSP u_FIR_Interpolation1/add_temp_8.
+DSP Report: Generating DSP u_FIR_Interpolation1/add_temp_9, operation Mode is: PCIN+A*B.
+DSP Report: operator u_FIR_Interpolation1/add_temp_9 is absorbed into DSP u_FIR_Interpolation1/add_temp_9.
+DSP Report: operator u_FIR_Interpolation1/product is absorbed into DSP u_FIR_Interpolation1/add_temp_9.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:50 ; elapsed = 00:06:04 . Memory (MB): peak = 5516.625 ; gain = 3370.031 ; free physical = 7576 ; free virtual = 17189
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++---------------------+-----------------------------------------------+---------------+----------------+
+|Module Name          | RTL Object                                    | Depth x Width | Implemented As | 
++---------------------+-----------------------------------------------+---------------+----------------+
+|addresses            | nc[0,0]                                       | 256x6         | LUT            | 
+|addresses            | nc[0,1]                                       | 256x14        | LUT            | 
+|addresses            | nc[0,2]                                       | 256x14        | LUT            | 
+|Cosine_HDL_Optimized | Look_Up_Table1_data[0]                        | 32x16         | LUT            | 
+|Cosine_HDL_Optimized | Look_Up_Table_data[0]                         | 32x16         | LUT            | 
+|bit_mapping          | u_Cosine_HDL_Optimized/Look_Up_Table_data[0]  | 32x16         | LUT            | 
+|bit_mapping          | u_Cosine_HDL_Optimized/Look_Up_Table1_data[0] | 32x16         | LUT            | 
++---------------------+-----------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tran_dut    | u_interleaver_dut/u_Single_Port_RAM/ram_reg  | 32 K x 1(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 1      | 
+|tran_dut    | u_interleaver_dut/u_Single_Port_RAM1/ram_reg | 32 K x 1(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 1      | 
++------------+----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping	Report (see note below)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bit_mapping        | A*B         | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bit_mapping        | A*B         | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | A*B         | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 12     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 13     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 14     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 16     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 16     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 14     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 13     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 12     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 11     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation  | PCIN+A*B    | 25     | 10     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | A*B         | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 12     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 13     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 14     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 16     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 16     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 14     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 13     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 12     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 11     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation1 | PCIN+A*B    | 25     | 10     | -      | -      | 45     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:06:00 ; elapsed = 00:06:14 . Memory (MB): peak = 5516.625 ; gain = 3370.031 ; free physical = 7323 ; free virtual = 17134
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tran_dut    | u_interleaver_dut/u_Single_Port_RAM/ram_reg  | 32 K x 1(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 1      | 
+|tran_dut    | u_interleaver_dut/u_Single_Port_RAM1/ram_reg | 32 K x 1(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 1      | 
++------------+----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance i_0/u_interleaver_dut/u_Single_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/u_interleaver_dut/u_Single_Port_RAM1/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:06:56 ; elapsed = 00:07:13 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7202 ; free virtual = 17030
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_interleaver_dut/u_Single_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_interleaver_dut/u_Single_Port_RAM1/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:45 ; elapsed = 00:08:04 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7106 ; free virtual = 17077
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:46 ; elapsed = 00:08:05 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7095 ; free virtual = 17067
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:19 ; elapsed = 00:08:39 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7070 ; free virtual = 17042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:08:20 ; elapsed = 00:08:40 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7069 ; free virtual = 17041
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:43 ; elapsed = 00:09:03 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7073 ; free virtual = 17045
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:08:44 ; elapsed = 00:09:04 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7077 ; free virtual = 17048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+-------+
+|      |Cell     |Count  |
++------+---------+-------+
+|1     |CARRY4   |    212|
+|2     |DSP48E1  |     24|
+|3     |LUT1     |    209|
+|4     |LUT2     |  32582|
+|5     |LUT3     |  34284|
+|6     |LUT4     |    163|
+|7     |LUT5     |  34404|
+|8     |LUT6     | 312724|
+|9     |MUXF7    |  34686|
+|10    |MUXF8    |  17210|
+|11    |RAMB36E1 |      2|
+|12    |FDCE     |  17280|
+|13    |FDPE     |     14|
+|14    |FDRE     |  16425|
++------+---------+-------+
+
+Report Instance Areas: 
++------+---------------------------+--------------------------+-------+
+|      |Instance                   |Module                    |Cells  |
++------+---------------------------+--------------------------+-------+
+|1     |top                        |                          | 500219|
+|2     |  u_bb_shaping1            |bb_shaping1               |    942|
+|3     |    u_FIR_Interpolation    |FIR_Interpolation         |    471|
+|4     |    u_FIR_Interpolation1   |FIR_Interpolation1        |    471|
+|5     |  u_bch_encoder            |bch_encoder               |   1326|
+|6     |    u_p2s                  |p2s                       |    706|
+|7     |    u_registers            |registers                 |    429|
+|8     |  u_bit_mapping            |bit_mapping               |    338|
+|9     |    u_Cosine_HDL_Optimized |Cosine_HDL_Optimized      |    194|
+|10    |  u_interleaver_dut        |interleaver_dut           |    161|
+|11    |    u_Single_Port_RAM      |SinglePortRAM_singlebit   |     47|
+|12    |    u_Single_Port_RAM1     |SinglePortRAM_singlebit_0 |     63|
+|13    |  u_ldpc_encoder           |ldpc_encoder              | 497260|
+|14    |    u_address_calculator   |address_calculator        | 417094|
+|15    |      u_addresses          |addresses                 | 417026|
+|16    |    u_p2s                  |p2s_block                 |  63787|
+|17    |  u_stream_adapt           |stream_adapt              |     72|
+|18    |  u_tran_dut_tc            |tran_dut_tc               |     29|
++------+---------------------------+--------------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:44 ; elapsed = 00:09:04 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 7077 ; free virtual = 17048
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:08:48 ; elapsed = 00:09:05 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 10977 ; free virtual = 20949
+Synthesis Optimization Complete : Time (s): cpu = 00:08:48 ; elapsed = 00:09:05 . Memory (MB): peak = 5524.629 ; gain = 3378.035 ; free physical = 11006 ; free virtual = 20949
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 5524.629 ; gain = 0.000 ; free physical = 10581 ; free virtual = 20525
+INFO: [Netlist 29-17] Analyzing 52134 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'tran_dut' is not ideal for floorplanning, since the cellview 'addresses' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 5568.730 ; gain = 0.000 ; free physical = 10474 ; free virtual = 20418
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:09:53 ; elapsed = 00:10:04 . Memory (MB): peak = 5568.730 ; gain = 3422.230 ; free physical = 10941 ; free virtual = 20885
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/tran_dut_vivado.runs/synth_1/tran_dut.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:20 ; elapsed = 00:00:56 . Memory (MB): peak = 5664.777 ; gain = 96.047 ; free physical = 10164 ; free virtual = 20145
+INFO: [runtcl-4] Executing : report_utilization -file tran_dut_utilization_synth.rpt -pb tran_dut_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 09:34:07 2021...

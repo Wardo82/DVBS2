@@ -1,0 +1,118 @@
+Flow report for stream_adapt_quartus
+Fri Feb  5 00:37:21 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Fri Feb  5 00:37:21 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; stream_adapt_quartus                        ;
+; Top-level Entity Name           ; stream_adapt                                ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA4U23C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 25 / 15,880 ( < 1 % )                       ;
+; Total registers                 ; 33                                          ;
+; Total pins                      ; 24 / 314 ( 8 % )                            ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 2,764,800 ( 0 % )                       ;
+; Total DSP Blocks                ; 0 / 84 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 5 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Flow Settings                            ;
++-------------------+----------------------+
+; Option            ; Setting              ;
++-------------------+----------------------+
+; Start date & time ; 02/05/2021 00:36:17  ;
+; Main task         ; Compilation          ;
+; Revision Name     ; stream_adapt_quartus ;
++-------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                          ;
++-----------------------+---------------------------------+----------------------+-------------+------------+
+; Assignment Name       ; Value                           ; Default Value        ; Entity Name ; Section Id ;
++-----------------------+---------------------------------+----------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID ; 215866198912885.161248177713120 ; --                   ; --          ; --         ;
+; TOP_LEVEL_ENTITY      ; stream_adapt                    ; stream_adapt_quartus ; --          ; --         ;
++-----------------------+---------------------------------+----------------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 520 MB              ; 00:00:22                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 676 MB              ; 00:00:03                           ;
+; Fitter               ; 00:00:28     ; 1.0                     ; 1604 MB             ; 00:00:32                           ;
+; Total                ; 00:00:57     ; --                      ; --                  ; 00:00:57                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; Wardo            ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; Timing Analyzer      ; Wardo            ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; Fitter               ; Wardo            ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off stream_adapt_quartus -c stream_adapt_quartus
+quartus_sta stream_adapt_quartus -c stream_adapt_quartus --post_map
+quartus_fit --read_settings_files=on --write_settings_files=off stream_adapt_quartus -c stream_adapt_quartus
+
+
+

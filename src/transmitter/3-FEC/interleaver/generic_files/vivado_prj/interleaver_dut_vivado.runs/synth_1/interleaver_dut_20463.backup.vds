@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 06:38:36 2021
+# Process ID: 20463
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.runs/synth_1
+# Command line: vivado -log interleaver_dut.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source interleaver_dut.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.runs/synth_1/interleaver_dut.vds
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source interleaver_dut.tcl -notrace
+Command: synth_design -top interleaver_dut -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20468
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2149.566 ; gain = 0.000 ; free physical = 15014 ; free virtual = 23130
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'interleaver_dut' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver_dut.vhd:55]
+INFO: [Synth 8-3491] module 'interleaver' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver.vhd:23' bound to instance 'u_interleaver' of component 'interleaver' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver_dut.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'interleaver' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'interleaver' (1#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'interleaver_dut' (2#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/hdlsrc/interleaver_model/interleaver_dut.vhd:55]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:39:26 ; elapsed = 00:39:42 . Memory (MB): peak = 4309.660 ; gain = 2160.094 ; free physical = 12166 ; free virtual = 20611
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:39:44 ; elapsed = 00:40:01 . Memory (MB): peak = 4309.660 ; gain = 2160.094 ; free physical = 12694 ; free virtual = 21139
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:39:44 ; elapsed = 00:40:01 . Memory (MB): peak = 4329.586 ; gain = 2180.020 ; free physical = 12692 ; free virtual = 21137
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Synth 8-802] inferred FSM for state register 'moore_state_reg_reg' in module 'interleaver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'moore_state_reg_reg' using encoding 'sequential' in module 'interleaver'
+1
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 0 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 08:21:21 2021...

@@ -1,0 +1,13 @@
+SLStudio.Utils.RemoveHighlighting(get_param('Copy_of_interleaver_model', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_Copy_of_interleaver_model', 'handle'));
+annotate_port('gm_Copy_of_interleaver_model/interleaver_dut/Single Port RAM', 0, 1, '');
+annotate_port('gm_Copy_of_interleaver_model/interleaver_dut/Single Port RAM', 1, 1, '');
+annotate_port('Copy_of_interleaver_model/interleaver_dut/Single Port RAM', 1, 1, '');
+annotate_port('gm_Copy_of_interleaver_model/interleaver_dut/Single Port RAM', 1, 1, '');
+annotate_port('Copy_of_interleaver_model/interleaver_dut/Single Port RAM', 1, 1, '');
+annotate_port('gm_Copy_of_interleaver_model/interleaver_dut/Single Port RAM1', 1, 1, '');
+annotate_port('Copy_of_interleaver_model/interleaver_dut/Single Port RAM1', 1, 1, '');
+annotate_port('gm_Copy_of_interleaver_model/interleaver_dut/Single Port RAM1', 1, 1, '');
+annotate_port('Copy_of_interleaver_model/interleaver_dut/Single Port RAM1', 1, 1, '');
+annotate_port('gm_Copy_of_interleaver_model/interleaver_dut/Bit Concat', 0, 1, '');
+annotate_port('Copy_of_interleaver_model/interleaver_dut/Single Port RAM', 0, 1, '');

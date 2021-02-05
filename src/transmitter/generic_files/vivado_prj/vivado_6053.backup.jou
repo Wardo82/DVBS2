@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 09:22:45 2021
+# Process ID: 6053
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj
+# Command line: vivado -mode batch -notrace -source tran_dut_Xilinx_Vivado_run.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/vivado.log
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/generic_files/vivado_prj/vivado.jou
+#-----------------------------------------------------------
+source tran_dut_Xilinx_Vivado_run.tcl -notrace

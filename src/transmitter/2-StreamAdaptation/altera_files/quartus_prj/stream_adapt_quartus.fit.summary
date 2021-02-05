@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Feb  5 00:37:21 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : stream_adapt_quartus
+Top-level Entity Name : stream_adapt
+Family : Cyclone V
+Device : 5CSEMA4U23C6
+Timing Models : Final
+Logic utilization (in ALMs) : 25 / 15,880 ( < 1 % )
+Total registers : 33
+Total pins : 24 / 314 ( 8 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 2,764,800 ( 0 % )
+Total RAM Blocks : 0 / 270 ( 0 % )
+Total DSP Blocks : 0 / 84 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 5 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

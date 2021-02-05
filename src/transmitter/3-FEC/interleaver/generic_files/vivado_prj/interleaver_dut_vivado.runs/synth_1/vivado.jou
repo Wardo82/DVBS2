@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Fri Feb  5 08:22:56 2021
+# Process ID: 26052
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.runs/synth_1
+# Command line: vivado -log interleaver_dut.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source interleaver_dut.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.runs/synth_1/interleaver_dut.vds
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/interleaver/generic_files/vivado_prj/interleaver_dut_vivado.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source interleaver_dut.tcl -notrace
