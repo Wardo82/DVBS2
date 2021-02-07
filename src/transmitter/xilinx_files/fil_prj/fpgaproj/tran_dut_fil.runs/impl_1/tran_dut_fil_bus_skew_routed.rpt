@@ -1,0 +1,828 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Feb  7 18:34:49 2021
+| Host         : Jarvis running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file tran_dut_fil_bus_skew_routed.rpt -pb tran_dut_fil_bus_skew_routed.pb -rpx tran_dut_fil_bus_skew_routed.rpx
+| Design       : tran_dut_fil
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   8         [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             15.152       1.053     14.099
+2   10        [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             15.152       0.990     14.162
+3   12        [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             15.152       1.042     14.110
+4   14        [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             15.152       1.012     14.140
+5   16        [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             15.152       0.958     14.194
+6   18        [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             15.152       0.939     14.213
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 15.152
+Requirement: 15.152ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+TCK                   clk_out1_clk_wiz_0    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         1.053     14.099
+
+
+Slack (MET) :             14.099ns  (requirement - actual skew)
+  Endpoint Source:        u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Endpoint Destination:   u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Reference Source:       u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Reference Destination:  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            15.152ns
+  Endpoint Relative Delay:    6.736ns
+  Reference Relative Delay:   4.822ns
+  Relative CRPR:              1.063ns
+  Uncertainty:                0.202ns
+  Actual Bus Skew:            1.053ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           2.023     2.023    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101     2.124 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.726     3.850    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X58Y44         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y44         FDRE (Prop_fdre_C_Q)         0.478     4.328 r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.620     4.948    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
+    SLICE_X57Y44         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420     1.420 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.582    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.438    -4.856 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.691    -3.165    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.074 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.551    -1.522    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X57Y44         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000    -1.522    
+    SLICE_X57Y44         FDRE (Setup_fdre_C_D)       -0.266    -1.788    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           4.948    
+                         clock arrival                         -1.788    
+  -------------------------------------------------------------------
+                         relative delay                         6.736    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           1.731     1.731    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091     1.822 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.551     3.373    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X58Y46         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y46         FDRE (Prop_fdre_C_Q)         0.418     3.791 r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.376     4.168    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[6]
+    SLICE_X58Y47         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.775    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.343    -4.568 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.855    -2.713    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.612 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.727    -0.885    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X58Y47         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000    -0.885    
+    SLICE_X58Y47         FDRE (Hold_fdre_C_D)         0.230    -0.655    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
+  -------------------------------------------------------------------
+                         data arrival                           4.168    
+                         clock arrival                         -0.655    
+  -------------------------------------------------------------------
+                         relative delay                         4.822    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 15.152
+Requirement: 15.152ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_wiz_0    TCK                   u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                                                                            u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         0.990     14.162
+
+
+Slack (MET) :             14.162ns  (requirement - actual skew)
+  Endpoint Source:        u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Endpoint Destination:   u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Reference Source:       u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Reference Destination:  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            15.152ns
+  Endpoint Relative Delay:   -2.932ns
+  Reference Relative Delay:  -4.807ns
+  Relative CRPR:              1.086ns
+  Uncertainty:                0.202ns
+  Actual Bus Skew:            0.990ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.775    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.343    -4.568 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.855    -2.713    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.612 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.651    -0.961    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X50Y40         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y40         FDRE (Prop_fdre_C_Q)         0.478    -0.483 r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]/Q
+                         net (fo=1, routed)           0.585     0.102    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[7]
+    SLICE_X53Y43         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           1.731     1.731    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091     1.822 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.479     3.301    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X53Y43         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
+                         clock pessimism              0.000     3.301    
+    SLICE_X53Y43         FDRE (Setup_fdre_C_D)       -0.267     3.034    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
+  -------------------------------------------------------------------
+                         data arrival                           0.102    
+                         clock arrival                          3.034    
+  -------------------------------------------------------------------
+                         relative delay                        -2.932    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420     1.420 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.582    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.438    -4.856 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.691    -3.165    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.074 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.477    -1.596    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X50Y40         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y40         FDRE (Prop_fdre_C_Q)         0.418    -1.178 r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.379    -0.800    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[6]
+    SLICE_X50Y44         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           2.023     2.023    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101     2.124 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.653     3.777    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X50Y44         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000     3.777    
+    SLICE_X50Y44         FDRE (Hold_fdre_C_D)         0.230     4.007    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
+  -------------------------------------------------------------------
+                         data arrival                          -0.800    
+                         clock arrival                          4.007    
+  -------------------------------------------------------------------
+                         relative delay                        -4.807    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 15.152
+Requirement: 15.152ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_wiz_0    TCK                   u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+                                                                            u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         1.042     14.110
+
+
+Slack (MET) :             14.110ns  (requirement - actual skew)
+  Endpoint Source:        u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Endpoint Destination:   u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Reference Source:       u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Reference Destination:  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            15.152ns
+  Endpoint Relative Delay:   -2.976ns
+  Reference Relative Delay:  -4.845ns
+  Relative CRPR:              1.028ns
+  Uncertainty:                0.202ns
+  Actual Bus Skew:            1.042ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.775    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.343    -4.568 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.855    -2.713    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.612 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.727    -0.885    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X59Y48         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y48         FDRE (Prop_fdre_C_Q)         0.419    -0.466 r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]/Q
+                         net (fo=1, routed)           0.601     0.136    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[9]
+    SLICE_X61Y48         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           1.731     1.731    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091     1.822 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.554     3.376    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X61Y48         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
+                         clock pessimism              0.000     3.376    
+    SLICE_X61Y48         FDRE (Setup_fdre_C_D)       -0.265     3.111    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
+  -------------------------------------------------------------------
+                         data arrival                           0.136    
+                         clock arrival                          3.111    
+  -------------------------------------------------------------------
+                         relative delay                        -2.976    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420     1.420 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.582    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.438    -4.856 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.691    -3.165    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.074 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.551    -1.522    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X57Y45         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y45         FDRE (Prop_fdre_C_Q)         0.367    -1.155 r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.391    -0.765    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[2]
+    SLICE_X58Y45         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           2.023     2.023    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101     2.124 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.726     3.850    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X58Y45         FDRE                                         r  u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     3.850    
+    SLICE_X58Y45         FDRE (Hold_fdre_C_D)         0.230     4.080    u_jtag_mac/u_post_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+  -------------------------------------------------------------------
+                         data arrival                          -0.765    
+                         clock arrival                          4.080    
+  -------------------------------------------------------------------
+                         relative delay                        -4.845    
+
+
+
+Id: 4
+set_bus_skew -from [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 15.152
+Requirement: 15.152ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+TCK                   clk_out1_clk_wiz_0    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
+                                                                                                            Slow         1.012     14.140
+
+
+Slack (MET) :             14.140ns  (requirement - actual skew)
+  Endpoint Source:        u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Endpoint Destination:   u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Reference Source:       u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Reference Destination:  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            15.152ns
+  Endpoint Relative Delay:    6.707ns
+  Reference Relative Delay:   4.835ns
+  Relative CRPR:              1.061ns
+  Uncertainty:                0.202ns
+  Actual Bus Skew:            1.012ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           2.023     2.023    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101     2.124 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.652     3.776    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X50Y41         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y41         FDRE (Prop_fdre_C_Q)         0.478     4.254 r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.601     4.855    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
+    SLICE_X49Y41         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420     1.420 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.582    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.438    -4.856 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.691    -3.165    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.074 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.489    -1.584    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X49Y41         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000    -1.584    
+    SLICE_X49Y41         FDRE (Setup_fdre_C_D)       -0.267    -1.851    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           4.855    
+                         clock arrival                         -1.851    
+  -------------------------------------------------------------------
+                         relative delay                         6.707    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           1.731     1.731    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091     1.822 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.478     3.300    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X51Y42         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y42         FDRE (Prop_fdre_C_Q)         0.367     3.667 r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]/Q
+                         net (fo=1, routed)           0.388     4.056    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[10]
+    SLICE_X49Y42         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.775    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.343    -4.568 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.855    -2.713    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.612 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.663    -0.949    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X49Y42         FDRE                                         r  u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/C
+                         clock pessimism              0.000    -0.949    
+    SLICE_X49Y42         FDRE (Hold_fdre_C_D)         0.169    -0.780    u_jtag_mac/u_pre_chif_fifo/u_jtag_mac_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]
+  -------------------------------------------------------------------
+                         data arrival                           4.056    
+                         clock arrival                         -0.780    
+  -------------------------------------------------------------------
+                         relative delay                         4.835    
+
+
+
+Id: 5
+set_bus_skew -from [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 15.152
+Requirement: 15.152ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_wiz_0    TCK                   u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.958     14.194
+
+
+Slack (MET) :             14.194ns  (requirement - actual skew)
+  Endpoint Source:        u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Endpoint Destination:   u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Reference Source:       u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Reference Destination:  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            15.152ns
+  Endpoint Relative Delay:   -2.978ns
+  Reference Relative Delay:  -4.797ns
+  Relative CRPR:              1.063ns
+  Uncertainty:                0.202ns
+  Actual Bus Skew:            0.958ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.775    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.343    -4.568 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.855    -2.713    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.612 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.728    -0.884    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X71Y40         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X71Y40         FDRE (Prop_fdre_C_Q)         0.419    -0.465 r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.595     0.131    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[1]
+    SLICE_X72Y40         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           1.731     1.731    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091     1.822 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.554     3.376    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X72Y40         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     3.376    
+    SLICE_X72Y40         FDRE (Setup_fdre_C_D)       -0.268     3.108    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  -------------------------------------------------------------------
+                         data arrival                           0.131    
+                         clock arrival                          3.108    
+  -------------------------------------------------------------------
+                         relative delay                        -2.978    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420     1.420 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.582    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.438    -4.856 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.691    -3.165    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.074 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.554    -1.519    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X71Y41         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X71Y41         FDRE (Prop_fdre_C_Q)         0.367    -1.152 r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.378    -0.774    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[2]
+    SLICE_X72Y41         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           2.023     2.023    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101     2.124 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.730     3.854    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X72Y41         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     3.854    
+    SLICE_X72Y41         FDRE (Hold_fdre_C_D)         0.169     4.023    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+  -------------------------------------------------------------------
+                         data arrival                          -0.774    
+                         clock arrival                          4.023    
+  -------------------------------------------------------------------
+                         relative delay                        -4.797    
+
+
+
+Id: 6
+set_bus_skew -from [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 15.152
+Requirement: 15.152ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+TCK                   clk_out1_clk_wiz_0    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.939     14.213
+
+
+Slack (MET) :             14.213ns  (requirement - actual skew)
+  Endpoint Source:        u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Endpoint Destination:   u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Reference Source:       u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by TCK)
+  Reference Destination:  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            15.152ns
+  Endpoint Relative Delay:    6.664ns
+  Reference Relative Delay:   4.838ns
+  Relative CRPR:              1.088ns
+  Uncertainty:                0.202ns
+  Actual Bus Skew:            0.939ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           2.023     2.023    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101     2.124 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.730     3.854    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X75Y41         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X75Y41         FDRE (Prop_fdre_C_Q)         0.456     4.310 r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.739     5.049    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[0]
+    SLICE_X74Y40         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420     1.420 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.582    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.438    -4.856 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.691    -3.165    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.074 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.554    -1.519    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X74Y40         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000    -1.519    
+    SLICE_X74Y40         FDRE (Setup_fdre_C_D)       -0.095    -1.614    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+  -------------------------------------------------------------------
+                         data arrival                           5.049    
+                         clock arrival                         -1.614    
+  -------------------------------------------------------------------
+                         relative delay                         6.664    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock TCK rise edge)        0.000     0.000 r  
+    BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  u_BSCANE2/TCK
+                         net (fo=1, routed)           1.731     1.731    TCK
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091     1.822 r  TCK_BUFG_inst/O
+                         net (fo=505, routed)         1.555     3.377    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X75Y41         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X75Y41         FDRE (Prop_fdre_C_Q)         0.367     3.744 r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.380     4.125    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[2]
+    SLICE_X74Y39         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz_0/inst/clk_in1
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  u_clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.285     2.775    u_clk_wiz_0/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.343    -4.568 r  u_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.855    -2.713    u_clk_wiz_0/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.612 r  u_clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=2737, routed)        1.729    -0.883    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X74Y39         FDRE                                         r  u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000    -0.883    
+    SLICE_X74Y39         FDRE (Hold_fdre_C_D)         0.169    -0.714    u_jtag_mac/u_simcycle_fifo/u_simcycle_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+  -------------------------------------------------------------------
+                         data arrival                           4.125    
+                         clock arrival                         -0.714    
+  -------------------------------------------------------------------
+                         relative delay                         4.838    
+
+
+
