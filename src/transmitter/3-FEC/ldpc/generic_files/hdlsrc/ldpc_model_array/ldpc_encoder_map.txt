@@ -1,0 +1,5 @@
+ --> ldpc_encoder_pac
+ldpc_model_array/ldpc_encoder/address_calculator/addresses --> addresses
+ldpc_model_array/ldpc_encoder/address_calculator --> address_calculator
+ldpc_model_array/ldpc_encoder/fsm_select_xor --> fsm_select_xor
+ldpc_model_array/ldpc_encoder --> ldpc_encoder

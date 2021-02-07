@@ -1,0 +1,13 @@
+SLStudio.Utils.RemoveHighlighting(get_param('ldpc_model_array', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_ldpc_model_array', 'handle'));
+annotate_port('gm_ldpc_model_array/ldpc_encoder/address_calculator', 0, 1, '');
+annotate_port('gm_ldpc_model_array/ldpc_encoder/address_calculator/bit_counter1', 0, 1, '');
+annotate_port('gm_ldpc_model_array/ldpc_encoder/address_calculator/slot_counter', 1, 2, '');
+annotate_port('gm_ldpc_model_array/ldpc_encoder/address_calculator/bit_count', 0, 1, '');
+annotate_port('gm_ldpc_model_array/ldpc_encoder/fsm_select_xor/fsm_select_xor', 1, 1, '');
+annotate_port('gm_ldpc_model_array/ldpc_encoder/fsm_select_xor/fsm_select_xor', 1, 1, '');
+annotate_port('ldpc_model_array/ldpc_encoder/fsm_select_xor', 1, 1, '');
+annotate_port('gm_ldpc_model_array/ldpc_encoder/address_calculator/addresses/addresses', 1, 1, '');
+annotate_port('ldpc_model_array/ldpc_encoder/address_calculator/addresses/addresses', 1, 1, '');
+annotate_port('gm_ldpc_model_array/ldpc_encoder/address_calculator/addresses/addresses1', 1, 1, '');
+annotate_port('ldpc_model_array/ldpc_encoder/address_calculator/addresses', 1, 1, '');

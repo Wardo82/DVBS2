@@ -1,0 +1,445 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Sun Feb  7 12:51:04 2021
+# Process ID: 4618
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj
+# Command line: vivado -mode batch -notrace -source ldpc_encoder_Xilinx_Vivado_run.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/vivado.log
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/vivado.jou
+#-----------------------------------------------------------
+source ldpc_encoder_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2020.1.1 project /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.srcs/sources_1'.
+### Running Synthesis in Xilinx Vivado 2020.1.1 ...
+[Sun Feb  7 12:51:14 2021] Launched synth_1...
+Run output will be captured here: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/runme.log
+[Sun Feb  7 12:51:15 2021] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log ldpc_encoder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ldpc_encoder.tcl
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source ldpc_encoder.tcl -notrace
+Command: synth_design -top ldpc_encoder -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4876
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2149.566 ; gain = 0.000 ; free physical = 13419 ; free virtual = 21809
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ldpc_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:58]
+INFO: [Synth 8-3491] module 'address_calculator' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:23' bound to instance 'u_address_calculator' of component 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'addresses' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:23' bound to instance 'u_addresses' of component 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'addresses' (1#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'address_calculator' (2#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'select_address' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/select_address.vhd:23' bound to instance 'u_select_address' of component 'select_address' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'select_address' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/select_address.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'select_address' (3#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/select_address.vhd:41]
+INFO: [Synth 8-3491] module 'ram_bank' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:22' bound to instance 'u_ram_bank' of component 'ram_bank' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:235]
+INFO: [Synth 8-638] synthesizing module 'ram_bank' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:56]
+INFO: [Synth 8-3491] module 'ram_repeat' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat.vhd:22' bound to instance 'u_ram_repeat' of component 'ram_repeat' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:38]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DualPortRAM_singlebit' (4#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat' (5#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat1' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat1.vhd:22' bound to instance 'u_ram_repeat1' of component 'ram_repeat1' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:253]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat1' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat1.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat1.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat1' (6#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat1.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat2' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat2.vhd:22' bound to instance 'u_ram_repeat2' of component 'ram_repeat2' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat2' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat2.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat2.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat2' (7#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat2.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat3' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat3.vhd:22' bound to instance 'u_ram_repeat3' of component 'ram_repeat3' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat3' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat3.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat3.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat3' (8#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat3.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat4' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat4.vhd:22' bound to instance 'u_ram_repeat4' of component 'ram_repeat4' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat4' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat4.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat4.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat4' (9#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat4.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat5' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat5.vhd:22' bound to instance 'u_ram_repeat5' of component 'ram_repeat5' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat5' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat5.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat5.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat5' (10#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat5.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat6' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat6.vhd:22' bound to instance 'u_ram_repeat6' of component 'ram_repeat6' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:303]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat6' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat6.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat6.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat6' (11#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat6.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat7' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat7.vhd:22' bound to instance 'u_ram_repeat7' of component 'ram_repeat7' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:313]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat7' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat7.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat7.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat7' (12#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat7.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat8' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat8.vhd:22' bound to instance 'u_ram_repeat8' of component 'ram_repeat8' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:323]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat8' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat8.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat8.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat8' (13#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat8.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat9' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat9.vhd:22' bound to instance 'u_ram_repeat9' of component 'ram_repeat9' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:333]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat9' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat9.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat9.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat9' (14#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat9.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat10' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat10.vhd:22' bound to instance 'u_ram_repeat10' of component 'ram_repeat10' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:343]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat10' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat10.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat10.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat10' (15#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat10.vhd:34]
+INFO: [Synth 8-3491] module 'ram_repeat11' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat11.vhd:22' bound to instance 'u_ram_repeat11' of component 'ram_repeat11' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:353]
+INFO: [Synth 8-638] synthesizing module 'ram_repeat11' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat11.vhd:34]
+	Parameter AddrWidth bound to: 14 - type: integer 
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'DualPortRAM_singlebit' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/DualPortRAM_singlebit.vhd:22' bound to instance 'u_Dual_Port_RAM' of component 'DualPortRAM_singlebit' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat11.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ram_repeat11' (16#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_repeat11.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'ram_bank' (17#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ram_bank.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder' (18#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2149.566 ; gain = 0.000 ; free physical = 13497 ; free virtual = 21888
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2149.566 ; gain = 0.000 ; free physical = 13499 ; free virtual = 21890
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2157.477 ; gain = 7.910 ; free physical = 13499 ; free virtual = 21890
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2157.477 ; gain = 7.910 ; free physical = 13398 ; free virtual = 21791
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   14 Bit       Adders := 12    
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 12    
+	  13 Input      1 Bit         XORs := 1     
++---Registers : 
+	               14 Bit    Registers := 12    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 51    
++---RAMs : 
+	              16K Bit	(16384 X 1 bit)          RAMs := 12    
++---Muxes : 
+	  16 Input   15 Bit        Muxes := 9     
+	   2 Input   14 Bit        Muxes := 33    
+	  16 Input   14 Bit        Muxes := 9     
+	   2 Input    9 Bit        Muxes := 2     
+	 135 Input    4 Bit        Muxes := 18    
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13209 ; free virtual = 21606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++-------------+-----------------------------------------------+---------------+----------------+
+|Module Name  | RTL Object                                    | Depth x Width | Implemented As | 
++-------------+-----------------------------------------------+---------------+----------------+
+|addresses    | tmp_110[0,0]                                  | 256x6         | LUT            | 
+|addresses    | tmp_114[0,1]                                  | 256x14        | LUT            | 
+|addresses    | tmp_118[0,2]                                  | 256x14        | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/tmp_110[0,0] | 256x6         | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/tmp_114[0,1] | 256x14        | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/tmp_118[0,2] | 256x14        | LUT            | 
++-------------+-----------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++-------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object                                        | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ldpc_encoder | u_ram_bank/u_ram_repeat/u_Dual_Port_RAM/ram_reg   | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat1/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat2/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat3/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat4/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat5/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat6/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat7/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat8/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat9/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat10/u_Dual_Port_RAM/ram_reg | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat11/u_Dual_Port_RAM/ram_reg | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++-------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13212 ; free virtual = 21609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++-------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object                                        | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ldpc_encoder | u_ram_bank/u_ram_repeat/u_Dual_Port_RAM/ram_reg   | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat1/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat2/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat3/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat4/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat5/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat6/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat7/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat8/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat9/u_Dual_Port_RAM/ram_reg  | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat10/u_Dual_Port_RAM/ram_reg | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|ldpc_encoder | u_ram_bank/u_ram_repeat11/u_Dual_Port_RAM/ram_reg | 16 K x 1(READ_FIRST)   | W |   | 16 K x 1(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++-------------+---------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat1/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat2/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat3/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat4/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat5/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat6/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat7/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat8/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat9/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat10/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ram_bank/u_ram_repeat11/u_Dual_Port_RAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   113|
+|2     |LUT1     |    51|
+|3     |LUT2     |    61|
+|4     |LUT3     |    26|
+|5     |LUT4     |   228|
+|6     |LUT5     |   186|
+|7     |LUT6     |   302|
+|8     |MUXF7    |    10|
+|9     |RAMB18E1 |    12|
+|10    |FDRE     |   226|
+|11    |FDSE     |     4|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------------+------+
+|      |Instance               |Module                   |Cells |
++------+-----------------------+-------------------------+------+
+|1     |top                    |                         |  1219|
+|2     |  u_address_calculator |address_calculator       |   920|
+|3     |    u_addresses        |addresses                |   853|
+|4     |  u_ram_bank           |ram_bank                 |   269|
+|5     |    u_ram_repeat       |ram_repeat               |    36|
+|6     |      u_Dual_Port_RAM  |DualPortRAM_singlebit_10 |    19|
+|7     |    u_ram_repeat1      |ram_repeat1              |    21|
+|8     |      u_Dual_Port_RAM  |DualPortRAM_singlebit_9  |     7|
+|9     |    u_ram_repeat10     |ram_repeat10             |    19|
+|10    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_8  |     5|
+|11    |    u_ram_repeat11     |ram_repeat11             |    22|
+|12    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_7  |     8|
+|13    |    u_ram_repeat2      |ram_repeat2              |    21|
+|14    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_6  |     7|
+|15    |    u_ram_repeat3      |ram_repeat3              |    35|
+|16    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_5  |    21|
+|17    |    u_ram_repeat4      |ram_repeat4              |    20|
+|18    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_4  |     6|
+|19    |    u_ram_repeat5      |ram_repeat5              |    19|
+|20    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_3  |     5|
+|21    |    u_ram_repeat6      |ram_repeat6              |    19|
+|22    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_2  |     5|
+|23    |    u_ram_repeat7      |ram_repeat7              |    19|
+|24    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_1  |     5|
+|25    |    u_ram_repeat8      |ram_repeat8              |    19|
+|26    |      u_Dual_Port_RAM  |DualPortRAM_singlebit_0  |     5|
+|27    |    u_ram_repeat9      |ram_repeat9              |    19|
+|28    |      u_Dual_Port_RAM  |DualPortRAM_singlebit    |     5|
++------+-----------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13228 ; free virtual = 21625
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.312 ; gain = 54.746 ; free physical = 13230 ; free virtual = 21627
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2204.320 ; gain = 54.746 ; free physical = 13230 ; free virtual = 21627
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2204.320 ; gain = 0.000 ; free physical = 13300 ; free virtual = 21697
+INFO: [Netlist 29-17] Analyzing 135 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2266.277 ; gain = 0.000 ; free physical = 13231 ; free virtual = 21629
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+88 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2266.277 ; gain = 116.805 ; free physical = 13372 ; free virtual = 21769
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/ldpc_encoder.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2682.277 ; gain = 416.000 ; free physical = 12998 ; free virtual = 21396
+INFO: [runtcl-4] Executing : report_utilization -file ldpc_encoder_utilization_synth.rpt -pb ldpc_encoder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  7 12:52:04 2021...
+[Sun Feb  7 12:52:08 2021] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 2150.562 ; gain = 0.000 ; free physical = 14117 ; free virtual = 22509
+### Synthesis Complete.
+### Running PostMapTiming in Xilinx Vivado 2020.1.1 ...
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2150.562 ; gain = 0.000 ; free physical = 13869 ; free virtual = 22261
+INFO: [Netlist 29-17] Analyzing 135 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2206.496 ; gain = 0.000 ; free physical = 13801 ; free virtual = 22193
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2206.496 ; gain = 55.934 ; free physical = 13811 ; free virtual = 22203
+WARNING: [Common 17-708] report_timing_summary: The '-name' option will be ignored because it is only relevant in GUI mode.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-493] Port clk has one or several leaf clock pins in its transitive fanout without any clock buffer on the path and no clock reaching the clock pin(s). Vivado cannot infer the clock source when no clock buffer is found on the path to a leaf clock pin.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2604.500 ; gain = 398.004 ; free physical = 13461 ; free virtual = 21854
+### PostMapTiming Complete.
+### Close Xilinx Vivado 2020.1.1 project.
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  7 12:52:24 2021...

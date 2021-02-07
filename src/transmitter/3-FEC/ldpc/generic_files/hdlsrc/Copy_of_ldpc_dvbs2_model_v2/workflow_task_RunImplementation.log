@@ -1,0 +1,197 @@
+Task "Run Implementation" unsuccessful. See log for details.
+Generated logfile: 
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source ldpc_encoder_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2020.1.1 project /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.srcs/sources_1'.
+### Running Implementation in Xilinx Vivado 2020.1.1 ...
+[Fri Feb  5 13:50:27 2021] Launched impl_1...
+Run output will be captured here: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/impl_1/runme.log
+[Fri Feb  5 13:50:28 2021] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log ldpc_encoder.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ldpc_encoder.tcl -notrace
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source ldpc_encoder.tcl -notrace
+Command: link_design -top ldpc_encoder -part xc7z020clg400-1 -mode out_of_context
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2418.965 ; gain = 3.000 ; free physical = 14500 ; free virtual = 23046
+INFO: [Netlist 29-17] Analyzing 56654 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ldpc_encoder' is not ideal for floorplanning, since the cellview 'addresses' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2751.668 ; gain = 0.000 ; free physical = 14271 ; free virtual = 22817
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+6 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:06 . Memory (MB): peak = 2751.668 ; gain = 602.195 ; free physical = 14271 ; free virtual = 22817
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2815.699 ; gain = 64.031 ; free physical = 14257 ; free virtual = 22803
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 85c76b13
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3597.176 ; gain = 781.477 ; free physical = 13477 ; free virtual = 22023
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 85c76b13
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 3762.996 ; gain = 1.883 ; free physical = 13711 ; free virtual = 22257
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: e8da0008
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:20 . Memory (MB): peak = 3762.996 ; gain = 1.883 ; free physical = 13722 ; free virtual = 22268
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: efb5a882
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:26 . Memory (MB): peak = 3762.996 ; gain = 1.883 ; free physical = 13681 ; free virtual = 22228
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: efb5a882
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 3762.996 ; gain = 1.883 ; free physical = 13694 ; free virtual = 22240
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: efb5a882
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:34 . Memory (MB): peak = 3762.996 ; gain = 1.883 ; free physical = 13693 ; free virtual = 22240
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: efb5a882
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:36 . Memory (MB): peak = 3762.996 ; gain = 1.883 ; free physical = 13703 ; free virtual = 22249
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3762.996 ; gain = 0.000 ; free physical = 13703 ; free virtual = 22249
+Ending Logic Optimization Task | Checksum: 7c5a41d7
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 3762.996 ; gain = 1.883 ; free physical = 13703 ; free virtual = 22249
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 7c5a41d7
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3762.996 ; gain = 0.000 ; free physical = 13706 ; free virtual = 22252
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 7c5a41d7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3762.996 ; gain = 0.000 ; free physical = 13706 ; free virtual = 22252
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3762.996 ; gain = 0.000 ; free physical = 13706 ; free virtual = 22252
+Ending Netlist Obfuscation Task | Checksum: 7c5a41d7
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3762.996 ; gain = 0.000 ; free physical = 13706 ; free virtual = 22252
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:04 . Memory (MB): peak = 3762.996 ; gain = 1011.328 ; free physical = 13706 ; free virtual = 22252
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/impl_1/ldpc_encoder_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:21 ; elapsed = 00:00:54 . Memory (MB): peak = 3889.891 ; gain = 126.895 ; free physical = 13310 ; free virtual = 21907
+INFO: [runtcl-4] Executing : report_drc -file ldpc_encoder_drc_opted.rpt -pb ldpc_encoder_drc_opted.pb -rpx ldpc_encoder_drc_opted.rpx
+Command: report_drc -file ldpc_encoder_drc_opted.rpt -pb ldpc_encoder_drc_opted.pb -rpx ldpc_encoder_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/wardo/Documents/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/impl_1/ldpc_encoder_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:46 ; elapsed = 00:00:11 . Memory (MB): peak = 4086.637 ; gain = 196.746 ; free physical = 13165 ; free virtual = 21763
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC UTLZ-1] Resource utilization: F7 Muxes over-utilized in Top Level Design (This design requires more F7 Muxes cells than are available in the target device. This design requires 37833 of such cell types but only 26600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: F8 Muxes over-utilized in Top Level Design (This design requires more F8 Muxes cells than are available in the target device. This design requires 18670 of such cell types but only 13300 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: LUT as Logic over-utilized in Top Level Design (This design requires more LUT as Logic cells than are available in the target device. This design requires 397754 of such cell types but only 53200 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+ERROR: [DRC UTLZ-1] Resource utilization: LUT2 over-utilized in Top Level Design (This design requires more LUT2 cells than are available in the target device. This design requires 113680 of such cell types but only 106400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: LUT6 over-utilized in Top Level Design (This design requires more LUT6 cells than are available in the target device. This design requires 246349 of such cell types but only 53200 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: MUXF7 over-utilized in Top Level Design (This design requires more MUXF7 cells than are available in the target device. This design requires 37833 of such cell types but only 26600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: MUXF8 over-utilized in Top Level Design (This design requires more MUXF8 cells than are available in the target device. This design requires 18670 of such cell types but only 13300 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: Slice LUTs over-utilized in Top Level Design (This design requires more Slice LUTs cells than are available in the target device. This design requires 397754 of such cell types but only 53200 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+INFO: [Vivado_Tcl 4-198] DRC finished with 8 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+39 Infos, 2 Warnings, 0 Critical Warnings and 9 Errors encountered.
+place_design failed
+place_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:09 . Memory (MB): peak = 4086.637 ; gain = 0.000 ; free physical = 13161 ; free virtual = 21758
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 13:54:02 2021...
+[Fri Feb  5 13:54:02 2021] impl_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'impl_1'
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:03:35 . Memory (MB): peak = 2150.566 ; gain = 0.000 ; free physical = 13179 ; free virtual = 21777
+### Implementation Complete.
+### Running PostPARTiming in Xilinx Vivado 2020.1.1 ...
+ERROR: [Common 17-69] Command failed: Run 'impl_1' failed. Unable to open
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 13:54:02 2021...
+
+Elapsed time is 229.5669 seconds.

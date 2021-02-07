@@ -1,0 +1,199 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - fsm_select_xor.vhd</title>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" language="JavaScript" src="slwebview.js"></SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript" src="id_mapping.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../fsm_select_xor.vhd" target="rtwreport_document_frame" id="linkToText_plain">fsm_select_xor.vhd</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" id="1">    1   </a><span class="CT">-- Created by Eduardo Flores in fulfillment of his Bachellor's degree Thesis.</span>
+</span><span><a class="LN" id="2">    2   </a>
+</span><span><a class="LN" id="3">    3   </a>
+</span><span><a class="LN" id="4">    4   </a><span class="KW">LIBRARY</span> IEEE;
+</span><span><a class="LN" id="5">    5   </a><span class="KW">USE</span> IEEE.std_logic_1164.<span class="KW">ALL</span>;
+</span><span><a class="LN" id="6">    6   </a><span class="KW">USE</span> IEEE.numeric_std.<span class="KW">ALL</span>;
+</span><span><a class="LN" id="7">    7   </a><span class="KW">USE</span> work.ldpc_encoder_pac.<span class="KW">ALL</span>;
+</span><span><a class="LN" id="8">    8   </a>
+</span><span><a class="LN" id="9">    9   </a><span class="KW">ENTITY</span> fsm_select_xor <span class="KW">IS</span>
+</span><span><a class="LN" id="10">   10   </a>  <span class="KW">PORT</span>( clk                               :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="11">   11   </a>        reset_x                           :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="12">   12   </a>        enb                               :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="13">   13   </a>        addresses                         :   <span class="KW">IN</span>    vector_of_std_logic_vector16(0 <span class="KW">TO</span> 11);  <span class="CT">-- uint16 [12]</span>
+</span><span><a class="LN" id="14">   14   </a>        input_bit                         :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="15">   15   </a>        start                             :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="16">   16   </a>        enable                            :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="17">   17   </a>        serial_out                        :   <span class="KW">OUT</span>   std_logic;  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="18">   18   </a>        valid                             :   <span class="KW">OUT</span>   std_logic  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="19">   19   </a>        );
+</span><span><a class="LN" id="20">   20   </a><span class="KW">END</span> fsm_select_xor;
+</span><span><a class="LN" id="21">   21   </a>
+</span><span><a class="LN" id="22">   22   </a>
+</span><span><a class="LN" id="23">   23   </a><span class="KW">ARCHITECTURE</span> rtl <span class="KW">OF</span> fsm_select_xor <span class="KW">IS</span>
+</span><span><a class="LN" id="24">   24   </a>
+</span><span><a class="LN" id="25">   25   </a>  <span class="CT">-- Functions</span>
+</span><span><a class="LN" id="26">   26   </a>  <span class="CT">-- HDLCODER_TO_STDLOGIC </span>
+</span><span><a class="LN" id="27">   27   </a>  <span class="KW">FUNCTION</span> hdlcoder_to_stdlogic(arg: boolean) <span class="KW">RETURN</span> std_logic <span class="KW">IS</span>
+</span><span><a class="LN" id="28">   28   </a>  <span class="KW">BEGIN</span>
+</span><span><a class="LN" id="29">   29   </a>    <span class="KW">IF</span> arg <span class="KW">THEN</span>
+</span><span><a class="LN" id="30">   30   </a>      <span class="KW">RETURN</span> '1';
+</span><span><a class="LN" id="31">   31   </a>    <span class="KW">ELSE</span>
+</span><span><a class="LN" id="32">   32   </a>      <span class="KW">RETURN</span> '0';
+</span><span><a class="LN" id="33">   33   </a>    <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="34">   34   </a>  <span class="KW">END</span> <span class="KW">FUNCTION</span>;
+</span><span><a class="LN" id="35">   35   </a>
+</span><span><a class="LN" id="36">   36   </a>  <span class="CT">-- HDLCODER_TO_SIGNED</span>
+</span><span><a class="LN" id="37">   37   </a>  <span class="KW">FUNCTION</span> hdlcoder_to_signed(arg: boolean; width: integer) <span class="KW">RETURN</span> signed <span class="KW">IS</span>
+</span><span><a class="LN" id="38">   38   </a>  <span class="KW">BEGIN</span>
+</span><span><a class="LN" id="39">   39   </a>    <span class="KW">IF</span> arg <span class="KW">THEN</span>
+</span><span><a class="LN" id="40">   40   </a>      <span class="KW">RETURN</span> to_signed(1, width);
+</span><span><a class="LN" id="41">   41   </a>    <span class="KW">ELSE</span>
+</span><span><a class="LN" id="42">   42   </a>      <span class="KW">RETURN</span> to_signed(0, width);
+</span><span><a class="LN" id="43">   43   </a>    <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="44">   44   </a>  <span class="KW">END</span> <span class="KW">FUNCTION</span>;
+</span><span><a class="LN" id="45">   45   </a>
+</span><span><a class="LN" id="46">   46   </a>
+</span><span><a class="LN" id="47">   47   </a>  <span class="CT">-- Signals</span>
+</span><span><a class="LN" id="48">   48   </a>  <span class="KW">SIGNAL</span> addresses_unsigned               : vector_of_unsigned16(0 <span class="KW">TO</span> 11);  <span class="CT">-- uint16 [12]</span>
+</span><span><a class="LN" id="49">   49   </a>  <span class="KW">SIGNAL</span> parity_bits                      : std_logic_vector(0 <span class="KW">TO</span> 16200);  <span class="CT">-- ufix1 [16201]</span>
+</span><span><a class="LN" id="50">   50   </a>  <span class="KW">SIGNAL</span> moore_state_machine              : unsigned(1 <span class="KW">DOWNTO</span> 0);  <span class="CT">-- ufix2</span>
+</span><span><a class="LN" id="51">   51   </a>  <span class="KW">SIGNAL</span> counter                          : unsigned(15 <span class="KW">DOWNTO</span> 0);  <span class="CT">-- ufix16</span>
+</span><span><a class="LN" id="52">   52   </a>  <span class="KW">SIGNAL</span> parity_bits_next                 : std_logic_vector(0 <span class="KW">TO</span> 16200);  <span class="CT">-- ufix1 [16201]</span>
+</span><span><a class="LN" id="53">   53   </a>  <span class="KW">SIGNAL</span> moore_state_machine_next         : unsigned(1 <span class="KW">DOWNTO</span> 0);  <span class="CT">-- ufix2</span>
+</span><span><a class="LN" id="54">   54   </a>  <span class="KW">SIGNAL</span> counter_next                     : unsigned(15 <span class="KW">DOWNTO</span> 0);  <span class="CT">-- ufix16</span>
+</span><span><a class="LN" id="55">   55   </a>
+</span><span><a class="LN" id="56">   56   </a><span class="KW">BEGIN</span>
+</span><span><a class="LN" id="57">   57   </a>  addresses_unsigned(0) &lt;= unsigned(addresses(0));
+</span><span><a class="LN" id="58">   58   </a>  addresses_unsigned(1) &lt;= unsigned(addresses(1));
+</span><span><a class="LN" id="59">   59   </a>  addresses_unsigned(2) &lt;= unsigned(addresses(2));
+</span><span><a class="LN" id="60">   60   </a>  addresses_unsigned(3) &lt;= unsigned(addresses(3));
+</span><span><a class="LN" id="61">   61   </a>  addresses_unsigned(4) &lt;= unsigned(addresses(4));
+</span><span><a class="LN" id="62">   62   </a>  addresses_unsigned(5) &lt;= unsigned(addresses(5));
+</span><span><a class="LN" id="63">   63   </a>  addresses_unsigned(6) &lt;= unsigned(addresses(6));
+</span><span><a class="LN" id="64">   64   </a>  addresses_unsigned(7) &lt;= unsigned(addresses(7));
+</span><span><a class="LN" id="65">   65   </a>  addresses_unsigned(8) &lt;= unsigned(addresses(8));
+</span><span><a class="LN" id="66">   66   </a>  addresses_unsigned(9) &lt;= unsigned(addresses(9));
+</span><span><a class="LN" id="67">   67   </a>  addresses_unsigned(10) &lt;= unsigned(addresses(10));
+</span><span><a class="LN" id="68">   68   </a>  addresses_unsigned(11) &lt;= unsigned(addresses(11));
+</span><span><a class="LN" id="69">   69   </a>
+</span><span><a class="LN" id="70">   70   </a>  fsm_select_xor_1_process : <span class="KW">PROCESS</span> (clk)
+</span><span><a class="LN" id="71">   71   </a>    <span class="KW">VARIABLE</span> t_1 : INTEGER;
+</span><span><a class="LN" id="72">   72   </a>  <span class="KW">BEGIN</span>
+</span><span><a class="LN" id="73">   73   </a>    <span class="KW">IF</span> clk'EVENT <span class="KW">AND</span> clk = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="74">   74   </a>      <span class="KW">IF</span> reset_x = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="75">   75   </a>
+</span><span><a class="LN" id="76">   76   </a>        <span class="KW">FOR</span> t_1 <span class="KW">IN</span> 0 <span class="KW">TO</span> 16200 <span class="KW">LOOP</span>
+</span><span><a class="LN" id="77">   77   </a>          parity_bits(t_1) &lt;= '0';
+</span><span><a class="LN" id="78">   78   </a>        <span class="KW">END</span> <span class="KW">LOOP</span>;
+</span><span><a class="LN" id="79">   79   </a>
+</span><span><a class="LN" id="80">   80   </a>        moore_state_machine &lt;= to_unsigned(16#2#, 2);
+</span><span><a class="LN" id="81">   81   </a>        counter &lt;= to_unsigned(16#0001#, 16);
+</span><span><a class="LN" id="82">   82   </a>      <span class="KW">ELSIF</span> enb = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="83">   83   </a>
+</span><span><a class="LN" id="84">   84   </a>        <span class="KW">FOR</span> t_0 <span class="KW">IN</span> 0 <span class="KW">TO</span> 16200 <span class="KW">LOOP</span>
+</span><span><a class="LN" id="85">   85   </a>          parity_bits(t_0) &lt;= parity_bits_next(t_0);
+</span><span><a class="LN" id="86">   86   </a>        <span class="KW">END</span> <span class="KW">LOOP</span>;
+</span><span><a class="LN" id="87">   87   </a>
+</span><span><a class="LN" id="88">   88   </a>        moore_state_machine &lt;= moore_state_machine_next;
+</span><span><a class="LN" id="89">   89   </a>        counter &lt;= counter_next;
+</span><span><a class="LN" id="90">   90   </a>      <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="91">   91   </a>    <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="92">   92   </a>  <span class="KW">END</span> <span class="KW">PROCESS</span> fsm_select_xor_1_process;
+</span><span><a class="LN" id="93">   93   </a>
+</span><span><a class="LN" id="94">   94   </a>  fsm_select_xor_1_output : <span class="KW">PROCESS</span> (addresses_unsigned, counter, enable, input_bit, moore_state_machine,
+</span><span><a class="LN" id="95">   95   </a>       parity_bits, start)
+</span><span><a class="LN" id="96">   96   </a>    <span class="KW">VARIABLE</span> address : unsigned(15 <span class="KW">DOWNTO</span> 0);
+</span><span><a class="LN" id="97">   97   </a>    <span class="KW">VARIABLE</span> parity_bits_temp : std_logic_vector(0 <span class="KW">TO</span> 16200);
+</span><span><a class="LN" id="98">   98   </a>    <span class="KW">VARIABLE</span> counter_temp : unsigned(15 <span class="KW">DOWNTO</span> 0);
+</span><span><a class="LN" id="99">   99   </a>    <span class="KW">VARIABLE</span> address_0 : unsigned(15 <span class="KW">DOWNTO</span> 0);
+</span><span><a class="LN" id="100">  100   </a>    <span class="KW">VARIABLE</span> sub_cast : signed(31 <span class="KW">DOWNTO</span> 0);
+</span><span><a class="LN" id="101">  101   </a>    <span class="KW">VARIABLE</span> sub_cast_0 : vector_of_signed32(0 <span class="KW">TO</span> 11);
+</span><span><a class="LN" id="102">  102   </a>    <span class="KW">VARIABLE</span> sub_cast_1 : vector_of_signed32(0 <span class="KW">TO</span> 11);
+</span><span><a class="LN" id="103">  103   </a>    <span class="KW">VARIABLE</span> cast : vector_of_signed32(0 <span class="KW">TO</span> 11);
+</span><span><a class="LN" id="104">  104   </a>    <span class="KW">VARIABLE</span> sub_cast_2 : signed(31 <span class="KW">DOWNTO</span> 0);
+</span><span><a class="LN" id="105">  105   </a>    <span class="KW">VARIABLE</span> sub_cast_3 : vector_of_signed32(0 <span class="KW">TO</span> 11);
+</span><span><a class="LN" id="106">  106   </a>    <span class="KW">VARIABLE</span> sub_cast_4 : vector_of_signed32(0 <span class="KW">TO</span> 11);
+</span><span><a class="LN" id="107">  107   </a>    <span class="KW">VARIABLE</span> cast_0 : vector_of_signed32(0 <span class="KW">TO</span> 11);
+</span><span><a class="LN" id="108">  108   </a>  <span class="KW">BEGIN</span>
+</span><span><a class="LN" id="109">  109   </a>    address := to_unsigned(16#0000#, 16);
+</span><span><a class="LN" id="110">  110   </a>    address_0 := to_unsigned(16#0000#, 16);
+</span><span><a class="LN" id="111">  111   </a>    sub_cast := to_signed(16#00000000#, 32);
+</span><span><a class="LN" id="112">  112   </a>    sub_cast_2 := to_signed(16#00000000#, 32);
+</span><span><a class="LN" id="113">  113   </a>
+</span><span><a class="LN" id="114">  114   </a>    <span class="KW">FOR</span> t_0 <span class="KW">IN</span> 0 <span class="KW">TO</span> 16200 <span class="KW">LOOP</span>
+</span><span><a class="LN" id="115">  115   </a>      parity_bits_temp(t_0) := parity_bits(t_0);
+</span><span><a class="LN" id="116">  116   </a>    <span class="KW">END</span> <span class="KW">LOOP</span>;
+</span><span><a class="LN" id="117">  117   </a>
+</span><span><a class="LN" id="118">  118   </a>    counter_temp := counter;
+</span><span><a class="LN" id="119">  119   </a>    moore_state_machine_next &lt;= moore_state_machine;
+</span><span><a class="LN" id="120" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1')" name="code2model">  120   </a>    <span class="CT">--MATLAB Function 'ldpc_encoder/fsm_select_xor'</span>
+</span><span><a class="LN" id="121">  121   </a>    <span class="KW">CASE</span> moore_state_machine <span class="KW">IS</span>
+</span><span><a class="LN" id="122">  122   </a>      <span class="KW">WHEN</span> <font color="#1122ff">&quot;10&quot;</font> =&gt;
+</span><span><a class="LN" id="123" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:25')" name="code2model">  123   </a>        serial_out &lt;= '0';
+</span><span><a class="LN" id="124" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:26')" name="code2model">  124   </a>        valid &lt;= '0';
+</span><span><a class="LN" id="125" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:26')" name="code2model">  125   </a>        <span class="KW">IF</span> start = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="126" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:29')" name="code2model">  126   </a>          moore_state_machine_next &lt;= to_unsigned(16#0#, 2);
+</span><span><a class="LN" id="127">  127   </a>          <span class="CT">-- Repeat bit on all addresses</span>
+</span><span><a class="LN" id="128">  128   </a>
+</span><span><a class="LN" id="129" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:31')" name="code2model">  129   </a>          <span class="KW">FOR</span> add <span class="KW">IN</span> 0 <span class="KW">TO</span> 11 <span class="KW">LOOP</span>
+</span><span><a class="LN" id="130" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:32')" name="code2model">  130   </a>            address := addresses_unsigned(add) + 1;
+</span><span><a class="LN" id="131" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:33')" name="code2model">  131   </a>            sub_cast_3(add) := signed(resize(address, 32));
+</span><span><a class="LN" id="132" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:33')" name="code2model">  132   </a>            sub_cast_4(add) := signed(resize(address, 32));
+</span><span><a class="LN" id="133" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:33')" name="code2model">  133   </a>            cast_0(add) := '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; input_bit;
+</span><span><a class="LN" id="134" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:33')" name="code2model">  134   </a>            parity_bits_temp(to_integer(sub_cast_3(add) - 1)) := hdlcoder_to_stdlogic(hdlcoder_to_signed(parity_bits_temp(to_integer(sub_cast_4(add) - 1)) /= '0', 32) /= cast_0(add));
+</span><span><a class="LN" id="135" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:26')" name="code2model">  135   </a>          <span class="KW">END</span> <span class="KW">LOOP</span>;
+</span><span><a class="LN" id="136">  136   </a>
+</span><span><a class="LN" id="137" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:26')" name="code2model">  137   </a>        <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="138">  138   </a>      <span class="KW">WHEN</span> <font color="#1122ff">&quot;00&quot;</font> =&gt;
+</span><span><a class="LN" id="139" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:37')" name="code2model">  139   </a>        serial_out &lt;= '0';
+</span><span><a class="LN" id="140" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:38')" name="code2model">  140   </a>        valid &lt;= '0';
+</span><span><a class="LN" id="141">  141   </a>        <span class="CT">-- Repeat bit on all addresses</span>
+</span><span><a class="LN" id="142">  142   </a>
+</span><span><a class="LN" id="143" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:41')" name="code2model">  143   </a>        <span class="KW">FOR</span> add_0 <span class="KW">IN</span> 0 <span class="KW">TO</span> 11 <span class="KW">LOOP</span>
+</span><span><a class="LN" id="144" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:42')" name="code2model">  144   </a>          address_0 := addresses_unsigned(add_0) + 1;
+</span><span><a class="LN" id="145" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:43')" name="code2model">  145   </a>          sub_cast_0(add_0) := signed(resize(address_0, 32));
+</span><span><a class="LN" id="146" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:43')" name="code2model">  146   </a>          sub_cast_1(add_0) := signed(resize(address_0, 32));
+</span><span><a class="LN" id="147" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:43')" name="code2model">  147   </a>          cast(add_0) := '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; '0' &amp; input_bit;
+</span><span><a class="LN" id="148" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:43')" name="code2model">  148   </a>          parity_bits_temp(to_integer(sub_cast_0(add_0) - 1)) := hdlcoder_to_stdlogic(hdlcoder_to_signed(parity_bits_temp(to_integer(sub_cast_1(add_0) - 1)) /= '0', 32) /= cast(add_0));
+</span><span><a class="LN" id="149">  149   </a>        <span class="KW">END</span> <span class="KW">LOOP</span>;
+</span><span><a class="LN" id="150">  150   </a>
+</span><span><a class="LN" id="151">  151   </a>        <span class="KW">IF</span> enable = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="152" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:47')" name="code2model">  152   </a>          moore_state_machine_next &lt;= to_unsigned(16#1#, 2);
+</span><span><a class="LN" id="153" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:48')" name="code2model">  153   </a>          sub_cast_2 := signed(resize(counter, 32));
+</span><span><a class="LN" id="154" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:48')" name="code2model">  154   </a>          serial_out &lt;= parity_bits_temp(to_integer(sub_cast_2 - 1));
+</span><span><a class="LN" id="155" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:49')" name="code2model">  155   </a>          counter_temp := counter + to_unsigned(16#0001#, 16);
+</span><span><a class="LN" id="156" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:50')" name="code2model">  156   </a>          valid &lt;= '1';
+</span><span><a class="LN" id="157">  157   </a>        <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="158">  158   </a>      <span class="KW">WHEN</span> <font color="#1122ff">&quot;01&quot;</font> =&gt;
+</span><span><a class="LN" id="159" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:53')" name="code2model">  159   </a>        sub_cast := signed(resize(counter, 32));
+</span><span><a class="LN" id="160" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:53')" name="code2model">  160   </a>        serial_out &lt;= parity_bits(to_integer(sub_cast - 1));
+</span><span><a class="LN" id="161" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:54')" name="code2model">  161   </a>        counter_temp := counter + to_unsigned(16#0001#, 16);
+</span><span><a class="LN" id="162" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:55')" name="code2model">  162   </a>        valid &lt;= '1';
+</span><span><a class="LN" id="163" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:55')" name="code2model">  163   </a>        <span class="KW">IF</span> counter_temp &gt; to_unsigned(16#3F48#, 16) <span class="KW">THEN</span>
+</span><span><a class="LN" id="164" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:57')" name="code2model">  164   </a>          moore_state_machine_next &lt;= to_unsigned(16#0#, 2);
+</span><span><a class="LN" id="165">  165   </a>        <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="166">  166   </a>      <span class="KW">WHEN</span> <span class="KW">OTHERS</span> =&gt;
+</span><span><a class="LN" id="167" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:60')" name="code2model">  167   </a>        serial_out &lt;= '0';
+</span><span><a class="LN" id="168" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:92:1:61')" name="code2model">  168   </a>        valid &lt;= '0';
+</span><span><a class="LN" id="169">  169   </a>    <span class="KW">END</span> <span class="KW">CASE</span>;
+</span><span><a class="LN" id="170">  170   </a>
+</span><span><a class="LN" id="171">  171   </a>    <span class="KW">FOR</span> t_1 <span class="KW">IN</span> 0 <span class="KW">TO</span> 16200 <span class="KW">LOOP</span>
+</span><span><a class="LN" id="172">  172   </a>      parity_bits_next(t_1) &lt;= parity_bits_temp(t_1);
+</span><span><a class="LN" id="173">  173   </a>    <span class="KW">END</span> <span class="KW">LOOP</span>;
+</span><span><a class="LN" id="174">  174   </a>
+</span><span><a class="LN" id="175">  175   </a>    counter_next &lt;= counter_temp;
+</span><span><a class="LN" id="176">  176   </a>  <span class="KW">END</span> <span class="KW">PROCESS</span> fsm_select_xor_1_output;
+</span><span><a class="LN" id="177">  177   </a>
+</span><span><a class="LN" id="178">  178   </a>
+</span><span><a class="LN" id="179">  179   </a><span class="KW">END</span> rtl;
+</span><span><a class="LN" id="180">  180   </a>
+</span><span><a class="LN" id="181">  181   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

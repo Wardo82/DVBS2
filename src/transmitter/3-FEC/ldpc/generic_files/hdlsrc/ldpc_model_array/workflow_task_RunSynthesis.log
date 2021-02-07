@@ -1,0 +1,286 @@
+Task "Run Synthesis" successful.
+Generated logfile: 
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source ldpc_encoder_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2020.1.1 project /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.srcs/sources_1'.
+### Running Synthesis in Xilinx Vivado 2020.1.1 ...
+[Sun Feb  7 13:54:14 2021] Launched synth_1...
+Run output will be captured here: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/runme.log
+[Sun Feb  7 13:54:14 2021] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log ldpc_encoder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ldpc_encoder.tcl
+
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source ldpc_encoder.tcl -notrace
+Command: synth_design -top ldpc_encoder -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11313
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2149.566 ; gain = 0.000 ; free physical = 12081 ; free virtual = 20883
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ldpc_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:58]
+INFO: [Synth 8-3491] module 'address_calculator' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:23' bound to instance 'u_address_calculator' of component 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'addresses' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/addresses.vhd:23' bound to instance 'u_addresses' of component 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'addresses' (1#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'address_calculator' (2#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'fsm_select_xor' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/fsm_select_xor.vhd:23' bound to instance 'u_fsm_select_xor' of component 'fsm_select_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'fsm_select_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/fsm_select_xor.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'fsm_select_xor' (3#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/fsm_select_xor.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder' (4#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:01:12 ; elapsed = 00:01:18 . Memory (MB): peak = 3984.004 ; gain = 1834.438 ; free physical = 11486 ; free virtual = 20296
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 3984.004 ; gain = 1834.438 ; free physical = 11517 ; free virtual = 20327
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'moore_state_machine_reg' in module 'fsm_select_xor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               10
+                 iSTATE0 |                               01 |                               00
+                 iSTATE1 |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'moore_state_machine_reg' using encoding 'sequential' in module 'fsm_select_xor'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:07 ; elapsed = 00:03:14 . Memory (MB): peak = 5589.109 ; gain = 3439.543 ; free physical = 6710 ; free virtual = 15528
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 12    
+	   2 Input   14 Bit       Adders := 13    
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input 16201 Bit        Muxes := 1     
+	   2 Input 16201 Bit        Muxes := 1     
+	  16 Input   14 Bit        Muxes := 9     
+	   2 Input    9 Bit        Muxes := 2     
+	 135 Input    4 Bit        Muxes := 9     
+	   3 Input    2 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:08:15 ; elapsed = 00:08:36 . Memory (MB): peak = 5881.277 ; gain = 3731.711 ; free physical = 6854 ; free virtual = 16005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++-------------+------------------------------------------+---------------+----------------+
+|Module Name  | RTL Object                               | Depth x Width | Implemented As | 
++-------------+------------------------------------------+---------------+----------------+
+|addresses    | nc[0,0]                                  | 256x6         | LUT            | 
+|addresses    | nc[0,1]                                  | 256x14        | LUT            | 
+|addresses    | nc[0,2]                                  | 256x14        | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/nc[0,0] | 256x6         | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/nc[0,1] | 256x14        | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/nc[0,2] | 256x14        | LUT            | 
++-------------+------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:08:38 ; elapsed = 00:09:00 . Memory (MB): peak = 5881.277 ; gain = 3731.711 ; free physical = 6494 ; free virtual = 15920
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:10:04 ; elapsed = 00:10:28 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6421 ; free virtual = 15867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:11:05 ; elapsed = 00:11:31 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6304 ; free virtual = 15913
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:11:07 ; elapsed = 00:11:33 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6307 ; free virtual = 15917
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:11:51 ; elapsed = 00:12:18 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6269 ; free virtual = 15878
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:13:12 ; elapsed = 00:13:38 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6235 ; free virtual = 15845
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:13:58 ; elapsed = 00:14:25 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6221 ; free virtual = 15832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:14:00 ; elapsed = 00:14:28 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6254 ; free virtual = 15864
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+-------+
+|      |Cell   |Count  |
++------+-------+-------+
+|1     |CARRY4 |    151|
+|2     |LUT1   |    172|
+|3     |LUT2   | 145998|
+|4     |LUT3   |  12861|
+|5     |LUT4   |  64943|
+|6     |LUT5   |  86399|
+|7     |LUT6   | 189633|
+|8     |MUXF7  |  35944|
+|9     |MUXF8  |  15917|
+|10    |FDRE   |  16256|
+|11    |FDSE   |      5|
++------+-------+-------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------+-------+
+|      |Instance               |Module             |Cells  |
++------+-----------------------+-------------------+-------+
+|1     |top                    |                   | 568279|
+|2     |  u_address_calculator |address_calculator | 512063|
+|3     |    u_addresses        |addresses          | 511990|
+|4     |  u_fsm_select_xor     |fsm_select_xor     |  56215|
++------+-----------------------+-------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:14:00 ; elapsed = 00:14:28 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6254 ; free virtual = 15864
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:14:05 ; elapsed = 00:14:32 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 10342 ; free virtual = 19952
+Synthesis Optimization Complete : Time (s): cpu = 00:14:05 ; elapsed = 00:14:32 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 10371 ; free virtual = 19953
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6020.656 ; gain = 0.000 ; free physical = 9910 ; free virtual = 19491
+INFO: [Netlist 29-17] Analyzing 52012 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ldpc_encoder' is not ideal for floorplanning, since the cellview 'addresses' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.14 . Memory (MB): peak = 6064.758 ; gain = 0.000 ; free physical = 9728 ; free virtual = 19309
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:15:59 ; elapsed = 00:16:06 . Memory (MB): peak = 6064.758 ; gain = 3915.285 ; free physical = 10212 ; free virtual = 19793
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/ldpc_encoder.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:31 ; elapsed = 00:01:03 . Memory (MB): peak = 6160.805 ; gain = 96.047 ; free physical = 9487 ; free virtual = 19117
+INFO: [runtcl-4] Executing : report_utilization -file ldpc_encoder_utilization_synth.rpt -pb ldpc_encoder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  7 14:11:36 2021...
+[Sun Feb  7 14:11:40 2021] synth_1 finished
+wait_on_run: Time (s): cpu = 00:17:44 ; elapsed = 00:17:26 . Memory (MB): peak = 2150.562 ; gain = 0.000 ; free physical = 12836 ; free virtual = 21611
+### Synthesis Complete.
+### Running PostMapTiming in Xilinx Vivado 2020.1.1 ...
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2380.086 ; gain = 4.000 ; free physical = 12117 ; free virtual = 20893
+INFO: [Netlist 29-17] Analyzing 52012 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ldpc_encoder' is not ideal for floorplanning, since the cellview 'addresses' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2743.332 ; gain = 0.000 ; free physical = 11958 ; free virtual = 20735
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:01:24 ; elapsed = 00:01:23 . Memory (MB): peak = 2743.332 ; gain = 592.770 ; free physical = 11958 ; free virtual = 20735
+WARNING: [Common 17-708] report_timing_summary: The '-name' option will be ignored because it is only relevant in GUI mode.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-493] Port clk has one or several leaf clock pins in its transitive fanout without any clock buffer on the path and no clock reaching the clock pin(s). Vivado cannot infer the clock source when no clock buffer is found on the path to a leaf clock pin.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:02:59 ; elapsed = 00:00:50 . Memory (MB): peak = 3885.508 ; gain = 1142.176 ; free physical = 10848 ; free virtual = 19627
+### PostMapTiming Complete.
+### Close Xilinx Vivado 2020.1.1 project.
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  7 14:26:48 2021...
+
+Elapsed time is 1965.793 seconds.

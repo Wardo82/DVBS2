@@ -1,0 +1,13 @@
+SLStudio.Utils.RemoveHighlighting(get_param('Copy_of_ldpc_dvbs2_model_v2', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_Copy_of_ldpc_dvbs2_model_v2', 'handle'));
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator', 0, 1, '');
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/bit_counter1', 0, 1, '');
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/slot_counter', 1, 2, '');
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/bit_count', 0, 1, '');
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/fsm_select_xor/fsm_select_xor', 1, 1, '');
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/fsm_select_xor/fsm_select_xor', 1, 1, '');
+annotate_port('Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/fsm_select_xor', 1, 1, '');
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/addresses/addresses', 1, 1, '');
+annotate_port('Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/addresses/addresses', 1, 1, '');
+annotate_port('gm_Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/addresses/addresses1', 1, 1, '');
+annotate_port('Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/addresses', 1, 1, '');

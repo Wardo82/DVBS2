@@ -1,0 +1,17 @@
+Task "Create Project" successful.
+Generated logfile: 
+
+****** Vivado v2020.1.1 (64-bit)
+  **** SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+  **** IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source ldpc_encoder_Xilinx_Vivado_run.tcl -notrace
+### Create new Xilinx Vivado 2020.1.1 project <a href="matlab:downstream.handle('Model','Copy_of_ldpc_dvbs2_model_v2').openTargetTool;">/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.xpr</a>
+### Set Xilinx Vivado 2020.1.1 project properties
+### Update Xilinx Vivado 2020.1.1 project with HDL source files
+WARNING: [Vivado 12-818] No files matched '*.tcl'
+### Close Xilinx Vivado 2020.1.1 project.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 13:10:07 2021...
+
+Elapsed time is 12.6602 seconds.

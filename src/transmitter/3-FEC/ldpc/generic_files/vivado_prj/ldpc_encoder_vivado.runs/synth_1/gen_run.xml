@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1612497477">
-  <File Type="PA-TCL" Name="ldpc_encoder.tcl"/>
-  <File Type="REPORTS-TCL" Name="ldpc_encoder_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ldpc_encoder.vds"/>
-  <File Type="RDS-UTIL" Name="ldpc_encoder_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ldpc_encoder_utilization_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1612702454">
+  <File Type="VDS-TIMINGSUMMARY" Name="ldpc_encoder_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="ldpc_encoder.dcp"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+  <File Type="RDS-UTIL-PB" Name="ldpc_encoder_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="ldpc_encoder_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="ldpc_encoder_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="ldpc_encoder.vds"/>
+  <File Type="REPORTS-TCL" Name="ldpc_encoder_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="ldpc_encoder_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="ldpc_encoder.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder_pac.vhd">
+    <File Path="$PPRDIR/../hdlsrc/ldpc_model_array/ldpc_encoder_pac.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd">
+    <File Path="$PPRDIR/../hdlsrc/ldpc_model_array/addresses.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd">
+    <File Path="$PPRDIR/../hdlsrc/ldpc_model_array/address_calculator.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../hdlsrc/ldpc_dvbs2_model_v2/fsm_select_xor.vhd">
+    <File Path="$PPRDIR/../hdlsrc/ldpc_model_array/fsm_select_xor.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd">
+    <File Path="$PPRDIR/../hdlsrc/ldpc_model_array/ldpc_encoder.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - ldpc_encoder.vhd</title>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" language="JavaScript" src="slwebview.js"></SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript" src="id_mapping.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../ldpc_encoder.vhd" target="rtwreport_document_frame" id="linkToText_plain">ldpc_encoder.vhd</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" id="1">    1   </a><span class="CT">-- Created by Eduardo Flores in fulfillment of his Bachellor's degree Thesis.</span>
+</span><span><a class="LN" id="2">    2   </a>
+</span><span><a class="LN" id="3">    3   </a>
+</span><span><a class="LN" id="4">    4   </a><span class="KW">LIBRARY</span> IEEE;
+</span><span><a class="LN" id="5">    5   </a><span class="KW">USE</span> IEEE.std_logic_1164.<span class="KW">ALL</span>;
+</span><span><a class="LN" id="6">    6   </a><span class="KW">USE</span> IEEE.numeric_std.<span class="KW">ALL</span>;
+</span><span><a class="LN" id="7">    7   </a><span class="KW">USE</span> work.ldpc_encoder_pac.<span class="KW">ALL</span>;
+</span><span><a class="LN" id="8">    8   </a>
+</span><span><a class="LN" id="9">    9   </a><span class="KW">ENTITY</span> ldpc_encoder <span class="KW">IS</span>
+</span><span><a class="LN" id="10">   10   </a>  <span class="KW">PORT</span>( clk                               :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="11">   11   </a>        reset_x                           :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="12">   12   </a>        clk_enable                        :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="13">   13   </a>        input_bit                         :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="14">   14   </a>        rst                               :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="15">   15   </a>        end_of_frame                      :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="16">   16   </a>        start                             :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="17">   17   </a>        ce_out                            :   <span class="KW">OUT</span>   std_logic;
+</span><span><a class="LN" id="18">   18   </a>        out_rsvd                          :   <span class="KW">OUT</span>   std_logic;  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="19">   19   </a>        valid                             :   <span class="KW">OUT</span>   std_logic  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="20">   20   </a>        );
+</span><span><a class="LN" id="21">   21   </a><span class="KW">END</span> ldpc_encoder;
+</span><span><a class="LN" id="22">   22   </a>
+</span><span><a class="LN" id="23">   23   </a>
+</span><span><a class="LN" id="24">   24   </a><span class="KW">ARCHITECTURE</span> rtl <span class="KW">OF</span> ldpc_encoder <span class="KW">IS</span>
+</span><span><a class="LN" id="25">   25   </a>
+</span><span><a class="LN" id="26">   26   </a>  <span class="CT">-- Component Declarations</span>
+</span><span><a class="LN" id="27">   27   </a>  <span class="KW">COMPONENT</span> address_calculator
+</span><span><a class="LN" id="28">   28   </a>    <span class="KW">PORT</span>( clk                             :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="29">   29   </a>          reset_x                         :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="30">   30   </a>          enb                             :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="31">   31   </a>          rst                             :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="32">   32   </a>          addresses1                      :   <span class="KW">OUT</span>   vector_of_std_logic_vector16(0 <span class="KW">TO</span> 11)  <span class="CT">-- uint16 [12]</span>
+</span><span><a class="LN" id="33">   33   </a>          );
+</span><span><a class="LN" id="34">   34   </a>  <span class="KW">END</span> <span class="KW">COMPONENT</span>;
+</span><span><a class="LN" id="35">   35   </a>
+</span><span><a class="LN" id="36">   36   </a>  <span class="KW">COMPONENT</span> fsm_select_xor
+</span><span><a class="LN" id="37">   37   </a>    <span class="KW">PORT</span>( clk                             :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="38">   38   </a>          reset_x                         :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="39">   39   </a>          enb                             :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="40">   40   </a>          addresses                       :   <span class="KW">IN</span>    vector_of_std_logic_vector16(0 <span class="KW">TO</span> 11);  <span class="CT">-- uint16 [12]</span>
+</span><span><a class="LN" id="41">   41   </a>          input_bit                       :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="42">   42   </a>          start                           :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="43">   43   </a>          enable                          :   <span class="KW">IN</span>    std_logic;
+</span><span><a class="LN" id="44">   44   </a>          serial_out                      :   <span class="KW">OUT</span>   std_logic;  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="45">   45   </a>          valid                           :   <span class="KW">OUT</span>   std_logic  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="46">   46   </a>          );
+</span><span><a class="LN" id="47">   47   </a>  <span class="KW">END</span> <span class="KW">COMPONENT</span>;
+</span><span><a class="LN" id="48">   48   </a>
+</span><span><a class="LN" id="49">   49   </a>  <span class="CT">-- Component Configuration Statements</span>
+</span><span><a class="LN" id="50">   50   </a>  <span class="KW">FOR</span> <span class="KW">ALL</span> : address_calculator
+</span><span><a class="LN" id="51">   51   </a>    <span class="KW">USE</span> <span class="KW">ENTITY</span> work.address_calculator(rtl);
+</span><span><a class="LN" id="52">   52   </a>
+</span><span><a class="LN" id="53">   53   </a>  <span class="KW">FOR</span> <span class="KW">ALL</span> : fsm_select_xor
+</span><span><a class="LN" id="54">   54   </a>    <span class="KW">USE</span> <span class="KW">ENTITY</span> work.fsm_select_xor(rtl);
+</span><span><a class="LN" id="55">   55   </a>
+</span><span><a class="LN" id="56">   56   </a>  <span class="CT">-- Signals</span>
+</span><span><a class="LN" id="57">   57   </a>  <span class="KW">SIGNAL</span> enb                              : std_logic;
+</span><span><a class="LN" id="58">   58   </a>  <span class="KW">SIGNAL</span> addresses                        : vector_of_std_logic_vector16(0 <span class="KW">TO</span> 11);  <span class="CT">-- ufix16 [12]</span>
+</span><span><a class="LN" id="59">   59   </a>  <span class="KW">SIGNAL</span> serial_out                       : std_logic;  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="60">   60   </a>  <span class="KW">SIGNAL</span> Delay1_out1                      : std_logic;  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="61">   61   </a>  <span class="KW">SIGNAL</span> Logical_Operator_out1            : std_logic;  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="62">   62   </a>
+</span><span><a class="LN" id="63">   63   </a><span class="KW">BEGIN</span>
+</span><span><a class="LN" id="64">   64   </a>  <span class="CT">-- Sequential xor</span>
+</span><span><a class="LN" id="65">   65   </a>
+</span><span><a class="LN" id="66" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:77')" name="code2model">   66   </a>  u_address_calculator : address_calculator
+</span><span><a class="LN" id="67" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:77')" name="code2model">   67   </a>    <span class="KW">PORT</span> <span class="KW">MAP</span>( clk =&gt; clk,
+</span><span><a class="LN" id="68" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:77')" name="code2model">   68   </a>              reset_x =&gt; reset_x,
+</span><span><a class="LN" id="69" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:77')" name="code2model">   69   </a>              enb =&gt; clk_enable,
+</span><span><a class="LN" id="70" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:77')" name="code2model">   70   </a>              rst =&gt; rst,
+</span><span><a class="LN" id="71" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:77')" name="code2model">   71   </a>              addresses1 =&gt; addresses  <span class="CT">-- uint16 [12]</span>
+</span><span><a class="LN" id="72" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:77')" name="code2model">   72   </a>              );
+</span><span><a class="LN" id="73">   73   </a>
+</span><span><a class="LN" id="74" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   74   </a>  u_fsm_select_xor : fsm_select_xor
+</span><span><a class="LN" id="75" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   75   </a>    <span class="KW">PORT</span> <span class="KW">MAP</span>( clk =&gt; clk,
+</span><span><a class="LN" id="76" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   76   </a>              reset_x =&gt; reset_x,
+</span><span><a class="LN" id="77" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   77   </a>              enb =&gt; clk_enable,
+</span><span><a class="LN" id="78" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   78   </a>              addresses =&gt; addresses,  <span class="CT">-- uint16 [12]</span>
+</span><span><a class="LN" id="79" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   79   </a>              input_bit =&gt; input_bit,
+</span><span><a class="LN" id="80" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   80   </a>              start =&gt; start,
+</span><span><a class="LN" id="81" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   81   </a>              enable =&gt; end_of_frame,
+</span><span><a class="LN" id="82" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   82   </a>              serial_out =&gt; serial_out,  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="83" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   83   </a>              valid =&gt; valid  <span class="CT">-- ufix1</span>
+</span><span><a class="LN" id="84" href="matlab:coder.internal.code2model({'Copy_of_ldpc_dvbs2_model_v2:92','Copy_of_ldpc_dvbs2_model_v2:67','Copy_of_ldpc_dvbs2_model_v2:68'})" name="code2model">   84   </a>              );
+</span><span><a class="LN" id="85">   85   </a>
+</span><span><a class="LN" id="86">   86   </a>  enb &lt;= clk_enable;
+</span><span><a class="LN" id="87">   87   </a>
+</span><span><a class="LN" id="88" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:95')" name="code2model">   88   </a>  Logical_Operator_out1 &lt;= serial_out <span class="KW">XOR</span> Delay1_out1;
+</span><span><a class="LN" id="89">   89   </a>
+</span><span><a class="LN" id="90" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   90   </a>  Delay1_process : <span class="KW">PROCESS</span> (clk)
+</span><span><a class="LN" id="91" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   91   </a>  <span class="KW">BEGIN</span>
+</span><span><a class="LN" id="92" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   92   </a>    <span class="KW">IF</span> clk'EVENT <span class="KW">AND</span> clk = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="93" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   93   </a>      <span class="KW">IF</span> reset_x = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="94" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   94   </a>        Delay1_out1 &lt;= '0';
+</span><span><a class="LN" id="95" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   95   </a>      <span class="KW">ELSIF</span> enb = '1' <span class="KW">THEN</span>
+</span><span><a class="LN" id="96" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   96   </a>        Delay1_out1 &lt;= Logical_Operator_out1;
+</span><span><a class="LN" id="97" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   97   </a>      <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="98" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   98   </a>    <span class="KW">END</span> <span class="KW">IF</span>;
+</span><span><a class="LN" id="99" href="matlab:coder.internal.code2model('Copy_of_ldpc_dvbs2_model_v2:94')" name="code2model">   99   </a>  <span class="KW">END</span> <span class="KW">PROCESS</span> Delay1_process;
+</span><span><a class="LN" id="100">  100   </a>
+</span><span><a class="LN" id="101">  101   </a>
+</span><span><a class="LN" id="102">  102   </a>  out_rsvd &lt;= Delay1_out1;
+</span><span><a class="LN" id="103">  103   </a>
+</span><span><a class="LN" id="104">  104   </a>  ce_out &lt;= clk_enable;
+</span><span><a class="LN" id="105">  105   </a>
+</span><span><a class="LN" id="106">  106   </a><span class="KW">END</span> rtl;
+</span><span><a class="LN" id="107">  107   </a>
+</span><span><a class="LN" id="108">  108   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

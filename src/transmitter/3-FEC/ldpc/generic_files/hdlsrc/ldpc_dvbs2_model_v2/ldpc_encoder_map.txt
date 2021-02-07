@@ -1,5 +1,19 @@
  --> ldpc_encoder_pac
 ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/addresses --> addresses
 ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator --> address_calculator
-ldpc_dvbs2_model_v2/ldpc_encoder/fsm_select_xor --> fsm_select_xor
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat/DualPortRAM_singlebit --> DualPortRAM_singlebit
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat --> ram_repeat
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat1 --> ram_repeat1
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat10 --> ram_repeat10
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat11 --> ram_repeat11
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat2 --> ram_repeat2
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat3 --> ram_repeat3
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat4 --> ram_repeat4
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat5 --> ram_repeat5
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat6 --> ram_repeat6
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat7 --> ram_repeat7
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat8 --> ram_repeat8
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank/ram_repeat9 --> ram_repeat9
+ldpc_dvbs2_model_v2/ldpc_encoder/ram_bank --> ram_bank
+ldpc_dvbs2_model_v2/ldpc_encoder/select_address --> select_address
 ldpc_dvbs2_model_v2/ldpc_encoder --> ldpc_encoder

@@ -1,0 +1,5 @@
+ --> ldpc_encoder_pac
+Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator/addresses --> addresses
+Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/address_calculator --> address_calculator
+Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder/fsm_select_xor --> fsm_select_xor
+Copy_of_ldpc_dvbs2_model_v2/ldpc_encoder --> ldpc_encoder

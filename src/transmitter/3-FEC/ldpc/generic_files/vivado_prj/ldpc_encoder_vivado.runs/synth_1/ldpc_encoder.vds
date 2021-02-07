@@ -1,53 +1,61 @@
 #-----------------------------------------------------------
-# Vivado v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Feb  5 04:58:00 2021
-# Process ID: 4880
-# Current directory: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1
-# Command line: vivado.exe -log ldpc_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ldpc_encoder.tcl
-# Log file: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/ldpc_encoder.vds
-# Journal file: D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1\vivado.jou
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:21 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Sun Feb  7 13:54:16 2021
+# Process ID: 11308
+# Current directory: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1
+# Command line: vivado -log ldpc_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ldpc_encoder.tcl
+# Log file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/ldpc_encoder.vds
+# Journal file: /home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source ldpc_encoder.tcl -notrace
-Command: synth_design -top ldpc_encoder -part xc7z020clg400-1 -mode out_of_context
+Command: synth_design -top ldpc_encoder -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13604
+INFO: [Synth 8-7075] Helper process launched with PID 11313
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1143.625 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2149.566 ; gain = 0.000 ; free physical = 12081 ; free virtual = 20883
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ldpc_encoder' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:57]
-INFO: [Synth 8-3491] module 'address_calculator' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:23' bound to instance 'u_address_calculator' of component 'address_calculator' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'address_calculator' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:33]
-INFO: [Synth 8-3491] module 'addresses' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:23' bound to instance 'u_addresses' of component 'addresses' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'addresses' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'addresses' (1#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/addresses.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'address_calculator' (2#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/address_calculator.vhd:33]
-INFO: [Synth 8-3491] module 'fsm_select_xor' declared at 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/fsm_select_xor.vhd:23' bound to instance 'u_fsm_select_xor' of component 'fsm_select_xor' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:114]
-INFO: [Synth 8-638] synthesizing module 'fsm_select_xor' [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/fsm_select_xor.vhd:38]
-INFO: [Synth 8-226] default block is never used [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/fsm_select_xor.vhd:122]
-INFO: [Synth 8-256] done synthesizing module 'fsm_select_xor' (3#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/fsm_select_xor.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder' (4#1) [D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_dvbs2_model_v2/ldpc_encoder.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'ldpc_encoder' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:58]
+INFO: [Synth 8-3491] module 'address_calculator' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:23' bound to instance 'u_address_calculator' of component 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'address_calculator' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'addresses' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/addresses.vhd:23' bound to instance 'u_addresses' of component 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'addresses' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'addresses' (1#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/addresses.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'address_calculator' (2#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/address_calculator.vhd:33]
+INFO: [Synth 8-3491] module 'fsm_select_xor' declared at '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/fsm_select_xor.vhd:23' bound to instance 'u_fsm_select_xor' of component 'fsm_select_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'fsm_select_xor' [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/fsm_select_xor.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'fsm_select_xor' (3#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/fsm_select_xor.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'ldpc_encoder' (4#1) [/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/hdlsrc/ldpc_model_array/ldpc_encoder.vhd:58]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:02:59 ; elapsed = 00:03:04 . Memory (MB): peak = 2236.008 ; gain = 1092.383
+Finished Synthesize : Time (s): cpu = 00:01:12 ; elapsed = 00:01:18 . Memory (MB): peak = 3984.004 ; gain = 1834.438 ; free physical = 11486 ; free virtual = 20296
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:02 ; elapsed = 00:03:07 . Memory (MB): peak = 2236.008 ; gain = 1092.383
+Finished Constraint Validation : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 3984.004 ; gain = 1834.438 ; free physical = 11517 ; free virtual = 20327
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7z020clg400-1
+Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:02 ; elapsed = 00:03:07 . Memory (MB): peak = 2236.008 ; gain = 1092.383
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 4003.930 ; gain = 1854.363 ; free physical = 11515 ; free virtual = 20325
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-802] inferred FSM for state register 'moore_state_machine_reg' in module 'fsm_select_xor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               10
+                 iSTATE0 |                               01 |                               00
+                 iSTATE1 |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'moore_state_machine_reg' using encoding 'sequential' in module 'fsm_select_xor'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:08 ; elapsed = 00:05:14 . Memory (MB): peak = 3872.480 ; gain = 2728.855
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:07 ; elapsed = 00:03:14 . Memory (MB): peak = 5589.109 ; gain = 3439.543 ; free physical = 6710 ; free virtual = 15528
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -63,16 +71,18 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	            16201 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input 16201 Bit        Muxes := 4     
+	   3 Input 16201 Bit        Muxes := 1     
+	   2 Input 16201 Bit        Muxes := 1     
 	  16 Input   14 Bit        Muxes := 9     
 	   2 Input    9 Bit        Muxes := 2     
 	 135 Input    4 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 8     
+	   3 Input    2 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -90,44 +100,39 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:09:21 ; elapsed = 00:10:13 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:08:15 ; elapsed = 00:08:36 . Memory (MB): peak = 5881.277 ; gain = 3731.711 ; free physical = 6854 ; free virtual = 16005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping	Report
-+------------+------------+---------------+----------------+
-|Module Name | RTL Object | Depth x Width | Implemented As | 
-+------------+------------+---------------+----------------+
-|addresses   | nc[0,0]    | 256x6         | LUT            | 
-|addresses   | nc[0,1]    | 256x14        | LUT            | 
-|addresses   | nc[0,2]    | 256x14        | LUT            | 
-+------------+------------+---------------+----------------+
++-------------+------------------------------------------+---------------+----------------+
+|Module Name  | RTL Object                               | Depth x Width | Implemented As | 
++-------------+------------------------------------------+---------------+----------------+
+|addresses    | nc[0,0]                                  | 256x6         | LUT            | 
+|addresses    | nc[0,1]                                  | 256x14        | LUT            | 
+|addresses    | nc[0,2]                                  | 256x14        | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/nc[0,0] | 256x6         | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/nc[0,1] | 256x14        | LUT            | 
+|ldpc_encoder | u_address_calculator/u_addresses/nc[0,2] | 256x14        | LUT            | 
++-------------+------------------------------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:09:39 ; elapsed = 00:10:31 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Timing Optimization : Time (s): cpu = 00:08:38 ; elapsed = 00:09:00 . Memory (MB): peak = 5881.277 ; gain = 3731.711 ; free physical = 6494 ; free virtual = 15920
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[2]' (FDRE) to 'i_0/u_address_calculator/slot_counter_out1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[7]' (FDRE) to 'i_0/u_address_calculator/slot_counter_out1_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[6]' (FDRE) to 'i_0/u_address_calculator/slot_counter_out1_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[5]' (FDRE) to 'i_0/u_address_calculator/slot_counter_out1_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[4]' (FDRE) to 'i_0/u_address_calculator/slot_counter_out1_reg[4]'
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[1]' (FDRE) to 'i_0/u_address_calculator/slot_counter_out1_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[0]' (FDSE) to 'i_0/u_address_calculator/slot_counter_out1_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/u_address_calculator/slot_counter_out1_reg_rep[3]' (FDRE) to 'i_0/u_address_calculator/slot_counter_out1_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:10:40 ; elapsed = 00:11:57 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Technology Mapping : Time (s): cpu = 00:10:04 ; elapsed = 00:10:28 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6421 ; free virtual = 15867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -145,37 +150,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:11:28 ; elapsed = 00:12:46 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished IO Insertion : Time (s): cpu = 00:11:05 ; elapsed = 00:11:31 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6304 ; free virtual = 15913
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:11:30 ; elapsed = 00:12:48 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Renaming Generated Instances : Time (s): cpu = 00:11:07 ; elapsed = 00:11:33 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6307 ; free virtual = 15917
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:11:49 ; elapsed = 00:13:08 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:11:51 ; elapsed = 00:12:18 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6269 ; free virtual = 15878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:11:50 ; elapsed = 00:13:09 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Renaming Generated Ports : Time (s): cpu = 00:13:12 ; elapsed = 00:13:38 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6235 ; free virtual = 15845
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:12:16 ; elapsed = 00:13:34 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:13:58 ; elapsed = 00:14:25 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6221 ; free virtual = 15832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:12:17 ; elapsed = 00:13:36 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Renaming Generated Nets : Time (s): cpu = 00:14:00 ; elapsed = 00:14:28 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6254 ; free virtual = 15864
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -192,50 +197,50 @@ Report Cell Usage:
 |      |Cell   |Count  |
 +------+-------+-------+
 |1     |CARRY4 |    151|
-|2     |LUT1   |    171|
-|3     |LUT2   |  16420|
-|4     |LUT3   |  59979|
-|5     |LUT4   |     44|
-|6     |LUT5   |  17777|
-|7     |LUT6   | 331248|
-|8     |MUXF7  |  33214|
-|9     |MUXF8  |  16433|
-|10    |FDRE   |  32450|
-|11    |FDSE   |      4|
+|2     |LUT1   |    172|
+|3     |LUT2   | 145998|
+|4     |LUT3   |  12861|
+|5     |LUT4   |  64943|
+|6     |LUT5   |  86399|
+|7     |LUT6   | 189633|
+|8     |MUXF7  |  35944|
+|9     |MUXF8  |  15917|
+|10    |FDRE   |  16256|
+|11    |FDSE   |      5|
 +------+-------+-------+
 
 Report Instance Areas: 
 +------+-----------------------+-------------------+-------+
 |      |Instance               |Module             |Cells  |
 +------+-----------------------+-------------------+-------+
-|1     |top                    |                   | 507891|
-|2     |  u_address_calculator |address_calculator | 419918|
-|3     |    u_addresses        |addresses          | 419855|
-|4     |  u_fsm_select_xor     |fsm_select_xor     |  71321|
+|1     |top                    |                   | 568279|
+|2     |  u_address_calculator |address_calculator | 512063|
+|3     |    u_addresses        |addresses          | 511990|
+|4     |  u_fsm_select_xor     |fsm_select_xor     |  56215|
 +------+-----------------------+-------------------+-------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:12:18 ; elapsed = 00:13:36 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Finished Writing Synthesis Report : Time (s): cpu = 00:14:00 ; elapsed = 00:14:28 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 6254 ; free virtual = 15864
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:12:18 ; elapsed = 00:13:47 . Memory (MB): peak = 5320.859 ; gain = 4177.234
-Synthesis Optimization Complete : Time (s): cpu = 00:12:18 ; elapsed = 00:13:47 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+Synthesis Optimization Runtime : Time (s): cpu = 00:14:05 ; elapsed = 00:14:32 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 10342 ; free virtual = 19952
+Synthesis Optimization Complete : Time (s): cpu = 00:14:05 ; elapsed = 00:14:32 . Memory (MB): peak = 6020.656 ; gain = 3871.090 ; free physical = 10371 ; free virtual = 19953
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 5320.859 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 49798 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6020.656 ; gain = 0.000 ; free physical = 9910 ; free virtual = 19491
+INFO: [Netlist 29-17] Analyzing 52012 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'ldpc_encoder' is not ideal for floorplanning, since the cellview 'addresses' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 5320.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.14 . Memory (MB): peak = 6064.758 ; gain = 0.000 ; free physical = 9728 ; free virtual = 19309
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+25 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:13:36 ; elapsed = 00:15:09 . Memory (MB): peak = 5320.859 ; gain = 4177.234
+synth_design: Time (s): cpu = 00:15:59 ; elapsed = 00:16:06 . Memory (MB): peak = 6064.758 ; gain = 3915.285 ; free physical = 10212 ; free virtual = 19793
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Common 17-1381] The checkpoint 'D:/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/ldpc_encoder.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:01:19 ; elapsed = 00:01:02 . Memory (MB): peak = 5320.859 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint '/home/wardo/Documents/DVBS2/DVBS2/src/transmitter/3-FEC/ldpc/generic_files/vivado_prj/ldpc_encoder_vivado.runs/synth_1/ldpc_encoder.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:31 ; elapsed = 00:01:03 . Memory (MB): peak = 6160.805 ; gain = 96.047 ; free physical = 9487 ; free virtual = 19117
 INFO: [runtcl-4] Executing : report_utilization -file ldpc_encoder_utilization_synth.rpt -pb ldpc_encoder_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb  5 05:14:17 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  7 14:11:36 2021...
