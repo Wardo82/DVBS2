@@ -1,3 +1,0 @@
- --> interleaver_dut_pac
-interleaver_model/interleaver_dut/interleaver --> interleaver
-interleaver_model/interleaver_dut --> interleaver_dut
