@@ -1,4 +1,4 @@
-# DVBS2 MATLAB implementation
+# DVBS2 MATLAB implementation [I'm still working on it. If you want to contribute, write me!]
 This folder contains the code implementation of the functional blocks as described in the DVBS2 paper:
 1. Mode adaptation
 2. Stream adaptation
