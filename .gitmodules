@@ -1,0 +1,3 @@
+[submodule "dvbs2-LDPC"]
+	path = dvbs2-LDPC
+	url = https://github.com/Wardo82/dvbs2-LDPC.git
